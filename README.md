@@ -1,30 +1,27 @@
-# new-library
+# react-library-example
 
-> Made with create-react-library
-
-[![NPM](https://img.shields.io/npm/v/new-library.svg)](https://www.npmjs.com/package/new-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+> Simple example of react library with typescript, rollup, jest, storybook, eslint and prettier
 
 ## Install
 
 ```bash
-npm install --save new-library
+npm i -s git+https://github.com/jmorozov/react-library-example.git
 ```
 
 ## Usage
 
-```jsx
-import React, { Component } from 'react'
+```tsx
+import * as React from 'react';
+import 'react-library-example/dist/index.css';
+import { ExampleComponent } from 'react-library-example';
 
-import MyComponent from 'new-library'
-import 'new-library/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+class Example extends React.Component {
+   render() {
+      return <ExampleComponent text="Test" />;
+   }
 }
 ```
 
 ## License
 
-MIT © [](https://github.com/)
+MIT © [jmorozov](https://github.com/jmorozov)
