@@ -5,7 +5,7 @@ import {
   ISortableParams,
   IPaginatableParams,
   IParsedSortingQuery,
-} from 'typings/api';
+} from '../typings/api';
 
 export const paginationToApi = (
   pagination: PaginationConfig,

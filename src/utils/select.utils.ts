@@ -1,4 +1,4 @@
-import { IDictionaryOption, ISelectOption, IHashMap } from 'typings/etc';
+import { IDictionaryOption, ISelectOption, IHashMap } from '../typings/etc';
 
 export const formatSelectOptions = (
   list: IDictionaryOption[],
