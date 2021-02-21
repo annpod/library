@@ -2,11 +2,6 @@
 
 > Simple example of react library with typescript, rollup, jest, storybook, eslint and prettier
 
-## Install
-
-```bash
-npm i -s git+https://github.com/jmorozov/react-library-example.git
-```
 
 ## Usage
 
@@ -22,6 +17,3 @@ class Example extends React.Component {
 }
 ```
 
-## License
-
-MIT © [jmorozov](https://github.com/jmorozov)
