@@ -51,7 +51,7 @@ const filterData: any = {
       { key: '2', name: 'First Floor', buildingKey: '1' }
    ]
 };
-export const config: any = {
+const config: any = {
    Region: {
       isMulti: false
    },
