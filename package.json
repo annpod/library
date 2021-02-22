@@ -1,13 +1,12 @@
 {
   "name": "my-lib",
   "version": "1.0.0",
-  "main": "build/index.js",
-  "module": "build/index.esm.js",
-  "files": [
-    "build"
-  ],
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "scripts": {
     "build": "rollup -c",
+    "start": "rollup -c -w",
+    "prepare": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
@@ -20,6 +19,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.17",
     "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
     "@storybook/addon-essentials": "^6.1.18",
     "@storybook/addon-links": "^6.1.18",
