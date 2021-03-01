@@ -1,7 +1,7 @@
 import { PreferencesItems } from './location-filter.typings';
-import { ILocationFilter, LocationFilterItems } from './location-filter.typings';
+import { ILocationFilterConfig, LocationFilterItems } from './location-filter.typings';
 
-export const LOCATION_FILTER: ILocationFilter = {
+export const LOCATION_FILTER: ILocationFilterConfig = {
   Region: {
     childKey: LocationFilterItems.Site,
     filterKey: null,

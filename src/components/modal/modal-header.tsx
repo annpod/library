@@ -1,24 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button } from '../modal-button';
-
-interface IModalButton {
-  label: string;
-  onClick: () => void;
-}
-
-export interface IModalHeader {
-  type?: string;
-  headerTitle: string;
-  theme?: any;
-  confirmButton: IModalButton | null;
-  cancelButton: IModalButton;
-}
+import { IModalHeader } from './modal.typings';
 
 export const ModalHeader = ({
   headerTitle,
   confirmButton,
-  cancelButton,
+  cancelButton
 }: IModalHeader) => (
   <Header>
     <TitleWrapper>

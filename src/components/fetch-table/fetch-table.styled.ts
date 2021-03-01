@@ -64,12 +64,12 @@ export const StyledTable = (styled(Table)`
     li:hover,
     a:hover,
     svg:hover {
-        border-color: #d9d9d9;
-        color: #d9d9d9;
+      border-color: #d9d9d9;
+      color: #d9d9d9;
       & a {
         color: #d9d9d9;
       }
-    } 
+    }
   }
   & .ant-pagination-item-active {
     border-color: ${theme.highlightColor};
@@ -92,8 +92,19 @@ export const StyledTable = (styled(Table)`
     height: 41px;
   }
 
-  & .ant-table-thead > tr > th .ant-table-column-sorter .ant-table-column-sorter-inner .ant-table-column-sorter-up.on,
-   .ant-table-thead > tr > th .ant-table-column-sorter .ant-table-column-sorter-inner .ant-table-column-sorter-down.on {
+  &
+    .ant-table-thead
+    > tr
+    > th
+    .ant-table-column-sorter
+    .ant-table-column-sorter-inner
+    .ant-table-column-sorter-up.on,
+  .ant-table-thead
+    > tr
+    > th
+    .ant-table-column-sorter
+    .ant-table-column-sorter-inner
+    .ant-table-column-sorter-down.on {
     color: ${theme.sortButtonColor};
   }
 ` as React.ComponentType) as new <T>() => Table<T>;

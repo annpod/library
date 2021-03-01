@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { LocationFilterItems } from './location-filter.typings';
+import { LocationFilterItems, ILocationFilterProps } from './location-filter.typings';
 
 import { ExtendedSelect } from '../extended-select';
 
@@ -11,7 +11,7 @@ const SearchSelectBox = styled.div`
   margin-top: 5px;
 `;
 
-export const LocationFilter = (props: any) => {
+export const LocationFilter = (props: ILocationFilterProps) => {
   const { onUpdateFilter } = useFilter(
     props.setFilterLocation,
     props.filterData,

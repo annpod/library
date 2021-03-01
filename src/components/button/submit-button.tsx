@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button } from 'antd';
+import Button from 'antd/lib/button';
 
 export interface ISubmitButton {
   isDisabled: boolean;

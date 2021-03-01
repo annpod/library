@@ -1,7 +1,10 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
-import { Modal as ModalAntd } from 'antd';
-import { ModalHeader, IModalHeader } from './modal-header';
+
+import Modal from 'antd/lib/modal';
+import { ModalHeader } from './modal-header';
+import { IModalHeader } from './modal.typings';
+import 'antd/lib/modal/style/css';
 
 export interface IModal extends IModalHeader {
   visible: boolean;
@@ -23,9 +26,9 @@ const ModalC = ({ visible, children, afterClose, ...props }: IModal) => (
   </ModalDialog>
 );
 
-export const Modal: any = withTheme(ModalC);
+export const ModalPopup: any = withTheme(ModalC);
 
-const ModalDialog = styled(ModalAntd)`
+const ModalDialog = styled(Modal)`
   max-width: 990px;
   .ant-modal-header {
     padding-top: 20px;

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { theme } from '../../constants/theme';
 
 import { IStyledProps } from '../../typings/styles';
-interface IButton extends IStyledProps {
+
+export interface IButton extends IStyledProps {
   color: string;
   background: string;
 }

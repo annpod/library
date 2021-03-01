@@ -3,43 +3,16 @@ import React from 'react';
 import { PaginationConfig } from 'antd/lib/pagination';
 import { ColumnProps, SorterResult, SortOrder } from 'antd/lib/table';
 
-import {
-  IPaginatableParams,
-  IParsedSortingQuery,
-  ISortableParams,
-} from '../../typings/api';
+import { IParsedSortingQuery, ISortableParams } from '../../typings/api';
 import {
   apiToPagination,
   apiToSortData,
   paginationToApi,
-  sorterToAPI,
+  sorterToAPI
 } from '../../utils/api-utils';
 import { StyledTable } from './fetch-table.styled';
 import { WaveLoading } from 'styled-spinkit';
-
-export interface TableEventListeners {
-  onClick?: (arg: React.SyntheticEvent) => void;
-  onDoubleClick?: (arg: React.SyntheticEvent) => void;
-  onContextMenu?: (arg: React.SyntheticEvent) => void;
-  onMouseEnter?: (arg: React.SyntheticEvent) => void;
-  onMouseLeave?: (arg: React.SyntheticEvent) => void;
-}
-
-export interface IFetchTableProps<T> {
-  onRow?: (record: T, index: number) => TableEventListeners;
-  columns: ColumnProps<T>[];
-  data: T[];
-  totalRowCount: number;
-  paginationParams: IPaginatableParams;
-  sortParams: ISortableParams;
-  setFetchParameters: (
-    paginationParams: IPaginatableParams,
-    sortParams: ISortableParams
-  ) => void;
-  isLoading: boolean;
-  isHidePagination?: boolean;
-  emptyText?: string;
-}
+import { IFetchTableProps } from './fetch-table.typings';
 
 function defaultSortOrder(
   columnKey: string | number,
@@ -61,7 +34,7 @@ function applyDefaultSorter<T>(
     ...item,
     defaultSortOrder: item.key
       ? defaultSortOrder(item.key, parsedParams)
-      : undefined,
+      : undefined
   }));
 }
 

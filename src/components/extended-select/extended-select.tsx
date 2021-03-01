@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Select } from '../../select';
+import { Select } from '../select';
 import { findSelectOption, findSelectOptions } from '../../utils/select.utils';
 export interface ISelectOption {
   [key: string]: string;
@@ -16,7 +16,7 @@ export interface IExtendedSelectOption {
   optionValue?: string;
 }
 
-interface IExtendedSelectProps extends IExtendedSelectOption {
+export interface IExtendedSelectProps extends IExtendedSelectOption {
   clearable?: boolean;
   searchable?: boolean;
   onChange?: (keyValue: string, value: string) => void;
