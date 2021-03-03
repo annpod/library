@@ -4,7 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 import json from '@rollup/plugin-json';
-import svg from 'rollup-plugin-svg';
+// import svg from 'rollup-plugin-svg';
 import image from '@rollup/plugin-image';
 // import url from "rollup-plugin-url"
 
@@ -27,8 +27,8 @@ export default {
     }
   ],
   plugins: [
-    svg(),
     image(),
+    // svg(),    
     peerDepsExternal({
       includeDependencies: true
     }),
@@ -41,7 +41,8 @@ export default {
       exclude: [
         'src/**/*.stories.tsx',
         'src/**/*.test.(tsx|ts)',
-        'src/**/*.stories.tsx'
+        'src/**/*.stories.tsx',
+        'src/**/*.svg'
       ]
     }),
     commonjs(),
