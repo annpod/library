@@ -5,6 +5,7 @@ declare module '*.ico';
 
 declare module 'rollup-plugin-svg';
 declare module '@rollup/plugin-image';
+declare module 'lodash';
 
 declare module 'antd/lib/form/style/css';
 declare module 'antd/lib/input/style/css';

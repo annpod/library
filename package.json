@@ -87,11 +87,6 @@
     "core-js": "^3.9.0",
     "styled-components": "^5.2.1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{ts,tsx}": [
       "yarn prettier",
@@ -101,12 +96,15 @@
   },
   "eslintConfig": {
     "extends": "react-app",
+    "@typescript-eslint/no-angle-bracket-type-assertion": "off",
     "rules": {
       "additional-rule": "warn"
     },
     "overrides": [
       {
-        "files": ["**/*.ts?(x)"],
+        "files": [
+          "**/*.ts?(x)"
+        ],
         "rules": {
           "additional-typescript-only-rule": "warn"
         }

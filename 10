@@ -1,0 +1,19 @@
+
+> husky@4.3.8 install D:\Project_work\library\node_modules\husky
+> node husky install
+
+husky > Setting up git hooks
+husky > Done
+
+> husky@4.3.8 postinstall D:\Project_work\library\node_modules\husky
+> opencollective-postinstall || exit 0
+
+[96m[1mThank you for using husky![96m[1m
+[0m[96mIf you rely on this package, please consider supporting our open collective:[22m[39m
+> [94mhttps://opencollective.com/husky/donate[0m
+
++ husky@4.3.8
++ lint-staged@10.5.4
+added 72 packages from 36 contributors and audited 3690 packages in 26.979s
+found 6 vulnerabilities (2 low, 4 high)
+  run `npm audit fix` to fix them, or `npm audit` for details

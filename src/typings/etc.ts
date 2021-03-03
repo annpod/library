@@ -37,3 +37,33 @@ export enum ToastStatus {
   warn = 'warn',
   success = 'success',
 }
+
+export interface IRegion {
+  regionKey: string;
+  name: string;
+  provisioningKey: string;
+}
+
+export interface IResourcesStateData {
+  regionList: IRegion[];
+  regionOptionList: ISelectOption[];
+  currentRegion: ISelectOption | null;
+  currentSection: string | null;
+  desksEnabled: boolean;
+  roomsEnabled: boolean;
+}
+
+export enum PreferencesItems {
+  defaultRegionId = 'defaultRegionId',
+  defaultSiteId = 'defaultSiteId',
+  defaultBuildingId = 'defaultBuildingId',
+  defaultFloorId = 'defaultFloorId',
+}
+
+export interface IUserPreferences {
+  [PreferencesItems.defaultRegionId]: string;
+  [PreferencesItems.defaultSiteId]: string;
+  [PreferencesItems.defaultBuildingId]: string;
+  [PreferencesItems.defaultFloorId]: string;
+  currentUserKey: string;
+}
