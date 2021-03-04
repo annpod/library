@@ -37,7 +37,7 @@ export const IconTextTabButton = (props: IIconTextTabButtonProps) => {
   const onClick = () => {
     props.onClick(section);
   };
-
+  
   return (
     <TextIconButton onClick={onClick} className={className} disabled={disabled}>
       {icon}

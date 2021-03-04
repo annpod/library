@@ -28,7 +28,7 @@ export interface IDeskDetailsProps {
   onSave: (data: ISaveDeskData, cb: () => void) => void;
   onCancel: () => void;
   onDelete: (provisioningKey: string) => void;
-  deskDetailsRouteHandler: () => void;
+  deskDetailsRouteHandler: (deskKey: string) => void;
   onFetchUsers: (search: string) => void;
 }
 
@@ -37,7 +37,7 @@ export const DeskDetails = (props: IDeskDetailsProps) => {
   const debouncedSearchTerm = useDebounce(userNameSearch, 500);
 
   useEffect(() => {
-    props.deskDetailsRouteHandler();
+    props.deskDetailsRouteHandler(props.deskKey);
   }, [props.deskKey]);
 
   useEffect(() => {

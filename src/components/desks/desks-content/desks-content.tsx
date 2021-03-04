@@ -114,7 +114,7 @@ export const DesksContent = (props: any) => {
   } = props;
   return (
     <ContentWrapper>
-      {props.routeSelector}
+      {/* {props.routeSelector} */}
       <ParamsPanel title={strings.resources.desks.sideTitle}>
         <BackButtonContainer>
           <RouteButton
