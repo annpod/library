@@ -12,10 +12,7 @@ import { ParamsPanel } from '../../params-panel';
 import { IPaginatableParams, ISortableParams } from '../../../typings/api';
 import { SubmitButton } from '../../button';
 import { DEFAULT_PAGING } from '../../../constants/config';
-import {
-  IDesk,
-  DeskFilterGroups,
-} from '../desks.typings';
+import { IDesk, DeskFilterGroups } from '../desks.typings';
 import {
   ContentWrapper,
   SearchSelectBox,
@@ -82,6 +79,7 @@ export interface IDesksProps {
 }
 
 export const DesksContent = (props: any) => {
+
   const resetSearchParams = () => {
     resetSearchParameters();
   };

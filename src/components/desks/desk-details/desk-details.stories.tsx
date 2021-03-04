@@ -3,7 +3,7 @@ import { Meta } from '@storybook/react/types-6-0';
 import { Store, State } from '@sambego/storybook-state';
 
 import { DeskDetails } from './desk-details';
-import { desk, options } from '../mocks';
+import { desk, options, deskFilterData, deskData, usersData } from '../mocks';
 import { ISaveDeskData } from '../desks.typings';
 
 const store = new Store({
@@ -23,9 +23,12 @@ export default {
     deskDetailsRouteHandler: () => {},
     desk,
     options,
+    deskData,
+    deskFilterData,
+    usersData,
     isImplementation: true,
     // eslint:disable-next-line
-    onFetchUsers: (search: string) => {},
+    onFetchUsers: (search: string) => {}
   },
   parameters: {
     docs: {
@@ -50,6 +53,10 @@ export const DeskDetailsPage = (args: any) => (
   <State store={store}>
     {(state) => (
       <DeskDetails
+        deskData={args.deskDetails}
+        // getDeskDetails={args.getDeskDetails}
+        deskFilterData={args.deskFilterData}
+        usersData={args.usersData}
         deskKey={args.deskKey}
         onCancel={args.onCancel}
         onSave={args.onSave}
