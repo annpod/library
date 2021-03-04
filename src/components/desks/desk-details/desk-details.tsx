@@ -43,10 +43,7 @@ export const DeskDetails = (props: IDeskDetailsProps) => {
   // const [userNameSearch, onSearchUser] = useState('');
   // const debouncedSearchTerm = useDebounce(userNameSearch, 500);
 
-  const {
-    state,
-    onSearchUser
-  } = useDeskDetails(props);
+  const { state, onSearchUser } = useDeskDetails(props);
 
   // useEffect(() => {
   //   createDesk(deskKey);
@@ -71,7 +68,9 @@ export const DeskDetails = (props: IDeskDetailsProps) => {
   //   props.onFetchUsers(search);
   // };
 
-if(!state.desk) { return null;}
+  if (!state.desk) {
+    return null;
+  }
   return (
     <MainBox>
       <DeskDetailsForm

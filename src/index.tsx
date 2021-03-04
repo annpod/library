@@ -5,7 +5,7 @@ import {
 import { FetchTable, IFetchTableProps } from './components/fetch-table';
 import { StyledPagination, IPaginationProps } from './components/pagination';
 import { ModalPopup, IModal } from './components/modal';
-import { DeskDetails, DesksContent, DesksWrapper } from './components/desks';
+import { DeskDetails, DesksContent } from './components/desks';
 import { Icon } from './components/icon';
 import { IconButton } from './components/icon-button';
 
@@ -20,7 +20,6 @@ export {
   IModal,
   DeskDetails,
   DesksContent,
-  DesksWrapper,
   Icon,
   IconButton,
 };

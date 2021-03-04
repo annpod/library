@@ -62,44 +62,28 @@ export const useDeskDetails = (props: any): any => {
   const [state, setState] = useState(initialState);
   const [userNameSearch, onSearchUser] = useState('');
   const debouncedSearchTerm = useDebounce(userNameSearch, 500);
-  
+
   useEffect(() => {
     createUsers();
   }, [props.usersData]);
-
 
   useEffect(() => {
     createDesk();
   }, [props.deskData, props.deskFilterData]);
 
   useEffect(() => {
-    props.deskDetailsRouteHandler(props.deskKey);
-  }, [props.deskKey]);
-
-  useEffect(() => {
-    getUsers(debouncedSearchTerm);
-  }, [debouncedSearchTerm]);
-
-  const getUsers = async (search: string) => {
-    if (search.length < 3) {
-      return;
-    }
-    props.onFetchUsers(search);
-  };
-
-  useEffect(() => {
     onFetchUsers(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
 
   const createDesk = () => {
-    if(!props.detailsData){
+    if (!props.deskData) {
       return;
     }
-    if (props.detailsData.details.allocatedUser.key) {
+    if (props.deskData.details.allocatedUser.key) {
       props.deskFilterData.users = [
         {
-          text: props.detailsData.details.allocatedUser.fullName,
-          value: props.detailsData.details.allocatedUser.key
+          text: props.deskData.details.allocatedUser.fullName,
+          value: props.deskData.details.allocatedUser.key
         }
       ];
     }
@@ -107,8 +91,8 @@ export const useDeskDetails = (props: any): any => {
     setState((s) => ({
       ...s,
       desk: {
-        ...props.detailsData,
-        statusKey: props.detailsData.statusKey || 'new'
+        ...props.deskData,
+        statusKey: props.deskData.statusKey || 'new'
       },
       options: {
         ...props.deskFilterData
@@ -117,7 +101,9 @@ export const useDeskDetails = (props: any): any => {
   };
 
   const createUsers = () => {
-   
+    if (!props.usersData) {
+      return;
+    }
     setState((s) => ({
       ...s,
       options: {
@@ -134,7 +120,7 @@ export const useDeskDetails = (props: any): any => {
     if (search.length < 3) {
       return;
     }
-    props.fetchUsers(search);    
+    props.fetchUsers(search);
   };
 
   return {
