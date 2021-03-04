@@ -76,7 +76,7 @@ export const useDeskDetails = (props: any): any => {
   }, [debouncedSearchTerm]);
 
   const createDesk = () => {
-    if (!props.deskData) {
+    if (!props.deskData || !props.deskFilterData) {
       return;
     }
     if (props.deskData.details.allocatedUser.key) {
