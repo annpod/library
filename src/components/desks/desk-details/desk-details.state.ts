@@ -76,10 +76,6 @@ export const useDeskDetails = (props: any): any => {
     props.deskDetailsRouteHandler(props.deskKey);
   }, [props.deskKey]);
 
-  // useEffect(() => {
-  //   props.deskDetailsRouteHandler(props.deskKey);
-  // }, [props.usersData]);
-
   useEffect(() => {
     getUsers(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
@@ -96,6 +92,9 @@ export const useDeskDetails = (props: any): any => {
   }, [debouncedSearchTerm]);
 
   const createDesk = () => {
+    if(!props.detailsData){
+      return;
+    }
     if (props.detailsData.details.allocatedUser.key) {
       props.deskFilterData.users = [
         {

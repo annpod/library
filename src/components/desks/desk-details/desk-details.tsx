@@ -19,8 +19,8 @@ export interface IDeskDetailsProps {
   deskKey: string;
   deskData: any;
   usersData: any;
-  desk: any;
-  options: any;
+  // desk: any;
+  // options: any;
   deskFilterData: any;
   // desk: IOpenDeskDetails;
   // options: {
@@ -36,7 +36,7 @@ export interface IDeskDetailsProps {
   onCancel: () => void;
   onDelete: (provisioningKey: string) => void;
   deskDetailsRouteHandler: (deskKey: string) => void;
-  onFetchUsers: (search: string) => void;
+  fetchUsers: (search: string) => void;
 }
 
 export const DeskDetails = (props: IDeskDetailsProps) => {
@@ -44,8 +44,7 @@ export const DeskDetails = (props: IDeskDetailsProps) => {
   // const debouncedSearchTerm = useDebounce(userNameSearch, 500);
 
   const {
-    desk,
-    options,
+    state,
     onSearchUser
   } = useDeskDetails(props);
 
@@ -72,11 +71,12 @@ export const DeskDetails = (props: IDeskDetailsProps) => {
   //   props.onFetchUsers(search);
   // };
 
+if(!state.desk) { return null;}
   return (
     <MainBox>
       <DeskDetailsForm
-        desk={desk}
-        options={options}
+        desk={state.desk}
+        options={state.options}
         onSave={props.onSave}
         onCancel={props.onCancel}
         onDelete={props.onDelete}

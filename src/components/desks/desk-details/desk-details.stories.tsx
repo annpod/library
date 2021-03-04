@@ -2,7 +2,7 @@ import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
 import { DeskDetails } from './desk-details';
-import { desk, options, deskFilterData, deskData, usersData } from '../mocks';
+import { deskFilterData, deskData, usersData } from '../mocks';
 import { ISaveDeskData } from '../desks.typings';
 
 export default {
@@ -16,14 +16,14 @@ export default {
     // eslint-disable-next-line
     onDelete: (provisioningKey: string) => {},
     deskDetailsRouteHandler: () => {},
-    desk,
-    options,
+    // desk,
+    // options,
     deskData,
     deskFilterData,
     usersData,
     isImplementation: true,
     // eslint-disable-next-line
-    onFetchUsers: (search: string) => {}
+    fetchUsers: (search: string) => {}
   },
   parameters: {
     docs: {
@@ -57,9 +57,9 @@ export const DeskDetailsPage = (args: any) => (
     onSave={args.onSave}
     onDelete={args.onDelete}
     deskDetailsRouteHandler={args.deskDetailsRouteHandler}
-    desk={args.desk}
-    options={args.options}
+    // desk={args.desk}
+    // options={args.options}
     isImplementation={args.isImplementation}
-    onFetchUsers={args.onFetchUsers}
+    fetchUsers={args.fetchUsers}
   />
 );
