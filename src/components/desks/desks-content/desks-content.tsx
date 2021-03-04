@@ -79,7 +79,6 @@ export interface IDesksProps {
 }
 
 export const DesksContent = (props: any) => {
-
   const resetSearchParams = () => {
     resetSearchParameters();
   };

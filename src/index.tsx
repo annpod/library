@@ -1,20 +1,26 @@
-
-import { LocationFilter, ILocationFilterProps } from './components/location-filter';
+import {
+  LocationFilter,
+  ILocationFilterProps
+} from './components/location-filter';
 import { FetchTable, IFetchTableProps } from './components/fetch-table';
 import { StyledPagination, IPaginationProps } from './components/pagination';
 import { ModalPopup, IModal } from './components/modal';
-import { DeskDetails } from './components/desks';
-import { DesksContent } from './components/desks';
+import { DeskDetails, DesksContent, DesksWrapper } from './components/desks';
+import { Icon } from './components/icon';
+import { IconButton } from './components/icon-button';
 
 export {
-   LocationFilter,
-   ILocationFilterProps,
-   FetchTable,
-   IFetchTableProps,
-   StyledPagination,
-   IPaginationProps,
-   ModalPopup,
-   IModal,
-   DeskDetails,
-   DesksContent,
+  LocationFilter,
+  ILocationFilterProps,
+  FetchTable,
+  IFetchTableProps,
+  StyledPagination,
+  IPaginationProps,
+  ModalPopup,
+  IModal,
+  DeskDetails,
+  DesksContent,
+  DesksWrapper,
+  Icon,
+  IconButton,
 };

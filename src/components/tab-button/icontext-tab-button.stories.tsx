@@ -18,9 +18,7 @@ Primary.args = {
   disabled: false,
   section: 'First section',
   className: 'firstSection',
-  onClick: (section: string) => {
-    // tslint:disable-next-line:no-console
-    console.log('section', section);
-  },
+  // eslint-disable-next-line
+  onClick: (section: string) => {},
   selected: true,
 };
