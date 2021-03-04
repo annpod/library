@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-import { IDictionaryOption } from '../../../typings/etc';
+// import { IDictionaryOption } from '../../../typings/etc';
 import { MainBox } from '../../../styles/resources.styled';
-import { useDebounce } from '../../../hooks/use-debounce';
+// import { useDebounce } from '../../../hooks/use-debounce';
 
 import { ISaveDeskData } from '../desks.typings';
 
@@ -10,10 +10,10 @@ import { DeskDetailsForm } from './desk-details.form';
 // import { IOpenDeskDetails } from './desk-details.typings';
 import { useDeskDetails } from './desk-details.state';
 
-interface IUser {
-  value: string;
-  text: string;
-}
+// interface IUser {
+//   value: string;
+//   text: string;
+// }
 
 export interface IDeskDetailsProps {
   deskKey: string;
@@ -44,11 +44,10 @@ export const DeskDetails = (props: IDeskDetailsProps) => {
   // const debouncedSearchTerm = useDebounce(userNameSearch, 500);
 
   const {
-    // userNameSearch,
-    desk, options,
-    onSearchUser,
+    desk,
+    options,
+    onSearchUser
   } = useDeskDetails(props);
-
 
   // useEffect(() => {
   //   createDesk(deskKey);

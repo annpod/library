@@ -140,6 +140,7 @@ export const useDeskDetails = (props: any): any => {
 
   return {
     state,
+    userNameSearch,
     onSearchUser
   };
 };
