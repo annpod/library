@@ -59,7 +59,7 @@ export const DesksWrapper = (props: any) => {
           match: {
             params: { deskKey },
           },
-        }) => (
+        }: any) => (
           <DeskDetails
             deskKey={state.currentDeskKey || deskKey}
             onCancel={props.cancelDeskView}
