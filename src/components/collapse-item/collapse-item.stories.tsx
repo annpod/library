@@ -9,7 +9,7 @@ export default {
 } as Meta;
 
 const Template: Story<CollapseItemProps> = (args) => (
-  <CollapseItem {...args}>Content</CollapseItem>
+  <div style={{width: '200px'}}><CollapseItem {...args}>Content</CollapseItem></div>
 );
 
 export const Collapse = Template.bind({});

@@ -2,7 +2,6 @@ import React from 'react';
 import { Icon, IIconProps } from './icon';
 
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { ICONS } from './icons';
 
 export default {
   title: 'Icon/Icon',
@@ -20,10 +19,8 @@ export const Reset: Story<IIconProps> = () => <Icon {...args}  type={'reset'} />
 export const User: Story<IIconProps> = () => <Icon {...args}  type={'user'} />;
 export const Users: Story<IIconProps> = () => <Icon {...args}  type={'users'} />;
 export const UpArrow: Story<IIconProps> = () => <Icon {...args} size={10} type={'upArrow'} />
-export const SmartSpace: Story<IIconProps> = () => <Icon {...args} size={150} type={'smartspace'} />;
 export const Settings: Story<IIconProps> = () => <Icon {...args}  type={'settings'} />;
 export const Services: Story<IIconProps> = () => <Icon {...args}  type={'services'} />;
-export const SCBLogo: Story<IIconProps> = () => <Icon {...args}  size={150}  type={'scbLogo'} />;
 export const Resources: Story<IIconProps> = () => <Icon {...args}  type={'resources'} />;
 export const ResourcesServices: Story<IIconProps> = () => <Icon {...args}  type={'resourcesServices'} />;
 export const ResourcesRooms: Story<IIconProps> = () => <Icon {...args}  type={'resourcesRooms'} />;
@@ -45,7 +42,6 @@ export const Equipment: Story<IIconProps> = () => <Icon {...args}  type={'equipm
 export const DownArrow: Story<IIconProps> = () => <Icon {...args} size={10} type={'downArrow'} />;
 export const Covid19: Story<IIconProps> = () => <Icon {...args}  type={'covid'} />;
 export const Catering: Story<IIconProps> = () => <Icon {...args}  type={'catering'} />;
-export const BTLogo: Story<IIconProps> = () => <Icon {...args}  size={35} type={'btLogo'} />;
 export const Bookings: Story<IIconProps> = () => <Icon {...args}  type={'bookings'} />;
 export const BackArrow: Story<IIconProps> = () => <Icon {...args}  type={'backArrow'} />;
 export const BackArrowRed: Story<IIconProps> = () => <Icon {...args}  type={'backArrowRed'} />;

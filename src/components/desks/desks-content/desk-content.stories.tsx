@@ -18,6 +18,7 @@ export default {
   component: DesksContent,
   args: {
     isLoading: false,
+    isReset: false,
     onChangeNeighbourhood: () => {},
     selectSearchFilter,
     fetchDesks: () => {},
@@ -26,13 +27,13 @@ export default {
     filterLocation,
     searchName: '',
     setSelectSearchParameter: () => {},
-    resetSearchParameters: () => {},
-    onSetSearchParam: () => {},
     updateFilterLocation: () => {},
     filterData,
     neighbourhood,
     onChangeDeskName: () => {},
     onAddDeskStatus: () => {},
+    setIsReset:() => {},
+    resetSearchParameters:() => {},
     deskList,
     totalDesksCount: deskList.length,
     sortParams: DEFAULT_SORTING,
@@ -44,6 +45,8 @@ export default {
       source: {
         code: `<DesksContent
         isLoading={isLoading}
+        isReset={isReset}
+        setIsReset={setIsReset}
         onChangeNeighbourhood={onChangeNeighbourhood}
         selectSearchFilter={selectSearchFilter}
         fetchDesks={fetchDesks}
@@ -53,7 +56,6 @@ export default {
         searchName={searchName}
         setSelectSearchParameter={setSelectSearchParameter}
         resetSearchParameters={resetSearchParameters}
-        onSetSearchParam={onSetSearchParam}
         updateFilterLocation={updateFilterLocation}
         filterData={filterData}
         neighbourhood={neighbourhood}
@@ -74,6 +76,8 @@ export const DeskDetailsPage = (args: IDesksProps) => (
   <div style={{ height: '90vh' }}>
     <DesksContent
       isLoading={args.isLoading}
+      isReset={args.isReset}
+      setIsReset={args.setIsReset}
       onChangeNeighbourhood={args.onChangeNeighbourhood}
       selectSearchFilter={args.selectSearchFilter}
       fetchDesks={args.fetchDesks}
@@ -83,7 +87,6 @@ export const DeskDetailsPage = (args: IDesksProps) => (
       searchName={args.searchName}
       setSelectSearchParameter={args.setSelectSearchParameter}
       resetSearchParameters={args.resetSearchParameters}
-      onSetSearchParam={args.onSetSearchParam}
       updateFilterLocation={args.updateFilterLocation}
       filterData={args.filterData}
       neighbourhood={args.neighbourhood}

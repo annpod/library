@@ -8,6 +8,18 @@ import { ModalPopup, IModal } from './components/modal';
 import { DeskDetails, DesksContent } from './components/desks';
 import { Icon } from './components/icon';
 import { IconButton } from './components/icon-button';
+import {
+  IDesksProps,
+  FilterBuilder,
+  formatData,
+  createNeighbourhoodsFilter,
+  createFeatureFilter,
+  createFilter,
+  locationKeyMap,
+  DEFAULT_FILTER_DATA,
+  DEFAULT_LOCATION_FILTER,
+  DEFAULT_NEIGHBOURHODS
+} from './components/desks';
 
 export {
   LocationFilter,
@@ -22,4 +34,14 @@ export {
   DesksContent,
   Icon,
   IconButton,
+  IDesksProps,
+  FilterBuilder,
+  createNeighbourhoodsFilter,
+  createFeatureFilter,
+  createFilter,
+  formatData,
+  locationKeyMap,
+  DEFAULT_FILTER_DATA,
+  DEFAULT_LOCATION_FILTER,
+  DEFAULT_NEIGHBOURHODS,
 };

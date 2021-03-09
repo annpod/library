@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { size } from 'lodash';
+
 import { ExtendedSelect } from '../../extended-select';
 import { strings } from '../../../constants/strings';
 import { Icon } from '../../icon';
 import { CollapseItem } from '../../collapse-item';
-// import { RouteSelector } from '..//route-selector';
 
 import { DesksTable } from '../desks-table';
 import { CustomSearchInput } from '../../custom-search-input';
@@ -34,14 +34,15 @@ import {
 
 import { SEARCH_PARAMETER_NAME } from '../../../constants/resources.constants';
 
-// import { IResourcesStateData } from '../../resources.state';
 import { filterConfig } from '../desks.constants';
-import { LocationFilter } from '../../location-filter';
+import { LocationFilter, IFilterData } from '../../location-filter';
 import { IHashMap } from '../../../typings/etc';
 import { IExtendedSelectOption } from '../../extended-select';
+import { useDebounce } from '../../../hooks/use-debounce';
 
 export interface IDesksProps {
   isLoading: boolean;
+  isReset: boolean;
   deskList: IDesk[];
   totalDesksCount: number;
   selectSearchFilter: IHashMap<IHashMap<IExtendedSelectOption>>;
@@ -51,9 +52,8 @@ export interface IDesksProps {
   isImplementation: boolean;
   filterLocation: any;
   searchName: string;
-  filterData: any;
+  filterData: IFilterData;
   neighbourhood: any;
-  resourcesState: any; // IResourcesStateData;
   onChangeNeighbourhood: (key: string, value: string) => void;
   fetchDesks: (
     paginationParams?: IPaginatableParams,
@@ -63,28 +63,51 @@ export interface IDesksProps {
   updateFilterLocation: (filter: any) => void;
   onChangeDeskName: (name: string, value: string) => void;
   setCurrentSection: (state: string | null) => void;
-  setSearchParameter: <T>(name: string, value: T) => void;
+  resetSearchParameters: () => void;
   setSelectSearchParameter: (
     section: string,
     subSection: string,
     value: string
   ) => void;
-  resetSearchParameters: () => void;
-  onSetSearchParam: (
-    paginationParams: IPaginatableParams,
-    sortParams: ISortableParams
-  ) => void;
   onAddDeskStatus: () => void;
+  setIsReset:(value: boolean) => void;
   routeSelector: any;
 }
 
 export const DesksContent = (props: any) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const debouncedSearchTerm = useDebounce(props.searchName, 600);
+
+  useEffect(() => {
+    if (!isLoaded) {
+      setIsLoaded(true);
+      return;
+    }
+    if (props.isReset) {
+      props.setIsReset(false);
+      return;
+    }
+    if (debouncedSearchTerm.length > 0 && debouncedSearchTerm.length < 3) {
+      return;
+    }    
+    fetchDesks(DEFAULT_PAGING);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debouncedSearchTerm]);
+
+
   const resetSearchParams = () => {
     resetSearchParameters();
   };
 
   const getDeskList = () => {
     fetchDesks(DEFAULT_PAGING);
+  };
+
+    const onSetSearchParam = (
+    paginationParams: IPaginatableParams,
+    sortParams: ISortableParams
+  ) => {
+    fetchDesks(paginationParams, sortParams);
   };
 
   const {
@@ -99,15 +122,12 @@ export const DesksContent = (props: any) => {
     isImplementation,
     onEditDeskStatus,
     filterLocation,
-    searchName,
     setSelectSearchParameter,
     resetSearchParameters,
-    onSetSearchParam,
     updateFilterLocation,
     filterData,
     neighbourhood,
-    onChangeDeskName,
-    onAddDeskStatus
+    onAddDeskStatus,
   } = props;
   return (
     <ContentWrapper>
@@ -115,18 +135,18 @@ export const DesksContent = (props: any) => {
       <ParamsPanel title={strings.resources.desks.sideTitle}>
         <BackButtonContainer>
           <RouteButton
-            icon={<Icon type='backArrowCircle' />}
+            icon={<Icon type="backArrowCircle" />}
             title={strings.resources.backButtonText}
-            section=''
+            section=""
             onClick={props.setCurrentSection}
-            className='resources-tab-button'
+            className="resources-tab-button"
           />
         </BackButtonContainer>
         <SidePanelButton
-          icon={<Icon type='reset' />}
+          icon={<Icon type="reset" />}
           title={strings.resources.resetButtonText}
           onClick={resetSearchParams}
-          className='resources-tab-button'
+          className="resources-tab-button"
         />
         <GlobalSeparator />
         <CollapseItem title={strings.resources.rooms.siteSearchPanelTitle}>
@@ -198,8 +218,8 @@ export const DesksContent = (props: any) => {
             <CustomSearchInput
               name={SEARCH_PARAMETER_NAME}
               placeholder={strings.resources.desks.nameInputPlaceholder}
-              value={searchName}
-              onChange={onChangeDeskName}
+              value={props.searchName}
+              onChange={props.onChangeDeskName}
               disabled={!size(filterLocation) || !filterLocation.Site.value}
             />
           </ListPageSearchInputBox>

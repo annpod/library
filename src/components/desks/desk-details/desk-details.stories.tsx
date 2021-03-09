@@ -29,18 +29,16 @@ export default {
     docs: {
       source: {
         code: `<DeskDetails
-        deskData={deskDetails}
+        deskKey={state.currentDeskKey || deskKey}
         deskFilterData={deskFilterData}
         usersData={usersData}
-        deskKey={deskKey}
-        onCancel={onCancel}
-        onSave={onSave}
-        onDelete={onDelete}
+        onCancel={cancelDeskView}
+        onSave={onSaveDesk}
+        onDelete={onRemoveDesk}
         deskDetailsRouteHandler={deskDetailsRouteHandler}
-        desk={desk}
-        options={options}
         isImplementation={isImplementation}
-        onFetchUsers={onFetchUsers}
+        fetchUsers={fetchUsers}
+        deskData={deskDetails}
       />`
       }
     }
