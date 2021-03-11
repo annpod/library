@@ -1,1 +1,2 @@
-export * from './collapse-item';
+import { CollapseItem } from './collapse-item';
+export default CollapseItem;

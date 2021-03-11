@@ -4,7 +4,7 @@ import { size } from 'lodash';
 import { ExtendedSelect } from '../../extended-select';
 import { strings } from '../../../constants/strings';
 import { Icon } from '../../icon';
-import { CollapseItem } from '../../collapse-item';
+import CollapseItem from '../../collapse-item';
 
 import { DesksTable } from '../desks-table';
 import { CustomSearchInput } from '../../custom-search-input';

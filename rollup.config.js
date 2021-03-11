@@ -11,7 +11,7 @@ import image from '@rollup/plugin-image';
 // const packageJson = require('./package.json');
 
 export default {
-  input: ['lib/index.tsx'],
+  input: ['lib/index.tsx', "lib/components/collapse-item/index.ts"],
   output: [
     {
       dir: "build",
