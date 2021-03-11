@@ -2,7 +2,7 @@ import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 import { Store, State } from '@sambego/storybook-state';
 
-import { ModalPopup, IModal } from './modal';
+import { ModalPopup, IModalPopup } from './modal';
 import { ExportBtn } from '../button';
 
 const store = new Store({
@@ -76,7 +76,7 @@ export default {
   }
 } as Meta;
 
-export const Modal = (args: IModal) => (
+export const Modal = (args: IModalPopup) => (
   <State store={store}>
     {(state) => (
       <>

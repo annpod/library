@@ -8,24 +8,25 @@ import json from '@rollup/plugin-json';
 import image from '@rollup/plugin-image';
 // import url from "rollup-plugin-url"
 
-const packageJson = require('./package.json');
+// const packageJson = require('./package.json');
 
 export default {
-  input: 'src/index.tsx',
+  input: ['lib/index.tsx'],
   output: [
     {
-      file: packageJson.main,
+      dir: "build",
       format: 'cjs',
       exports: 'named',
       sourcemap: true
     },
-    {
-      file: packageJson.module,
-      format: 'esm',
-      exports: 'named',
-      sourcemap: true
-    }
+    // {
+    //   file: packageJson.module,
+    //   format: 'esm',
+    //   exports: 'named',
+    //   sourcemap: true
+    // }
   ],
+  preserveModules: true,
   plugins: [
     image(),
     // svg(),    
@@ -39,10 +40,10 @@ export default {
       rollupCommonJSResolveHack: true,
       clean: true,
       exclude: [
-        'src/**/*.stories.tsx',
-        'src/**/*.test.(tsx|ts)',
-        'src/**/*.stories.tsx',
-        'src/**/*.svg'
+        'lib/**/*.stories.tsx',
+        'lib/**/*.test.(tsx|ts)',
+        'lib/**/*.stories.tsx',
+        'lib/**/*.svg'
       ]
     }),
     commonjs(),

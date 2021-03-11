@@ -6,13 +6,13 @@ import { ModalHeader } from './modal-header';
 import { IModalHeader } from './modal.typings';
 import 'antd/lib/modal/style/css';
 
-export interface IModal extends IModalHeader {
+export interface IModalPopup extends IModalHeader {
   visible: boolean;
   children: string | React.ReactElement;
   afterClose?: () => void;
 }
 
-const ModalC = ({ visible, children, afterClose, ...props }: IModal) => (
+const ModalC = ({ visible, children, afterClose, ...props }: IModalPopup) => (
   <ModalDialog
     title={<ModalHeader {...props} />}
     closable={false}

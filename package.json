@@ -2,8 +2,10 @@
   "name": "my-lib",
   "license": "MIT",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "main": "build/index.js",
+  "files": [
+    "build"
+  ],  
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
@@ -12,7 +14,7 @@
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
-    "prettier": "prettier --config ./.prettierrc --write  \"./src/**/*.{ts,tsx}\"",
+    "prettier": "prettier --config ./.prettierrc --write  \"./lib/**/*.{ts,tsx}\"",
     "lint": "eslint"
   },
   "peerDependencies": {

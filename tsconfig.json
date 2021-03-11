@@ -21,7 +21,7 @@
     "resolveJsonModule": true,
     "noEmit": true
   },
-  "include": ["src"],
+  "include": ["lib"],
   "exclude": [
     "node_modules",
     "build",
