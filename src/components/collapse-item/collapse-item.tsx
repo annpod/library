@@ -12,7 +12,7 @@ export interface CollapseItemProps {
   title: string;
 }
 
-export const CollapseItem: FunctionComponent<CollapseItemProps> = (props) => {
+const CollapseItem: FunctionComponent<CollapseItemProps> = (props) => {
   const [isOpen, setIsOpen] = useState(true);
 
   const handleToggleCollapse = () => {
@@ -31,3 +31,5 @@ export const CollapseItem: FunctionComponent<CollapseItemProps> = (props) => {
     </CollapseItemBody>
   );
 };
+
+export default CollapseItem;
