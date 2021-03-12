@@ -1,5 +1,5 @@
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import resolve from '@rollup/plugin-node-resolve';
+// import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
@@ -12,12 +12,11 @@ import image from '@rollup/plugin-image';
 // import multiInput from 'rollup-plugin-multi-input';
 
 export default {
-  input: ['src/index.tsx'],
+  input: ['src/index.tsx', 'src/components/button/button.tsx'],
   output: [
     {
       dir: 'build',
       format: 'cjs',
-      exports: 'named',
       sourcemap: true
     }
     // {
@@ -35,7 +34,7 @@ export default {
     peerDepsExternal({
       includeDependencies: true
     }),
-    resolve(),
+    // resolve(),
     postcss(),
     typescript({
       useTsconfigDeclarationDir: true,
