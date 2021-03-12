@@ -9,14 +9,16 @@ import { ModalPopup, IModalPopup } from './components/modal';
 import { DeskDetails, DesksContent } from './components/desks';
 import { Icon } from './components/icon';
 import { IconButton } from './components/icon-button';
+import { Button } from './components/button';
 import {
   IDesksProps,
   FilterBuilder,
   formatData,
-  locationKeyMap,
+  locationKeyMap
 } from './components/desks';
 
 export {
+  Button,
   LocationFilter,
   ILocationFilterProps,
   FetchTable,
@@ -33,5 +35,5 @@ export {
   FilterBuilder,
   createLocationFilter,
   formatData,
-  locationKeyMap,
+  locationKeyMap
 };
