@@ -68,18 +68,27 @@ class Example extends Component {
 
 ### Supporting Image Imports
 
-Add the following library to your component library [@rollup/plugin-image](https://github.com/rollup/plugins/tree/master/packages/image):
+Rollup plugin which imports JPG, PNG, GIF, SVG, and WebP files 
+- [@rollup/plugin-image](https://github.com/rollup/plugins/tree/master/packages/image):
 
-You can then import and render images in your components like:
+Import and render images in your components like:
 
 ```tsx
-import logo from "./rollup.png";
+import logo from "./logo.png";
 
 export const ImageComponent = () => (
   <div>
     <img src={logo} />
   </div>
 );
+```
+OR
+You can then import and render images in your components like:
+
+```tsx
+import logo from "./logo.png";
+
+export const ImageComponent = () => <div>{logo}</div>;
 ```
 
 ## Development
@@ -94,7 +103,8 @@ export const MyComponent = (props) => (
 )
 ```
 
-Add export to src/index.ts (used as the entry point for Rollup). We use a pattern called Barrel Exports to expose our components in the entry point. We do this by importing, then exporting all our components. Components exported here are bundled by Rollup
+Add export to `src/index.ts` (used as the entry point for Rollup). 
+*We use a pattern called Barrel Exports to expose our components in the entry point. We do this by importing, then exporting all our components. Components exported here are bundled by Rollup*
 
 ```jsx
 import { MyComponent } from './MyComponent';
