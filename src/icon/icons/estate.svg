@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="Group_2564" data-name="Group 2564" transform="translate(-1519.417 -3406.059)">
+    <g id="Group_2563" data-name="Group 2563">
+      <rect id="Rectangle_2426" data-name="Rectangle 2426" width="100" height="100" transform="translate(1519.417 3406.059)" fill="none"/>
+    </g>
+    <circle id="Ellipse_102" data-name="Ellipse 102" cx="47.092" cy="47.092" r="47.092" transform="translate(1522.321 3408.967)" fill="none" stroke="#5d6267" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <ellipse id="Ellipse_103" data-name="Ellipse 103" cx="23.546" cy="47.092" rx="23.546" ry="47.092" transform="translate(1545.867 3408.967)" fill="none" stroke="#5d6267" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_49" data-name="Line 49" x1="94.184" transform="translate(1522.321 3456.059)" fill="none" stroke="#5d6267" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_50" data-name="Line 50" y2="94.184" transform="translate(1569.413 3408.967)" fill="none" stroke="#5d6267" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="Path_140" data-name="Path 140" d="M1602.2,3456.9a12.994,12.994,0,0,0-25.988,0c0,12.875,12.994,24.674,12.994,24.674S1602.2,3470.013,1602.2,3456.9Z" fill="#efefef" stroke="#5d6267" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_1656" data-name="Path 1656" d="M1534.321,3424.664c8.623,4.816,21.147,7.849,35.092,7.849s26.468-3.033,35.091-7.849" fill="none" stroke="#5d6267" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="Path_1657" data-name="Path 1657" d="M1604.5,3487.237c-8.623-4.816-21.147-7.849-35.091-7.849s-26.469,3.033-35.092,7.849" fill="none" stroke="#5d6267" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="Path_140-2" data-name="Path 140" d="M1551.287,3421.961a12.994,12.994,0,0,0-25.988,0c0,12.875,12.994,24.674,12.994,24.674S1551.287,3435.075,1551.287,3421.961Z" fill="#efefef" stroke="#5d6267" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>

@@ -22,19 +22,23 @@ npm install --save git+https://github.com/annpod/library.git // change the path 
 
 which will install the local component library as a dependency in application. It'll then appear as a dependency in `package.json` like:
 
+```
 "devDependencies": {
   "workplace-web-component-library": "git+https://github.com/annpod/library.git" // change the path after publishing to npm
   ...
 }
- 
+```
+
 Your components can then be imported and used in the project.
 
+```
 import { MyComponent } from 'workplace-web-component-library'
-
+```
 
 ### Component Code Splitting
 
-Code splitting of your components is not supported by default.
+
+*Code splitting of your components is not supported by default.*
 
 ```
 import MyComponent from 'workplace-web-component-library/build/src/MyComponent';
@@ -42,7 +46,10 @@ import MyComponent from 'workplace-web-component-library/build/src/MyComponent';
 
 There are some changes we have to make to rollup.config.js
 
+```
 input: [..., "src/MyComponent/index.ts"],
+```
+
 
 ## Usage
 
@@ -63,22 +70,6 @@ class Example extends Component {
 
 Add the following library to your component library [@rollup/plugin-image](https://github.com/rollup/plugins/tree/master/packages/image):
 
-```
-npm i -D @rollup/plugin-image
-```
-
-Then add it to `rollup-config.js`:
-
-```
-...
-plugins:[
-  ...,
-  image(),
-  ...
-]
-...
-```
-
 You can then import and render images in your components like:
 
 ```tsx
@@ -95,14 +86,17 @@ export const ImageComponent = () => (
 
 Create a component
 
+```jsx
 import React from 'react'
 
 export const MyComponent = (props) => (
   <div>{props.title}</div>
 )
+```
 
 Add export to src/index.ts (used as the entry point for Rollup). We use a pattern called Barrel Exports to expose our components in the entry point. We do this by importing, then exporting all our components. Components exported here are bundled by Rollup
 
+```jsx
 import { MyComponent } from './MyComponent';
 
 export {
@@ -110,10 +104,13 @@ export {
   MyComponent
 }
 
+```
+
 ### Story
 
-Create a stories for MyComponent. Open src/MyComponent/MyComponent.stories.tsx and place
+Create a stories for `MyComponent`. Open `src/MyComponent/MyComponent.stories.tsx` and place
 
+```jsx
 import React from "react";
 import MyComponent from './MyComponent';
 
@@ -129,6 +126,7 @@ export const Primary = Template.bind({});
 Primary.args = {  
   title: 'Hello World'
 };
+```
 
 ### Testing
 
@@ -144,13 +142,13 @@ npm run build
 
 ### Storybook
 
-To run a live-reload Storybook server on your local machine:
+To run a live-reload `Storybook` server on your local machine:
 
 ```
 npm run storybook
 ```
 
-Storybook will run and load up components at http://localhost:6006
+Storybook will run and load up components at `http://localhost:6006`
 
 
 To export your Storybook as static files:
