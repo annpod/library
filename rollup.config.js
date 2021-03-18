@@ -48,13 +48,13 @@ export default [{
   ]
 },
 {
-  input: ['src/index.tsx'],
+  input: ['src/button/index.ts'],
   output: [
     {
       dir: 'build',
       format: 'cjs',
       sourcemap: true
-    }    
+    }
   ],
   preserveModules: true,
   plugins: [
@@ -72,7 +72,8 @@ export default [{
         'src/**/*.stories.tsx',
         'src/**/*.test.(tsx|ts)',
         'src/**/*.stories.tsx',
-        'src/**/*.svg'
+        'src/**/*.svg',
+        'src/icons'
       ]
     }),
     commonjs(),

@@ -1,10 +1,10 @@
 // TODO after design will be ready, think about moving these styles to the global
 
 import styled from 'styled-components';
-import { Button } from '../components/button';
-import { IconTextTabButton } from '../components/tab-button';
-import { Icon } from '../components/icon';
-import { IconButton } from '../components/icon-button/icon-button';
+import { Button } from '../button';
+import { IconTextTabButton } from '../tab-button';
+import { Icon } from '../icon';
+import { IconButton } from '../icon-button/icon-button';
 import Checkbox from 'antd/lib/checkbox';
 
 const { div } = styled;
