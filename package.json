@@ -1,5 +1,5 @@
 {
-  "name": "my-lib",
+  "name": "workplace-web-component-library",
   "license": "MIT",
   "version": "1.0.0",
   "main": "build/index.js",
