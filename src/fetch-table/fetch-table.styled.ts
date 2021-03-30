@@ -4,15 +4,14 @@ import styled from 'styled-components';
 import Table from 'antd/lib/table';
 import 'antd/lib/pagination/style/css';
 import 'antd/lib/table/style/css';
-import { theme } from '../constants/theme';
 
 export const StyledTable = (styled(Table)`
   & .ant-pagination-prev:focus .ant-pagination-item-link,
   .ant-pagination-next:focus .ant-pagination-item-link,
   .ant-pagination-prev:hover .ant-pagination-item-link,
   .ant-pagination-next:hover .ant-pagination-item-link {
-    border-color: ${theme.highlightColor};
-    color: ${theme.highlightColor};
+    border-color: ${(props) => props.theme.highlightColor};
+    color: ${(props) => props.theme.highlightColor};
   }
   &.ant-pagination-jump-prev
     .ant-pagination-item-container
@@ -26,7 +25,7 @@ export const StyledTable = (styled(Table)`
   .ant-pagination-jump-next
     .ant-pagination-item-container
     .ant-pagination-item-link-icon {
-    color: ${theme.highlightColor};
+    color: ${(props) => props.theme.highlightColor};
   }
 
   & .ant-table-thead > tr > th,
@@ -55,9 +54,9 @@ export const StyledTable = (styled(Table)`
   li:hover,
   a:hover,
   svg:hover {
-    border-color: ${theme.highlightColor};
+    border-color: ${(props) => props.theme.highlightColor};
     & a {
-      color: ${theme.highlightColor};
+      color: ${(props) => props.theme.highlightColor};
     }
   }
   & .ant-pagination.ant-table-pagination .ant-pagination-disabled {
@@ -72,9 +71,9 @@ export const StyledTable = (styled(Table)`
     }
   }
   & .ant-pagination-item-active {
-    border-color: ${theme.highlightColor};
+    border-color: ${(props) => props.theme.highlightColor};
     & a {
-      color: ${theme.highlightColor};
+      color: ${(props) => props.theme.highlightColor};
     }
   }
 
@@ -105,6 +104,6 @@ export const StyledTable = (styled(Table)`
     .ant-table-column-sorter
     .ant-table-column-sorter-inner
     .ant-table-column-sorter-down.on {
-    color: ${theme.sortButtonColor};
+    color: ${(props) => props.theme.sortButtonColor};
   }
 ` as React.ComponentType) as new <T>() => Table<T>;

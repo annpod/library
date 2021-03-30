@@ -7,7 +7,7 @@ import { IFormElementProps } from '../form-typings';
 
 import 'antd/lib/input-number/style/css';
 
-export interface IFormAmountProps<F> extends IFormElementProps<F, number> {
+interface IFormAmountProps<F> extends IFormElementProps<F, number> {
   min?: number;
   max?: number;
 }

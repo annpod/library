@@ -1,19 +1,13 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
-import { Store, State } from '@sambego/storybook-state';
 
 import { ModalPopup, IModalPopup } from './modal';
-import { ExportBtn } from '../button';
-
-const store = new Store({
-  isVisible: false
-});
 
 export default {
   title: 'Modal/ModalPopup',
   component: ModalPopup,
   args: {
-    visible: false,
+    visible: true,
     children: `<div>Modal Content</div>`,
     headerTitle: 'Modal Header'
   },
@@ -39,7 +33,7 @@ export default {
     headerTitle: {
       type: { required: true },
       table: {
-        type: { summary: 'string' },
+        type: { summary: 'string' }
       }
     },
     visible: {
@@ -77,25 +71,16 @@ export default {
 } as Meta;
 
 export const Modal = (args: IModalPopup) => (
-  <State store={store}>
-    {(state) => (
-      <>
-        <ExportBtn onClick={() => store.set({ isVisible: !state.isVisible })}>
-          Open
-        </ExportBtn>
-        <ModalPopup
-          {...args}
-          visible={state.isVisible}
-          confirmButton={{
-            label: 'confirm',
-            onClick: () => store.set({ isVisible: false })
-          }}
-          cancelButton={{
-            label: 'cancel',
-            onClick: () => store.set({ isVisible: false })
-          }}
-        />
-      </>
-    )}
-  </State>
+  <ModalPopup
+    {...args}
+    visible={args.visible}
+    confirmButton={{
+      label: 'confirm',
+      onClick: () => {}
+    }}
+    cancelButton={{
+      label: 'cancel',
+      onClick: () => {}
+    }}
+  />
 );

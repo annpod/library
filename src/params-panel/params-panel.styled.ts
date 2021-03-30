@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../constants/theme';
 import { Button } from '../button';
 
 export const ComponentWrapper = styled.div`
@@ -21,7 +20,7 @@ export const ParamsPanelBody = styled.div`
 `;
 
 export const ParamsPanelTitle = styled.div`
-  color: ${theme.highlightColor};
+  color: ${(props) => props.theme.highlightColor};
   font-size: 23px;
   font-weight: 400;
   padding: 15px 20px;
@@ -32,7 +31,7 @@ export const CollapseBtn = styled(Button)`
   top: 25px;
   right: 0;
   transform: translateX(50%);
-  color: ${theme.highlightColor};
+  color: ${(props) => props.theme.highlightColor};
   background-color: #f7f7f7;
   min-width: 25px;
   min-height: 25px;
@@ -43,7 +42,7 @@ export const CollapseBtn = styled(Button)`
   justify-content: center;
   align-items: center;
   padding: 0;
-  border: 1px solid ${theme.highlightColor};
+  border: 1px solid ${(props) => props.theme.highlightColor};
   box-shadow: none;
 
   &:hover,
@@ -51,6 +50,6 @@ export const CollapseBtn = styled(Button)`
   &:focus {
     color: white;
     background-color: #f7f7f7;
-    border: 1px solid ${theme.highlightColor};
+    border: 1px solid ${(props) => props.theme.highlightColor};
   }
 `;

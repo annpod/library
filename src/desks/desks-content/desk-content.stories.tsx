@@ -1,6 +1,5 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
-// import { Store, State } from '@sambego/storybook-state';
 
 import { DesksContent, IDesksProps } from './desks-content';
 import {
@@ -10,7 +9,7 @@ import {
   deskList,
   selectSearchFilter
 } from '../mocks';
-// import { ISaveDeskData } from './desks.typings';
+
 import { DEFAULT_SORTING, DEFAULT_PAGING } from '../../constants/mocks';
 
 export default {

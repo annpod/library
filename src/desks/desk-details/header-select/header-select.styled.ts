@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import Select from 'antd/lib/select';
-import { theme } from '../../../constants/theme';
 import { Form } from 'antd';
 
 export const HeaderItemBox = styled(Form.Item)`
@@ -20,7 +19,7 @@ export const GreenSelect: new <T>() => Select<T> = styled(Select)`
   border: none !important;
 
   & > .ant-select-selection {
-    background-color: ${theme.statusButtonBg};
+    background-color: ${(props) => props.theme.statusButtonBg};
     border: none;
     height: 36px;
     border-radius: 18px;

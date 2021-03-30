@@ -1,8 +1,9 @@
 import React from 'react';
-import Pagination from 'antd/lib/pagination';
-
-import 'antd/lib/pagination/style/css';
 import styled from 'styled-components';
+
+import Pagination from 'antd/lib/pagination';
+import 'antd/lib/pagination/style/css';
+
 import { IPaginationProps } from './pagination.typings';
 
 export const StyledPagination = (props: IPaginationProps) => {
@@ -21,7 +22,7 @@ const PaginationWrapper = styled(Pagination)`
   display: flex;
   justify-content: flex-end;
   padding-top: 1rem;
-  & .ant-pagination {
+  &.ant-pagination {
     li:hover,
     a:hover,
     svg:hover {
@@ -39,14 +40,13 @@ const PaginationWrapper = styled(Pagination)`
     border-color: ${(props) => props.theme.highlightColor};
     color: ${(props) => props.theme.highlightColor};
   }
-  &
-    .ant-pagination-disabled.ant-pagination-prev:hover
+  & .ant-pagination-disabled.ant-pagination-prev:hover
     .ant-pagination-item-link,
-  .ant-pagination-disabled.ant-pagination-next:hover .ant-pagination-item-link {
+    .ant-pagination-disabled.ant-pagination-next:hover .ant-pagination-item-link {
     border-color: #d9d9d9;
     color: #d9d9d9;
   }
-  &.ant-pagination-jump-prev
+  & .ant-pagination-jump-prev
     .ant-pagination-item-container
     .ant-pagination-item-link-icon,
   .ant-pagination-jump-next
@@ -61,7 +61,9 @@ const PaginationWrapper = styled(Pagination)`
     color: ${(props) => props.theme.highlightColor};
   }
 
-  & .ant-pagination-item-active {
+  & .ant-pagination-item-active,
+  .ant-pagination-item:focus,
+  .ant-pagination-item:active {
     border-color: ${(props) => props.theme.highlightColor};
     & a {
       color: ${(props) => props.theme.highlightColor};

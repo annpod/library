@@ -9,20 +9,25 @@ export interface ISubmitButton {
   onClick: () => void;
 }
 
-export const SubmitButton = (props: ISubmitButton) => (
-  <Submit
-    onClick={props.onClick}
-    loading={props.isLoading}
-    disabled={props.isDisabled}
-  >
-    {props.title ? props.title : 'Search'}
-  </Submit>
-);
+export const SubmitButton = (props: ISubmitButton) => {
+  // tslint:disable-next-line:no-console
+  console.log('props', props);
+
+  return (
+    <Submit
+      onClick={props.onClick}
+      loading={props.isLoading}
+      disabled={props.isDisabled}
+    >
+      {props.title ? props.title : 'Search'}
+    </Submit>
+  );
+};
 
 export const Submit = styled(Button)`
   && {
     margin-top: 20px;
-    background-color: #1EA7FD;
+    background-color: ${(props) => props.theme.bgBackground};
     width: 216px;
     height: 36px;
     font-size: 15px;
@@ -35,7 +40,7 @@ export const Submit = styled(Button)`
       opacity: 0.3;
       color: #fff;
       &:hover {
-        background-color: #1EA7FD;
+        background-color: ${(props) => props.theme.bgBackground};
         color: #fff;
       }
     }

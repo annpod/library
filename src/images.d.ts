@@ -7,7 +7,6 @@ declare module 'rollup-plugin-svg';
 declare module '@rollup/plugin-image';
 declare module 'lodash';
 declare module 'react-router-dom';
-declare module '@rollup__plugin-multi-entry';
 
 declare module 'antd/lib/form/style/css';
 declare module 'antd/lib/input/style/css';

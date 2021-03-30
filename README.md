@@ -17,22 +17,30 @@ It also features:
 
 
 ```bash
-npm install --save git+https://github.com/annpod/library.git // change the path after publishing to npm
+npm install @connectlabs/workplace-web-component-library --save 
 ```
 
 which will install the local component library as a dependency in application. It'll then appear as a dependency in `package.json` like:
 
 ```
 "devDependencies": {
-  "workplace-web-component-library": "git+https://github.com/annpod/library.git" // change the path after publishing to npm
-  ...
+  "@connectlabs/workplace-web-component-library": "^1.0.0",
 }
 ```
 
 Your components can then be imported and used in the project.
 
 ```
-import { MyComponent } from 'workplace-web-component-library'
+import { MyComponent } from '@connectlabs/workplace-web-component-library'
+```
+
+### Development
+
+To work with different versions and branches, you can install, but DON'T COMMIT IT TO THE BITBUCKET
+
+```bash
+git clone https://[your-login]/connectib/workplace-web-component-library.git#[branchName] --save
+
 ```
 
 ### Component Code Splitting
@@ -41,7 +49,7 @@ import { MyComponent } from 'workplace-web-component-library'
 *Code splitting of your components is not supported by default.*
 
 ```
-import MyComponent from 'workplace-web-component-library/build/src/MyComponent';
+import MyComponent from '@connectlabs/workplace-web-component-library/lib/src/MyComponent';
 ```
 
 There are some changes we have to make to rollup.config.js
@@ -52,6 +60,14 @@ input: [..., "src/MyComponent/index.ts"],
 
 
 ## Usage
+
+### Setup
+
+`npm config set @connectlabs:registry "http://packages.connectlabs.local/npm/NPM"`
+
+this tells npm to import @connectlabs scoped packages from our registry rather than the standard public one. Other packages would still come from the standard one.
+
+### Component Usage
 
 ```jsx
 import React, { Component } from 'react'
@@ -162,6 +178,8 @@ Storybook will run and load up components at `http://localhost:6006`
 
 
 To export your Storybook as static files:
+
+https://storybook.js.org/docs/react/workflows/publish-storybook
 
 ```
 npm run storybook:export

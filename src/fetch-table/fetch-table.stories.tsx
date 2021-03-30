@@ -29,19 +29,35 @@ const data: any = [
   {
     building: '251, The Village',
     request: 'First Floor'
+  },
+  {
+    building: '251, The Village',
+    request: 'First Floor'
+  },
+  {
+    building: '251, The Village',
+    request: 'First Floor'
+  },
+  {
+    building: '251, The Village',
+    request: 'First Floor'
+  },
+  {
+    building: '251, The Village',
+    request: 'First Floor'
   }
 ];
 
 export default {
-  title: 'Example/FetchTable',
+  title: 'FetchTable',
   component: FetchTable,
   args: {
     columns: desksColumns,
     data,
-    totalRowCount: 5,
+    totalRowCount: 3,
     paginationParams: {
       pageNumber: 1,
-      pageSize: 20
+      pageSize: 3
     },
     sortParams: {
       sortingQuery: 'asc'

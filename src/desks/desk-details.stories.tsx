@@ -1,14 +1,9 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
-import { Store, State } from '@sambego/storybook-state';
 
 import { DeskDetails } from './desk-details';
 import { deskFilterData, usersData } from './mocks';
 import { ISaveDeskData } from './desks.typings';
-
-const store = new Store({
-  isVisible: false
-});
 
 
 export default {
@@ -48,8 +43,6 @@ export default {
 } as Meta;
 
 export const DeskDetailsPage = (args: any) => (
-  <State store={store}>
-    {(state) => (
       <DeskDetails
         deskKey={args.deskKey}
         onCancel={args.onCancel}
@@ -62,6 +55,4 @@ export const DeskDetailsPage = (args: any) => (
         deskFilterData={args.deskFilterData}
         usersData={args.usersData}
       />
-    )}
-  </State>
 );

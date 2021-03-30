@@ -12,7 +12,7 @@ export const Button = styled.button<IButton>`
   height: 35px;
   min-width: 165px;
   width: auto;
-  font-size: ${theme.headerFontSize};
+  font-size: ${(props) => props.theme.headerFontSize};
   display: flex;
   align-items: center;
   justify-content: center;

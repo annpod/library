@@ -3,7 +3,7 @@ import { FormItemBox } from '../form.styled';
 import { IFormElementProps } from '../form-typings';
 import { SearchInput } from '../../search-input';
 
-export interface IFormAmountProps<F> extends IFormElementProps<F, number> {
+interface IFormAmountProps<F> extends IFormElementProps<F, number> {
   onChange: (name: string, value: string) => void;
   width?: string;
 }

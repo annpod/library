@@ -8,3 +8,4 @@ export * from './form.styled';
 export * from './form-typings';
 export * from './form-autocomplete/form-autocomplete';
 export * from './form-icon-select';
+export * from './form-number-input'; 

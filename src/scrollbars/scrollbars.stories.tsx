@@ -9,7 +9,9 @@ export default {
 } as Meta;
 
 const Template: Story<ICustomScrollbarsProps> = (args) => (
-  <CustomScrollbars {...args} />
+  <div style={{ width: '400px' }}>
+    <CustomScrollbars {...args} />
+  </div>
 );
 
 export const Scrollbars = Template.bind({});
@@ -18,7 +20,7 @@ Scrollbars.args = {
   height: '150px',
   minHeight: '150px',
   children: (
-    <div style={{width: '400px'}}>
+    <div  style={{ paddingRight: '20px' }}>
       Storybook is a tool for UI development. It makes development faster and
       easier by isolating components. This allows you to work on one component
       at a time. You can develop entire UIs without needing to start up a

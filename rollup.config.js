@@ -5,8 +5,8 @@ import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 import json from '@rollup/plugin-json';
 import image from '@rollup/plugin-image';
+
 const packageJson = require('./package.json');
-// import multiInput from 'rollup-plugin-multi-input';
 
 export default [
   {
@@ -15,11 +15,13 @@ export default [
       {
         file: packageJson.main,
         format: 'cjs',
+        exports: 'named',
         sourcemap: true
       },
       {
-        file: 'build/index.es.js',
+        file: 'dist/index.es.js',
         format: 'esm',
+        exports: 'named',
         sourcemap: true
       }
     ],
@@ -35,6 +37,7 @@ export default [
         rollupCommonJSResolveHack: true,
         clean: true,
         exclude: [
+          'node_modules',
           'src/**/*.stories.tsx',
           'src/**/*.test.(tsx|ts)',
           'src/**/*.stories.tsx',
@@ -47,6 +50,7 @@ export default [
   },
   {
     input: [
+      'src/button/index.ts',
       'src/collapse-item/index.ts',
       'src/custom-search-input/index.ts',
       'src/date-picker/index.ts',
@@ -68,16 +72,17 @@ export default [
       'src/time-picker/index.ts',
       'src/time-range-picker/index.ts',
       'src/custom-search-input/index.ts',
+      'src/header/index.ts',
       'src/hooks/index.ts',
       'src/typings/index.ts',
-      'src/constants/strings.ts',
+      'src/constants/strings.ts'      
     ],
     output: [
       {
-        dir: 'build',
+        dir: 'lib',
         format: 'cjs',
         sourcemap: true,
-        exports: "named"
+        exports: 'named'
       }
     ],
     preserveModules: true,
@@ -93,6 +98,7 @@ export default [
         rollupCommonJSResolveHack: true,
         clean: true,
         exclude: [
+          'node_modules',
           'src/**/*.stories.tsx',
           'src/**/*.test.(tsx|ts)',
           'src/**/*.stories.tsx',

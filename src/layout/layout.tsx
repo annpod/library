@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Content, Wrapper } from './layout.style';
+import { Header } from '../header';
 
 export interface IHeaderOption {
   btn: string;
