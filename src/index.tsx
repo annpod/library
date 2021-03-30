@@ -47,7 +47,7 @@ import { useClickOutside, useDebounce, useToggle } from './hooks';
 // theme provider
 
 import { LibThemeProvider } from './theme-provider';
-import { withTheme } from 'styled-components';
+import { LibWithTheme } from './theme-provider';
 
 // styles
 import {
@@ -154,5 +154,5 @@ export {
   CheckedInputStyles,
   Header,
   LibThemeProvider,
-  withTheme
+  LibWithTheme
 };
