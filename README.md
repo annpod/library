@@ -17,34 +17,23 @@ It also features:
 
 
 ```bash
-npm install @connectlabs/workplace-web-component-library --save 
+npm install 
 ```
 
-which will install the local component library as a dependency in application. It'll then appear as a dependency in `package.json` like:
-
-```
-"devDependencies": {
-  "@connectlabs/workplace-web-component-library": "^1.0.0",
-}
-```
-
-Your components can then be imported and used in the project.
-
-```
-import { MyComponent } from '@connectlabs/workplace-web-component-library'
-```
-
-### Development
-
-To work with different versions and branches, you can install, but DON'T COMMIT IT TO THE BITBUCKET
+### Testing
 
 ```bash
-git clone https://[your-login]/connectib/workplace-web-component-library.git#[branchName] --save
-
+npm run test
 ```
 
-### Component Code Splitting
+### Building
 
+```bash
+npm run build
+```
+
+
+### Component Code Splitting
 
 *Code splitting of your components is not supported by default.*
 
@@ -58,54 +47,6 @@ There are some changes we have to make to rollup.config.js
 input: [..., "src/MyComponent/index.ts"],
 ```
 
-
-## Usage
-
-### Setup
-
-`npm config set @connectlabs:registry "http://packages.connectlabs.local/npm/NPM"`
-
-this tells npm to import @connectlabs scoped packages from our registry rather than the standard public one. Other packages would still come from the standard one.
-
-### Component Usage
-
-```jsx
-import React, { Component } from 'react'
-
-import { MyComponent } from 'workplace-web-component-library'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
-```
-
-
-### Supporting Image Imports
-
-Rollup plugin which imports JPG, PNG, GIF, SVG, and WebP files 
-- [@rollup/plugin-image](https://github.com/rollup/plugins/tree/master/packages/image):
-
-Import and render images in your components like:
-
-```tsx
-import logo from "./logo.png";
-
-export const ImageComponent = () => (
-  <div>
-    <img src={logo} />
-  </div>
-);
-```
-OR
-You can then import and render images in your components like:
-
-```tsx
-import logo from "./logo.png";
-
-export const ImageComponent = () => <div>{logo}</div>;
-```
 
 ## Development
 
@@ -132,6 +73,32 @@ export {
 
 ```
 
+### Supporting Image Imports
+
+Rollup plugin which imports JPG, PNG, GIF, SVG, and WebP files 
+- [@rollup/plugin-image](https://github.com/rollup/plugins/tree/master/packages/image):
+
+Import and render images in your components like:
+
+```tsx
+import logo from "./logo.png";
+
+export const ImageComponent = () => (
+  <div>
+    <img src={logo} />
+  </div>
+);
+```
+OR
+
+You can then import and render images in your components like:
+
+```tsx
+import logo from "./logo.png";
+
+export const ImageComponent = () => <div>{logo}</div>;
+```
+
 ### Story
 
 Create a stories for `MyComponent`. Open `src/MyComponent/MyComponent.stories.tsx` and place
@@ -154,18 +121,6 @@ Primary.args = {
 };
 ```
 
-### Testing
-
-```
-npm run test
-```
-
-### Building
-
-```
-npm run build
-```
-
 ### Storybook
 
 To run a live-reload `Storybook` server on your local machine:
@@ -184,3 +139,62 @@ https://storybook.js.org/docs/react/workflows/publish-storybook
 ```
 npm run storybook:export
 ```
+
+## Usage
+
+### Setup
+
+`npm config set @connectlabs:registry "http://packages.connectlabs.local/npm/NPM"`
+
+this tells npm to import @connectlabs scoped packages from our registry rather than the standard public one. Other packages would still come from the standard one.
+
+### Install 
+
+```bash
+npm install @connectlabs/workplace-web-component-library --save 
+```
+
+which will install the local component library as a dependency in application. It'll then appear as a dependency in `package.json` like:
+
+```
+"devDependencies": {
+  "@connectlabs/workplace-web-component-library": "^1.0.0",
+}
+```
+
+Your components can then be imported and used in the project.
+
+```
+import { MyComponent } from '@connectlabs/workplace-web-component-library'
+```
+
+OR
+
+```
+import MyComponent from '@connectlabs/workplace-web-component-library/lib/src/
+```
+
+### Component Usage
+
+```jsx
+import React, { Component } from 'react'
+
+import { MyComponent } from '@connectlabs/workplace-web-component-library'
+
+class Example extends Component {
+  render() {
+    return <MyComponent />
+  }
+}
+```
+
+### Development
+
+To work with different versions and branches, you can install the library from the Bitbucket, but DON'T COMMIT IT
+
+```bash
+git install https://[your-login]/connectib/workplace-web-component-library.git#[branchName] --save
+
+```
+
+### Theme Provider

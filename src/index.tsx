@@ -46,7 +46,7 @@ import { useClickOutside, useDebounce, useToggle } from './hooks';
 
 // provider
 
-import { ThemeProvider } from './theme-provider';
+import { LibThemeProvider } from './theme-provider';
 // styles
 import {
   ResourcesInputNumbers,
@@ -151,5 +151,5 @@ export {
   MainTitleRegion,
   CheckedInputStyles,
   Header,
-  ThemeProvider
+  LibThemeProvider
 };
