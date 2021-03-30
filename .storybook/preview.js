@@ -3,12 +3,12 @@ import { withThemesProvider } from 'storybook-addon-styled-component-theme';
 import { ThemeProvider } from 'styled-components';
 import {
   theme,
-  DEFAULT_THEME_NAME,
+  DEFAULT_THEME,
   SCB_THEME,
   BT_THEME
 } from '../src/constants/theme';
 
-const themes = [theme[DEFAULT_THEME_NAME], theme[SCB_THEME], theme[BT_THEME]];
+const themes = [theme[DEFAULT_THEME], theme[SCB_THEME], theme[BT_THEME]];
 addDecorator(withThemesProvider(themes), ThemeProvider);
 
 export const parameters = {
