@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { theme as themes } from '../constants/theme';
+import { theme as themes } from '../themes/theme';
 
 export const LibThemeProvider = (props: any) => {
   const theme = { ...themes[props.themeName], ...props.theme };

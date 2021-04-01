@@ -10,9 +10,6 @@ export interface ISubmitButton {
 }
 
 export const SubmitButton = (props: ISubmitButton) => {
-  // tslint:disable-next-line:no-console
-  console.log('props', props);
-
   return (
     <Submit
       onClick={props.onClick}

@@ -2,18 +2,24 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { LibThemeProvider } from './theme-provider';
-import { theme as themes, DEFAULT_THEME } from '../constants/theme';
-import { SubmitButton } from '../button';
+import { theme as themes, DEFAULT_THEME } from '../themes/theme';
 
 export default {
-  title: 'App/ThemeProvider',
-  component: LibThemeProvider
+  title: 'Themes/ThemeProvider',
+  component: LibThemeProvider,
+  parameters: {
+    docs: {
+      source: {
+        code: `<LibThemeProvider theme={themeProps} themeName={themeName} >        
+          Content
+        </LibThemeProvider>`
+      }
+    }
+  }
 } as Meta;
 
 const Template: Story<any> = (args) => (
-  <LibThemeProvider {...args}>
-    <SubmitButton isDisabled={false} isLoading={false} onClick={() => {}} />
-  </LibThemeProvider>
+  <LibThemeProvider {...args}>Content</LibThemeProvider>
 );
 
 export const Primary = Template.bind({});

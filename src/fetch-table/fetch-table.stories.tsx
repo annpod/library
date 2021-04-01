@@ -49,7 +49,7 @@ const data: any = [
 ];
 
 export default {
-  title: 'FetchTable',
+  title: 'Shared/FetchTable',
   component: FetchTable,
   args: {
     columns: desksColumns,

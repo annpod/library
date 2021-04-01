@@ -6,7 +6,7 @@ import {
   DEFAULT_THEME,
   SCB_THEME,
   BT_THEME
-} from '../src/constants/theme';
+} from '../src/themes';
 
 const themes = [theme[DEFAULT_THEME], theme[SCB_THEME], theme[BT_THEME]];
 addDecorator(withThemesProvider(themes), ThemeProvider);

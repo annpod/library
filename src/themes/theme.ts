@@ -12,8 +12,8 @@ import {
   LIGHT_BLUE_COLOR,
   RED_COLOR,
   INDIGO_COLOR,
-} from './colors';
-import { commonTheme, toast } from './common';
+} from '../constants/colors';
+import { commonTheme, toast } from '../constants/common';
 
 export const DEFAULT_THEME = 'DEFAULT';
 export const SCB_THEME = 'SCB';

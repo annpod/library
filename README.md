@@ -25,6 +25,7 @@ npm install
 ```bash
 npm run test
 ```
+There is no any test :(
 
 ### Building
 
@@ -50,7 +51,7 @@ input: [..., "src/MyComponent/index.ts"],
 
 ## Development
 
-Create a component
+### Create a component
 
 ```jsx
 import React from 'react'
@@ -71,6 +72,28 @@ export {
   MyComponent
 }
 
+```
+
+### Create Story
+
+Create a stories for `MyComponent`. Create file `src/MyComponent/MyComponent.stories.tsx` and place
+
+```jsx
+import React from "react";
+import MyComponent from './MyComponent';
+
+export default {
+  title: 'Components/MyComponent',
+  component: MyComponent
+} as Meta;
+
+const Template: Story = (args) => <MyComponent {...args} />;
+
+export const Primary = Template.bind({});
+
+Primary.args = {  
+  title: 'Hello World'
+};
 ```
 
 ### Supporting Image Imports
@@ -99,29 +122,7 @@ import logo from "./logo.png";
 export const ImageComponent = () => <div>{logo}</div>;
 ```
 
-### Story
-
-Create a stories for `MyComponent`. Open `src/MyComponent/MyComponent.stories.tsx` and place
-
-```jsx
-import React from "react";
-import MyComponent from './MyComponent';
-
-export default {
-  title: 'Components/MyComponent',
-  component: MyComponent
-} as Meta;
-
-const Template: Story = (args) => <MyComponent {...args} />;
-
-export const Primary = Template.bind({});
-
-Primary.args = {  
-  title: 'Hello World'
-};
-```
-
-### Storybook
+## Storybook
 
 To run a live-reload `Storybook` server on your local machine:
 
@@ -198,3 +199,45 @@ git install https://[your-login]/connectib/workplace-web-component-library.git#[
 ```
 
 ### Theme Provider
+
+#### Theme Provider
+
+Benefit of exporting a custom Theme Provider is that you can set the default theme of your library and avoid tons of "does this property exist" check
+
+Import `LibThemeProvider` component to your App and pass `Theme Props` and `Theme Name` properties
+
+```
+import { LibThemeProvider } from '@connectlabs/workplace-web-component-library';
+
+export const App = () => {
+  return (
+    <Provider store={store}>
+      <LibThemeProvider theme={themeProps} themeName={themeName} >        
+          Content        
+      </LibThemeProvider>
+    </Provider>
+  );
+};
+
+```
+To override a property from the library, override it in the themeProps.
+
+
+#### With Theme Component
+
+If you ever need to use the current theme outside styled components (e.g. inside big components), you can use the withTheme higher order component.
+
+Import `LibWithTheme` component
+
+```
+import { LibWithTheme } from '@connectlabs/workplace-web-component-library';
+
+class MyComponent extends React.Component {
+  render() {
+    console.log('Current theme: ', this.props.theme);
+    // ...
+  }
+}
+
+export default LibWithTheme(MyComponent);
+```
