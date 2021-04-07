@@ -1,14 +1,14 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
-import { ModalPopup, IModalPopup } from './modal';
+import { Modal, IModal } from './modal';
 
 export default {
-  title: 'Modal/ModalPopup',
-  component: ModalPopup,
+  title: 'Modal',
+  component: Modal,
   args: {
     visible: true,
-    children: `<div>Modal Content</div>`,
+    children: `Modal Content`,
     headerTitle: 'Modal Header'
   },
   argTypes: {
@@ -51,8 +51,11 @@ export default {
   },
   parameters: {
     docs: {
+      description: {
+        component: 'Based on https://ant.design/components/modal/',
+      },
       source: {
-        code: `<ModalPopup
+        code: `<Modal
                   visible={false}
                   children={<div>Modal Content</div>}
                   headerTitle={'Modal Header'}
@@ -66,12 +69,12 @@ export default {
                   }}
                 />`
       }
-    }
+    },   
   }
 } as Meta;
 
-export const Modal = (args: IModalPopup) => (
-  <ModalPopup
+export const Primary = (args: IModal) => (
+  <Modal
     {...args}
     visible={args.visible}
     confirmButton={{

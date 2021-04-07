@@ -2,31 +2,33 @@ import React, { forwardRef, useImperativeHandle } from 'react';
 import Form from 'antd/lib/form/Form';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { FormCheck } from './form-check';
+import { StatusSelect, IStatusSelect } from './status-select';
 
 const args = {
-  id: 'id1',
-  initialValues: ['1'],
-  options: [{ value: '1', label: 'string' }]
+  initialValue: 'Active',
+  id: '1',
+  label: '',
+  isNewDesk: true,
+  rules: [
+    {
+      required: true,
+      message: 'error'
+    }
+  ],
+  disabled: false,
+  placeholder: '',
+  onChangeStatus: () => {}
 };
 
 export default {
-  title: 'Form/FormCheck',
-  component: FormCheck,
+  title: 'Form/StatusSelect',
+  component: StatusSelect,
   args,
   parameters: {
     docs: {
       description: {
-        component: 'Based on https://ant.design/components/checkbox/',
+        component: 'Based on https://ant.design/components/select/',
       },
-      source: {
-        code: `<FormCheck 
-                form={form}
-                id='id1',
-                initialValues=['1'],
-                options=[{ value: '1', label: 'string' }],
-         />`
-      }
     }
   }
 } as Meta;
@@ -47,7 +49,9 @@ const TestForm = forwardRef<any, any>(({ form, onSubmit }: any, ref) => {
       labelCol={{ span: 6 }}
       wrapperCol={{ span: 12 }}
     >
-      <FormCheck {...args} form={form} />
+      <div style={{width: '120px'}}>
+      <StatusSelect {...args} form={form} />
+      </div>
     </Form>
   );
 });

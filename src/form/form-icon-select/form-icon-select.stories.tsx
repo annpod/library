@@ -35,6 +35,9 @@ export default {
   args,
   parameters: {
     docs: {
+      description: {
+        component: 'Based on https://ant.design/components/select/',
+      },
       source: {
         code: `<FormIconSelect 
                 form={this.props.form}

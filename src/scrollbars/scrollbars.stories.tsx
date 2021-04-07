@@ -4,8 +4,15 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { CustomScrollbars, ICustomScrollbarsProps } from './scrollbars';
 
 export default {
-  title: 'Shared/Scrollbars',
-  component: CustomScrollbars
+  title: 'Scrollbars',
+  component: CustomScrollbars,
+  parameters: {    
+    docs: {
+      description: {
+        component: 'Based on https://www.npmjs.com/package/react-custom-scrollbars',
+      },
+    },
+  }
 } as Meta;
 
 const Template: Story<ICustomScrollbarsProps> = (args) => (
@@ -14,9 +21,9 @@ const Template: Story<ICustomScrollbarsProps> = (args) => (
   </div>
 );
 
-export const Scrollbars = Template.bind({});
+export const Primary = Template.bind({});
 
-Scrollbars.args = {
+Primary.args = {
   height: '150px',
   minHeight: '150px',
   children: (

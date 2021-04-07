@@ -1,12 +1,8 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-// import { theme as themes } from '../themes/theme';
+import styled from 'styled-components';
 import { LibWithTheme } from '../theme-provider';
 
 const Theme = (props: any) => {
-  // tslint:disable-next-line:no-console
-  console.log('theme', props.theme);
-
   return (
     <div>
       <h2>Theme styles</h2>

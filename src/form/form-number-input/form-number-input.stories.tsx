@@ -15,11 +15,7 @@ const args = {
   rules: [
     {
       required: true,
-      message: 'Please enter a Site name'
-    },
-    {
-      pattern: /^(\S.{1,46}\S)$/g,
-      message: 'Please enter 3 or more characters'
+      message: 'Please enter capacity'
     }
   ]
 };
@@ -31,22 +27,23 @@ export default {
   parameters: {
     docs: {
       source: {
+        type: 'code',
         code: `<FormNumberInput
-                onChange={setSearchParameter}
-                form={this.props.form}
-                width={'90px'}
-                label={detailsScreen.capacity.label}
-                id="capacity"
-                initialValue={room.details.capacity}
-                validateTrigger="onBlur"
-                disabled={isFacilityManagerOnly}
-                rules={[
-                  {
-                    required: true,
-                    message: detailsScreen.capacity.error,
-                  },
-                ]}
-              />`
+        onChange={setSearchParameter}
+        form={this.props.form}
+        width={'90px'}
+        label={detailsScreen.capacity.label}
+        id="capacity"
+        initialValue={room.details.capacity}
+        validateTrigger="onBlur"
+        disabled={isFacilityManagerOnly}
+        rules={[
+          {
+            required: true,
+            message: detailsScreen.capacity.error,
+          },
+        ]}
+      />`
       }
     }
   }

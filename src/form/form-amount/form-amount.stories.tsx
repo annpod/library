@@ -18,6 +18,9 @@ export default {
   args,
   parameters: {
     docs: {
+      description: {
+        component: 'Based on https://ant.design/components/input-number',
+      },
       source: {
         code: `<FormAmount 
                 form={form}

@@ -1,9 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { Select } from '../select';
 import { TimePicker, ITimePickerProps } from './time-picker';
-import { createTimeOptions } from './time-picker.utils';
-import { ISelectOption } from '../typings/etc';
 
 export default {
   title: 'Form/TimePicker',
@@ -11,32 +8,21 @@ export default {
   parameters: {
     docs: {
       source: {
-        code: `<TimePicker>
-        <Select
-          value={options.find((x: ISelectOption) => x.value === args.value)}
-          options={options}
-          onChange={onChange}
-          placeholder={args.placeholder}
-          width={width}
-        />
-      </TimePicker>`
+        type: 'code',
+        code: ` <TimePicker
+                  value={startTime}
+                  range={rangeStart}
+                  onChange={onStartChange}
+                  width={props.width}
+                />`
       }
     }
   }
 } as Meta;
 
 const Template: Story<ITimePickerProps> = (args) => {
-  const options = createTimeOptions(args.range);
   return (
-    <TimePicker {...args}>
-      <Select
-        value={options.find((x: ISelectOption) => x.value === args.value)}
-        options={options}
-        onChange={args.onChange}
-        placeholder={args.placeholder}
-        width={args.width}
-      />
-    </TimePicker>
+    <TimePicker {...args} />     
   );
 };
 

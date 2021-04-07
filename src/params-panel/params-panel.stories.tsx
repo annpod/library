@@ -4,16 +4,16 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { ParamsPanel, IParamsPanelProps } from '../params-panel';
 
 export default {
-  title: 'Shared/ParamsPanel',
+  title: 'ParamsPanel',
   component: ParamsPanel
 } as Meta;
 
 const Template: Story<IParamsPanelProps> = (args: any) => (
   <ParamsPanel {...args} />
 );
-export const Panel = Template.bind({});
+export const Primary = Template.bind({});
 
-Panel.args = {
+Primary.args = {
   title: 'Title',
   // children: `<div>Content</div>`
 };

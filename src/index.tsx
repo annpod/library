@@ -27,7 +27,7 @@ import {
 } from './location-filter';
 import { FetchTable, IFetchTableProps } from './fetch-table';
 import { StyledPagination, IPaginationProps } from './pagination';
-import { ModalPopup, IModalPopup } from './modal';
+import { Modal, IModal } from './modal';
 import { CustomScrollbars } from './scrollbars';
 import { IconButton } from './icon-button';
 import { CustomSearchInput } from './custom-search-input';
@@ -107,8 +107,8 @@ export {
   IFetchTableProps,
   StyledPagination,
   IPaginationProps,
-  ModalPopup,
-  IModalPopup,
+  Modal,
+  IModal,
   ParamsPanel,
   TimePicker,
   TimeRangePicker,

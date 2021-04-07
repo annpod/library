@@ -11,10 +11,7 @@ It also features:
 - [Jest](https://jestjs.io/) and [React Testing Library](https://github.com/testing-library/react-testing-library) enabling testing of the components
 
 
-## Install
-
-### Installing Component Library Locally
-
+## Installation
 
 ```bash
 npm install 
@@ -194,13 +191,17 @@ class Example extends Component {
 To work with different versions and branches, you can install the library from the Bitbucket, but DON'T COMMIT IT
 
 ```bash
-git install https://[your-login]/connectib/workplace-web-component-library.git#[branchName] --save
+git install git://<github username>/connectib/workplace-web-component-library.git#<release version | branch> --save
 
 ```
+OR add dependency to the package.json as
 
+```
+"dependencies": {
+  "@connectib/workplace-web-component-library": "git+ssh://git@github.com/<github username>/<repository name>.git#<release version | branch>"
+}
+```
 ### Theme Provider
-
-#### Theme Provider
 
 Benefit of exporting a custom Theme Provider is that you can set the default theme of your library and avoid tons of "does this property exist" check
 

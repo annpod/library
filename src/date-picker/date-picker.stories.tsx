@@ -7,7 +7,14 @@ import { Datepicker, IDatePickerProps } from './date-picker';
 
 export default {
   title: 'Form/Datepicker',
-  component: Datepicker
+  component: Datepicker,
+  parameters: {    
+    docs: {
+      description: {
+        component: 'Based on https://ant.design/components/date-picker/',
+      },
+    }
+  },
 } as Meta;
 
 const Template: Story<IDatePickerProps> = (args) => <Datepicker {...args} />;

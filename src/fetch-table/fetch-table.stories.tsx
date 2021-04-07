@@ -49,7 +49,7 @@ const data: any = [
 ];
 
 export default {
-  title: 'Shared/FetchTable',
+  title: 'FetchTable',
   component: FetchTable,
   args: {
     columns: desksColumns,
@@ -66,6 +66,9 @@ export default {
   },
   parameters: {
     docs: {
+      description: {
+        component: 'Based on https://ant.design/components/table/',
+      },
       source: {
         code: `<FetchTable
        onRow={onRow}

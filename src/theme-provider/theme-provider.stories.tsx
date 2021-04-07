@@ -9,6 +9,9 @@ export default {
   component: LibThemeProvider,
   parameters: {
     docs: {
+      description: {
+        component: 'Based on https://styled-components.com/docs/advanced#theming',
+      },
       source: {
         code: `<LibThemeProvider theme={themeProps} themeName={themeName} >        
           Content

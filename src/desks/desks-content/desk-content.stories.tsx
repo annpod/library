@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
-import { DesksContent, IDesksProps } from './desks-content';
+import { DesksContent as DesksContentC, IDesksProps } from './desks-content';
 import {
   filterLocation,
   filterData,
@@ -11,6 +11,34 @@ import {
 } from '../mocks';
 
 import { DEFAULT_SORTING, DEFAULT_PAGING } from '../../constants/mocks';
+
+export const DesksContent = (args: IDesksProps) => (
+  <div style={{ height: '90vh' }}>
+    <DesksContentC
+      isLoading={args.isLoading}
+      isReset={args.isReset}
+      setIsReset={args.setIsReset}
+      onChangeNeighbourhood={args.onChangeNeighbourhood}
+      selectSearchFilter={args.selectSearchFilter}
+      fetchDesks={args.fetchDesks}
+      isImplementation={args.isImplementation}
+      onEditDeskStatus={args.onEditDeskStatus}
+      filterLocation={args.filterLocation}
+      searchName={args.searchName}
+      setSelectSearchParameter={args.setSelectSearchParameter}
+      resetSearchParameters={args.resetSearchParameters}
+      updateFilterLocation={args.updateFilterLocation}
+      filterData={args.filterData}
+      neighbourhood={args.neighbourhood}
+      onChangeDeskName={args.onChangeDeskName}
+      onAddDeskStatus={args.onAddDeskStatus}
+      deskList={args.deskList}
+      totalDesksCount={args.totalDesksCount}
+      sortParams={args.sortParams}
+      paginationParams={args.paginationParams}
+    />
+  </div>
+);
 
 export default {
   title: 'Desks/DesksContent',
@@ -70,31 +98,3 @@ export default {
     }
   }
 } as Meta;
-
-export const DeskDetailsPage = (args: IDesksProps) => (
-  <div style={{ height: '90vh' }}>
-    <DesksContent
-      isLoading={args.isLoading}
-      isReset={args.isReset}
-      setIsReset={args.setIsReset}
-      onChangeNeighbourhood={args.onChangeNeighbourhood}
-      selectSearchFilter={args.selectSearchFilter}
-      fetchDesks={args.fetchDesks}
-      isImplementation={args.isImplementation}
-      onEditDeskStatus={args.onEditDeskStatus}
-      filterLocation={args.filterLocation}
-      searchName={args.searchName}
-      setSelectSearchParameter={args.setSelectSearchParameter}
-      resetSearchParameters={args.resetSearchParameters}
-      updateFilterLocation={args.updateFilterLocation}
-      filterData={args.filterData}
-      neighbourhood={args.neighbourhood}
-      onChangeDeskName={args.onChangeDeskName}
-      onAddDeskStatus={args.onAddDeskStatus}
-      deskList={args.deskList}
-      totalDesksCount={args.totalDesksCount}
-      sortParams={args.sortParams}
-      paginationParams={args.paginationParams}
-    />
-  </div>
-);

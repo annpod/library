@@ -1,9 +1,28 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
-import { DeskDetails } from './desk-details';
+import { DeskDetails as DeskDetailsC } from './desk-details';
 import { deskFilterData, deskData, usersData } from '../mocks';
 import { ISaveDeskData } from '../desks.typings';
+
+
+
+export const DeskDetails = (args: any) => (
+  <DeskDetailsC
+    deskData={args.deskDetails}
+    deskFilterData={args.deskFilterData}
+    usersData={args.usersData}
+    deskKey={args.deskKey}
+    onCancel={args.onCancel}
+    onSave={args.onSave}
+    onDelete={args.onDelete}
+    deskDetailsRouteHandler={args.deskDetailsRouteHandler}
+    // desk={args.desk}
+    // options={args.options}
+    isImplementation={args.isImplementation}
+    fetchUsers={args.fetchUsers}
+  />
+);
 
 export default {
   title: 'Desks/DeskDetails',
@@ -45,19 +64,3 @@ export default {
   }
 } as Meta;
 
-export const DeskDetailsPage = (args: any) => (
-  <DeskDetails
-    deskData={args.deskDetails}
-    deskFilterData={args.deskFilterData}
-    usersData={args.usersData}
-    deskKey={args.deskKey}
-    onCancel={args.onCancel}
-    onSave={args.onSave}
-    onDelete={args.onDelete}
-    deskDetailsRouteHandler={args.deskDetailsRouteHandler}
-    // desk={args.desk}
-    // options={args.options}
-    isImplementation={args.isImplementation}
-    fetchUsers={args.fetchUsers}
-  />
-);

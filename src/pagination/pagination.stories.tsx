@@ -3,20 +3,17 @@ import React from 'react';
 import { StyledPagination } from './pagination';
 import { IPaginationProps } from './pagination.typings';
 
-
-
-export const Pagination = (args: IPaginationProps) => (
-
-      <StyledPagination
-        {...args}
-        current={args.current}
-        setCurrentPage={() => {}}
-      />
+export const Primary = (args: IPaginationProps) => (
+  <StyledPagination
+    {...args}
+    current={args.current}
+    setCurrentPage={() => {}}
+  />
 );
 
 export default {
-  title: 'Shared/Pagination',
-  component: Pagination,
+  title: 'Pagination',
+  component: StyledPagination,
   args: {
     defaultPageSize: 10,
     total: 100,
@@ -32,6 +29,9 @@ export default {
   },
   parameters: {
     docs: {
+      description: {
+        component: 'Based on https://ant.design/components/pagination/'
+      },
       source: {
         code: `<StyledPagination
         current={current}

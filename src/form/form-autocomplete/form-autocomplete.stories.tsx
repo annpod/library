@@ -20,6 +20,9 @@ export default {
   args,
   parameters: {
     docs: {
+      description: {
+        component: 'Based on https://ant.design/components/auto-complete/',
+      },
       source: {
         code: `<FormAutoComplete
                 form={this.props.form}

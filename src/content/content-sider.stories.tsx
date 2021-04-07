@@ -4,11 +4,19 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { ContentSider } from './content-sider';
 
 export default {
-  title: 'Layout/Sider',
-  component: ContentSider
+  title: 'Layout/ContentSider',
+  component: ContentSider,
+  parameters: {
+    docs: {
+      source: {
+        type: 'code',
+        code: `<ContentSider>Content</ContentSider>`
+      }
+    }
+  }
 } as Meta;
 
-const Template: Story<any> = () => <ContentSider >Content</ContentSider>;
+const Template: Story<any> = () => <ContentSider>Content</ContentSider>;
 
-export const Sider = Template.bind({});
+export const Primary = Template.bind({});
 

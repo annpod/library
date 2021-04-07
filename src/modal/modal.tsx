@@ -1,18 +1,18 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
 
-import Modal from 'antd/lib/modal';
+import { Modal as ModalAntd }from 'antd';
 import { ModalHeader } from './modal-header';
 import { IModalHeader } from './modal.typings';
 import 'antd/lib/modal/style/css';
 
-export interface IModalPopup extends IModalHeader {
+export interface IModal extends IModalHeader {
   visible: boolean;
   children: string | React.ReactElement;
   afterClose?: () => void;
 }
 
-const ModalC = ({ visible, children, afterClose, ...props }: IModalPopup) => (
+const ModalC = ({ visible, children, afterClose, ...props }: IModal) => (
   <ModalDialog
     title={<ModalHeader {...props} />}
     closable={false}
@@ -26,9 +26,9 @@ const ModalC = ({ visible, children, afterClose, ...props }: IModalPopup) => (
   </ModalDialog>
 );
 
-export const ModalPopup: any = withTheme(ModalC);
+export const Modal: any = withTheme(ModalC);
 
-const ModalDialog = styled(Modal)`
+const ModalDialog = styled(ModalAntd)`
   max-width: 990px;
   .ant-modal-header {
     padding-top: 20px;

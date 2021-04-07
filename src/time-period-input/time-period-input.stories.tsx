@@ -10,6 +10,9 @@ export default {
   parameters: {
     docs: {
       source: {
+        description: {
+          component: 'Based on https://ant.design/components/select/',
+        },
         code: `<TimePeriodInput
         someProps={
           props.initialValue
