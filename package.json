@@ -16,8 +16,7 @@
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
     "prettier": "prettier --config ./.prettierrc --write  \"./lib/**/*.{ts,tsx}\"",
-    "lint": "eslint",
-    "postbuild": "tsc --emitDeclarationOnly"
+    "lint": "eslint"
   },
   "peerDependencies": {
     "react": "^16.0.0",
@@ -76,6 +75,7 @@
     "react-scripts": "^4.0.3",
     "react-select": "^2.4.3",
     "rollup": "^2.39.0",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-dts": "^3.0.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",

@@ -5,7 +5,7 @@ import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 import json from '@rollup/plugin-json';
 import image from '@rollup/plugin-image';
-// import dts from 'rollup-plugin-dts';
+import copy from 'rollup-plugin-copy'
 
 const packageJson = require('./package.json');
 
@@ -32,6 +32,10 @@ export default [
       }
     ],
     plugins: [
+      copy({
+        targets: [{ src: 'src/index.d.ts', dest: 'dist/' }],
+        copyOnce: true
+      }),
       image(),
       peerDepsExternal({
         includeDependencies: true
