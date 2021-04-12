@@ -6,7 +6,6 @@
   "files": [
     "lib"
   ],
-  "typings": "dist/index",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
