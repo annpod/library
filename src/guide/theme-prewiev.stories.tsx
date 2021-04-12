@@ -6,6 +6,6 @@ import { Themes as ThemesC } from './theme-prewiev';
 export const Themes = () => <ThemesC />;
 
 export default {
-  title: 'Guideline/Themes',
+  title: 'Guide/Themes',
   component: Themes
 } as Meta;

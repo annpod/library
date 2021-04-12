@@ -5,11 +5,6 @@ import { theme as themes } from '../themes';
 
 export const LibThemeProvider = (props: any) => {
   const theme = { ...themes[props.themeName], ...props.theme };
-// tslint:disable-next-line:no-console
-console.log('theme', theme);
-// tslint:disable-next-line:no-console
-console.log('props.themeName', props.themeName);
-
 
   return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
 };

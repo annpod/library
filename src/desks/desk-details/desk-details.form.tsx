@@ -22,7 +22,7 @@ import {
   CancelIcon,
   SaveBtn,
   CheckedInputStyles,
-} from '../../styles/resources.styled';
+} from '../../styled-components/resources.styled';
 import { ISaveDeskData } from '../desks.typings';
 
 export interface IDeskDetailsFormBodyProps extends FormComponentProps {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
+import styled from 'styled-components';
 
 import {
   UsersIcon,
@@ -13,43 +14,68 @@ import {
   MeetingsIcon
 } from './route-selector.icons';
 
-export const Template = (args: any) => {
+export const Icons = (args: any) => {
   return (
     <>
-      <UsersIcon /> <span> UsersIcon </span>
-      <br />
-      <EstateIcon />
-      <br />
-
-      <ResourcesIcon />
-      <br />
-      <ReportingIcon />
-      <br />
-      <SettingsIcon />
-      <br />
-      <BookingsIcon />
-      <br />
-      <CovidIcon />
-      <br />
-      <UploadIcon />
-      <br />
-      <MeetingsIcon />
-      <br />
-
+      <ExampleIcon>
+        <UsersIcon />
+        <Code> {'<UsersIcon />'} </Code>
+      </ExampleIcon>
+      <ExampleIcon>
+        <EstateIcon />
+        <Code> {'<EstateIcon />'} </Code>
+      </ExampleIcon>
+      <ExampleIcon>
+        <ResourcesIcon />
+        <Code> {'<ResourcesIcon />'} </Code>
+      </ExampleIcon>
+      <ExampleIcon>
+        <ReportingIcon />
+        <Code> {'<ReportingIcon />'} </Code>
+      </ExampleIcon>
+      <ExampleIcon>
+        <SettingsIcon />
+        <Code> {'<SettingsIcon />'} </Code>
+      </ExampleIcon>
+      <ExampleIcon>
+        <BookingsIcon />
+        <Code> {'<BookingsIcon />'} </Code>
+      </ExampleIcon>
+      <ExampleIcon>
+        <CovidIcon />
+        <Code> {'<CovidIcon />'} </Code>
+      </ExampleIcon>
+      <ExampleIcon>
+        <UploadIcon />
+        <Code> {'<UploadIcon />'} </Code>
+      </ExampleIcon>
+      <ExampleIcon>
+        <MeetingsIcon />
+        <Code> {'<MeetingsIcon />'} </Code>
+      </ExampleIcon>
     </>
   );
 };
 
-export const Users = Template.bind({});
+const Users = Icons.bind({});
 
 export default {
   title: 'ResourcesIcons',
-  component: Template
+  component: Icons,
+  parameters: {
+    docs: {
+      source: {
+        code: ` `
+      }
+    }
+  }
 } as Meta;
 
-// const Template: Story<any> = (args) => { return  <UsersIcon />};
-// export const Users = Template.bind({});
+const Code = styled.span`
+  display: inline-block;
+  padding-left: 40px;
+`;
 
-// const Template2: Story<any> = (args) => { return  <EstateIcon />};
-
-// export const Estate = Template2.bind({});
+const ExampleIcon = styled.div`
+  padding: 30px;
+`;

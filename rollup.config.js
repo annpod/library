@@ -5,6 +5,7 @@ import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 import json from '@rollup/plugin-json';
 import image from '@rollup/plugin-image';
+import dts from 'rollup-plugin-dts';
 
 const packageJson = require('./package.json');
 
@@ -41,12 +42,19 @@ export default [
           'src/**/*.stories.tsx',
           'src/**/*.test.(tsx|ts)',
           'src/**/*.stories.tsx',
-          'src/**/*.svg'
+          'src/**/*.svg',
+          'src/*.d.ts',
+          'src/typings.index.d.ts'
         ]
       }),
       commonjs(),
       json()
     ]
+  },
+  {
+    input: ['src/index.d.ts'],
+    output: [{ file: 'dist/index.d.ts', format: 'es' }],    
+    plugins: [dts()]
   },
   {
     input: [
@@ -75,7 +83,7 @@ export default [
       'src/header/index.ts',
       'src/hooks/index.ts',
       'src/typings/index.ts',
-      'src/constants/strings.ts'      
+      'src/constants/strings.ts'
     ],
     output: [
       {

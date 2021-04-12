@@ -5,12 +5,14 @@ import {
   TimePeriodInput,
 } from '../../time-period-input';
 import { FormItemBox } from '../form.styled';
+
 export interface ITimePeriodData {
   Days: string[];
   Hours: string[];
   Minutes: string[];
   [index: string]: any;
 }
+
 export interface IFormTimePeriodProps<F>
   extends IFormElementProps<F, ITimePeriod> {
   timePeriodData: ITimePeriodData;

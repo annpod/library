@@ -35,3 +35,5 @@ export interface IFormCheckProps<F> extends IFormElementProps<F, string> {
 export interface IFormTextProps<F> extends IFormElementProps<F, string> {
   rows: number;
 }
+
+export interface IFormCheckboxProps<F> extends IFormElementProps<F, boolean> {}

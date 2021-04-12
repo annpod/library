@@ -30,7 +30,7 @@ import {
   ListPageSearchBox,
   ListPageSearchLabel,
   ListPageSearchInputBox
-} from '../../styles/resources.styled';
+} from '../../styled-components/resources.styled';
 
 import { SEARCH_PARAMETER_NAME } from '../../constants/resources.constants';
 

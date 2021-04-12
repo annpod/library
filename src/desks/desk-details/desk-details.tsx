@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 // import { IDictionaryOption } from '../../../typings/etc';
-import { MainBox } from '../../styles/resources.styled';
+import { MainBox } from '../../styled-components/resources.styled';
 // import { useDebounce } from '../../../hooks/use-debounce';
 
 import { ISaveDeskData } from '../desks.typings';

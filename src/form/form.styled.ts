@@ -4,11 +4,14 @@ import Select from 'antd/lib/select';
 import InputNumber from 'antd/lib/input-number';
 import Form from 'antd/lib/form';
 import Autocomplete from 'antd/lib/auto-complete';
+import Checkbox from 'antd/lib/checkbox';
+import { COAL_COLOR } from '../constants/colors';
 import 'antd/lib/form/style/css';
 import 'antd/lib/input/style/css';
 import 'antd/lib/input-number/style/css';
 import 'antd/lib/select/style/css';
 import 'antd/lib/auto-complete/style/css';
+import 'antd/lib/checkbox/style/css';
 
 export const FormItemBox = styled(Form.Item)`
   max-width: 700px;
@@ -165,4 +168,39 @@ export const InputCustom = styled.input`
 export const ErrorText = styled.span`
   color: rgb(245, 34, 45);
   margin-top: 2px;
+`;
+
+export const CheckboxCustom = styled(Checkbox)`
+  &:hover,
+  &:focus,
+  &:focus:hover {
+    &.ant-checkbox > .ant-checkbox-inner,
+    & > .ant-checkbox.ant-checkbox-checked > .ant-checkbox-inner {
+      border-color: ${COAL_COLOR};
+      background-color: ${COAL_COLOR};
+    }
+  }
+  & > .ant-checkbox,
+  & > .ant-checkbox.ant-checkbox-checked {
+    & > .ant-checkbox-input {
+      &:focus,
+      &:hover {
+        & + .ant-checkbox-inner {
+          border-color: ${COAL_COLOR};
+        }
+      }
+    }
+    &.ant-checkbox-checked > .ant-checkbox-inner,
+    &.ant-checkbox-checked:hover > .ant-checkbox-inner,
+    &:hover > .ant-checkbox-inner {
+      border-color: ${COAL_COLOR};
+      background-color: ${COAL_COLOR};
+    }
+  }
+  & > span:last-child {
+    color: rgb(99, 99, 99);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
 `;

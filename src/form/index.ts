@@ -9,3 +9,4 @@ export * from './form-typings';
 export * from './form-autocomplete/form-autocomplete';
 export * from './form-icon-select';
 export * from './form-number-input'; 
+export * from './form-checkbox'; 
