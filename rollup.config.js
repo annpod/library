@@ -49,7 +49,6 @@ export default [
           'src/**/*.svg',
           'src/*.d.ts',
           'src/**/*.d.ts',
-          'src/typings.index.d.ts'
         ]
       }),
       commonjs(),

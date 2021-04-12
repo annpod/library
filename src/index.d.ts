@@ -1,8 +1,3 @@
-declare namespace common {
-  interface Person {
-      firstName: string;
-      lastName: string;
-      age: number;
-  }
-}
-export {common}
+declare module 'classnames' {
+  const noTypesYet: any;
+  export default noTypesYet;}
