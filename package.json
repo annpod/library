@@ -3,10 +3,10 @@
   "license": "MIT",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "lib"
   ],
-  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
@@ -88,7 +88,8 @@
   "dependencies": {
     "antd": "^3.26.7",
     "core-js": "^3.9.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "typescript": "^4.2.4"
   },
   "lint-staged": {
     "*.{ts,tsx}": [

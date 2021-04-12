@@ -11,6 +11,11 @@ const packageJson = require('./package.json');
 
 export default [
   {
+    input: ['src/index.d.ts'],
+    output: [{ file: 'dist/index.d.ts', format: 'es' }],    
+    plugins: [dts()]
+  },
+  {
     input: 'src/index.tsx',
     output: [
       {
@@ -50,12 +55,7 @@ export default [
       commonjs(),
       json()
     ]
-  },
-  {
-    input: ['src/index.d.ts'],
-    output: [{ file: 'dist/index.d.ts', format: 'es' }],    
-    plugins: [dts()]
-  },
+  }, 
   {
     input: [
       'src/button/index.ts',
