@@ -39,7 +39,6 @@ export default [
       resolve(),
       postcss(),
       typescript({
-        useTsconfigDeclarationDir: true,
         rollupCommonJSResolveHack: true,
         clean: true,
         exclude: [
@@ -49,6 +48,7 @@ export default [
           'src/**/*.stories.tsx',
           'src/**/*.svg',
           'src/*.d.ts',
+          'src/**/*.d.ts',
           'src/typings.index.d.ts'
         ]
       }),
