@@ -5,14 +5,14 @@ import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 import json from '@rollup/plugin-json';
 import image from '@rollup/plugin-image';
-import copy from 'rollup-plugin-copy'
+import copy from 'rollup-plugin-copy';
 
 const packageJson = require('./package.json');
 
 export default [
   // {
   //   input: ['src/index.d.ts'],
-  //   output: [{ file: 'dist/index.d.ts', format: 'es' }],    
+  //   output: [{ file: 'dist/index.d.ts', format: 'es' }],
   //   plugins: [dts()]
   // },
   {
@@ -33,7 +33,10 @@ export default [
     ],
     plugins: [
       copy({
-        targets: [{ src: 'src/index.d.ts', dest: 'dist/' }],
+        targets: [
+          { src: 'src/index.d.ts', dest: 'dist/' },
+          { src: 'src/loction-filter/index.d.ts', dest: 'dist/loction-filter' }
+        ],
         copyOnce: true
       }),
       image(),
@@ -52,13 +55,13 @@ export default [
           'src/**/*.stories.tsx',
           'src/**/*.svg',
           'src/*.d.ts',
-          'src/**/*.d.ts',
+          'src/**/*.d.ts'
         ]
       }),
       commonjs(),
       json()
     ]
-  }, 
+  },
   {
     input: [
       'src/button/index.ts',
@@ -112,7 +115,6 @@ export default [
           'node_modules',
           'src/**/*.stories.tsx',
           'src/**/*.test.(tsx|ts)',
-          'src/**/*.stories.tsx',
           'src/**/*.svg'
         ]
       }),

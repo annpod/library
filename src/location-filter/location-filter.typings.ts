@@ -47,6 +47,7 @@ export interface IUserPreferences {
   [PreferencesItems.defaultFloorId]: string;
   currentUserKey: string;
 }
+
 interface IRegionsData {
   key: string;
   name: string;
