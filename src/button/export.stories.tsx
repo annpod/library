@@ -2,7 +2,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { ExportBtn } from './export';
-import { IExportButton } from './button';
+import { IExportButton } from './typings';
 
 export default {
   title: 'Buttons/ExportButton',

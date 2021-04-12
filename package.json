@@ -16,7 +16,8 @@
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
     "prettier": "prettier --config ./.prettierrc --write  \"./lib/**/*.{ts,tsx}\"",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postbuild": "tsc --emitDeclarationOnly"
   },
   "peerDependencies": {
     "react": "^16.0.0",
