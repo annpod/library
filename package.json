@@ -6,7 +6,8 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
-    "src"
+    "lib",
+    "src/typings"
   ],
   "module": "dist/index.esm.js",
   "scripts": {

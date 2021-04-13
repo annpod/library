@@ -20,7 +20,6 @@
     "strict": true,
     "resolveJsonModule": true,
     "noEmit": false,
-    "declarationDir": "dist",
   },
   "include": ["src", "src/index.d.ts", "src/**/*.ts"],
   "exclude": [
