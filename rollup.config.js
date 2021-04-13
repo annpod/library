@@ -49,8 +49,9 @@ export default [
           'node_modules',
           'src/**/*.stories.tsx',
           'src/**/*.test.(tsx|ts)',
-          'src/**/*.stories.tsx',
           'src/**/*.svg',
+          "*.d.ts",
+          "**/*.d.ts"
         ]
       }),      
       commonjs(),

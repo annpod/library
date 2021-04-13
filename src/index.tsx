@@ -2,11 +2,10 @@ import { Button, ExportBtn, SaveBtn, SubmitButton } from './button';
 import { CollapseItem } from './collapse-item';
 import { ContentSider, ContentHeader } from './content';
 import { DeskDetails, DesksContent } from './desks';
-import { ExtendedSelect, IExtendedSelectOption } from './extended-select';
+import { ExtendedSelect } from './extended-select';
 import {
   FormAmount,
   FormAutoComplete,
-  IAutoCompleteOption,
   FormCheck,
   FormIconSelect,
   FormInput,
@@ -46,13 +45,11 @@ import { Select } from './select';
 import { TabButton, IconTextTabButton } from './tab-button';
 import {
   LocationFilter,
-  // ILocationFilterProps,
   createLocationFilter,
   LocationFilterItems,
 } from './location-filter';
-export type { ILocationFilterProps } from './location-filter';
 import { FetchTable, IFetchTableProps } from './fetch-table';
-import { StyledPagination, IPaginationProps } from './pagination';
+import { StyledPagination } from './pagination';
 import { Modal, IModal } from './modal';
 import { CustomScrollbars } from './scrollbars';
 import { IconButton } from './icon-button';
@@ -60,7 +57,6 @@ import { CustomSearchInput } from './custom-search-input';
 import { Datepicker } from './date-picker';
 import { ParamsPanel } from './params-panel';
 import {
-  IDesksProps,
   FilterBuilder,
   formatData,
   locationKeyMap
@@ -129,11 +125,9 @@ export {
   CustomSearchInput,
   Datepicker,
   ExtendedSelect,
-  IExtendedSelectOption,
   FetchTable,
   FormAmount,
   FormAutoComplete,
-  IAutoCompleteOption,
   FormCheck,
   FormIconSelect,
   FormInput,
@@ -148,11 +142,8 @@ export {
   TimePeriodInput,
   LocationFilter,
   LocationFilterItems,
-  IFetchTableProps,
   StyledPagination,
-  IPaginationProps,
   Modal,
-  IModal,
   ParamsPanel,
   TimePicker,
   TimeRangePicker,
@@ -163,7 +154,6 @@ export {
   DeskDetails,
   DesksContent,
   IconButton,
-  IDesksProps,
   FilterBuilder,
   createLocationFilter,
   formatData,
