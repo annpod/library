@@ -20,8 +20,7 @@
     "strict": true,
     "resolveJsonModule": true,
     "noEmit": false,
-    "declarationDir": "lib",
-    "typeRoots": ["node_modules/@types"]
+    "declarationDir": "dist",
   },
   "include": ["src", "src/index.d.ts", "src/**/*.ts"],
   "exclude": [

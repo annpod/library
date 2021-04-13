@@ -5,7 +5,6 @@ import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 import json from '@rollup/plugin-json';
 import image from '@rollup/plugin-image';
-import copy from 'rollup-plugin-copy';
 
 const packageJson = require('./package.json');
 
@@ -31,13 +30,7 @@ export default [
         sourcemap: true
       }
     ],
-    plugins: [   
-      copy({
-        targets: [
-          { src: 'src/loction-filter/typings.ts', dest: 'dist/loction-filter' }
-        ],
-        copyOnce: true
-      }),  
+    plugins: [ 
       image(),
       peerDepsExternal({
         includeDependencies: true
@@ -46,18 +39,20 @@ export default [
       postcss(),
       typescript({
         emitDeclarationTrue: true,
+        useTsconfigDeclarationDir: true,
         rollupCommonJSResolveHack: true,
         clean: true,
+        declaration: true,
+        declarationDir: 'lib/types/',
+        rootDir: 'src/',
         exclude: [
           'node_modules',
           'src/**/*.stories.tsx',
           'src/**/*.test.(tsx|ts)',
           'src/**/*.stories.tsx',
           'src/**/*.svg',
-          'src/*.d.ts',
-          'src/**/*.d.ts'
         ]
-      }),
+      }),      
       commonjs(),
       json()
     ]
@@ -97,6 +92,12 @@ export default [
         format: 'cjs',
         sourcemap: true,
         exports: 'named'
+      },
+      {
+        dir: 'lib',
+        format: 'esm',
+        exports: 'named',
+        sourcemap: true
       }
     ],
     preserveModules: true,
@@ -109,6 +110,7 @@ export default [
       postcss(),
       typescript({
         rollupCommonJSResolveHack: true,
+        useTsconfigDeclarationDir: true,
         clean: true,
         exclude: [
           'node_modules',

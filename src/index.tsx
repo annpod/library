@@ -230,5 +230,6 @@ export {
   CovidIcon,
   UploadIcon,
   MeetingsIcon,
-  DeleteBtn
+  DeleteBtn,
 };
+
