@@ -72,7 +72,7 @@ export default [
       'src/extended-select/index.ts',
       'src/fetch-table/index.ts',
       'src/form/index.ts',
-      'src/location-filter/index.ts',
+      'src/location-filter/index.tsx',
       'src/modal/index.ts',
       'src/modal-button/index.ts',
       'src/icon/index.ts',

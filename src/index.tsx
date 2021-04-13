@@ -46,10 +46,11 @@ import { Select } from './select';
 import { TabButton, IconTextTabButton } from './tab-button';
 import {
   LocationFilter,
-  ILocationFilterProps,
+  // ILocationFilterProps,
   createLocationFilter,
   LocationFilterItems,
 } from './location-filter';
+export type { ILocationFilterProps } from './location-filter';
 import { FetchTable, IFetchTableProps } from './fetch-table';
 import { StyledPagination, IPaginationProps } from './pagination';
 import { Modal, IModal } from './modal';
@@ -147,7 +148,6 @@ export {
   TimePeriodInput,
   LocationFilter,
   LocationFilterItems,
-  ILocationFilterProps,
   IFetchTableProps,
   StyledPagination,
   IPaginationProps,
