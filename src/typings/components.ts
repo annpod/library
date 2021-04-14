@@ -10,7 +10,7 @@ export interface IExportButton {
 export interface ISubmitButton {
   isDisabled: boolean;
   isLoading: boolean;
-  title?: string;
+  children?: string | React.ReactElement;
   onClick: () => void;
 }
 

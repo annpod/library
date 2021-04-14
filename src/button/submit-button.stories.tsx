@@ -9,12 +9,11 @@ export default {
   component: SubmitButton
 } as Meta;
 
-const Template: Story<ISubmitButton> = (args) => <SubmitButton {...args} />;
+const Template: Story<ISubmitButton> = (args) => <SubmitButton {...args}>Search</SubmitButton>;
 
 export const Primary = Template.bind({});
 
 Primary.args = {
   isDisabled: false,
-  isLoading: false,
-  title: 'Save'
+  isLoading: false
 };

@@ -11,7 +11,7 @@ export const SubmitButton = (props: ISubmitButton) => {
       loading={props.isLoading}
       disabled={props.isDisabled}
     >
-      {props.title ? props.title : 'Search'}
+      {props.children || 'Search'}
     </Submit>
   );
 };

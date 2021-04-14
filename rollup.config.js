@@ -9,11 +9,6 @@ import image from '@rollup/plugin-image';
 const packageJson = require('./package.json');
 
 export default [
-  // {
-  //   input: ['src/index.d.ts'],
-  //   output: [{ file: 'dist/index.d.ts', format: 'es' }],
-  //   plugins: [dts()]
-  // },
    {
     input: 'src/index.tsx',
     output: [
