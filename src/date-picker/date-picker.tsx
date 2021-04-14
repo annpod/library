@@ -5,17 +5,7 @@ import AntdDatepicker from 'antd/lib/date-picker';
 import 'antd/lib/date-picker/style/css';
 import { DATE_FORMAT } from '../constants/date';
 
-export interface IDatePickerProps {
-  label?: string;
-  placeholder: string;
-  value?: moment.Moment | null;
-  onChange?: (value: string) => void;
-  onChangeMoment?: (value: moment.Moment | null) => void;
-  minDate: moment.Moment;
-  maxDate: moment.Moment;
-  allowClear: boolean;
-  isDisabled?: boolean;
-}
+import { IDatePickerProps } from '../typings';
 
 const DatePickerStyled = {
   DatePicker: styled(AntdDatepicker)`

@@ -2,7 +2,7 @@ import { ColumnProps } from 'antd/lib/table';
 import {
   IPaginatableParams,
   ISortableParams
-} from '../typings/api';
+} from './api';
 
 export enum DefaultSortOrder {
   ascend = 'ascend',

@@ -5,22 +5,7 @@ import { Logo } from './components/logo';
 import { NavBar } from './components/nav-bar';
 
 import { mediaStyled } from '../styles/media';
-
-export interface IHeaderProps {
-  menu: IMenuHeader;
-  onLogout: () => void;
-}
-
-export interface IHeaderOption {
-  btn: string;
-  route: string;
-  order: number;
-}
-
-export interface IMenuHeader {
-  headerOptions: IHeaderOption[];
-  activeHeader: string;
-}
+import { IHeaderProps } from '../typings';
 
 export const Header = ({ menu, onLogout }: IHeaderProps) => {
   return (

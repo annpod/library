@@ -2,7 +2,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { LocationFilter } from './location-filter';
-import { ILocationFilterProps } from './location-filter.typings';
+import { ILocationFilterProps } from '../typings/location-filter';
 
 import { filterData, filter, config } from './location-filter.mocks';
 

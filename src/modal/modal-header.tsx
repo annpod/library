@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button } from '../modal-button';
-import { IModalHeader } from './modal.typings';
+import { IModalHeader } from '../typings';
 
 export const ModalHeader = ({
   headerTitle,

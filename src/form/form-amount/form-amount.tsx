@@ -3,14 +3,10 @@ import * as React from 'react';
 import { MAX_INT32_VALUE } from '../../constants/config';
 
 import { FormItemBox, AmountInput } from '../form.styled';
-import { IFormElementProps } from '../form-typings';
+import { IFormAmountProps } from '../../typings/form';
 
 import 'antd/lib/input-number/style/css';
 
-interface IFormAmountProps<F> extends IFormElementProps<F, number> {
-  min?: number;
-  max?: number;
-}
 
 export const FormAmount = <F extends {}>(props: IFormAmountProps<F>) => {
 

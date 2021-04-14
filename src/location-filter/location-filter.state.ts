@@ -5,7 +5,7 @@ import {
   getSingleValue,
 } from './location-filter.utils';
 import { LOCATION_FILTER } from './location-filter.constant';
-import { IFilterConfig } from './location-filter.typings';
+import { IFilterConfig } from '../typings/location-filter';
 
 export const useFilter = (
   setFilterLocation: (value: any) => void,

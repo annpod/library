@@ -5,22 +5,7 @@ import styled from 'styled-components';
 import { createDateFromHours } from '../utils/date-utils';
 
 import { TimePicker } from '../time-picker';
-
-export interface ITimeRangePickerProps {
-  options: {
-    startLabel: string;
-    endLabel: string;
-    timeStart: Date;
-    timeEnd: Date;
-    placeholder?: string;
-  };
-  someProps: {
-    start: string;
-    end: string;
-  };
-  onChange?: (value: any) => void;
-  width?: string;
-}
+import { ITimeRangePickerProps } from '../typings';
 
 const Wrapper = styled.div`
   display: flex;

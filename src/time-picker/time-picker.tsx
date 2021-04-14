@@ -4,15 +4,7 @@ import { Select } from '../select';
 
 import { createTimeOptions } from './time-picker.utils';
 
-import { ISelectOption, IRange } from '../typings/etc';
-
-export interface ITimePickerProps {
-  range: IRange<Date>;
-  value: string;
-  onChange: (value: any) => any;
-  placeholder?: string;
-  width?: string;
-}
+import { ISelectOption, ITimePickerProps } from '../typings';
 
 export const TimePicker = (props: ITimePickerProps) => {
   const options = createTimeOptions(props.range);

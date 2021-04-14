@@ -1,8 +1,8 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { TimePeriodInput, ITimePeriodInputProps } from './time-period-input';
-import { ITimePeriod } from './time-period-input.typings';
+import { TimePeriodInput,  } from './time-period-input';
+import { ITimePeriod } from '../typings';
 
 export default {
   title: 'Form/TimePeriodInput',
@@ -19,7 +19,7 @@ export default {
             ? props.initialValue
             : { amount: 0, units: 'Minutes' }
         }
-        timePeriodData={props.timePeriodData}
+        timePeriodData={timePeriodData}
       />`
       }
     }
@@ -27,7 +27,7 @@ export default {
 
 } as Meta;
 
-const Template: Story<ITimePeriodInputProps> = (args) => (
+const Template: Story = (args: any) => (
   <TimePeriodInput {...args} />
 );
 

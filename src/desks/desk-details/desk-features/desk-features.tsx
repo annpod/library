@@ -6,7 +6,7 @@ import { DeskFeatureStyles } from './desk-features.styled';
 
 import { APP_CONFIG } from '../../../constants/config';
 
-import { IDeskFeature } from '../desk-details.typings';
+import { IDeskFeature } from '../../../typings/desk-details';
 
 export interface IDeskCapabilityFormControlProps extends FormComponentProps {
   options: IDeskFeature[];

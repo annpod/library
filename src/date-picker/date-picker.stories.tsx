@@ -2,8 +2,8 @@ import React from 'react';
 import moment from 'moment';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Datepicker, IDatePickerProps } from './date-picker';
-
+import { Datepicker } from './date-picker';
+import { IDatePickerProps } from '../typings';
 
 export default {
   title: 'Form/Datepicker',

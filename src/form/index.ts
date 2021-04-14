@@ -5,7 +5,7 @@ export * from './form-check';
 export * from './form-amount';
 export * from './form-time-period';
 export * from './form.styled';
-export * from './form-typings';
+export * from '../typings/form';
 export * from './form-autocomplete/form-autocomplete';
 export * from './form-icon-select';
 export * from './form-number-input'; 

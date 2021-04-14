@@ -1,12 +1,7 @@
 import * as React from 'react';
 import { FormItemBox } from '../form.styled';
-import { IFormElementProps } from '../form-typings';
 import { SearchInput } from '../../search-input';
-
-interface IFormAmountProps<F> extends IFormElementProps<F, number> {
-  onChange: (name: string, value: string) => void;
-  width?: string;
-}
+import { IFormAmountProps } from '../../typings'
 
 export const FormNumberInput = <F extends {}>(props: IFormAmountProps<F>) => {
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {

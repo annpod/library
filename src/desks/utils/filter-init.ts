@@ -2,7 +2,7 @@ import {
   IDesksFilter,
   DeskFilterItems,
   DeskFilterGroups,
-} from '../desks.typings';
+} from '../../typings/desks';
 import { IDictionaryOption } from '../../typings/etc';
 import { formatSelectOptions } from '../../utils/select.utils';
 import { strings } from '../../constants/strings';

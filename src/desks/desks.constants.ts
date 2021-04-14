@@ -1,4 +1,4 @@
-import { IFilterConfig } from '../location-filter';
+import { IFilterConfig } from '../typings';
 
 export const filterConfig: IFilterConfig = {
   Region: {

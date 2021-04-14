@@ -1,7 +1,8 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { SubmitButton, ISubmitButton } from './submit-button';
+import { SubmitButton } from './submit-button';
+import { ISubmitButton } from '../typings';
 
 export default {
   title: 'Buttons/SubmitButton',

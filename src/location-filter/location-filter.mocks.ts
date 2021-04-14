@@ -2,7 +2,7 @@ import {
   IFilterData,
   IFilterState,
   IFilterConfig
-} from './location-filter.typings';
+} from '../typings/location-filter';
 
 
 export const filter: IFilterState = {

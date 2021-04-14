@@ -1,16 +1,13 @@
 import { strings } from '../constants/strings';
 
-import { LocationFilterItems } from './location-filter.typings';
 import { formatSelectOptions } from '../utils/select.utils';
-import { IUserPreferences, IFilterConfig } from './location-filter.typings';
+import {
+  IUserPreferences,
+  IFilterConfig,
+  LocationFilterItems,
+  ISelectOption
+} from '../typings';
 import { LOCATION_FILTER } from './location-filter.constant';
-
-export interface ISelectOption {
-  [key: string]: string;
-  value: string;
-  label: string;
-}
-
 
 interface IFilterGroupItem {
   key: LocationFilterItems;
@@ -28,7 +25,7 @@ export const placeholderMap: any = {
   [LocationFilterItems.Floor]: strings.resources.rooms.floorSelectPlaceholder,
   [LocationFilterItems.Room]: strings.resources.rooms.roomSelectPlaceholder,
   [LocationFilterItems.Neighbourhood]:
-    strings.resources.desks.neighbourhoodSelectPlaceholder,
+    strings.resources.desks.neighbourhoodSelectPlaceholder
 };
 
 const parseFilterGroup = (group: IFilterGroupItem[]) => {
@@ -40,8 +37,8 @@ const parseFilterGroup = (group: IFilterGroupItem[]) => {
         placeholder: placeholderMap[x.key],
         value: x.value || '',
         options: formatSelectOptions(x.options, 'key'),
-        isDisabled: x.isDisabled || false,
-      },
+        isDisabled: x.isDisabled || false
+      }
     };
   }, {});
 };
@@ -64,7 +61,7 @@ const getFilterOptions = (
   list: any,
   parentValue: string | string[] | null,
   filterKey: string | null
-) => {  
+) => {
   if (!filterKey) {
     return list ? list : [];
   }
@@ -109,7 +106,7 @@ export const createLocationFilter = (
       key,
       value: !filterConfig[key].isMulti ? value : value ? [value] : [],
       options,
-      isDisabled: !options.length,
+      isDisabled: !options.length
     };
   });
 

@@ -12,7 +12,7 @@ import {
 } from '../utils/api-utils';
 import { StyledTable } from './fetch-table.styled';
 import { WaveLoading } from 'styled-spinkit';
-import { IFetchTableProps } from './fetch-table.typings';
+import { IFetchTableProps } from '../typings/fetch-table';
 
 function defaultSortOrder(
   columnKey: string | number,

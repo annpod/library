@@ -3,7 +3,7 @@ import { Meta } from '@storybook/react/types-6-0';
 
 import { DeskDetails as DeskDetailsC } from './desk-details';
 import { deskFilterData, deskData, usersData } from '../mocks';
-import { ISaveDeskData } from '../desks.typings';
+import { ISaveDeskData } from '../../typings';
 
 
 

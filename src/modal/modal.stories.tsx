@@ -1,7 +1,8 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
-import { Modal, IModal } from './modal';
+import { Modal } from './modal';
+import { IModal } from '../typings';
 
 export default {
   title: 'Modal',

@@ -1,10 +1,11 @@
 import {
   DeskFilterItems,
   DeskFilterGroups,
-} from '../desks.typings';
-import { IExtendedSelectOption } from '../../extended-select';
-import { IHashMap } from '../../typings/etc';
-import { IPaginatableParams, ISortableParams } from '../../typings/api';
+  IExtendedSelectOption,
+  IHashMap,
+  IPaginatableParams,
+  ISortableParams
+} from '../../typings';
 
 export class FilterBuilder {
   public static build(

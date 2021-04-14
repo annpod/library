@@ -1,11 +1,6 @@
 import * as React from 'react';
 import ReactSelect from 'react-select';
-
-export interface ISelectOption {
-  [key: string]: string;
-  value: string;
-  label: string;
-}
+import { ISelectOption } from '../typings';
 
 interface IProps {
   options: ISelectOption[];

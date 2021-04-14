@@ -2,19 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { FormItemBox, AutocompleteInput } from '../form.styled';
-import { IFormElementProps } from '../form-typings';
+import { IFormElementProps, IAutoComplete } from '../../typings/form';
 
-export interface IAutoCompleteOption {
-  text: string;
-  value: string;
-}
-
-interface IAutoComplete {
-  data: Array<{ text: string; value: string }>;
-  isHideError?: boolean;
-  onSearch: (x: string) => void;
-  onSelect?: (x: any) => void;
-}
 
 const Wrapper = styled<any>(FormItemBox)`
   .ant-form-explain {

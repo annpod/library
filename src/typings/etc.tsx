@@ -67,3 +67,11 @@ export interface IUserPreferences {
   [PreferencesItems.defaultFloorId]: string;
   currentUserKey: string;
 }
+
+export interface ITimePickerProps {
+  range: IRange<Date>;
+  value: string;
+  onChange: (value: any) => any;
+  placeholder?: string;
+  width?: string;
+}

@@ -1,4 +1,4 @@
-import { IDictionaryOption } from '../typings/etc';
+import { IDictionaryOption } from './etc';
 
 export interface IDesk {
   provisioningKey: string;

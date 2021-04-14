@@ -2,7 +2,7 @@ import React, { forwardRef, useImperativeHandle } from 'react';
 import Form from 'antd/lib/form/Form';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { StatusSelect, IStatusSelect } from './status-select';
+import { StatusSelect } from './status-select';
 
 const args = {
   initialValue: 'Active',

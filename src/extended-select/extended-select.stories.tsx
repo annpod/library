@@ -1,7 +1,8 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { ExtendedSelect, IExtendedSelectProps } from './extended-select';
+import { ExtendedSelect } from './extended-select';
+import { IExtendedSelectProps } from '../typings';
 
 const options = [
   {

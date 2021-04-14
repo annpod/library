@@ -2,7 +2,7 @@ import * as React from 'react';
 import Select from 'antd/lib/select';
 
 import { FormItemBox } from '../form.styled';
-import { IFormIconSelectProps } from '../form-typings';
+import { IFormIconSelectProps } from '../../typings/form';
 import { APP_CONFIG } from '../../constants/config';
 
 import { OptionIcon, IconSelectBase } from './form-icon-select.styled';

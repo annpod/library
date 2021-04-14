@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { FormItemBox, SimpleTextArea } from '../form.styled';
-import { IFormTextProps } from '../form-typings';
+import { IFormTextProps } from '../../typings/form';
 
 export const FormText = <F extends {}>(props: IFormTextProps<F>) => (
   <FormItemBox label={props.label}>

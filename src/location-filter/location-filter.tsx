@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { LocationFilterItems, ILocationFilterProps } from './location-filter.typings';
+import { LocationFilterItems, ILocationFilterProps } from '../typings/location-filter';
 
 import { ExtendedSelect } from '../extended-select';
 

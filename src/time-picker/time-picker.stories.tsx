@@ -1,6 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { TimePicker, ITimePickerProps } from './time-picker';
+import { TimePicker } from './time-picker';
+import { ITimePickerProps } from '../typings';
 
 export default {
   title: 'Form/TimePicker',

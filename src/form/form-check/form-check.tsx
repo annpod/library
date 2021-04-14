@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { FormItemBox } from '../form.styled';
-import { IFormCheckProps } from '../form-typings';
+import { IFormCheckProps } from '../../typings/form';
 import CheckboxGroup from 'antd/lib/checkbox/Group';
 import 'antd/lib/checkbox/style/css';
 

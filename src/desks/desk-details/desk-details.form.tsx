@@ -11,7 +11,7 @@ import {
   FormSectionStartNoBottom,
   FormAutoComplete,
 } from '../../form';
-import { IOpenDeskDetails } from './desk-details.typings';
+import { IOpenDeskDetails } from '../../typings/desk-details';
 import { formatSelectOptions } from '../../utils/select.utils';
 import { DeskFeatures } from './desk-features';
 import { DetailsFormTitle } from './desk-details.styled';
@@ -23,7 +23,7 @@ import {
   SaveBtn,
   CheckedInputStyles,
 } from '../../styled-components/resources.styled';
-import { ISaveDeskData } from '../desks.typings';
+import { ISaveDeskData } from '../../typings/desks';
 
 export interface IDeskDetailsFormBodyProps extends FormComponentProps {
   desk: IOpenDeskDetails;

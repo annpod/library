@@ -2,16 +2,7 @@ import React, { ReactNode } from 'react';
 
 import { Button } from '../button';
 import { TextIconButton, TextWrapper } from './tab-button.styled';
-
-export interface ITabButtonProps {
-  section: string;
-  currentSection?: string;
-  title: string;
-  className?: string;
-  disabled?: boolean;
-  onClick: (section: string) => void;
-  selected?: boolean
-}
+import { ITabButtonProps, IIconTextTabButtonProps } from '../typings';
 
 export const TabButton = (props: ITabButtonProps) => {
   const { title, disabled, section, className } = props;
@@ -27,9 +18,6 @@ export const TabButton = (props: ITabButtonProps) => {
   );
 };
 
-export interface IIconTextTabButtonProps extends ITabButtonProps {
-  icon: ReactNode;
-}
 
 export const IconTextTabButton = (props: IIconTextTabButtonProps) => {
   const { icon, title, disabled, section, className } = props;

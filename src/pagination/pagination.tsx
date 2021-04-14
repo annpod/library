@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Pagination from 'antd/lib/pagination';
 import 'antd/lib/pagination/style/css';
 
-import { IPaginationProps } from './pagination.typings';
+import { IPaginationProps } from '../typings';
 
 export const StyledPagination = (props: IPaginationProps) => {
   const { current, setCurrentPage, defaultPageSize, total } = props;

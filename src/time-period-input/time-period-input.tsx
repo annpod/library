@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import Select from 'antd/lib/select';
 import 'antd/lib/select/style/css';
 
-import { ITimePeriod } from './time-period-input.typings';
-import { ITimePeriodData } from '../form';
+import { ITimePeriodInputProps } from '../typings';
 
 const TimePerionInputBody = styled.div`
   display: flex;
@@ -16,12 +15,6 @@ const UnitsSelect: new <T>() => Select<T> = styled(Select)`
   max-width: 100px;
   width: 100%;
 ` as any;
-
-export interface ITimePeriodInputProps {
-  timePeriodData: ITimePeriodData;
-  someProps: ITimePeriod;
-  onChange?: (value: ITimePeriod) => void;
-}
 
 export const TimePeriodInput = forwardRef<
   HTMLDivElement,

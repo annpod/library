@@ -4,8 +4,7 @@ import { Select } from '../../select';
 import {
   FormItemBox,
 } from '../form.styled';
-import { IFormSelectProps } from '../form-typings';
-import { ISelectOption } from '../../typings/etc';
+import { IFormSelectProps, ISelectProps } from '../../typings/form';
 
 export const FormSelect = <F extends {}>(props: IFormSelectProps<F>) => {
   return (
@@ -18,11 +17,6 @@ export const FormSelect = <F extends {}>(props: IFormSelectProps<F>) => {
     </FormItemBox>
   );
 };
-
-interface ISelectProps extends IFormSelectProps<{}> {
-  value?: string;
-  options: ISelectOption[];
-}
 
 const TempSelect = ({ value: v2, ...props }: ISelectProps) => {
   const options = props.options.map(el => ({ ...el, key: el.value }));

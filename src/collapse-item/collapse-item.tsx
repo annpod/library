@@ -1,4 +1,5 @@
 import React, { useState, FunctionComponent } from 'react';
+import { CollapseItemProps } from '../typings';
 
 import {
   CollapseItemBody,
@@ -8,9 +9,7 @@ import {
   CollapseTitleBtn,
 } from './collapse-item.styled';
 
-export interface CollapseItemProps {
-  title: string;
-}
+
 
 export const CollapseItem: FunctionComponent<CollapseItemProps> = (props) => {
   const [isOpen, setIsOpen] = useState(true);

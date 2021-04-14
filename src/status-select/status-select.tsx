@@ -2,20 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import Select from 'antd/lib/select';
 import { Form } from 'antd';
-import { IHashMap } from '../typings';
-
-export interface IStatusSelect {
-  isNewDesk: boolean;
-  // deskName?: string;
-  form: any;
-  initialValue: any;
-  id: any;
-  label: any;
-  rules: any;
-  disabled: any;
-  placeholder: any;
-  onChangeStatus: any;
-}
+import { IHashMap, IStatusSelect } from '../typings';
 
 const optionsMap: IHashMap<string[]> = {
   Active: ['Unavailable'],

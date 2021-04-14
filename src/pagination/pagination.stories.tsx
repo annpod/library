@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { StyledPagination } from './pagination';
-import { IPaginationProps } from './pagination.typings';
+import { IPaginationProps } from '../typings';
 
 export const Primary = (args: IPaginationProps) => (
   <StyledPagination

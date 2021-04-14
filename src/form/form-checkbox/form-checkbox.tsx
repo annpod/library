@@ -1,5 +1,5 @@
 import React from 'react';
-import { IFormCheckboxProps } from '../form-typings';
+import { IFormCheckboxProps } from '../../typings/form';
 import { FormItemBox, CheckboxCustom } from '../form.styled';
 
 export const FormCheckbox = <F extends {}>(props: IFormCheckboxProps<F>) => (

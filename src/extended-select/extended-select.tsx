@@ -2,29 +2,8 @@ import * as React from 'react';
 
 import { Select } from '../select';
 import { findSelectOption, findSelectOptions } from '../utils/select.utils';
-export interface ISelectOption {
-  [key: string]: string;
-  value: string;
-  label: string;
-}
-export interface IExtendedSelectOption {
-  keyValue: string;
-  value: any;
-  options: ISelectOption[];
-  placeholder: string;
-  isDisabled?: boolean;
-  optionValue?: string;
-}
 
-export interface IExtendedSelectProps extends IExtendedSelectOption {
-  clearable?: boolean;
-  searchable?: boolean;
-  onChange?: (keyValue: string, value: string) => void;
-  onChangeMulti?: (keyValue: string, value: string[]) => void;
-  onChangeOption?: (keyValue: string, value: string, option: string) => void;
-  isAutoSelect?: boolean;
-  isMulti?: boolean;
-}
+import { IExtendedSelectProps } from '../typings';
 
 export const ExtendedSelect = (props: IExtendedSelectProps) => {
   const searchOption = Array.isArray(props.value)

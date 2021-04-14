@@ -46,11 +46,11 @@ import { TabButton, IconTextTabButton } from './tab-button';
 import {
   LocationFilter,
   createLocationFilter,
-  LocationFilterItems,
 } from './location-filter';
-import { FetchTable, IFetchTableProps } from './fetch-table';
+import { LocationFilterItems } from './typings';
+import { FetchTable } from './fetch-table';
 import { StyledPagination } from './pagination';
-import { Modal, IModal } from './modal';
+import { Modal } from './modal';
 import { CustomScrollbars } from './scrollbars';
 import { IconButton } from './icon-button';
 import { CustomSearchInput } from './custom-search-input';

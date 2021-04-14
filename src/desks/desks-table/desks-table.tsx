@@ -4,7 +4,7 @@ import { FetchTable } from '../../fetch-table';
 
 import { strings } from '../../constants/strings';
 import { ISortableParams, IPaginatableParams } from '../../typings/api';
-import { IDesk } from '../desks.typings';
+import { IDesk } from '../../typings/desks';
 
 export interface IDesksTableProps {
   data: IDesk[];

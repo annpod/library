@@ -1,7 +1,8 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Header, IHeaderProps } from './header';
+import { Header } from './header';
+import { IHeaderProps } from '../typings';
 
 export default {
   title: 'Layout/Header',

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IFormSelectProps } from '../../../form/form-typings';
+import { IFormSelectProps } from '../../../typings/form';
 
 import {
   Wrapper,

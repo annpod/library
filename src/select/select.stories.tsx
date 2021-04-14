@@ -1,7 +1,6 @@
-import React, { forwardRef, useImperativeHandle } from 'react';
-import Form from 'antd/lib/form/Form';
+import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { ISelectOption } from '../typings/etc';
+import { ISelectOption } from '../typings';
 import { Select } from '../select';
 
 interface ISelectProps {

@@ -2,14 +2,7 @@ import * as React from 'react';
 
 import { Scrollbars } from 'react-custom-scrollbars';
 
-export interface ICustomScrollbarsProps {
-  height?: string;
-  minHeight?: string;
-  children: React.ReactNode;
-  style?: any;
-  isScrollToBottom?: boolean;
-  flex?: number | string;
-}
+import { ICustomScrollbarsProps } from '../typings';
 
 export const CustomScrollbars = (props: ICustomScrollbarsProps) => {
   const { isScrollToBottom } = props;

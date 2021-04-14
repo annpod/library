@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
+import { IContentHeaderProps } from '../typings';
+
 const Wrapper = styled.div`
   height: 60px;
   background-color: ${(props) => props.theme.contentHeaderBgColor};
@@ -17,9 +19,7 @@ const Title = styled.div`
   padding-left: 40px;
 `;
 
-export interface IContentHeaderProps {
-  title: string;
-}
+
 
 export const ContentHeader = (props: IContentHeaderProps) => {
   return (

@@ -8,7 +8,7 @@ import {
   InputCustom,
   ErrorText,
 } from '../form.styled';
-import { IFormElementProps } from '../form-typings';
+import { IFormElementProps } from '../../typings/form';
 
 export const FormInput = <F extends {}>(
   props: IFormElementProps<F, string>

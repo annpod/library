@@ -2,12 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from 'antd/lib/button';
 
-export interface ISubmitButton {
-  isDisabled: boolean;
-  isLoading: boolean;
-  title?: string;
-  onClick: () => void;
-}
+import { ISubmitButton } from '../typings';
 
 export const SubmitButton = (props: ISubmitButton) => {
   return (

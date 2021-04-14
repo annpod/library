@@ -1,7 +1,8 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { TabButton, ITabButtonProps } from './tab-button';
+import { TabButton } from './tab-button';
+import { ITabButtonProps } from '../typings';
 
 export default {
   title: 'Buttons/TabButton',
@@ -18,9 +19,6 @@ Primary.args = {
   title: 'First section',
   className: "FirstSection",
   disabled: false,
-  onClick: (section: string) => {
-    // eslint-disable-next-line
-  console.log('section', section);
-  },
+  onClick: (section: string) => {},
   selected: true,
 };

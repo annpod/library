@@ -9,10 +9,17 @@ import { CollapseItem } from '../../collapse-item';
 import { DesksTable } from '../desks-table';
 import { CustomSearchInput } from '../../custom-search-input';
 import { ParamsPanel } from '../../params-panel';
-import { IPaginatableParams, ISortableParams } from '../../typings/api';
+import {
+  IDesk,
+  DeskFilterGroups,
+  IPaginatableParams,
+  ISortableParams,
+  IExtendedSelectOption,
+  IFilterData,
+  IHashMap
+} from '../../typings';
 import { SubmitButton } from '../../button';
 import { DEFAULT_PAGING } from '../../constants/config';
-import { IDesk, DeskFilterGroups } from '../desks.typings';
 import {
   ContentWrapper,
   SearchSelectBox,
@@ -35,9 +42,7 @@ import {
 import { SEARCH_PARAMETER_NAME } from '../../constants/resources.constants';
 
 import { filterConfig } from '../desks.constants';
-import { LocationFilter, IFilterData } from '../../location-filter';
-import { IHashMap } from '../../typings/etc';
-import { IExtendedSelectOption } from '../../extended-select';
+import { LocationFilter } from '../../location-filter';
 import { useDebounce } from '../../hooks/use-debounce';
 
 export interface IDesksProps {

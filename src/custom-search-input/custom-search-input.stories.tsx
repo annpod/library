@@ -1,7 +1,8 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { CustomSearchInput, IInputProps } from './search-input';
+import { CustomSearchInput } from './search-input';
+import { IInputProps } from '../typings';
 
 export default {
   title: 'Form/CustomSearchInput',

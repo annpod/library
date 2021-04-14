@@ -1,11 +1,5 @@
-import { ISelectOption} from '../extended-select';
+import { ISelectOption, PreferencesItems } from '.';
 
-export enum PreferencesItems {
-  defaultRegionId = 'defaultRegionId',
-  defaultSiteId = 'defaultSiteId',
-  defaultBuildingId = 'defaultBuildingId',
-  defaultFloorId = 'defaultFloorId'
-}
 export interface IFilterConfig {
   [key: string]: IProps;
 }
@@ -40,13 +34,7 @@ export interface ILocationFilterProps {
   setFilterLocation: (value: any) => void;
 }
 
-export interface IUserPreferences {
-  [PreferencesItems.defaultRegionId]: string;
-  [PreferencesItems.defaultSiteId]: string;
-  [PreferencesItems.defaultBuildingId]: string;
-  [PreferencesItems.defaultFloorId]: string;
-  currentUserKey: string;
-}
+
 
 interface IRegionsData {
   key: string;

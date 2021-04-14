@@ -1,22 +1,7 @@
 import * as React from 'react';
-import { IFormElementProps } from '../form-typings';
-import {
-  ITimePeriod,
-  TimePeriodInput,
-} from '../../time-period-input';
+import { IFormTimePeriodProps } from '../../typings/form';
+import { TimePeriodInput } from '../../time-period-input';
 import { FormItemBox } from '../form.styled';
-
-export interface ITimePeriodData {
-  Days: string[];
-  Hours: string[];
-  Minutes: string[];
-  [index: string]: any;
-}
-
-export interface IFormTimePeriodProps<F>
-  extends IFormElementProps<F, ITimePeriod> {
-  timePeriodData: ITimePeriodData;
-}
 
 export const FormTimePeriod = <F extends {}>(
   props: IFormTimePeriodProps<F>
@@ -24,7 +9,7 @@ export const FormTimePeriod = <F extends {}>(
   <FormItemBox label={props.label}>
     {props.form.getFieldDecorator(props.id, {
       initialValue: props.initialValue,
-      rules: props.rules,
+      rules: props.rules
     })(
       <TimePeriodInput
         someProps={

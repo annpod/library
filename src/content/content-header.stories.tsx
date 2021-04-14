@@ -3,9 +3,8 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import {
   ContentHeader as ContentHeaderC,
-  IContentHeaderProps
 } from './content-header';
-
+import { IContentHeaderProps } from '../typings';
 
 export default {
   title: 'Layout/ContentHeader',

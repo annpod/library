@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import { useDebounce } from '../../hooks/use-debounce';
 
-import { IOpenDeskDetails } from './desk-details.typings';
+import { IOpenDeskDetails } from '../../typings/desk-details';
 import { IDictionaryOption } from '../../typings/etc';
 
 export interface IDeskDetailsStateData {

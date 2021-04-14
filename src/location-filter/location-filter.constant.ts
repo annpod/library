@@ -1,5 +1,5 @@
-import { PreferencesItems } from './location-filter.typings';
-import { ILocationFilterConfig, LocationFilterItems } from './location-filter.typings';
+import { PreferencesItems } from '../typings';
+import { ILocationFilterConfig, LocationFilterItems } from '../typings/location-filter';
 
 export const LOCATION_FILTER: ILocationFilterConfig = {
   Region: {

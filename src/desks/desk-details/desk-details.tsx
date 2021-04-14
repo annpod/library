@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { MainBox } from '../../styled-components/resources.styled';
 // import { useDebounce } from '../../../hooks/use-debounce';
 
-import { ISaveDeskData } from '../desks.typings';
+import { ISaveDeskData } from '../../typings/desks';
 
 import { DeskDetailsForm } from './desk-details.form';
 // import { IOpenDeskDetails } from './desk-details.typings';
