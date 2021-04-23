@@ -17,7 +17,7 @@ export interface ITimePeriodData {
 }
 
 export interface ITimePeriodInputProps {
-  timePeriodData: ITimePeriodData;
+  timePeriodData: IFormTimePeriodData;
   someProps: ITimePeriod;
   onChange?: (value: ITimePeriod) => void;
 }
