@@ -1,22 +1,24 @@
-import * as React from 'react';
+import React from 'react';
+import { FullscreenHeader } from '../header';
+import { Container } from './layout.styled';
+import { ILayoutProps } from '../typings';
 
-import { Content, Wrapper } from './layout.style';
-import { Header } from '../header';
-
-export interface IHeaderOption {
-  btn: string;
-  route: string;
-  order: number;
-}
-
-export interface ILayoutProps {
-  children: React.ReactElement;
-}
-
-export const Layout = (props: ILayoutProps) => {
+export const Layout = ({
+  children,
+  menu,
+  isProfile,
+  onLogout,
+  onLogoClick
+}: ILayoutProps) => {
   return (
-    <Wrapper>
-      <Content>{props.children}</Content>
-    </Wrapper>
+    <>
+      <FullscreenHeader
+        menu={menu}
+        onLogout={onLogout}
+        isProfile={isProfile}
+        onLogoClick={onLogoClick}
+      />
+      <Container>{children}</Container>
+    </>
   );
 };

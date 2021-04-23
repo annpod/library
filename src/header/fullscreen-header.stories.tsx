@@ -1,14 +1,15 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Header } from './header';
+import { FullscreenHeader } from './fullscreen-header';
 import { IHeaderProps } from '../typings';
 
 export default {
-  title: 'Layout/Header',
-  component: Header,
+  title: 'Layout/FullscreenHeader',
+  component: FullscreenHeader,
   args: {
     isProfile: true,
+    onLogoClick: () => {},
     onLogout: () => {},
     menu: {
       activeHeader: 'Administration',
@@ -27,8 +28,10 @@ export default {
   parameters: {
     docs: {
       source: {
-        code: `<Header 
+        code: `<FullscreenHeader 
                 menu={menu}
+                isProfile: true,
+                onLogoClick: () => {},
                 onLogout={() => {}}
                />`
       }
@@ -36,6 +39,6 @@ export default {
   }
 } as Meta;
 
-const Template: Story<IHeaderProps> = (args) => <Header {...args} />;
+const Template: Story<IHeaderProps> = (args) => <FullscreenHeader {...args} />;
 
-export const Primary = Template.bind({});
+export const Fullscreen = Template.bind({});

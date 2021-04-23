@@ -121,6 +121,13 @@ export const ImageComponent = () => <div>{logo}</div>;
 
 ## Storybook
 
+Workplace Storybook
+
+```
+https://workplace-web-component-library.azurewebsites.ne
+
+```
+
 To run a live-reload `Storybook` server on your local machine:
 
 ```
@@ -170,6 +177,12 @@ OR
 
 ```
 import MyComponent from '@connectlabs/workplace-web-component-library/lib/src/
+```
+
+Types
+```
+import { IMyComponent } from '@connectlabs/workplace-web-component-library/dist/typings';
+
 ```
 
 ### Component Usage

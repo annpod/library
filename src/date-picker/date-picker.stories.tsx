@@ -8,7 +8,7 @@ import { IDatePickerProps } from '../typings';
 export default {
   title: 'Form/Datepicker',
   component: Datepicker,
-  parameters: {    
+  parameters: {
     docs: {
       description: {
         component: 'Based on https://ant.design/components/date-picker/',

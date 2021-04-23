@@ -35,6 +35,7 @@ export interface IFormElementProps<F, V> {
   validateTrigger?: string;
   readonly?: boolean
   errorList?: string
+  isHideError?: boolean;
 }
 
 export interface IFormSelectProps<F> extends IFormElementProps<F, string> {
@@ -59,7 +60,7 @@ export interface IFormTextProps<F> extends IFormElementProps<F, string> {
 
 export interface IFormCheckboxProps<F> extends IFormElementProps<F, boolean> {}
 
-export interface IFormAmountProps<F> extends IFormElementProps<F, number> {
+export interface IFormNumberProps<F> extends IFormElementProps<F, number> {
   min?: number;
   max?: number;
 }

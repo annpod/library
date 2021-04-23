@@ -46,6 +46,8 @@ export const theme: Record<string, any> = {
     uploadButtonBg: LIGHT_RED_COLOR,
     sliderColor: LIGHT_RED_COLOR,
     sortButtonColor: BLUE_COLOR,
+    logoTextColor: COAL_COLOR,
+    logoFontSize: '20px',
     toast,
   },
   [SCB_THEME]: {
@@ -74,6 +76,8 @@ export const theme: Record<string, any> = {
     uploadButtonBg: LIGHT_RED_COLOR,
     sliderColor: LIGHT_RED_COLOR,
     sortButtonColor: BLUE_COLOR,
+    logoTextColor: COAL_COLOR,
+    logoFontSize: '20px',
     toast,
   },
   [BT_THEME]: {
@@ -102,6 +106,8 @@ export const theme: Record<string, any> = {
     uploadButtonBg: INDIGO_COLOR,
     sliderColor: INDIGO_COLOR,
     sortButtonColor: INDIGO_COLOR,
+    logoTextColor: COAL_COLOR,
+    logoFontSize: '20px',
     toast,
   },
 };

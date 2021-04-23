@@ -7,7 +7,11 @@ const menu = [
   { title: 'Log out', link: '' },
 ];
 
-const ProfileMenu = (props: any) => {
+interface IProfileMenu {
+  logout: () => void;
+  isProfile?: boolean;
+};
+const ProfileMenu = (props: IProfileMenu) => {
   const logoutFromProfile = () => {
     props.logout();
   };
@@ -16,15 +20,11 @@ const ProfileMenu = (props: any) => {
     <Wrapper>
       <TriangleWrapper />
       <List>
-        <EditProfileLink href={menu[0].link}>{menu[0].title}</EditProfileLink>
+        {props.isProfile && <EditProfileLink href={menu[0].link}>{menu[0].title}</EditProfileLink>}
         <Item onClick={logoutFromProfile}>{menu[1].title}</Item>
       </List>
     </Wrapper>
   );
-};
-
-ProfileMenu.propTypes = {
-  logout: PropTypes.func.isRequired,
 };
 
 export default ProfileMenu;

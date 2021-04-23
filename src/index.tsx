@@ -113,7 +113,10 @@ import {
   DeleteBtn
 } from './styled-components/resources.styled';
 
+import { Layout } from './layout';
+
 export {
+  Layout,
   Button,
   ExportBtn,
   SaveBtn,

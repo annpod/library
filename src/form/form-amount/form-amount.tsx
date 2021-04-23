@@ -3,12 +3,12 @@ import * as React from 'react';
 import { MAX_INT32_VALUE } from '../../constants/config';
 
 import { FormItemBox, AmountInput } from '../form.styled';
-import { IFormAmountProps } from '../../typings/form';
+import { IFormNumberProps } from '../../typings/form';
 
 import 'antd/lib/input-number/style/css';
 
 
-export const FormAmount = <F extends {}>(props: IFormAmountProps<F>) => {
+export const FormAmount = <F extends {}>(props: IFormNumberProps<F>) => {
 
 return (
   <FormItemBox label={props.label}>

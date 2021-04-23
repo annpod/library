@@ -12,7 +12,8 @@ export default {
   args: {
     filterData,
     filter,
-    config
+    config,
+    setFilterLocation: () => {}
   },
   argTypes: {
     setFilterLocation: {
@@ -24,7 +25,7 @@ export default {
   parameters: {
     docs: {
       source: {
-        code: `<LocationFilter                
+        code: `<LocationFilter
                 filterData={filterData}
                 config={config}
                 filter={filter}
@@ -36,7 +37,9 @@ export default {
 } as Meta;
 
 const Template: Story<ILocationFilterProps> = (args) => (
-  <LocationFilter {...args} />
+  <div style={{ display: 'inline-block' }}>
+    <LocationFilter {...args} />
+  </div>
 );
 
 export const Primary = Template.bind({});
