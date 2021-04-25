@@ -17,7 +17,7 @@ export interface ITimePeriodData {
 }
 
 export interface ITimePeriodInputProps {
-  timePeriodData: ITimePeriodData;
+  timePeriodData: IFormTimePeriodData;
   someProps: ITimePeriod;
   onChange?: (value: ITimePeriod) => void;
 }
@@ -88,7 +88,7 @@ export interface ISelectProps extends IFormSelectProps<{}> {
   options: ISelectOption[];
 }
 
-export interface ITimePeriodData {
+export interface IFormTimePeriodData {
   Days: string[];
   Hours: string[];
   Minutes: string[];
@@ -97,5 +97,5 @@ export interface ITimePeriodData {
 
 export interface IFormTimePeriodProps<F>
   extends IFormElementProps<F, ITimePeriod> {
-  timePeriodData: ITimePeriodData;
+  timePeriodData: IFormTimePeriodData;
 }
