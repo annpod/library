@@ -1,4 +1,4 @@
-import { IHashMap, IRange } from 'typings/etc';
+import { IHashMap, IRange } from '../typings/etc';
 
 interface IMark {
   label: string;

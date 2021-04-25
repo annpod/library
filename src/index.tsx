@@ -71,7 +71,8 @@ import {
   DayRangePicker,
   DAY_MARKS,
   getRangeValue,
-  STEP
+  STEP,
+  DaySlider,
 } from './day-range-picker';
 
 // hooks
@@ -153,6 +154,7 @@ export {
   Select,
   selectStyles,
   DayRangePicker,
+  DaySlider,
   DAY_MARKS,
   getRangeValue,
   STEP,
