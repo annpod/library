@@ -50,7 +50,7 @@ export const Select = React.memo((props: IProps) => {
 
   return (
     <ReactSelect
-      styles={styles(width ? width : '215px')}
+      styles={selectStyles(width ? width : '215px')}
       onBlurResetsInput={false}
       onSelectResetsInput={false}
       autoFocus={false}
@@ -71,7 +71,7 @@ export const Select = React.memo((props: IProps) => {
 });
 
 // TODO: update with theme
-export const styles = (width: string): any => ({
+export const selectStyles = (width: string): any => ({
   control: (provided: React.CSSProperties) => ({
     ...provided,
     width,

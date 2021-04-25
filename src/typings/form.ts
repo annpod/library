@@ -99,4 +99,3 @@ export interface IFormTimePeriodProps<F>
   extends IFormElementProps<F, ITimePeriod> {
   timePeriodData: ITimePeriodData;
 }
-

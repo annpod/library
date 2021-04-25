@@ -34,19 +34,16 @@ import {
   ErrorText,
   Title,
   Block,
-  FormCheckbox,
+  FormCheckbox
 } from './form';
 import { Icon, SvgIconStyled } from './icon';
 import { TextIconButton, TextWrapper } from './icon-button';
 import { TimePeriodInput } from './time-period-input';
 import { TimePicker } from './time-picker';
 import { TimeRangePicker } from './time-range-picker';
-import { Select } from './select';
+import { Select, selectStyles } from './select';
 import { TabButton, IconTextTabButton } from './tab-button';
-import {
-  LocationFilter,
-  createLocationFilter,
-} from './location-filter';
+import { LocationFilter, createLocationFilter } from './location-filter';
 import { LocationFilterItems } from './typings';
 import { FetchTable } from './fetch-table';
 import { StyledPagination } from './pagination';
@@ -56,11 +53,7 @@ import { IconButton } from './icon-button';
 import { CustomSearchInput } from './custom-search-input';
 import { Datepicker } from './date-picker';
 import { ParamsPanel } from './params-panel';
-import {
-  FilterBuilder,
-  formatData,
-  locationKeyMap
-} from './desks';
+import { FilterBuilder, formatData, locationKeyMap } from './desks';
 import { Header } from './header';
 import {
   UsersIcon,
@@ -73,6 +66,13 @@ import {
   UploadIcon,
   MeetingsIcon
 } from './route-selector/route-selector.icons';
+
+import {
+  DayRangePicker,
+  DAY_MARKS,
+  getRangeValue,
+  STEP
+} from './day-range-picker';
 
 // hooks
 import { useClickOutside, useDebounce, useToggle } from './hooks';
@@ -151,6 +151,11 @@ export {
   TimePicker,
   TimeRangePicker,
   Select,
+  selectStyles,
+  DayRangePicker,
+  DAY_MARKS,
+  getRangeValue,
+  STEP,
   CustomScrollbars,
   TabButton,
   IconTextTabButton,
@@ -223,6 +228,5 @@ export {
   CovidIcon,
   UploadIcon,
   MeetingsIcon,
-  DeleteBtn,
+  DeleteBtn
 };
-

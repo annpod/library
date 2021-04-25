@@ -75,3 +75,10 @@ export interface ITimePickerProps {
   placeholder?: string;
   width?: string;
 }
+
+export type IDayRangeValue = [number, number];
+
+export interface IDayRangePickerProps {
+  value: IRange<number>;
+  onChange: (value: IRange<number>) => void;
+}
