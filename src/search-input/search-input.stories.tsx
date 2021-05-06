@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { SearchInput } from './search-input';
 
 export default {
-  title: 'Form/SearchInput',
+  title: 'SearchInput',
   component: SearchInput
 } as Meta;
 

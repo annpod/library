@@ -64,8 +64,8 @@ interface IRoomData {
 export interface IFilterData {
   regions: IRegionsData[];
   sites: ISitesData[];
-  buildings: IBuildingsData[];
-  floors: IFloorsData[];
+  buildings?: IBuildingsData[];
+  floors?: IFloorsData[];
   room?: IRoomData[];
 }
 

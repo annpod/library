@@ -2,7 +2,8 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { startOfToday, startOfTomorrow } from 'date-fns';
 
-import { TimeRangePicker, ITimeRangePickerProps } from './time-range-picker';
+import { TimeRangePicker } from './time-range-picker';
+import { ITimeRangePickerProps } from '../typings';
 
 export default {
   title: 'Form/TimeRangePicker',

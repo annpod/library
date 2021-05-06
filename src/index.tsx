@@ -55,6 +55,8 @@ import { Datepicker } from './date-picker';
 import { ParamsPanel } from './params-panel';
 import { FilterBuilder, formatData, locationKeyMap } from './desks';
 import { Header } from './header';
+import { Input } from './input';
+import { Switch } from './switch';
 import {
   UsersIcon,
   EstateIcon,
@@ -122,6 +124,8 @@ export {
   ExportBtn,
   SaveBtn,
   TextWrapper,
+  Input,
+  Switch,
   SubmitButton,
   CollapseItem,
   ContentSider,

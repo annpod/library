@@ -34,6 +34,12 @@ export const StyledTable = (styled(Table)`
     font-weight: 400;
     background: none;
     border: none;
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
   }
 
   & .ant-table-thead > tr > th {
@@ -83,12 +89,12 @@ export const StyledTable = (styled(Table)`
 
   & .ant-table-tbody > tr > td {
     background-color: #f7f7f7;
-    height: 41px;
-    border-bottom: 2px solid #fff;
+    height: 50px;
+    border-bottom: 4px solid #fff;
   }
 
   & .ant-table-tbody > tr {
-    height: 41px;
+    height: 50px;
   }
 
   &

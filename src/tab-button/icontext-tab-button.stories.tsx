@@ -1,7 +1,8 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { IconTextTabButton, IIconTextTabButtonProps } from './tab-button';
+import { IconTextTabButton } from './tab-button';
+import { IIconTextTabButtonProps } from '../typings';
 
 export default {
   title: 'Buttons/IconTextTabButton',

@@ -7,7 +7,6 @@ export interface IIconProps extends React.HTMLAttributes<HTMLElement> {
   type: string;
   size?: number;
   className?: string;
-  color?: string | undefined;
 }
 
 const Wrapper = styled.div`

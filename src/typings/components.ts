@@ -26,9 +26,12 @@ export interface IContentHeaderProps {
 export interface IInputProps {
   placeholder: string;
   name: string;
+  className?: string;
   type?: string;
   value?: string;
   error?: boolean;
+  errorMessage?: string;
+  isErrorIcon?: boolean;
   disabled?: boolean;
   onChange: (name: string, value: string) => void;
 }
@@ -142,3 +145,13 @@ export interface ITimeRangePickerProps {
   width?: string;
 }
 
+export interface ISwitchProps {
+  loading?: boolean;
+  disabled?: boolean;
+  checkedChildren?: boolean;
+  checked?: boolean;
+  defaultChecked?: boolean;
+  unCheckedChildren?: boolean;
+  onChange?: (checked: boolean, event: Event) => void;
+  onClick?: (checked: boolean, event: Event) => void;
+}

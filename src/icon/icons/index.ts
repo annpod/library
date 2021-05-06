@@ -22,6 +22,7 @@ import facilities from './facilities.svg';
 import layout from './layout.svg';
 import catering from './catering.svg';
 import equipment from './equipment.svg';
+import error from './error.svg';
 
 import resourcesDesks from './resources-desks.svg';
 import resourcesNeighbourhoods from './resources-neighbourhoods.svg';
@@ -77,4 +78,5 @@ export const ICONS: IconTypes = {
   arrow_left,
   arrow_down,
   remove,
+  error,
 };
