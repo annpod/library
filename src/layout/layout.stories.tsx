@@ -5,7 +5,7 @@ import { Layout } from './layout';
 import { ILayoutProps } from '../typings';
 
 export default {
-  title: 'Layout/Layout',
+  title: 'Layout',
   component: Layout,
   parameters: {
     docs: {

@@ -16,4 +16,7 @@ export const LIGHT_GREY2_COLOR = '#F7F7F7';
 export const DARK_GREY2_COLOR = '#707070';
 export const GREY2_COLOR = '#b5b5b5';
 export const LIGHT_RED2_COLOR = '#edb8bd';
+export const LIGHT_RED3_COLOR = '#ee4756';
+export const BLUE2_COLOR = '#72ABDD';
+
 

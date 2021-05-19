@@ -5,7 +5,7 @@ import { Header } from './header';
 import { IHeaderProps } from '../typings';
 
 export default {
-  title: 'Layout/Header',
+  title: 'Header',
   component: Header,
   args: {
     isProfile: true,

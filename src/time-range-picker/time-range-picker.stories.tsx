@@ -6,7 +6,7 @@ import { TimeRangePicker } from './time-range-picker';
 import { ITimeRangePickerProps } from '../typings';
 
 export default {
-  title: 'Form/TimeRangePicker',
+  title: 'TimeRangePicker',
   component: TimeRangePicker
 } as Meta;
 

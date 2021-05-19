@@ -4,7 +4,7 @@ import { TimePicker } from './time-picker';
 import { ITimePickerProps } from '../typings';
 
 export default {
-  title: 'Form/TimePicker',
+  title: 'TimePicker',
   component: TimePicker,
   parameters: {
     docs: {

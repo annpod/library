@@ -20,36 +20,43 @@ const desksColumns: any = [
 const data: any = [
   {
     building: '250, The Village',
-    request: 'First Floor'
+    request: 'First Floor',
+    key: '1'
   },
   {
     building: '250, The Village',
-    request: 'Second Floor'
+    request: 'Second Floor',
+    key: '2'
   },
   {
     building: '251, The Village',
-    request: 'First Floor'
+    request: 'First Floor',
+    key: '3'
   },
   {
     building: '251, The Village',
-    request: 'First Floor'
+    request: 'First Floor',
+    key: '4'
   },
   {
     building: '251, The Village',
-    request: 'First Floor'
+    request: 'First Floor',
+    key: '5'
   },
   {
     building: '251, The Village',
-    request: 'First Floor'
+    request: 'First Floor',
+    key: '6'
   },
   {
     building: '251, The Village',
-    request: 'First Floor'
+    request: 'First Floor',
+    key: '7'
   }
 ];
 
 export default {
-  title: 'FetchTable',
+  title: 'V1/FetchTable',
   component: FetchTable,
   args: {
     columns: desksColumns,
@@ -71,6 +78,7 @@ export default {
       },
       source: {
         code: `<FetchTable
+       rowKey="key" // specify the primary key of data value via rowKey
        onRow={onRow}
        columns={desksColumns}
        data={data}

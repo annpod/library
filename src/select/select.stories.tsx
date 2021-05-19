@@ -19,7 +19,7 @@ interface ISelectProps {
 }
 
 export default {
-  title: 'Form/Select',
+  title: 'Select',
   component: Select,
   parameters: {
     docs: {

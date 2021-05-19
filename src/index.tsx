@@ -1,4 +1,4 @@
-import { Button, ExportBtn, SaveBtn, SubmitButton } from './button';
+import { Button, ExportBtn, SaveBtn, SubmitButton, ButtonStyled } from './button';
 import { CollapseItem } from './collapse-item';
 import { ContentSider, ContentHeader } from './content';
 import { DeskDetails, DesksContent } from './desks';
@@ -123,6 +123,7 @@ export {
   Button,
   ExportBtn,
   SaveBtn,
+  ButtonStyled,
   TextWrapper,
   Input,
   Switch,

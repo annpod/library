@@ -9,7 +9,7 @@ export const Input = (props: IInputProps) => {
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     props.onChange(props.name, event.currentTarget.value);
   };
-
+  
   return (
     <InputWrapper>
       <InputC

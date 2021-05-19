@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { LibWithTheme } from '../theme-provider';
-import { Button, ExportBtn, SaveBtn, Submit } from '../button';
+import { Button, ExportBtn, SaveBtn, Submit, ButtonStyled } from '../button';
 
 const ButtonsC = () => {
   return (
@@ -46,19 +46,57 @@ const ButtonsC = () => {
 
       <Wrapper>
         <div>
-          <Submit onClick={() => {}} loading={false} disabled={false}>
+          <Submit onClick={() => { }} loading={false} disabled={false}>
             Default
           </Submit>
         </div>
         <div>
-          <Submit onClick={() => {}} loading={false} disabled={true}>
+          <Submit onClick={() => { }} loading={false} disabled={true}>
             Disabled
           </Submit>
         </div>
         <div>
-          <Submit onClick={() => {}} loading={true} disabled={false}>
+          <Submit onClick={() => { }} loading={true} disabled={false}>
             Loading
           </Submit>
+        </div>
+      </Wrapper>
+
+      <div><b>V1</b></div>
+      <Title>ButtonStyled.Primary</Title>
+      <Wrapper>
+        <div>
+          <ButtonStyled.Primary>Default</ButtonStyled.Primary>
+        </div>
+        <div>
+          <ButtonStyled.Primary disabled={true}>Disabled</ButtonStyled.Primary>
+        </div>
+      </Wrapper>
+      <Title>ButtonStyled.Dark</Title>
+      <Wrapper>
+        <div>
+          <ButtonStyled.Dark>Default</ButtonStyled.Dark>
+        </div>
+        <div>
+          <ButtonStyled.Dark disabled={true}>Disabled</ButtonStyled.Dark>
+        </div>
+      </Wrapper>
+      <Title>ButtonStyled.Light</Title>
+      <Wrapper>
+        <div>
+          <ButtonStyled.Light>Default</ButtonStyled.Light>
+        </div>
+        <div>
+          <ButtonStyled.Light disabled={true}>Disabled</ButtonStyled.Light>
+        </div>
+      </Wrapper>
+      <Title>ButtonStyled.Blue</Title>
+      <Wrapper>
+        <div>
+          <ButtonStyled.Blue>Default</ButtonStyled.Blue>
+        </div>
+        <div>
+          <ButtonStyled.Blue disabled={true}>Disabled</ButtonStyled.Blue>
         </div>
       </Wrapper>
     </div>
@@ -72,8 +110,9 @@ const Wrapper = styled.div`
   margin-bottom: 30px;
   div {
     display: flex;
-    width: 300px;
+    width: 200px;
     align-content: center;
+    padding: 0 40px;
   }
 `;
 

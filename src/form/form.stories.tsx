@@ -95,7 +95,7 @@ export const Primary = () => {
 const Fields = Primary.bind({});
 
 export default {
-  title: 'Form/StyledFields',
+  title: 'StyledFields',
   component: Primary,
   parameters: {
     docs: {

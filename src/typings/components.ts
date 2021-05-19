@@ -24,7 +24,7 @@ export interface IContentHeaderProps {
 }
 
 export interface IInputProps {
-  placeholder: string;
+  placeholder?: string;
   name: string;
   className?: string;
   type?: string;

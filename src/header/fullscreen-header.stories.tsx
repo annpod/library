@@ -5,7 +5,7 @@ import { FullscreenHeader } from './fullscreen-header';
 import { IHeaderProps } from '../typings';
 
 export default {
-  title: 'Layout/FullscreenHeader',
+  title: 'FullscreenHeader',
   component: FullscreenHeader,
   args: {
     isProfile: true,

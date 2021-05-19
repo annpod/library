@@ -6,7 +6,7 @@ import { Datepicker } from './date-picker';
 import { IDatePickerProps } from '../typings';
 
 export default {
-  title: 'Form/Datepicker',
+  title: 'Datepicker',
   component: Datepicker,
   parameters: {
     docs: {

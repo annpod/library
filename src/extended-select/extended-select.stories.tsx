@@ -17,7 +17,7 @@ const options = [
 ];
 
 export default {
-  title: 'Form/ExtendedSelect',
+  title: 'ExtendedSelect',
   component: ExtendedSelect
 } as Meta;
 

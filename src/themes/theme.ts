@@ -17,7 +17,10 @@ import {
   DARK_GREY2_COLOR,
   LIGHT_RED2_COLOR,
   GREY2_COLOR,
+  LIGHT_RED3_COLOR,
+  BLUE2_COLOR,
 } from '../constants/colors';
+import { BtnTypes } from "../typings";
 import { commonTheme, toast } from '../constants/common';
 
 export const DEFAULT_THEME = 'DEFAULT';
@@ -61,6 +64,24 @@ export const theme: Record<string, any> = {
     switchActiveColor: RED2_COLOR,
     switchBg: GREY2_COLOR,
     toast,
+    buttons: {
+      [BtnTypes.primary]: {
+        background: LIGHT_RED3_COLOR,
+        color: WHITE_COLOR
+      },
+      [BtnTypes.dark]: {
+        background: COAL_COLOR,
+        color: WHITE_COLOR
+      },
+      [BtnTypes.light]: {
+        background: WHITE_COLOR,
+        color: DARK_GREY2_COLOR
+      },
+      [BtnTypes.blue]: {
+        background: BLUE2_COLOR,
+        color: WHITE_COLOR
+      },
+    },
   },
   [SCB_THEME]: {
     ...commonTheme,
@@ -97,6 +118,24 @@ export const theme: Record<string, any> = {
     switchActiveBg: LIGHT_RED2_COLOR,
     switchBg: GREY2_COLOR,
     toast,
+    buttons: {
+      [BtnTypes.primary]: {
+        background: LIGHT_RED3_COLOR,
+        color: WHITE_COLOR
+      },
+      [BtnTypes.dark]: {
+        background: COAL_COLOR,
+        color: WHITE_COLOR
+      },
+      [BtnTypes.light]: {
+        background: WHITE_COLOR,
+        color: DARK_GREY2_COLOR
+      },
+      [BtnTypes.blue]: {
+        background: BLUE2_COLOR,
+        color: WHITE_COLOR
+      },
+    },
   },
   [BT_THEME]: {
     ...commonTheme,
@@ -133,5 +172,23 @@ export const theme: Record<string, any> = {
     switchActiveBg: LIGHT_RED2_COLOR,
     switchBg: GREY2_COLOR,
     toast,
+    buttons: {
+      [BtnTypes.primary]: {
+        background: LIGHT_RED3_COLOR,
+        color: WHITE_COLOR
+      },
+      [BtnTypes.dark]: {
+        background: COAL_COLOR,
+        color: WHITE_COLOR
+      },
+      [BtnTypes.light]: {
+        background: WHITE_COLOR,
+        color: DARK_GREY2_COLOR
+      },
+      [BtnTypes.blue]: {
+        background: BLUE2_COLOR,
+        color: WHITE_COLOR
+      },
+    },
   },
 };

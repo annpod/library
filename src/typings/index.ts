@@ -8,3 +8,4 @@ export * from './form';
 export * from './layout';
 export * from './location-filter';
 export * from './desk-details';
+export * from './enum';

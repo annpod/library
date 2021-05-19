@@ -21,7 +21,7 @@ export const Primary = () => {
 const Fields = Primary.bind({});
 
 export default {
-  title: 'Form/CheckedInputStyles',
+  title: 'CheckedInputStyles',
   component: Primary,
   parameters: {
     docs: {

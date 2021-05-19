@@ -141,6 +141,20 @@ const Theme = (props: any) => {
               <SortButtonColor /> <ColorCode>{props.theme.sortButtonColor}</ColorCode>
             </td>
           </tr>
+          <div><b>V1</b></div>
+          <tr>
+            <td>switchActiveBg</td>
+            <td>
+              <SwitchActiveBg /> <ColorCode>{props.theme.switchActiveBg}</ColorCode>
+            </td>
+          </tr>
+          <tr>
+            <td>switchBg</td>
+            <td>
+              <SwitchBg /> <ColorCode>{props.theme.switchActiveBg}</ColorCode>
+            </td>
+          </tr>
+          
         </tbody>
       </Table>
     </div>
@@ -256,3 +270,14 @@ const SortButtonColor = styled(Color)`
   background: ${(props) => props.theme.sortButtonColor};
   border: ${(props) => props.theme.sortButtonColor === '#ffffff' || props.theme.sortButtonColor === '#fff' ? '1px solid #999' : 'none'};
 `;
+const SwitchActiveBg = styled(Color)`
+  background: ${(props) => props.theme.switchActiveBg};
+  border: ${(props) => props.theme.switchActiveBg === '#ffffff' || props.theme.switchActiveBg === '#fff' ? '1px solid #999' : 'none'};
+`;
+
+const SwitchBg = styled(Color)`
+  background: ${(props) => props.theme.switchBg};
+  border: ${(props) => props.theme.switchBg === '#ffffff' || props.theme.switchBg === '#fff' ? '1px solid #999' : 'none'};
+`;
+
+

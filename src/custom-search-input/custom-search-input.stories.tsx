@@ -5,7 +5,7 @@ import { CustomSearchInput } from './search-input';
 import { IInputProps } from '../typings';
 
 export default {
-  title: 'Form/CustomSearchInput',
+  title: 'CustomSearchInput',
   component: CustomSearchInput
 } as Meta;
 

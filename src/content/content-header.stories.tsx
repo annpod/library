@@ -7,7 +7,7 @@ import {
 import { IContentHeaderProps } from '../typings';
 
 export default {
-  title: 'Layout/ContentHeader',
+  title: 'ContentHeader',
   component: ContentHeaderC,
   args: {
     title: 'Title'

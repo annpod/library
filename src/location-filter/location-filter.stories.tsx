@@ -7,7 +7,7 @@ import { ILocationFilterProps } from '../typings/location-filter';
 import { filterData, filter, config } from './location-filter.mocks';
 
 export default {
-  title: 'Filter/LocationFilter',
+  title: 'LocationFilter',
   component: LocationFilter,
   args: {
     filterData,

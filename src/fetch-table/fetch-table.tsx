@@ -63,6 +63,7 @@ export function FetchTable<T>(props: IFetchTableProps<T>) {
     <WaveLoading color={'#bcbcbc'} />
   ) : (
     <StyledTable
+      rowKey={props.rowKey || "key"}
       onRow={props.onRow}
       columns={columns}
       dataSource={props.data}

@@ -31,4 +31,5 @@ export interface IFetchTableProps<T> {
   isLoading: boolean;
   isHidePagination?: boolean;
   emptyText?: string;
+  rowKey?: string;
 }

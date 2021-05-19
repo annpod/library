@@ -5,7 +5,7 @@ import { Input } from './input';
 import { IInputProps } from '../typings';
 
 export default {
-  title: 'Input',
+  title: 'V1/Input',
   component: Input
 } as Meta;
 

@@ -5,7 +5,7 @@ import { TimePeriodInput,  } from './time-period-input';
 import { ITimePeriod } from '../typings';
 
 export default {
-  title: 'Form/TimePeriodInput',
+  title: 'TimePeriodInput',
   component: TimePeriodInput,
   parameters: {
     docs: {
