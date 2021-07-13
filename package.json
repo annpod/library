@@ -12,7 +12,7 @@
   "module": "dist/index.esm.js",
   "scripts": {
     "build": "rollup -c",
-    "start": "rollup -c -w",
+    "start": "rollup -c -w && npm run prettier",
     "prepare": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -106,19 +106,6 @@
   },
   "eslintConfig": {
     "extends": "react-app",
-    "@typescript-eslint/no-angle-bracket-type-assertion": "off",
-    "rules": {
-      "additional-rule": "warn"
-    },
-    "overrides": [
-      {
-        "files": [
-          "**/*.ts?(x)"
-        ],
-        "rules": {
-          "additional-typescript-only-rule": "warn"
-        }
-      }
-    ]
+    "@typescript-eslint/no-angle-bracket-type-assertion": "off"
   }
 }

@@ -14,9 +14,9 @@ const Template: Story<IInputProps> = (args) => <Input {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
- value: 'text',
- name: 'name',
- onChange: () => {}
+  value: 'text',
+  name: 'name',
+  onChange: () => {}
 };
 
 export const Error = Template.bind({});
@@ -38,7 +38,6 @@ ErrorMessage.args = {
   onChange: () => {}
 };
 
-
 export const ErrorIcon = Template.bind({});
 
 ErrorIcon.args = {
@@ -47,5 +46,14 @@ ErrorIcon.args = {
   error: true,
   errorMessage: 'Error message',
   isErrorIcon: true,
+  onChange: () => {}
+};
+
+export const Number = Template.bind({});
+
+Number.args = {
+  value: 'text',
+  name: 'name',
+  type: 'number',
   onChange: () => {}
 };

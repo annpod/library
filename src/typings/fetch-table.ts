@@ -1,12 +1,9 @@
 import { ColumnProps } from 'antd/lib/table';
-import {
-  IPaginatableParams,
-  ISortableParams
-} from './api';
+import { IPaginatableParams, ISortableParams } from './api';
 
 export enum DefaultSortOrder {
   ascend = 'ascend',
-  descend = 'descend',
+  descend = 'descend'
 }
 
 export interface TableEventListeners {
@@ -19,6 +16,8 @@ export interface TableEventListeners {
 
 export interface IFetchTableProps<T> {
   onRow?: (record: T, index: number) => TableEventListeners;
+  rowSelection?: (r: string[] | number[]) => void;
+  selectedRowKeys?: string[];
   columns: ColumnProps<T>[];
   data: T[];
   totalRowCount: number;

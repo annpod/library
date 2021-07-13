@@ -124,7 +124,7 @@ export const ImageComponent = () => <div>{logo}</div>;
 Workplace Storybook
 
 ```
-https://workplace-web-component-library.azurewebsites.ne
+https://workplace-web-component-library.azurewebsites.net
 
 ```
 
@@ -214,6 +214,12 @@ OR add dependency to the package.json as
   "@connectib/workplace-web-component-library": "git+ssh://git@github.com/<github username>/<repository name>.git#<release version | branch>"
 }
 ```
+Watch mode during development
+
+```
+npm start
+```
+
 ### Theme Provider
 
 Benefit of exporting a custom Theme Provider is that you can set the default theme of your library and avoid tons of "does this property exist" check
@@ -226,8 +232,8 @@ import { LibThemeProvider } from '@connectlabs/workplace-web-component-library';
 export const App = () => {
   return (
     <Provider store={store}>
-      <LibThemeProvider theme={themeProps} themeName={themeName} >        
-          Content        
+      <LibThemeProvider theme={themeProps} themeName={themeName} >
+          Content
       </LibThemeProvider>
     </Provider>
   );

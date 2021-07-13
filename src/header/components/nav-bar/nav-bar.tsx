@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { NavBarButton } from './nav-bar-btn';
-import { mediaStyled } from '../../../styles/media';
 import { NavBarIcon, NavBarIconContainer } from './nav-bar-icon';
 import { IHeaderOption } from '../../../typings';
 import ProfileMenu from './profile-menu';

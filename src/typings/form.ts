@@ -33,8 +33,8 @@ export interface IFormElementProps<F, V> {
   disabled?: boolean;
   type?: string;
   validateTrigger?: string;
-  readonly?: boolean
-  errorList?: string
+  readonly?: boolean;
+  errorList?: string;
   isHideError?: boolean;
 }
 
@@ -73,10 +73,9 @@ export interface IAutoCompleteOption {
 export interface IAutoComplete {
   data: Array<{ text: string; value: string }>;
   isHideError?: boolean;
-  onSearch: (x: string) => void;
+  onSearch?: (x: string) => void;
   onSelect?: (x: any) => void;
 }
-
 
 export interface IFormAmountProps<F> extends IFormElementProps<F, number> {
   onChange: (name: string, value: string) => void;

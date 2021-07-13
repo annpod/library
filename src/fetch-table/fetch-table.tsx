@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { PaginationConfig } from 'antd/lib/pagination';
+
 import { ColumnProps, SorterResult, SortOrder } from 'antd/lib/table';
 
 import { IParsedSortingQuery, ISortableParams } from '../typings/api';
@@ -59,11 +60,35 @@ export function FetchTable<T>(props: IFetchTableProps<T>) {
     props.paginationParams
   );
 
-  return props.isLoading ? (
-    <WaveLoading color={'#bcbcbc'} />
-  ) : (
+  const rowSelection = {
+    onChange: (selectedRowKeys: string[] | number[]) => {
+      if (props.rowSelection) {
+        props.rowSelection(selectedRowKeys);
+      }
+    },
+    selectedRowKeys: props.selectedRowKeys
+  };
+
+  if (props.isLoading) return <WaveLoading color='#bcbcbc' />;
+
+  if (props.rowSelection) {
+    return (
+      <StyledTable
+        rowKey={props.rowKey || 'key'}
+        rowSelection={rowSelection}
+        onRow={props.onRow}
+        columns={columns}
+        dataSource={props.data}
+        onChange={handleTableChange}
+        pagination={props.isHidePagination ? false : toPagination}
+        locale={props.emptyText ? { emptyText: props.emptyText } : {}}
+      />
+    );
+  }
+
+  return (
     <StyledTable
-      rowKey={props.rowKey || "key"}
+      rowKey={props.rowKey || 'key'}
       onRow={props.onRow}
       columns={columns}
       dataSource={props.data}

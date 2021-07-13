@@ -39,7 +39,6 @@ export default [
         clean: true,
         exclude: [
           'node_modules',
-          'src/**/*.stories.tsx',
           'src/**/*.test.(tsx|ts)',
           'src/**/*.svg',
           "*.d.ts",

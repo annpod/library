@@ -1,0 +1,29 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  viewBox="0 0 18 18"
+>
+  <g id="Group_7719" data-name="Group 7719" transform="translate(-425 -273)">
+    <g
+      id="Ellipse_418"
+      data-name="Ellipse 418"
+      transform="translate(425 273)"
+      fill="none"
+      stroke="#cc5858"
+      stroke-width="1"
+    >
+      <circle cx="9" cy="9" r="9" stroke="none" />
+      <circle cx="9" cy="9" r="8.5" fill="none" />
+    </g>
+    <path
+      id="Union_1"
+      data-name="Union 1"
+      d="M3417.181,17884.182l-3.183,3.182,3.183-3.182L3414,17881l3.183,3.184,3.183-3.184-3.183,3.184,3.183,3.182Z"
+      transform="translate(-2983.182 -17602.182)"
+      fill="none"
+      stroke="#cc5858"
+      stroke-width="1.5"
+    />
+  </g>
+</svg>

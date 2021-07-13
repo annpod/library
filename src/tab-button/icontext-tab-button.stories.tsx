@@ -19,7 +19,6 @@ Primary.args = {
   disabled: false,
   section: 'First section',
   className: 'firstSection',
-  // eslint-disable-next-line
   onClick: (section: string) => {},
   selected: true,
 };

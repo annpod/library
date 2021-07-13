@@ -58,7 +58,7 @@ export const Select = React.memo((props: IProps) => {
       onChange={onChangeSelect}
       isDisabled={disabled}
       clearable={false}
-      value={value}
+      value={value || null}
       valueRenderer={valueRenderer}
       placeholder={placeholder}
       optionRenderer={optionRenderer}

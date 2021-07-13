@@ -1,7 +1,20 @@
-import { Button, ExportBtn, SaveBtn, SubmitButton, ButtonStyled } from './button';
+import './styles.module.css';
+import {
+  Button,
+  ExportBtn,
+  SaveBtn,
+  SubmitButton,
+  ButtonStyled
+} from './button';
 import { CollapseItem } from './collapse-item';
 import { ContentSider, ContentHeader } from './content';
-import { DeskDetails, DesksContent } from './desks';
+import {
+  DeskDetails,
+  DesksContent,
+  FilterBuilder,
+  formatData,
+  locationKeyMap
+} from './desks';
 import { ExtendedSelect } from './extended-select';
 import {
   FormAmount,
@@ -37,7 +50,7 @@ import {
   FormCheckbox
 } from './form';
 import { Icon, SvgIconStyled } from './icon';
-import { TextIconButton, TextWrapper } from './icon-button';
+import { TextIconButton, TextWrapper, IconButton } from './icon-button';
 import { TimePeriodInput } from './time-period-input';
 import { TimePicker } from './time-picker';
 import { TimeRangePicker } from './time-range-picker';
@@ -49,14 +62,16 @@ import { FetchTable } from './fetch-table';
 import { StyledPagination } from './pagination';
 import { Modal } from './modal';
 import { CustomScrollbars } from './scrollbars';
-import { IconButton } from './icon-button';
+
 import { CustomSearchInput } from './custom-search-input';
 import { Datepicker } from './date-picker';
 import { ParamsPanel } from './params-panel';
-import { FilterBuilder, formatData, locationKeyMap } from './desks';
+
 import { Header } from './header';
-import { Input } from './input';
+import { Input, InputStyled } from './input';
 import { Switch } from './switch';
+import { RadioGroup } from './radio-group';
+import { CheckboxGroup } from './checkbox-group';
 import {
   UsersIcon,
   EstateIcon,
@@ -74,7 +89,7 @@ import {
   DAY_MARKS,
   getRangeValue,
   STEP,
-  DaySlider,
+  DaySlider
 } from './day-range-picker';
 
 // hooks
@@ -82,8 +97,7 @@ import { useClickOutside, useDebounce, useToggle } from './hooks';
 
 // theme provider
 
-import { LibThemeProvider } from './theme-provider';
-import { LibWithTheme } from './theme-provider';
+import { LibThemeProvider, LibWithTheme } from './theme-provider';
 
 // styles
 import {
@@ -116,16 +130,18 @@ import {
   DeleteBtn
 } from './styled-components/resources.styled';
 
-import { Layout } from './layout';
+import { Layout, FocusViewLayout } from './layout';
 
 export {
   Layout,
+  FocusViewLayout,
   Button,
   ExportBtn,
   SaveBtn,
   ButtonStyled,
   TextWrapper,
   Input,
+  InputStyled,
   Switch,
   SubmitButton,
   CollapseItem,
@@ -235,5 +251,7 @@ export {
   CovidIcon,
   UploadIcon,
   MeetingsIcon,
-  DeleteBtn
+  DeleteBtn,
+  RadioGroup,
+  CheckboxGroup
 };

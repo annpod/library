@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { CollapseItem, CollapseItemProps } from './collapse-item';
 
 export default {
-  title: 'CollapseItem',
+  title: 'V1/CollapseItem',
   component: CollapseItem,
   parameters: {
     docs: {

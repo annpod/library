@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 import { Button } from '../button';
 import { TextIconButton, TextWrapper } from './tab-button.styled';
@@ -17,7 +17,6 @@ export const TabButton = (props: ITabButtonProps) => {
     </Button>
   );
 };
-
 
 export const IconTextTabButton = (props: IIconTextTabButtonProps) => {
   const { icon, title, disabled, section, className } = props;

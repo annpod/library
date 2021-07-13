@@ -5,10 +5,17 @@ import {
   theme,
   DEFAULT_THEME,
   SCB_THEME,
-  BT_THEME
+  BT_THEME,
+  AMEREN_THEME
 } from '../src/themes';
 
-const themes = [theme[DEFAULT_THEME], theme[SCB_THEME], theme[BT_THEME]];
+const themes = [
+  theme[DEFAULT_THEME],
+  theme[SCB_THEME],
+  theme[BT_THEME],
+  theme[AMEREN_THEME]
+];
+
 addDecorator(withThemesProvider(themes), ThemeProvider);
 
 export const parameters = {

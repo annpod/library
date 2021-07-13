@@ -1,6 +1,11 @@
 export enum BtnTypes {
-  primary,
-  dark,
-  light,
-  blue,
+  Primary = 'primary',
+  Dark = 'dark',
+  Light = 'light',
+  Blue = 'blue'
+}
+
+export enum InputTypes {
+  Primary = 'primary',
+  Dark = 'dark',
 }

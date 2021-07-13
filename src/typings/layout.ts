@@ -19,3 +19,10 @@ export interface IMenuHeader {
 export interface ILayoutProps extends IHeaderProps {
   children: React.ReactNode;
 }
+
+export interface IFocusViewLayout {
+  title?: string;
+  children: React.ReactNode;
+  header?: React.ReactNode;
+  onClose: () => void;
+}

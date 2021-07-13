@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { BtnTypes } from "../typings";
+import React from 'react';
+import styled from 'styled-components';
+import { BtnTypes } from '../typings';
 
 interface ButtonProps {
   btnType: BtnTypes;
@@ -18,7 +18,8 @@ const ButtonWrapper = styled.div<ButtonProps>`
   align-items: center;
   justify-content: space-around;
   padding: 0px 10px;
-  background-color: ${(props) => props.disabled ? "#DBDBDB" : props.theme.buttons[props.btnType].background};
+  background-color: ${(props) =>
+    props.disabled ? '#DBDBDB' : props.theme.buttons[props.btnType].background};
   color: ${(props) => props.theme.buttons[props.btnType].color};
 `;
 
@@ -32,17 +33,25 @@ export interface IProps {
   disabled?: boolean;
 }
 
-const Wrapper = (btnType: BtnTypes) => ({ onClick, children, disabled = false }: IProps) => {
+const Wrapper = (btnType: BtnTypes) => ({
+  onClick,
+  children,
+  disabled = false
+}: IProps) => {
   return (
-    <ButtonWrapper btnType={btnType} onClick={disabled ? () => null : onClick} disabled={disabled}>
+    <ButtonWrapper
+      btnType={btnType}
+      onClick={disabled ? () => null : onClick}
+      disabled={disabled}
+    >
       <Text>{children}</Text>
     </ButtonWrapper>
   );
 };
-
+ 
 export const ButtonStyled = {
-  Primary: Wrapper(BtnTypes.primary),
-  Dark: Wrapper(BtnTypes.dark),
-  Light: Wrapper(BtnTypes.light),
-  Blue: Wrapper(BtnTypes.blue),
+  Primary: Wrapper(BtnTypes.Primary),
+  Dark: Wrapper(BtnTypes.Dark),
+  Light: Wrapper(BtnTypes.Light),
+  Blue: Wrapper(BtnTypes.Blue)
 };

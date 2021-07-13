@@ -78,7 +78,7 @@ export default {
       },
       source: {
         code: `<FetchTable
-       rowKey="key" // specify the primary key of data value via rowKey
+       rowKey={props.rowKey} // specify the primary key of data value via rowKey
        onRow={onRow}
        columns={desksColumns}
        data={data}

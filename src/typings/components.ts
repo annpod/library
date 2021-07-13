@@ -1,6 +1,9 @@
 import React, { ReactNode } from 'react';
 import { ISelectOption } from './etc';
 import moment from 'moment';
+import { CheckboxValueType } from 'antd/lib/checkbox/Group';
+import { RadioChangeEvent } from 'antd/lib/radio';
+import { InputTypes } from '../typings';
 
 export interface IExportButton {
   disabled: boolean;
@@ -33,7 +36,19 @@ export interface IInputProps {
   errorMessage?: string;
   isErrorIcon?: boolean;
   disabled?: boolean;
+  min?: string;
+  max?: string;
+  inputType?: InputTypes;
   onChange: (name: string, value: string) => void;
+}
+
+export interface IInputsProps extends IInputProps {
+  isError?: boolean;
+  large?: boolean;
+  label?: string;
+  labelRight?: boolean;
+  labelWidth?: string;
+  inputType: InputTypes;
 }
 
 export interface IDatePickerProps {
@@ -122,7 +137,7 @@ export interface ITabButtonProps {
   className?: string;
   disabled?: boolean;
   onClick: (section: string) => void;
-  selected?: boolean
+  selected?: boolean;
 }
 
 export interface IIconTextTabButtonProps extends ITabButtonProps {
@@ -154,4 +169,30 @@ export interface ISwitchProps {
   unCheckedChildren?: boolean;
   onChange?: (checked: boolean, event: Event) => void;
   onClick?: (checked: boolean, event: Event) => void;
+}
+
+export interface IRadioGroupOption {
+  key: string;
+  name: string;
+  tooltip?: string | null;
+}
+
+export interface IRadioGroupProps {
+  options: IRadioGroupOption[];
+  value: string;
+  name: string;
+  onChange: (e: RadioChangeEvent) => void;
+}
+
+export interface ICheckboxGroupOption {
+  key: string;
+  name: string;
+  rightSideValue?: string;
+}
+
+export interface ICheckboxGroupProps {
+  name: string;
+  options: ICheckboxGroupOption[];
+  value: CheckboxValueType[];
+  onChange: (checkedValues: CheckboxValueType[]) => void;
 }

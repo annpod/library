@@ -11,17 +11,15 @@ export const CollapseTitleBody = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 34px;
-  border-bottom: 1px solid #dbdbdb;
 `;
 
 export const CollapseTitleText = styled.div`
-  color: #434447;
+  color: ${(props) => props.theme.text};
   font-size: 13px;
   font-weight: 400;
 `;
 
 export const CollapseTitleBtn = styled.div`
-  color: #565559;
   width: 20px;
   height: 20px;
   cursor: pointer;

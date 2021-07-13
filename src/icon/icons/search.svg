@@ -1,0 +1,38 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18.183"
+  height="18.183"
+  viewBox="0 0 18.183 18.183"
+>
+  <g
+    id="Group_7710"
+    data-name="Group 7710"
+    transform="translate(-140.748 -4095.501)"
+  >
+    <circle
+      id="Ellipse_433"
+      data-name="Ellipse 433"
+      cx="7.428"
+      cy="7.428"
+      r="7.428"
+      transform="translate(141.498 4096.251)"
+      fill="none"
+      stroke="#999"
+      stroke-linecap="round"
+      stroke-miterlimit="10"
+      stroke-width="1.5"
+    />
+    <line
+      id="Line_491"
+      data-name="Line 491"
+      x2="3.666"
+      y2="3.666"
+      transform="translate(154.204 4108.958)"
+      fill="none"
+      stroke="#999"
+      stroke-linecap="round"
+      stroke-miterlimit="10"
+      stroke-width="1.5"
+    />
+  </g>
+</svg>

@@ -40,12 +40,20 @@ import remove from './remove.svg';
 import arrow_left from './icon-arrow-left.svg';
 import arrow_down from './down-arrow.svg';
 
+import available from './available.svg';
+import unavailable from './unavailable.svg';
+import search from './search.svg';
+import back from './back.svg';
+import amerenLogo from './amerenLogo.svg';
+import close from './close.svg';
+
 type IconTypes = { [key: string]: string };
 
 export const ICONS: IconTypes = {
   smartspace,
   scbLogo,
   btLogo,
+  amerenLogo,
   users,
   user,
   settings,
@@ -79,4 +87,9 @@ export const ICONS: IconTypes = {
   arrow_down,
   remove,
   error,
+  available,
+  unavailable,
+  search,
+  back,
+  close
 };

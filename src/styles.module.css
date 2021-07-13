@@ -7,3 +7,23 @@
   font-size: 2em;
   text-align: center;
 }
+
+button {
+  border: 3px solid #000000 !important;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('./fonts/gotham-book.eot');
+  src: url('./fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/gotham-book.woff') format('woff'),
+    url('./fonts/gotham-book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('./fonts/gotham-medium.eot');
+  src: url('./fonts/gotham-medium.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/gotham-medium.woff') format('woff'),
+  url('./fonts/gotham-medium.ttf') format('truetype'),
+  url('./fonts/gotham-medium.svg#gothamlight') format('svg');
+}

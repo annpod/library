@@ -19,13 +19,32 @@ import {
   GREY2_COLOR,
   LIGHT_RED3_COLOR,
   BLUE2_COLOR,
+  GOLD_COLOR,
+  FOREST_GREEN,
+  LIGHT_GREY3_COLOR
 } from '../constants/colors';
-import { BtnTypes } from "../typings";
+import { BtnTypes, InputTypes } from '../typings';
 import { commonTheme, toast } from '../constants/common';
 
 export const DEFAULT_THEME = 'DEFAULT';
 export const SCB_THEME = 'SCB';
 export const BT_THEME = 'BT';
+export const AMEREN_THEME = 'AMEREN';
+
+const inputs = {
+  [InputTypes.Primary]: {
+    background: WHITE_COLOR,
+    color: DARK_GREY2_COLOR,
+    borderColor: LIGHT_GREY3_COLOR,
+    disabledBg: LIGHT_GREY2_COLOR,
+  },
+  [InputTypes.Dark]: {
+    background: LIGHT_GREY2_COLOR,
+    color: DARK_GREY2_COLOR,
+    borderColor: LIGHT_GREY2_COLOR,
+    disabledBg: LIGHT_GREY2_COLOR,
+  },
+};
 
 export const theme: Record<string, any> = {
   [DEFAULT_THEME]: {
@@ -38,8 +57,10 @@ export const theme: Record<string, any> = {
     bgConfirmColor: GREEN_COLOR,
     bgActionColor: COAL_COLOR,
     borderColor: COAL_COLOR,
+    borderColorLight: DARK_GREY_COLOR,
     borderFocusColor: LIGHT_RED_COLOR,
     contentHeaderBgColor: DARK_GREY_COLOR,
+    contentHeaderBg: LIGHT_GREY2_COLOR,
     contentHeaderSecondaryBgColor: LIGHTER_GREY_COLOR,
     textColorMain: LIGHT_RED_COLOR,
     textColorRegular: COAL_COLOR,
@@ -63,25 +84,27 @@ export const theme: Record<string, any> = {
     switchActiveBg: LIGHT_RED2_COLOR,
     switchActiveColor: RED2_COLOR,
     switchBg: GREY2_COLOR,
+    tooltip: GOLD_COLOR,
     toast,
+    inputs,
     buttons: {
-      [BtnTypes.primary]: {
+      [BtnTypes.Primary]: {
         background: LIGHT_RED3_COLOR,
         color: WHITE_COLOR
       },
-      [BtnTypes.dark]: {
+      [BtnTypes.Dark]: {
         background: COAL_COLOR,
         color: WHITE_COLOR
       },
-      [BtnTypes.light]: {
+      [BtnTypes.Light]: {
         background: WHITE_COLOR,
         color: DARK_GREY2_COLOR
       },
-      [BtnTypes.blue]: {
+      [BtnTypes.Blue]: {
         background: BLUE2_COLOR,
         color: WHITE_COLOR
-      },
-    },
+      }
+    }
   },
   [SCB_THEME]: {
     ...commonTheme,
@@ -93,7 +116,9 @@ export const theme: Record<string, any> = {
     bgConfirmColor: GREEN_COLOR,
     bgActionColor: COAL_COLOR,
     borderColor: COAL_COLOR,
+    borderColorLight: LIGHT_GREY3_COLOR,
     borderFocusColor: RED_COLOR,
+    contentHeaderBg: LIGHT_GREY2_COLOR,
     contentHeaderBgColor: DARK_GREY_COLOR,
     contentHeaderSecondaryBgColor: LIGHTER_GREY_COLOR,
     textColorMain: '#27A135',
@@ -117,25 +142,27 @@ export const theme: Record<string, any> = {
     elementBg: LIGHT_GREY2_COLOR,
     switchActiveBg: LIGHT_RED2_COLOR,
     switchBg: GREY2_COLOR,
+    tooltip: GOLD_COLOR,
     toast,
+    inputs,
     buttons: {
-      [BtnTypes.primary]: {
+      [BtnTypes.Primary]: {
         background: LIGHT_RED3_COLOR,
         color: WHITE_COLOR
       },
-      [BtnTypes.dark]: {
+      [BtnTypes.Dark]: {
         background: COAL_COLOR,
         color: WHITE_COLOR
       },
-      [BtnTypes.light]: {
+      [BtnTypes.Light]: {
         background: WHITE_COLOR,
         color: DARK_GREY2_COLOR
       },
-      [BtnTypes.blue]: {
+      [BtnTypes.Blue]: {
         background: BLUE2_COLOR,
         color: WHITE_COLOR
-      },
-    },
+      }
+    }
   },
   [BT_THEME]: {
     ...commonTheme,
@@ -147,7 +174,9 @@ export const theme: Record<string, any> = {
     bgConfirmColor: GREEN_COLOR,
     bgActionColor: COAL_COLOR,
     borderColor: COAL_COLOR,
+    borderColorLight: LIGHT_GREY3_COLOR,
     borderFocusColor: RED_COLOR,
+    contentHeaderBg: LIGHT_GREY2_COLOR,
     contentHeaderBgColor: DARK_GREY_COLOR,
     contentHeaderSecondaryBgColor: LIGHTER_GREY_COLOR,
     textColorMain: INDIGO_COLOR,
@@ -171,24 +200,84 @@ export const theme: Record<string, any> = {
     elementBg: LIGHT_GREY2_COLOR,
     switchActiveBg: LIGHT_RED2_COLOR,
     switchBg: GREY2_COLOR,
+    tooltip: GOLD_COLOR,
     toast,
+    inputs,
     buttons: {
-      [BtnTypes.primary]: {
+      [BtnTypes.Primary]: {
         background: LIGHT_RED3_COLOR,
         color: WHITE_COLOR
       },
-      [BtnTypes.dark]: {
+      [BtnTypes.Dark]: {
         background: COAL_COLOR,
         color: WHITE_COLOR
       },
-      [BtnTypes.light]: {
+      [BtnTypes.Light]: {
         background: WHITE_COLOR,
         color: DARK_GREY2_COLOR
       },
-      [BtnTypes.blue]: {
+      [BtnTypes.Blue]: {
         background: BLUE2_COLOR,
         color: WHITE_COLOR
-      },
-    },
+      }
+    },    
   },
+  [AMEREN_THEME]: {
+    ...commonTheme,
+    name: AMEREN_THEME,
+    faviconName: 'ameren',
+    logoImage: 'amerenLogo',
+    bgColor: WHITE_COLOR,
+    bgItemColor: LIGHT_GREY_COLOR,
+    bgConfirmColor: GREEN_COLOR,
+    bgActionColor: COAL_COLOR,
+    borderColor: COAL_COLOR,
+    borderColorLight: LIGHT_GREY3_COLOR,
+    borderFocusColor: FOREST_GREEN,
+    contentHeaderBgColor: DARK_GREY_COLOR,
+    contentHeaderSecondaryBgColor: LIGHTER_GREY_COLOR,
+    textColorMain: FOREST_GREEN,
+    textColorRegular: COAL_COLOR,
+    textColor: DARK_GREY2_COLOR,
+    textColorRevert: WHITE_COLOR,
+    textColorNotes: SECONDARY_GREY,
+    iconColorMain: GREY_COLOR,
+    highlightColor: FOREST_GREEN,
+    bgBackground: '#5aafe2',
+    linkColor: LIGHT_BLUE_COLOR,
+    statusButtonBg: GREEN_COLOR,
+    routeButtonBg: FOREST_GREEN,
+    uploadButtonBg: FOREST_GREEN,
+    sliderColor: FOREST_GREEN,
+    sortButtonColor: BLUE_COLOR,
+    logoTextColor: COAL_COLOR,
+    logoFontSize: '20px',
+    errorColor: RED2_COLOR,
+    activeColor: RED2_COLOR,
+    elementBg: LIGHT_GREY2_COLOR,
+    switchActiveBg: LIGHT_RED2_COLOR,
+    switchActiveColor: RED2_COLOR,
+    switchBg: GREY2_COLOR,
+    tooltip: GOLD_COLOR,
+    toast,
+    inputs,
+    buttons: {
+      [BtnTypes.Primary]: {
+        background: LIGHT_RED3_COLOR,
+        color: WHITE_COLOR
+      },
+      [BtnTypes.Dark]: {
+        background: COAL_COLOR,
+        color: WHITE_COLOR
+      },
+      [BtnTypes.Light]: {
+        background: WHITE_COLOR,
+        color: DARK_GREY2_COLOR
+      },
+      [BtnTypes.Blue]: {
+        background: BLUE2_COLOR,
+        color: WHITE_COLOR
+      }
+    }
+  }
 };

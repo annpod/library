@@ -1,15 +1,15 @@
 import React, { useState, FunctionComponent } from 'react';
 import { CollapseItemProps } from '../typings';
+import close from './close.svg';
+import open from './open.svg';
 
 import {
   CollapseItemBody,
   CollapseTitleBody,
   CollapseContentBody,
   CollapseTitleText,
-  CollapseTitleBtn,
+  CollapseTitleBtn
 } from './collapse-item.styled';
-
-
 
 export const CollapseItem: FunctionComponent<CollapseItemProps> = (props) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -23,7 +23,7 @@ export const CollapseItem: FunctionComponent<CollapseItemProps> = (props) => {
       <CollapseTitleBody>
         <CollapseTitleText>{props.title}</CollapseTitleText>
         <CollapseTitleBtn onClick={handleToggleCollapse}>
-          {isOpen ? '\u2013' : '+'}
+          {isOpen ? <img src={open} /> : <img src={close} />}
         </CollapseTitleBtn>
       </CollapseTitleBody>
       {isOpen && <CollapseContentBody>{props.children}</CollapseContentBody>}
