@@ -38,7 +38,6 @@ export interface IInputProps {
   disabled?: boolean;
   min?: string;
   max?: string;
-  inputType?: InputTypes;
   onChange: (name: string, value: string) => void;
 }
 
@@ -48,7 +47,7 @@ export interface IInputsProps extends IInputProps {
   label?: string;
   labelRight?: boolean;
   labelWidth?: string;
-  inputType: InputTypes;
+  inputType?: InputTypes;
 }
 
 export interface IDatePickerProps {

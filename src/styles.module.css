@@ -8,9 +8,6 @@
   text-align: center;
 }
 
-button {
-  border: 3px solid #000000 !important;
-}
 @font-face {
   font-family: 'Gotham';
   src: url('./fonts/gotham-book.eot');

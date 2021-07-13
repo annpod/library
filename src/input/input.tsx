@@ -20,7 +20,6 @@ export const Input = (props: IInputProps) => {
         disabled={props.disabled}
         min={props.min}
         max={props.max}
-        inputType={props.inputType}        
       />
       {props.error && props.errorMessage && (
         <Error>
