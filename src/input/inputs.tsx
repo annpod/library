@@ -11,19 +11,25 @@ export const Wrapper = (inputType: InputTypes) => (props: IInputsProps) => {
 
   return (
     <InputWrapper className={props.className}>
-      {props.label && <Label labelRight={props.labelRight} labelWidth={props.labelWidth}>{props.label}</Label>}
-      <InputC
-        className={props.isError ? 'error' : ''}
-        type={props.type}
-        placeholder={props.placeholder}
-        value={props.value}
-        onChange={onChange}
-        disabled={props.disabled}
-        min={props.min}
-        max={props.max}
-        inputType={inputType}
-        large={props.large}
-      />
+      <FieldLabel>
+        {props.label && (
+          <Label labelRight={props.labelRight} labelWidth={props.labelWidth}>
+            {props.label}
+          </Label>
+        )}
+        <InputC
+          className={props.isError ? 'error' : ''}
+          type={props.type}
+          placeholder={props.placeholder}
+          value={props.value}
+          onChange={onChange}
+          disabled={props.disabled}
+          min={props.min}
+          max={props.max}
+          inputType={inputType}
+          large={props.large}
+        />
+      </FieldLabel>
       {props.isError && props.errorMessage && (
         <Error>
           {props.isErrorIcon && <Icon type='error' />}
@@ -34,6 +40,12 @@ export const Wrapper = (inputType: InputTypes) => (props: IInputsProps) => {
   );
 };
 
+const FieldLabel = styled.label`
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
 const InputC = styled.input<any>`
   background-color: ${(props) =>
     props.disabled
@@ -41,7 +53,7 @@ const InputC = styled.input<any>`
       : props.theme.inputs[props.inputType].background};
   color: ${(props) => props.theme.inputs[props.inputType].color};
   border-color: ${(props) => props.theme.inputs[props.inputType].borderColor};
-  width: ${(props) => props.large ? '362px' : '100%'};
+  width: ${(props) => (props.large ? '362px' : '100%')};
   height: 36px;
   border-radius: 5px;
   border-width: 1px;
@@ -80,8 +92,8 @@ const Error = styled.div`
 const Label = styled.div<any>`
   font-family: Gotham-Medium;
   display: flex;
-  margin-right: 20px; 
-  justify-content: ${(props) => props.labelRight ? 'flex-end' : 'flex-start' };
+  margin-right: 20px;
+  justify-content: ${(props) => (props.labelRight ? 'flex-end' : 'flex-start')};
   width: ${(props) => props.labelWidth || 'auto'};
 `;
 

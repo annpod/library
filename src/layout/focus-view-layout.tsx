@@ -38,7 +38,6 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-
 const Header = styled.div`
   display: flex;
   flex-direction: column;
@@ -55,7 +54,6 @@ const Headline = styled.div`
   align-items: center;
 `;
 
-
 const SubHeader = styled.div`
   display: flex;
   min-height: 70px;
@@ -66,7 +64,6 @@ const Title = styled.div`
   font-size: 18px;
   font-family: Gotham-Medium;
 `;
-
 
 const Content = styled.div`
   display: flex;

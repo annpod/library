@@ -41,18 +41,10 @@ export default {
 } as Meta;
 
 const Template1: Story<IInputsProps> = (args) => (
-  <>
   <Wrapper>
     <InputStyled.Primary {...args} />
-    
   </Wrapper>
-    <Wrapper>
-    <InputStyled.Primary {...args} />
-    
-  </Wrapper>
-  </>
 );
-
 
 export const Primary = Template1.bind({});
 
@@ -72,7 +64,7 @@ Primary.args = {
   disabled: false,
   min: '',
   max: '',
-  onChange: () => { }
+  onChange: () => {}
 };
 
 const Template2: Story<IInputsProps> = (args) => (
@@ -99,7 +91,7 @@ Primary.args = {
   disabled: false,
   min: '',
   max: '',
-  onChange: () => { }
+  onChange: () => {}
 };
 
 const Wrapper = styled.div`
