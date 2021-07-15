@@ -16,26 +16,7 @@ export const Toast = styled(ToastContainer)`
       background: ${(props) => props.theme.toast.log.background};
       border-color: ${(props) => props.theme.toast.log.borderColor};
     }
-    .Toastify__toast--error {
-      color: ${(props) => props.theme.toast.error.color};
-      background: ${(props) => props.theme.toast.error.background};
-      border-color: ${(props) => props.theme.toast.error.borderColor};
-    }
-    .Toastify__toast--warn {
-      color: ${(props) => props.theme.toast.warn.color};
-      background: ${(props) => props.theme.toast.warn.background};
-      border-color: ${(props) => props.theme.toast.warn.borderColor};
-    }
-    .Toastify__toast--info {
-      color: ${(props) => props.theme.toast.info.color};
-      background: ${(props) => props.theme.toast.info.background};
-      border-color: ${(props) => props.theme.toast.info.borderColor};
-    }
-    .Toastify__toast--success {
-      color: ${(props) => props.theme.toast.success.color};
-      background: ${(props) => props.theme.toast.success.background};
-      border-color: ${(props) => props.theme.toast.success.borderColor};
-    }
+    
    
     .Toastify__toast-body {
       padding: 0;

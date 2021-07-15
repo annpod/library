@@ -15,7 +15,21 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Based on https://fkhadra.github.io/react-toastify/introduction'
+        component: `Based on https://fkhadra.github.io/react-toastify/introduction
+
+        Statuses: 
+                
+          logId => showToast(message);
+          success => showToast(message, ToastStatus.success);
+          error => showToast(message, ToastStatus.error);
+
+        Message:
+
+        message = {
+          logId,
+          message
+        }
+        `
       },
       source: {
         type: 'code',
@@ -42,13 +56,14 @@ const message3 = {
 };
 const message4 = {};
 
-showToast(message1);
-showToast(message2, ToastStatus.success);
-showToast(message3, ToastStatus.error);
-showToast(message4, ToastStatus.error);
-
 const Template: Story<IToast> = () => (
-  <Toast />
+  <>
+  <Toast />  
+  <button onClick={()=>showToast(message1)} >Show logId Toast</button><br /><br />
+  <button onClick={()=>showToast(message2, ToastStatus.success)} >Show Sucess Toast</button><br /><br />
+  <button onClick={()=>showToast(message3, ToastStatus.error)} >Show Error Toast</button><br /><br />
+  <button onClick={()=>showToast(message4, ToastStatus.error)} >Show 500 error Toast</button><br /><br />
+  </>
 );
 
 export const Primary = Template.bind({});
