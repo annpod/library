@@ -1,7 +1,8 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { CollapseItem, CollapseItemProps } from './collapse-item';
+import { CollapseItem } from './collapse-item';
+import { CollapseItemProps } from '../typings';
 
 export default {
   title: 'V1/CollapseItem',

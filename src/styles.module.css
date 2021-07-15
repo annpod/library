@@ -24,3 +24,15 @@
   url('./fonts/gotham-medium.ttf') format('truetype'),
   url('./fonts/gotham-medium.svg#gothamlight') format('svg');
 }
+
+.Toastify__toast-container {
+  width: auto;
+  max-width: 450px;
+}
+
+.Toastify__toast-container--top-center {
+  top: 135px;
+}
+.Toastify__toast-container--bottom-center {
+  bottom: 60px;
+}

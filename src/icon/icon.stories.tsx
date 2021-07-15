@@ -12,7 +12,7 @@ const args = {
   className: 'icon',
   size: 25,
   // type: 'reset',
-  onClick: () => { }
+  onClick: () => {}
 };
 
 export const Reset: Story<IIconProps> = () => <Icon {...args} type={'reset'} />;
@@ -111,5 +111,12 @@ export const Unavailable: Story<IIconProps> = () => (
 export const Search: Story<IIconProps> = () => (
   <Icon {...args} type={'search'} />
 );
+export const successGreen: Story<IIconProps> = () => (
+  <Icon {...args} type={'successGreen'} />
+);
+export const errorrRed: Story<IIconProps> = () => (
+  <Icon {...args} type={'errorrRed'} />
+);
 export const Back: Story<IIconProps> = () => <Icon {...args} type={'back'} />;
 export const Close: Story<IIconProps> = () => <Icon {...args} type={'close'} />;
+ 

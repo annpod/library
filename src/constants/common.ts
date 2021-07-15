@@ -6,19 +6,28 @@ export const commonTheme = {
 
 export const toast = {
   error: {
-    background: '#fff2f0',
-    borderColor: '#ffccc7'
+    color: '#EE4656',
+    background: '#FFF5F6',
+    borderColor: '#FFF5F6'
   },
   warn: {
-    background: '#fffbe6',
-    borderColor: '#ffe58f'
+    color: '#EE4656',
+    background: '#FFF5F6',
+    borderColor: '#FFF5F6'
   },
   info: {
-    background: '#e6f7ff',
-    borderColor: '#91d5ff'
+    color: '#EE4656',
+    background: '#FFF5F6',
+    borderColor: '#FFF5F6'
   },
   success: {
-    background: '#f6ffed',
-    borderColor: '#b7eb8f'
+    color: '#3E963E',
+    background: '#E7FAEC',
+    borderColor: '#E7FAEC'
+  },
+  default: {
+    color: '#EE4656',
+    background: '#FFF5F6',
+    borderColor: '#FFF5F6'
   }
 }

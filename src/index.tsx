@@ -62,7 +62,7 @@ import { FetchTable } from './fetch-table';
 import { StyledPagination } from './pagination';
 import { Modal } from './modal';
 import { CustomScrollbars } from './scrollbars';
-
+import { showToast, Toast } from './toast';
 import { CustomSearchInput } from './custom-search-input';
 import { Datepicker } from './date-picker';
 import { ParamsPanel } from './params-panel';
@@ -169,6 +169,8 @@ export {
   LocationFilterItems,
   StyledPagination,
   Modal,
+  showToast,
+  Toast,
   ParamsPanel,
   TimePicker,
   TimeRangePicker,

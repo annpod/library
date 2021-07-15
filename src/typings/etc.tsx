@@ -31,13 +31,6 @@ export enum FormState {
   Edit,
 }
 
-export enum ToastStatus {
-  error = 'error',
-  info = 'info',
-  warn = 'warn',
-  success = 'success',
-}
-
 export interface IRegion {
   regionKey: string;
   name: string;

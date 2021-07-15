@@ -15,7 +15,7 @@ const ButtonWrapper = styled.div`
 `;
 
 export default {
-  title: 'FocusViewLayout',
+  title: 'Layout/V1/FocusViewLayout',
   component: FocusViewLayout,
   parameters: {
     docs: {

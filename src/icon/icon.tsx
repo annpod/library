@@ -5,7 +5,7 @@ import { ICONS } from './icons';
 
 export interface IIconProps extends React.HTMLAttributes<HTMLElement> {
   type: string;
-  size?: number;
+  size?: string | number;
   className?: string;
 }
 

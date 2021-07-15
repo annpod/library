@@ -46,6 +46,8 @@ import search from './search.svg';
 import back from './back.svg';
 import amerenLogo from './amerenLogo.svg';
 import close from './close.svg';
+import errorrRed from './error-red.svg';
+import successGreen from './success-green.svg';
 
 type IconTypes = { [key: string]: string };
 
@@ -54,6 +56,8 @@ export const ICONS: IconTypes = {
   scbLogo,
   btLogo,
   amerenLogo,
+  successGreen,
+  errorrRed,
   users,
   user,
   settings,
