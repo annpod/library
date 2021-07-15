@@ -57,7 +57,7 @@ import { TimeRangePicker } from './time-range-picker';
 import { Select, selectStyles } from './select';
 import { TabButton, IconTextTabButton } from './tab-button';
 import { LocationFilter, createLocationFilter } from './location-filter';
-import { LocationFilterItems } from './typings';
+import { LocationFilterItems, ToastStatus } from './typings';
 import { FetchTable } from './fetch-table';
 import { StyledPagination } from './pagination';
 import { Modal } from './modal';
@@ -171,6 +171,7 @@ export {
   Modal,
   showToast,
   Toast,
+  ToastStatus,
   ParamsPanel,
   TimePicker,
   TimeRangePicker,
