@@ -2,6 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { ToastStatus } from '../typings';
 import { toastStrings } from './toast.strings';
 import { Icon } from '../icon';

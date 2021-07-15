@@ -3,7 +3,6 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { ToastStatus } from '../typings';
 import { Toast } from './toast.styled';
 import { showToast } from './toast';
-import 'react-toastify/dist/ReactToastify.css';
 
 export default {
   title: 'V1/Toast',
