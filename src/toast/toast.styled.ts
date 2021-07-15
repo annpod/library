@@ -33,7 +33,11 @@ export const Toast = styled(ToastContainer)`
       background: ${(props) => props.theme.toast.success.background};
       border-color: ${(props) => props.theme.toast.success.borderColor};
     }
-   
+    &.Toastify__toast--default {
+      color: ${(props) => props.theme.toast.default.color};
+      background: ${(props) => props.theme.toast.default.background};
+      border-color: ${(props) => props.theme.toast.default.borderColor};
+    }
     .Toastify__toast-body {
       padding: 0;
     }
