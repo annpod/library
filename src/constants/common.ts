@@ -1,3 +1,5 @@
+import { RED2_COLOR } from '../constants/colors';
+
 export const commonTheme = {
   normalFontSize: '14px',
   headerFontSize: '16px',
@@ -5,29 +7,8 @@ export const commonTheme = {
 };
 
 export const toast = {
-  error: {
-    color: '#EE4656',
-    background: '#FFF5F6',
-    borderColor: '#FFF5F6'
-  },
-  warn: {
-    color: '#EE4656',
-    background: '#FFF5F6',
-    borderColor: '#FFF5F6'
-  },
-  info: {
-    color: '#EE4656',
-    background: '#FFF5F6',
-    borderColor: '#FFF5F6'
-  },
-  success: {
-    color: '#3E963E',
-    background: '#E7FAEC',
-    borderColor: '#E7FAEC'
-  },
-  log: {
-    color: '#EE4656',
-    background: '#FFF5F6',
-    borderColor: '#FFF5F6'
-  }
+  toastErrorColor: RED2_COLOR,
+  toastErrorBg: '#FFF5F6',
+  toastSuccessColor: '#3E963E',
+  toastSuccessBg: '#FFF5F6',
 }

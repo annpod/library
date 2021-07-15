@@ -12,12 +12,22 @@ export const Toast = styled(ToastContainer)`
       font-family: 'Gotham';
       word-break: break-word;
       min-height: 45px;
-      color: ${(props) => props.theme.toast.log.color};
-      background: ${(props) => props.theme.toast.log.background};
-      border-color: ${(props) => props.theme.toast.log.borderColor};
+      color: ${(props) => props.theme.toastErrorColor};
+      background: ${(props) => props.theme.toastErrorBg};
+      border-color: ${(props) => props.theme.toastErrorBg};
+
+      &.Toastify__toast--error {
+        color: ${(props) => props.theme.toastErrorColor};
+        background: ${(props) => props.theme.toastErrorBg};
+        border-color: ${(props) => props.theme.toastErrorBg};
+      }
+      &.Toastify__toast--success {
+        color: ${(props) => props.theme.successColor};
+        background: ${(props) => props.theme.toastSuccessColor};
+        border-color: ${(props) => props.theme.toastSuccessColor};
+      }
     }
-    
-   
+
     .Toastify__toast-body {
       padding: 0;
     }

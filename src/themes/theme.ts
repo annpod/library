@@ -85,7 +85,7 @@ export const theme: Record<string, any> = {
     switchActiveColor: RED2_COLOR,
     switchBg: GREY2_COLOR,
     tooltip: GOLD_COLOR,
-    toast,
+    ...toast,
     inputs,
     buttons: {
       [BtnTypes.Primary]: {
@@ -137,13 +137,13 @@ export const theme: Record<string, any> = {
     sortButtonColor: BLUE_COLOR,
     logoTextColor: COAL_COLOR,
     logoFontSize: '20px',
-    errorColor: RED2_COLOR,
+    errorColor: RED2_COLOR,   
     activeColor: RED2_COLOR,
     elementBg: LIGHT_GREY2_COLOR,
     switchActiveBg: LIGHT_RED2_COLOR,
     switchBg: GREY2_COLOR,
     tooltip: GOLD_COLOR,
-    toast,
+    ...toast,
     inputs,
     buttons: {
       [BtnTypes.Primary]: {
@@ -201,7 +201,7 @@ export const theme: Record<string, any> = {
     switchActiveBg: LIGHT_RED2_COLOR,
     switchBg: GREY2_COLOR,
     tooltip: GOLD_COLOR,
-    toast,
+    ...toast,
     inputs,
     buttons: {
       [BtnTypes.Primary]: {
@@ -259,7 +259,7 @@ export const theme: Record<string, any> = {
     switchActiveColor: RED2_COLOR,
     switchBg: GREY2_COLOR,
     tooltip: GOLD_COLOR,
-    toast,
+    ...toast,
     inputs,
     buttons: {
       [BtnTypes.Primary]: {
