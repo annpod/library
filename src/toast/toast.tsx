@@ -4,18 +4,9 @@ import styled from 'styled-components';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { ToastStatus } from '../typings';
+import { ToastStatus, IToastMessage, IToastProps } from '../typings';
 import { toastStrings } from './toast.strings';
 import { Icon } from '../icon';
-
-interface IToastMessage {
-  logId?: string;
-  message?: string;
-}
-interface IToastProps {
-  data: IToastMessage;
-  status?: ToastStatus;
-}
 
 const iconMap = {
   [ToastStatus.error]: 'errorrRed',

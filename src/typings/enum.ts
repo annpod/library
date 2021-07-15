@@ -13,7 +13,6 @@ export enum InputTypes {
 export enum ToastStatus {
   error = "error", 
   success = "success",
-  default = "default",
   // dark = "dark", // TODO don't have design for these statuses
   // info = "info",
   // warn = "warn",

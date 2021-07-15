@@ -1,3 +1,5 @@
+import { ToastStatus } from '../typings';
+
 export interface IHashMap<T> {
   [key: string]: T;
 }
@@ -74,4 +76,13 @@ export type IDayRangeValue = [number, number];
 export interface IDayRangePickerProps {
   value: IRange<number>;
   onChange: (value: IRange<number>) => void;
+}
+
+export interface IToastMessage {
+  logId?: string;
+  message?: string;
+}
+export interface IToastProps {
+  data: IToastMessage;
+  status?: ToastStatus;
 }
