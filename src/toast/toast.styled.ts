@@ -22,9 +22,9 @@ export const Toast = styled(ToastContainer)`
         border-color: ${(props) => props.theme.toastErrorBg};
       }
       &.Toastify__toast--success {
-        color: ${(props) => props.theme.successColor};
-        background: ${(props) => props.theme.toastSuccessColor};
-        border-color: ${(props) => props.theme.toastSuccessColor};
+        color: ${(props) => props.theme.toastSuccessColor};
+        background: ${(props) => props.theme.toastSuccessBg};
+        border-color: ${(props) => props.theme.toastSuccessBg};
       }
     }
 

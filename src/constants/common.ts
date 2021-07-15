@@ -10,5 +10,5 @@ export const toast = {
   toastErrorColor: RED2_COLOR,
   toastErrorBg: '#FFF5F6',
   toastSuccessColor: '#3E963E',
-  toastSuccessBg: '#FFF5F6',
+  toastSuccessBg: '#E7FAEC',
 }
