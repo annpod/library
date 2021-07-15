@@ -25,7 +25,7 @@ export const toast = {
     background: '#E7FAEC',
     borderColor: '#E7FAEC'
   },
-  default: {
+  log: {
     color: '#EE4656',
     background: '#FFF5F6',
     borderColor: '#FFF5F6'
