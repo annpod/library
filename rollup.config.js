@@ -9,7 +9,7 @@ import image from '@rollup/plugin-image';
 const packageJson = require('./package.json');
 
 export default [
-   {
+  {
     input: 'src/index.tsx',
     output: [
       {
@@ -25,13 +25,15 @@ export default [
         sourcemap: true
       }
     ],
-    plugins: [ 
+    plugins: [
       image(),
       peerDepsExternal({
         includeDependencies: true
       }),
       resolve(),
-      postcss(),
+      postcss({
+        extensions: ['.css'],
+      }),
       typescript({
         emitDeclarationTrue: true,
         useTsconfigDeclarationDir: false,
@@ -44,7 +46,7 @@ export default [
           "*.d.ts",
           "**/*.d.ts"
         ]
-      }),      
+      }),
       commonjs(),
       json()
     ]
