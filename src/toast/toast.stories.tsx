@@ -58,11 +58,27 @@ const message4 = {};
 
 const Template: Story<IToast> = () => (
   <>
-  <Toast />  
-  <button onClick={()=>showToast(message1)} >Show logId(default) Toast</button><br /><br />
-  <button onClick={()=>showToast(message2, ToastStatus.success)} >Show Sucess Toast</button><br /><br />
-  <button onClick={()=>showToast(message3, ToastStatus.error)} >Show Error Toast</button><br /><br />
-  <button onClick={()=>showToast(message4, ToastStatus.error)} >Show 500 error Toast</button><br /><br />
+    <Toast />
+    <button onClick={() => showToast(message1)}>
+      Show logId(default) Toast
+    </button>
+    <br />
+    <br />
+    <button onClick={() => showToast(message2, ToastStatus.success)}>
+      Show Sucess Toast
+    </button>
+    <br />
+    <br />
+    <button onClick={() => showToast(message3, ToastStatus.error)}>
+      Show Error Toast
+    </button>
+    <br />
+    <br />
+    <button onClick={() => showToast(message4, ToastStatus.error)}>
+      Show 500 error Toast
+    </button>
+    <br />
+    <br />
   </>
 );
 

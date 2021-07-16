@@ -1,6 +1,6 @@
 import { HTMLAttributes } from 'react';
 
-interface IThemeMap {
+export interface IThemeMap {
   [key: string]: string;
 }
 

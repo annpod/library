@@ -48,6 +48,8 @@ import amerenLogo from './amerenLogo.svg';
 import close from './close.svg';
 import errorrRed from './error-red.svg';
 import successGreen from './success-green.svg';
+import clearSelect from './clear-select.svg';
+import arrowBack from './arrow-back.svg';
 
 type IconTypes = { [key: string]: string };
 
@@ -95,5 +97,7 @@ export const ICONS: IconTypes = {
   unavailable,
   search,
   back,
-  close
+  close,
+  clearSelect,
+  arrowBack
 };

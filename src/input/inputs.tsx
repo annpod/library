@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { InputTypes } from '../typings';
+import { InputTypes, IInputsProps } from '../typings';
 import { Icon } from '../icon';
-import { IInputsProps } from '../typings';
 
 export const Wrapper = (inputType: InputTypes) => (props: IInputsProps) => {
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,7 +42,6 @@ export const Wrapper = (inputType: InputTypes) => (props: IInputsProps) => {
 const FieldLabel = styled.label`
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
 `;
 
 const InputC = styled.input<any>`

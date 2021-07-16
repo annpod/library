@@ -3,9 +3,9 @@ import * as React from 'react';
 import { findSelectOption, findSelectOptions } from '../utils/select.utils';
 
 import { IExtendedSelectProps } from '../typings';
-import { Select } from '../select';
+import { Dropdown } from '../dropdown';
 
-export const ExtendedSelect = (props: IExtendedSelectProps) => {
+export const ExtendedDropdown = (props: IExtendedSelectProps) => {
   const searchOption = Array.isArray(props.value)
     ? findSelectOptions(props.value, props.options)
     : findSelectOption(props.value, props.options);
@@ -32,7 +32,7 @@ export const ExtendedSelect = (props: IExtendedSelectProps) => {
   }, [props.options, props.isAutoSelect, props.value]);
 
   return (
-    <Select
+    <Dropdown
       disabled={props.isDisabled}
       clearable={props.clearable}
       searchable={props.searchable}

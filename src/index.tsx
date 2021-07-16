@@ -1,4 +1,3 @@
-import './styles.module.css';
 import {
   Button,
   ExportBtn,
@@ -72,6 +71,8 @@ import { Input, InputStyled } from './input';
 import { Switch } from './switch';
 import { RadioGroup } from './radio-group';
 import { CheckboxGroup } from './checkbox-group';
+import { Number } from './number';
+
 import {
   UsersIcon,
   EstateIcon,
@@ -91,6 +92,10 @@ import {
   STEP,
   DaySlider
 } from './day-range-picker';
+
+import { Dropdown } from './dropdown';
+import { ExtendedDropdown } from './extended-dropdown';
+import { LocationDropdown } from './location-dropdown';
 
 // hooks
 import { useClickOutside, useDebounce, useToggle } from './hooks';
@@ -256,5 +261,9 @@ export {
   MeetingsIcon,
   DeleteBtn,
   RadioGroup,
-  CheckboxGroup
+  CheckboxGroup,
+  Dropdown,
+  Number,
+  ExtendedDropdown,
+  LocationDropdown
 };

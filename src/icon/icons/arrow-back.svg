@@ -1,0 +1,41 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="10.346"
+  height="8.586"
+  viewBox="0 0 10.346 8.586"
+>
+  <g
+    id="Group_7810"
+    data-name="Group 7810"
+    transform="translate(-24.827 -15.468)"
+  >
+    <g
+      id="Group_7796"
+      data-name="Group 7796"
+      transform="translate(25.577 22.993) rotate(-90)"
+    >
+      <line
+        id="Line_514"
+        data-name="Line 514"
+        y1="8.846"
+        transform="translate(3.232 0)"
+        fill="none"
+        stroke="#707070"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+      />
+      <path
+        id="Path_3122"
+        data-name="Path 3122"
+        d="M6.465,3.232,3.232,0,0,3.232"
+        transform="translate(0)"
+        fill="none"
+        stroke="#707070"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+      />
+    </g>
+  </g>
+</svg>

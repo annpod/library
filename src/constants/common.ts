@@ -4,6 +4,16 @@ export const commonTheme = {
   normalFontSize: '14px',
   headerFontSize: '16px',
   oversizeFontSize: '36px',
+  dropdownBorderColor: '#CCCCCC',
+  dropdownTextColor: '#707070',
+  dropdownBgHoverColor: '#DBDCDB',
+  dropdownBgColor: '#F7F7F7',
+  dropdownDisabledBorder: '#DBDBDB',
+  dropdownDisabledTextColor: '#CCCCCC',
+  numberBorderColor: '#CCCCCC',
+  numberTextColor: '#707070',
+  numberBgColor: '#F7F7F7',
+  numberBgHoverColor: '#dbdcdb'
 };
 
 export const toast = {
