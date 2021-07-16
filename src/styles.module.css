@@ -12,6 +12,9 @@
   bottom: 60px;
 }
 
-button {
+img {
   border: 3px solid #000;
+}
+span {
+  font-weight: bold !important;
 }
