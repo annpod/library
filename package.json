@@ -90,7 +90,7 @@
     "ts-jest": "^26.5.1"
   },
   "dependencies": {
-    "@types/react-select": "^4.0.17",
+    "@types/react-select": "3.0.8",
     "antd": "^3.26.7",
     "core-js": "^3.9.0",
     "react-toastify": "7.0.4",
