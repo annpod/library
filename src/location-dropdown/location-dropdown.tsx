@@ -9,12 +9,17 @@ import {
 import { ExtendedDropdown } from '../extended-dropdown';
 
 import { useFilter } from './location-dropdown.state';
+import { ThemeTypes } from '../typings';
 
 const SearchSelectBox = styled.div`
   margin-top: 5px;
 `;
 
-export const LocationDropdown = (props: ILocationFilterProps) => {
+interface ILocationDropdown extends ILocationFilterProps {
+  themeType: ThemeTypes;
+}
+
+export const LocationDropdown = (props: ILocationDropdown) => {
   const { onUpdateFilter } = useFilter(
     props.setFilterLocation,
     props.filterData,
@@ -49,6 +54,7 @@ export const LocationDropdown = (props: ILocationFilterProps) => {
               isDisabled={isDisabled || option.isDisabled}
               isAutoSelect={true}
               isMulti={props.config[key].isMulti}
+              themeType={props.themeType}
             />
           </SearchSelectBox>
         );

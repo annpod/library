@@ -5,7 +5,7 @@ import { Number, INumberProps } from './number';
 
 export default {
   title: 'V1/Number',
-  component: Number
+  component: Number.Primary
 } as Meta;
 
 const Template: Story<INumberProps> = (args) => {
@@ -15,7 +15,7 @@ const Template: Story<INumberProps> = (args) => {
     setValue(value);
   };
 
-  return <Number {...args} onChange={onChange} value={value} />;
+  return <Number.Primary {...args} onChange={onChange} value={value} />;
 };
 
 export const Primary = Template.bind({});

@@ -20,7 +20,7 @@ const RightMenuDropDown = styled.div`
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.2s, opacity 0.2s ease-in-out;
-  right: -66px; 
+  right: -66px;
 `;
 
 const ProfileIconContainer = styled.div`
@@ -54,23 +54,28 @@ export const NavBar = React.memo((props: INavBarProps) => {
     {
       type: 'headerHelp',
       onClick: () =>
-      (window.location.href =
-        'https://support.smartspaceplc.com/hc/en-gb/categories/360002253299-Workplace-Help-and-User-Guides')
+        (window.location.href = 'https://www.smartspaceglobal.com/help')
     }
   ];
 
   return (
     <Wrapper>
-      {props.headerOptions && props.headerOptions.length ? props.headerOptions
-        .filter((e) => e.btn !== 'Help')
-        .sort((a, b) => a.order - b.order)
-        .map(({ btn, route }, index) => (
-          <RedirectLink href={route} key={index}>
-            <NavBarButton isActive={!!(props.activeHeader && btn === props.activeHeader)}>
-              {btn}
-            </NavBarButton>
-          </RedirectLink>
-        )) : null}
+      {props.headerOptions && props.headerOptions.length
+        ? props.headerOptions
+            .filter((e) => e.btn !== 'Help')
+            .sort((a, b) => a.order - b.order)
+            .map(({ btn, route }, index) => (
+              <RedirectLink href={route} key={index}>
+                <NavBarButton
+                  isActive={
+                    !!(props.activeHeader && btn === props.activeHeader)
+                  }
+                >
+                  {btn}
+                </NavBarButton>
+              </RedirectLink>
+            ))
+        : null}
       <NavBarIconContainer>
         <ProfileIconContainer>
           <NavBarIcon type={icons[0].type} />

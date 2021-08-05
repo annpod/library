@@ -29,6 +29,5 @@ const CollapseIcon = styled(Icon)`
 const CollapseIconDisabled = styled(Icon)`
   width: 11px;
   height: 6px;
-  margin-right: 7px;
   opacity: 0.3;
 `;

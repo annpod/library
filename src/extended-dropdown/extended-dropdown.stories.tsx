@@ -2,7 +2,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { ExtendedDropdown } from './extended-dropdown';
-import { IExtendedSelectProps } from '../typings';
+import { IExtendedSelectProps, ThemeTypes } from '../typings';
 
 const options = [
   {
@@ -32,6 +32,7 @@ Primary.args = {
   value: '1',
   clearable: true,
   searchable: true,
+  themeType: ThemeTypes.Primary,
   // onChange: (keyValue: string, value: string) => {},
   // onChangeMulti: (keyValue: string, value: string[]) => {},
   // onChangeOption: (keyValue: string, value: string, option: string) => {},

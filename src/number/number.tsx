@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { ThemeTypes } from '../typings';
 
 export interface INumberProps {
   min?: string;
@@ -13,7 +14,9 @@ export interface INumberProps {
 
 const sliceLast = (str: string) => str.slice(0, -1);
 
-export const Number = (props: INumberProps): React.ReactElement => {
+const Wrapper = (themeType: ThemeTypes) => (
+  props: INumberProps
+): React.ReactElement => {
   const { min, max, value, label, width } = props;
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,7 +30,7 @@ export const Number = (props: INumberProps): React.ReactElement => {
   };
 
   const increment = () => {
-    const targetValue = parseInt(value, 10) + 1;
+    const targetValue = +value + 1;
 
     if (max && +targetValue > +max) return;
 
@@ -35,7 +38,7 @@ export const Number = (props: INumberProps): React.ReactElement => {
   };
 
   const decrement = () => {
-    const targetValue = parseInt(value, 10) - 1;
+    const targetValue = +value - 1;
 
     if (min && +targetValue < +min) return;
 
@@ -45,15 +48,15 @@ export const Number = (props: INumberProps): React.ReactElement => {
   return (
     <InputWrapper width={width}>
       <Label>{label}</Label>
-      <div>
+      <Flex>
         <Input value={value} onChange={onChange} type='number' />
-        <DecrementBtn onClick={decrement}>
+        <DecrementBtn onClick={decrement} themeType={themeType}>
           <span>-</span>
         </DecrementBtn>
-        <IncrementBtn onClick={increment}>
+        <IncrementBtn onClick={increment} themeType={themeType}>
           <span>+</span>
         </IncrementBtn>
-      </div>
+      </Flex>
     </InputWrapper>
   );
 };
@@ -65,8 +68,14 @@ const InputWrapper = styled.div<{ width?: string }>`
   width: ${(props) => (props.width ? `${props.width}px` : '250px')};
 `;
 
+const Flex = styled.div`
+  display: flex;
+`;
+
 const Label = styled.div`
   color: ${(props) => props.theme.numberTextColor};
+  font-size: 12px;
+  font-family: 'Gotham-Book';
 `;
 
 const Input = styled.input`
@@ -77,6 +86,8 @@ const Input = styled.input`
   height: 28px;
   padding-left: 5px;
   color: ${(props) => props.theme.numberTextColor};
+  font-family: 'Gotham-book';
+  font-size: 12px;
 
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
@@ -85,12 +96,12 @@ const Input = styled.input`
   }
 `;
 
-const Button = styled.button`
+const Button = styled.button<{ themeType: ThemeTypes }>`
   width: 28px;
   height: 28px;
   border: 1px solid ${(props) => props.theme.numberBorderColor};
   color: ${(props) => props.theme.numberTextColor};
-  background: ${(props) => props.theme.numberBgColor};
+  background-color: ${(props) => props.theme.numberBgColor[props.themeType]};
   cursor: pointer;
   line-height: 24px;
 
@@ -108,3 +119,8 @@ const IncrementBtn = styled(Button)`
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 `;
+
+export const Number = {
+  Primary: Wrapper(ThemeTypes.Primary),
+  Dark: Wrapper(ThemeTypes.Dark)
+};

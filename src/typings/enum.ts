@@ -7,12 +7,17 @@ export enum BtnTypes {
 
 export enum InputTypes {
   Primary = 'primary',
-  Dark = 'dark',
+  Dark = 'dark'
+}
+
+export enum ThemeTypes {
+  Primary = 'Primary',
+  Dark = 'Dark'
 }
 
 export enum ToastStatus {
-  error = "error", 
-  success = "success",
+  error = 'error',
+  success = 'success'
   // dark = "dark", // TODO don't have design for these statuses
   // info = "info",
   // warn = "warn",
