@@ -2,10 +2,14 @@ import * as React from 'react';
 
 import { findSelectOption, findSelectOptions } from '../utils/select.utils';
 
-import { IExtendedSelectProps } from '../typings';
+import { IExtendedSelectProps, ThemeTypes } from '../typings';
 import { Dropdown } from '../dropdown';
 
-export const ExtendedDropdown = (props: IExtendedSelectProps) => {
+interface IExtendedDropdown extends IExtendedSelectProps {
+  themeType: ThemeTypes;
+}
+
+export const ExtendedDropdown = (props: IExtendedDropdown) => {
   const searchOption = Array.isArray(props.value)
     ? findSelectOptions(props.value, props.options)
     : findSelectOption(props.value, props.options);
@@ -31,8 +35,10 @@ export const ExtendedDropdown = (props: IExtendedSelectProps) => {
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.options, props.isAutoSelect, props.value]);
 
+  const DropdownC = Dropdown[props.themeType];
+
   return (
-    <Dropdown
+    <DropdownC
       disabled={props.isDisabled}
       clearable={props.clearable}
       searchable={props.searchable}

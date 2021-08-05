@@ -3,7 +3,7 @@ import { ISelectOption } from './etc';
 import moment from 'moment';
 import { CheckboxValueType } from 'antd/lib/checkbox/Group';
 import { RadioChangeEvent } from 'antd/lib/radio';
-import { InputTypes } from '../typings';
+import { InputTypes, IThemeMap } from '../typings';
 
 export interface IExportButton {
   disabled: boolean;
@@ -194,4 +194,31 @@ export interface ICheckboxGroupProps {
   options: ICheckboxGroupOption[];
   value: CheckboxValueType[];
   onChange: (checkedValues: CheckboxValueType[]) => void;
+}
+
+export interface IDropdownTypes {
+  options: ISelectOption[];
+  onChange?: (value: any) => void;
+  disabled?: boolean;
+  value?: ISelectOption | ISelectOption[] | null | undefined;
+  defaultValue?: ISelectOption | ISelectOption[] | null | undefined;
+  valueRenderer?: () => React.Component | null;
+  optionRenderer?: (value: any) => React.Component | null;
+  placeholder?: string;
+  clearable?: boolean;
+  searchable?: boolean;
+  width?: string;
+  isMulti?: boolean;
+  theme: IThemeMap;
+}
+
+export interface IBreadcrumbRoute {
+  path: string;
+  breadcrumb: string;
+}
+
+export interface IBreadcrumbRouteMatch extends IBreadcrumbRoute {
+  path: string;
+  breadcrumb: string;
+  match: any;
 }

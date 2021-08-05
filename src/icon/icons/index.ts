@@ -49,6 +49,7 @@ import close from './close.svg';
 import errorrRed from './error-red.svg';
 import successGreen from './success-green.svg';
 import clearSelect from './clear-select.svg';
+import arrowLeft from './arrow-left.svg';
 import arrowBack from './arrow-back.svg';
 
 type IconTypes = { [key: string]: string };
@@ -99,5 +100,6 @@ export const ICONS: IconTypes = {
   back,
   close,
   clearSelect,
+  arrowLeft,
   arrowBack
 };

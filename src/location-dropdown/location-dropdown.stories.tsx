@@ -5,6 +5,7 @@ import { LocationDropdown } from './location-dropdown';
 import { ILocationFilterProps } from '../typings/location-filter';
 
 import { filterData, filter, config } from './location-dropdown.mocks';
+import { ThemeTypes } from '../typings';
 
 export default {
   title: 'V1/LocationDropdown',
@@ -13,6 +14,7 @@ export default {
     filterData,
     filter,
     config,
+    themeType: ThemeTypes.Dark,
     setFilterLocation: () => {}
   },
   argTypes: {
@@ -30,6 +32,7 @@ export default {
                 config={config}
                 filter={filter}
                 setFilterLocation={setFilterLocation}
+                themeType={ThemeTypes.Dark},
                 />`
       }
     }
@@ -42,4 +45,4 @@ const Template: Story<ILocationFilterProps> = (args) => (
   </div>
 );
 
-export const Primary = Template.bind({});
+export const Dark = Template.bind({});

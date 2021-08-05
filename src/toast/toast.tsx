@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastStatus, IToastMessage, IToastProps } from '../typings';
 import { toastStrings } from './toast.strings';
 import { Icon } from '../icon';
+import '../styles.css';
 
 const iconMap = {
   [ToastStatus.error]: 'errorrRed',
@@ -66,5 +67,5 @@ const ToastContent = styled.div`
   align-items: flex-start;
 `;
 const ToastMessage = styled.div`
-  padding: 0 10px;
+  padding: 0 15px;
 `;

@@ -10,7 +10,7 @@ interface ButtonProps {
 const ButtonWrapper = styled.div<ButtonProps>`
   min-width: 81px;
   cursor: pointer;
-  height: 29px;
+  height: 36px;
   font-size: 12px;
   border-radius: 20px;
   display: flex;

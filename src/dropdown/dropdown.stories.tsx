@@ -21,7 +21,7 @@ interface IDropdownProps {
 
 export default {
   title: 'V1/Dropdown',
-  component: Dropdown,
+  component: Dropdown.Primary,
   parameters: {
     docs: {
       description: {
@@ -29,8 +29,8 @@ export default {
       },
       source: {
         type: 'code',
-        code: `<Select
-        <Select
+        code: `<Dropdown.Primary
+        <Dropdown.Primary
           disabled={isDisabled}
           clearable={clearable}
           searchable={searchable}
@@ -45,15 +45,38 @@ export default {
   }
 } as Meta;
 
-const Template: Story<IDropdownProps> = (args) => <Dropdown {...args} />;
+const TemplatePrimary: Story<IDropdownProps> = (args) => (
+  <Dropdown.Primary {...args} />
+);
 
-export const Primary = Template.bind({});
+const TemplateDark: Story<IDropdownProps> = (args) => (
+  <Dropdown.Dark {...args} />
+);
 
-export const Multi = Template.bind({});
+export const Primary = TemplatePrimary.bind({});
 
-export const Disabled = Template.bind({});
+export const Multi = TemplatePrimary.bind({});
+
+export const Disabled = TemplatePrimary.bind({});
+
+export const Dark = TemplateDark.bind({});
 
 Primary.args = {
+  options: [
+    { value: '1', label: 'Orange' },
+    { value: '2', label: 'Apple' }
+  ],
+  disabled: false,
+  placeholder: '',
+  value: { value: '1', label: 'Orange' },
+  clearable: true,
+  searchable: false,
+  width: '200px',
+  isMulti: false,
+  defaultValue: { value: '1', label: 'Orange' }
+};
+
+Dark.args = {
   options: [
     { value: '1', label: 'Orange' },
     { value: '2', label: 'Apple' }
