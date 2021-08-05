@@ -211,3 +211,14 @@ export interface IDropdownTypes {
   isMulti?: boolean;
   theme: IThemeMap;
 }
+
+export interface IBreadcrumbRoute {
+  path: string;
+  breadcrumb: string;
+}
+
+export interface IBreadcrumbRouteMatch extends IBreadcrumbRoute {
+  path: string;
+  breadcrumb: string;
+  match: any;
+}
