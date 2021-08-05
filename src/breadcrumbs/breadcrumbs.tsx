@@ -1,11 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import { IBreadcrumbRouteMatch  } from '../typings';
 
 
 interface IBreadcrumbs {
-  breadcrumbs: IBreadcrumbRouteMatch[],
-  lastItem: string
+  breadcrumbs: IBreadcrumbRouteMatch[];
+  lastItem: string;
 }
 
 export const Breadcrumbs = ({ 
@@ -19,7 +19,7 @@ export const Breadcrumbs = ({
           <div>{item.breadcrumb}</div>
         ) : (
           <>
-            <NavLink to={item.match.url}>{item.breadcrumb}</NavLink>
+            <a href={item.match.url}>{item.breadcrumb}</a>
             <span>{" > "}</span>
           </>
         )}
