@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { IBreadcrumbRouteMatch } from '../typings';
+import { IBreadcrumbRouteMatch, IBreadcrumbs } from '../typings';
 import { withBreadcrumbs } from './hoc';
 
 interface IBreadcrumbsComponent {
@@ -9,7 +9,10 @@ interface IBreadcrumbsComponent {
   lastItem: string;
 }
 
-export const BreadcrumbsComponent = ({ breadcrumbs, lastItem }: IBreadcrumbsComponent) => (
+export const BreadcrumbsComponent = ({
+  breadcrumbs,
+  lastItem
+}: IBreadcrumbsComponent) => (
   <div>
     {breadcrumbs.map(
       (item: IBreadcrumbRouteMatch, index: number) =>
@@ -30,18 +33,25 @@ export const BreadcrumbsComponent = ({ breadcrumbs, lastItem }: IBreadcrumbsComp
   </div>
 );
 
-export const Breadcrumbs = ({ routes, matchPath, withRouter }: any) => withBreadcrumbs(routes, matchPath, withRouter)(BreadcrumbsComponent);
+export const Breadcrumbs = (props: IBreadcrumbs) => {
+  const Breadcrumbs = withBreadcrumbs(
+    props.routes,
+    props.matchPath,
+    props.withRouter
+  )(BreadcrumbsComponent);
+  return <Breadcrumbs />;
+};
 
 const LastItem = styled.div`
   font-size: 18px;
-  color: ${props => props.theme.textColorRegular}
+  color: ${(props) => props.theme.textColorRegular};
 `;
 const Link = styled.a`
   font-size: 10px;
-  color: ${props => props.theme.textColor}
+  color: ${(props) => props.theme.textColor};
 `;
 const Arrow = styled.span`
   font-size: 10px;
   padding: 0 5px;
-  color: ${props => props.theme.borderColorLight}
+  color: ${(props) => props.theme.borderColorLight};
 `;

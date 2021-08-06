@@ -216,6 +216,7 @@ export interface IBreadcrumbs {
   routes: IBreadcrumbRoute[];
   matchPath: any;
   withRouter: any;
+  lastItem?: string;
 }
 
 export interface IBreadcrumbRoute {

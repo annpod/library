@@ -29,7 +29,6 @@ export default {
       source: {
         type: 'code',
         code: `<Select
-        <Select
           disabled={isDisabled}
           clearable={clearable}
           searchable={searchable}

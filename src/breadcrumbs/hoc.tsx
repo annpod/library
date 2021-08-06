@@ -1,5 +1,5 @@
 import React from 'react';
-import { IBreadcrumbRoute, IBreadcrumbRouteMatch } from "../typings";
+import { IBreadcrumbRoute, IBreadcrumbRouteMatch } from '../typings';
 
 interface IGetBreadcrumbs {
   routes: IBreadcrumbRoute[];
@@ -8,14 +8,18 @@ interface IGetBreadcrumbs {
 }
 
 const renderer = ({ breadcrumb, match }: any) => {
+  console.log(" breadcrumb, match",  breadcrumb, match)
   if (typeof breadcrumb === 'function') {
     return breadcrumb({ match });
   }
   return breadcrumb;
 };
 
-export const getBreadcrumbs = ({ pathname, routes, matchPath }: IGetBreadcrumbs) => {
-  console.log("routes, pathname, matchPath", routes, pathname, matchPath)
+export const getBreadcrumbs = ({
+  pathname,
+  routes,
+  matchPath
+}: IGetBreadcrumbs) => {
   const matches: IBreadcrumbRouteMatch[] = [];
   pathname
     .replace(/\/$/, '')
@@ -23,10 +27,8 @@ export const getBreadcrumbs = ({ pathname, routes, matchPath }: IGetBreadcrumbs)
     .reduce((previous: string, current: string) => {
       const pathSection = `${previous}/${current}`;
       let breadcrumbMatch;
-
       routes.some(({ breadcrumb, path }: IBreadcrumbRoute) => {
         const match = matchPath(pathSection, { exact: true, path });
-
         if (match) {
           breadcrumbMatch = {
             breadcrumb: renderer({ breadcrumb, match }),
@@ -35,7 +37,6 @@ export const getBreadcrumbs = ({ pathname, routes, matchPath }: IGetBreadcrumbs)
           };
           return true;
         }
-
         return false;
       });
       if (breadcrumbMatch) {
@@ -43,35 +44,22 @@ export const getBreadcrumbs = ({ pathname, routes, matchPath }: IGetBreadcrumbs)
       }
       return pathSection;
     });
-    console.log("matches", matches)
   return matches;
 };
 
-export const withBreadcrumbs = (routes: IBreadcrumbRoute[], matchPath: any, withRouter: any) => (
-  Component: any
-) => {
-  return (
-  withRouter((props: any) => (
+export const withBreadcrumbs = (
+  routes: IBreadcrumbRoute[],
+  matchPath: any,
+  withRouter: any
+) => (Component: React.ComponentType<any>) => {
+  return withRouter((props: any) => (
     <Component
       {...props}
       breadcrumbs={getBreadcrumbs({
         pathname: props.location.pathname,
         routes,
-        matchPath,
+        matchPath
       })}
     />
-  ))
-  )}
-
-// export const withBreadcrumbs = (routes: IBreadcrumbRoute[]) => (
-//   Component: any
-// ) =>
-//   withRouter((props: any) => (
-//     <Component
-//       {...props}
-//       breadcrumbs={getBreadcrumbs({
-//         pathname: props.location.pathname,
-//         routes
-//       })}
-//     />
-//   ));
+  ));
+};
