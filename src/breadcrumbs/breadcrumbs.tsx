@@ -4,15 +4,14 @@ import styled from 'styled-components';
 import { IBreadcrumbRouteMatch, IBreadcrumbs } from '../typings';
 import { withBreadcrumbs } from './hoc';
 
+
 interface IBreadcrumbsComponent {
   breadcrumbs: IBreadcrumbRouteMatch[];
   lastItem: string;
 }
 
-export const BreadcrumbsComponent = ({
-  breadcrumbs,
-  lastItem
-}: IBreadcrumbsComponent) => (
+
+export const BreadcrumbsComponent = ({ breadcrumbs, lastItem }: IBreadcrumbsComponent) => (
   <div>
     {breadcrumbs.map(
       (item: IBreadcrumbRouteMatch, index: number) =>
@@ -23,7 +22,7 @@ export const BreadcrumbsComponent = ({
             ) : (
               <>
                 <Link href={item.match.url}>{item.breadcrumb}</Link>
-                <Arrow>{' > '}</Arrow>
+                <Arrow>{" > "}</Arrow>
               </>
             )}
           </span>
@@ -34,11 +33,7 @@ export const BreadcrumbsComponent = ({
 );
 
 export const Breadcrumbs = (props: IBreadcrumbs) => {
-  const Breadcrumbs = withBreadcrumbs(
-    props.routes,
-    props.matchPath,
-    props.withRouter
-  )(BreadcrumbsComponent);
+  const Breadcrumbs = withBreadcrumbs(props.routes, props.matchPath, props.withRouter)(BreadcrumbsComponent);
   return <Breadcrumbs />;
 };
 

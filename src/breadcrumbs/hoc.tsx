@@ -8,35 +8,34 @@ interface IGetBreadcrumbs {
 }
 
 const renderer = ({ breadcrumb, match }: any) => {
-  console.log(" breadcrumb, match",  breadcrumb, match)
-  if (typeof breadcrumb === 'function') {
+  if (typeof breadcrumb === "function") {
     return breadcrumb({ match });
   }
   return breadcrumb;
 };
 
-export const getBreadcrumbs = ({
-  pathname,
-  routes,
-  matchPath
-}: IGetBreadcrumbs) => {
+export const getBreadcrumbs = ({ pathname, routes, matchPath }: IGetBreadcrumbs) => {
+  console.log("routes, pathname, matchPath", routes, pathname, matchPath);
   const matches: IBreadcrumbRouteMatch[] = [];
   pathname
-    .replace(/\/$/, '')
-    .split('/')
+    .replace(/\/$/, "")
+    .split("/")
     .reduce((previous: string, current: string) => {
       const pathSection = `${previous}/${current}`;
       let breadcrumbMatch;
+
       routes.some(({ breadcrumb, path }: IBreadcrumbRoute) => {
         const match = matchPath(pathSection, { exact: true, path });
+
         if (match) {
           breadcrumbMatch = {
             breadcrumb: renderer({ breadcrumb, match }),
             path,
-            match
+            match,
           };
           return true;
         }
+
         return false;
       });
       if (breadcrumbMatch) {
@@ -44,22 +43,21 @@ export const getBreadcrumbs = ({
       }
       return pathSection;
     });
+  console.log("matches", matches);
   return matches;
 };
 
-export const withBreadcrumbs = (
-  routes: IBreadcrumbRoute[],
-  matchPath: any,
-  withRouter: any
-) => (Component: React.ComponentType<any>) => {
-  return withRouter((props: any) => (
-    <Component
-      {...props}
-      breadcrumbs={getBreadcrumbs({
-        pathname: props.location.pathname,
-        routes,
-        matchPath
-      })}
-    />
-  ));
-};
+export const withBreadcrumbs =
+  (routes: IBreadcrumbRoute[], matchPath: any, withRouter: any) =>
+  (Component: any) => {
+    return withRouter((props: any) => (
+      <Component
+        {...props}
+        breadcrumbs={getBreadcrumbs({
+          pathname: props.location.pathname,
+          routes,
+          matchPath,
+        })}
+      />
+    ));
+  };
