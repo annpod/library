@@ -7,6 +7,7 @@ import {
   SubmitButton,
   ButtonStyled
 } from './button';
+import { withBreadcrumbs, Breadcrumbs } from "./breadcrumbs";
 import { CollapseItem } from './collapse-item';
 import { ContentSider, ContentHeader } from './content';
 import {
@@ -146,6 +147,8 @@ export {
   ExportBtn,
   SaveBtn,
   ButtonStyled,
+  withBreadcrumbs,
+  Breadcrumbs,
   TextWrapper,
   Input,
   InputStyled,
