@@ -212,6 +212,12 @@ export interface IDropdownTypes {
   theme: IThemeMap;
 }
 
+export interface IBreadcrumbs {
+  routes: IBreadcrumbRoute[];
+  matchPath: any;
+  withRouter: any;
+}
+
 export interface IBreadcrumbRoute {
   path: string;
   breadcrumb: string;
