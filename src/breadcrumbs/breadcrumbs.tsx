@@ -17,9 +17,7 @@ export const Breadcrumbs = ({ breadcrumbs, lastItem }: IBreadcrumbs) => (
               <div>{item.breadcrumb}</div>
             ) : (
               <>
-                {/* <a href={item.match.url}>{item.breadcrumb}</a> */}
-                {item.match.url}
-                {item.breadcrumb}
+                <a href={item.match.url}>{item.breadcrumb}</a>
                 <span>{' > '}</span>
               </>
             )}
