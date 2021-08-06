@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { IBreadcrumbRouteMatch, IBreadcrumbs } from '../typings';
+import { IBreadcrumbRouteMatch } from '../typings';
 import { withBreadcrumbs } from './hoc';
 
 interface IBreadcrumbsComponent {
@@ -30,7 +30,7 @@ export const BreadcrumbsComponent = ({ breadcrumbs, lastItem }: IBreadcrumbsComp
   </div>
 );
 
-export const Breadcrumbs = ({ routes, lastItem, matchPath, withRouter }: any) => withBreadcrumbs(routes, matchPath, withRouter)(BreadcrumbsComponent);
+export const Breadcrumbs = ({ routes, matchPath, withRouter }: any) => withBreadcrumbs(routes, matchPath, withRouter)(BreadcrumbsComponent);
 
 const LastItem = styled.div`
   font-size: 18px;
