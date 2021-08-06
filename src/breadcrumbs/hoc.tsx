@@ -15,7 +15,6 @@ const renderer = ({ breadcrumb, match }: any) => {
 };
 
 export const getBreadcrumbs = ({ pathname, routes, matchPath }: IGetBreadcrumbs) => {
-  console.log("routes, pathname, matchPath", routes, pathname, matchPath);
   const matches: IBreadcrumbRouteMatch[] = [];
   pathname
     .replace(/\/$/, "")
@@ -43,13 +42,12 @@ export const getBreadcrumbs = ({ pathname, routes, matchPath }: IGetBreadcrumbs)
       }
       return pathSection;
     });
-  console.log("matches", matches);
   return matches;
 };
 
 export const withBreadcrumbs =
   (routes: IBreadcrumbRoute[], matchPath: any, withRouter: any) =>
-  (Component: any) => {
+  (Component: React.ComponentType<any>) => {
     return withRouter((props: any) => (
       <Component
         {...props}

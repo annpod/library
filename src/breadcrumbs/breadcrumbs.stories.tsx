@@ -46,8 +46,12 @@ export default {
   parameters: {
     docs: {
       source: {
-        code: `<Breadcrumbs lasItem="Name" />
-        App:
+        code: `
+        
+        <Breadcrumbs lasItem="Custom Name" />
+
+        Breadcrumbs Component:
+
         import { matchPath, withRouter } from "react-router-dom";
         const routes = [
           { path: ROOT_ROUTE, breadcrumb: "System Configuration" },
@@ -65,7 +69,3 @@ const Template: Story<any> = (args: any) => <Breadcrumbs {...args} />;
 
 export const Primary = Template.bind({});
 
-// Primary.args = {
-//   lastItem: 'Provider 1',
-//   breadcrumbs
-// };
