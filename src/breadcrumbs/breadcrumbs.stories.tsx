@@ -1,6 +1,53 @@
 import React from 'react';
+import styled from "styled-components";
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { BreadcrumbsComponent as Breadcrumbs } from './breadcrumbs';
+import { IBreadcrumbRouteMatch } from '../typings';
+
+// copy of the component because we can't use NavLink without Router
+interface IBreadcrumbsComponent {
+  breadcrumbs: IBreadcrumbRouteMatch[];
+  lastItem: string;
+}
+
+const Breadcrumbs = ({ breadcrumbs, lastItem }: IBreadcrumbsComponent) => {
+  return (
+    <div>
+      {breadcrumbs.map(
+        (item: IBreadcrumbRouteMatch, index: number) =>
+          item && (
+            <span key={`br-${index}`}>
+              {!lastItem && index === breadcrumbs.length - 1 ? (
+                <LastItem>{item.breadcrumb}</LastItem>
+              ) : (
+                <>
+                  <Link className='breadcrumb'>{item.breadcrumb}</Link>
+                  <Arrow>{" > "}</Arrow>
+                </>
+              )}
+            </span>
+          )
+      )}
+      {lastItem && <LastItem>{lastItem}</LastItem>}
+    </div>
+  );
+};
+
+const LastItem = styled.div`
+  font-size: 18px;
+  color: ${(props) => props.theme.textColorRegular};
+`;
+const Link = styled.span`
+  font-size: 10px;
+  color: ${(props) => props.theme.textColor};
+  &:hover {
+    color: #1890ff;
+  }
+`;
+const Arrow = styled.span`
+  font-size: 10px;
+  padding: 0 5px;
+  color: ${(props) => props.theme.borderColorLight};
+`;
 
 const breadcrumbs = [
   {
@@ -11,7 +58,6 @@ const breadcrumbs = [
       path: '/systemconfiguration/',
       url: '/systemconfiguration'
     },
-
     path: '/systemconfiguration/'
   },
   {
@@ -41,7 +87,7 @@ export default {
   component: Breadcrumbs,
   args: {
     lastItem: 'Provider 1',
-    breadcrumbs
+    breadcrumbs,
   },
   parameters: {
     docs: {
@@ -58,7 +104,7 @@ export default {
           { path: USER_DIRECTORY_ROUTE, breadcrumb: "User Directory" },
           { path: USER_DIRECTORY_PROVIDERS_ROUTE, breadcrumb: "Providers" },
         ];
-        export const Breadcrumbs = ({ lastItem }) => BreadcrumbsLib({ lastItem, routes, matchPath, withRouter });
+        export const Breadcrumbs = ({ lastItem }) => BreadcrumbsLib({ routes, matchPath, withRouter, NavLink, lastItem });
         `
       }
     }

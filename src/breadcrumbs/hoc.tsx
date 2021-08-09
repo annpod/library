@@ -46,16 +46,18 @@ export const getBreadcrumbs = ({ pathname, routes, matchPath }: IGetBreadcrumbs)
 };
 
 export const withBreadcrumbs =
-  (routes: IBreadcrumbRoute[], matchPath: any, withRouter: any) =>
+  (routes: IBreadcrumbRoute[], matchPath: any, withRouter: any, NavLink: any, lastItem?: string) =>
   (Component: React.ComponentType<any>) => {
-    return withRouter((props: any) => (
-      <Component
+    return withRouter((props: any) => {
+      return <Component
         {...props}
+        lastItem={lastItem}
+        NavLink={NavLink}
         breadcrumbs={getBreadcrumbs({
           pathname: props.location.pathname,
           routes,
           matchPath,
         })}
       />
-    ));
+      });
   };
