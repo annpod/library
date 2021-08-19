@@ -33,7 +33,7 @@ export class Truncate extends Component<any> {
 
   componentDidUpdate(prevProps: any) {
     // Render was based on outdated refs and needs to be rerun
-    if (this.props.children !== prevProps.children) {
+    if (this.props.children !== prevProps.children && this.props.update !== prevProps.update) {
       this.forceUpdate();
     }
 
@@ -97,8 +97,8 @@ export class Truncate extends Component<any> {
       canvasContext,
       props: { width }
     } = this;
-// tslint:disable-next-line:no-console
-console.log('width', width);
+    // tslint:disable-next-line:no-console
+    console.log('width', width);
 
     // Calculation is no longer relevant, since node has been removed
     if (!target) {
@@ -117,8 +117,8 @@ console.log('width', width);
     }
 
     const style = window.getComputedStyle(target);
-// tslint:disable-next-line:no-console
-console.log('targetWidth', targetWidth);
+    // tslint:disable-next-line:no-console
+    console.log('targetWidth', targetWidth);
 
     const font = [
       style['font-weight'],
@@ -198,19 +198,19 @@ console.log('targetWidth', targetWidth);
           const middle = Math.floor((lower + upper) / 2);
 
           const testLine = textRest.slice(0, middle + 1);
-console.log("this.measureWidth(testLine)", this.measureWidth(testLine));
-console.log("ellipsisWidth", ellipsisWidth);
-console.log("targetWidth", targetWidth);
+          console.log("this.measureWidth(testLine)", this.measureWidth(testLine));
+          console.log("ellipsisWidth", ellipsisWidth);
+          console.log("targetWidth", targetWidth);
           if (this.measureWidth(testLine) + ellipsisWidth <= targetWidth) {
             lower = middle + 1;
           } else {
             upper = middle - 1;
           }
         }
-console.log("lower", lower);
-console.log("upper", upper);
+        console.log("lower", lower);
+        console.log("upper", upper);
         let lastLineText = textRest.slice(0, lower);
-console.log("lastLineText11", lastLineText)
+        console.log("lastLineText11", lastLineText)
         if (trimWhitespace) {
           lastLineText = this.trimRight(lastLineText);
 
@@ -221,8 +221,8 @@ console.log("lastLineText11", lastLineText)
             lastLineText = this.trimRight(prevLine);
           }
         }
-// tslint:disable-next-line:no-console
-console.log('lastLineText22', lastLineText);
+        // tslint:disable-next-line:no-console
+        console.log('lastLineText22', lastLineText);
 
         resultLine = (
           <span>
@@ -232,7 +232,7 @@ console.log('lastLineText22', lastLineText);
         );
         // tslint:disable-next-line:no-console
         console.log('resultLine', resultLine);
-        
+
       } else {
         // Binary search determining when the line breaks
         let lower = 0;
@@ -242,7 +242,7 @@ console.log('lastLineText22', lastLineText);
           const middle = Math.floor((lower + upper) / 2);
 
           const testLine = textWords.slice(0, middle + 1).join(' ');
-console.log("this.measureWidth(testLine), targetWidth", this.measureWidth(testLine), targetWidth)
+          console.log("this.measureWidth(testLine), targetWidth", this.measureWidth(testLine), targetWidth)
           if (this.measureWidth(testLine) <= targetWidth) {
             lower = middle + 1;
           } else {
@@ -260,8 +260,8 @@ console.log("this.measureWidth(testLine), targetWidth", this.measureWidth(testLi
         resultLine = textWords.slice(0, lower).join(' ');
         textLines[0].splice(0, lower);
       }
-// tslint:disable-next-line:no-console
-console.log('resultLine',resultLine);
+      // tslint:disable-next-line:no-console
+      console.log('resultLine', resultLine);
 
       lines.push(resultLine);
     }

@@ -23,13 +23,19 @@ export const ShowMoreText = (props: IShowMoreText) => {
   const moreText = more || "Show More";
   const lessText = less || "Show Less";
   const [isShowButton, setIsShowButton] = React.useState(false);
+  const [update, setUpdate] = React.useState(false);
   const [height, setHeight] = React.useState<any>();
   const container = React.useRef<HTMLInputElement>(null);
 
   React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setUpdate(true)
+    }, 150);
+
     if (!floatLine) {
       return;
     }
+
     if (container.current) {
       const currentLineHeight = window
         .getComputedStyle(container.current)
@@ -38,8 +44,6 @@ export const ShowMoreText = (props: IShowMoreText) => {
         .getComputedStyle(container.current)
         .getPropertyValue('height');
       console.log("currentHeight", currentHeight)
-      // tslint:disable-next-line:no-console
-      console.log('"currentLineHeight', currentLineHeight);
 
       if (Number.parseInt(currentHeight) > Number.parseInt(currentLineHeight)) {
         setIsShowButton(true);
@@ -48,7 +52,9 @@ export const ShowMoreText = (props: IShowMoreText) => {
         setIsShowButton(false);
       }
     }
+    return () => clearTimeout(timer);
   }, []);
+
   if (floatLine) {
     return (
       <div>
@@ -62,14 +68,12 @@ export const ShowMoreText = (props: IShowMoreText) => {
             </Button></span>
 
           )}
-
         </TextWrapper>
-        {'dfkgjdlfkgjdlfhkjdkhjfg;hfghkfghfghf'}
       </div>
     );
   }
   return (
-    <div>
+    <Wrapper>
       <Truncate
         lines={!isExpanded && lines ? lines : 0}
         width={width}
@@ -77,15 +81,32 @@ export const ShowMoreText = (props: IShowMoreText) => {
           <Button onClick={toggleLines}>{moreText}</Button>
         )}
         onTruncate={handleTruncate}
+        update={update}
       >
         {children}
       </Truncate>
       {!isTruncated && isExpanded && (
         <span> <Button onClick={toggleLines}>{lessText}</Button></span>
       )}
-    </div>
+    </Wrapper>
   );
+  //   return (
+  //     <Wrapper style={{ width }}>
+  // <TextTruncate
+  //             line={1}
+  //             truncateText="…"
+  //             text={
+  //                 "rH2ivGxNu5UX73rt76nLiCjtvwrtg4Tx8orH2ivGxNu5UX73rt76nLiCjtvwrtg4Tx8o"
+  //             }
+  // />
+
+  //     </Wrapper>
+  //   )
 };
+
+const Wrapper = styled.div`
+font-family: 'Gotham-Medium';
+`;
 
 const Button = styled.button`
   font-size: 11px;
@@ -99,6 +120,7 @@ const Button = styled.button`
 const Text = styled.span<any>`  
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: 'Gotham-Medium';
   height: ${(props) => (props.isExpanded ? 'auto' : props.height)};
   width: ${(props) => (props.isExpanded ? '100%' : 'calc( 100% - 70px )')};  
   display: ${(props) => (props.isExpanded ? 'inline' : 'inline-block')};
