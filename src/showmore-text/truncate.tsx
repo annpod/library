@@ -207,9 +207,10 @@ console.log("targetWidth", targetWidth);
             upper = middle - 1;
           }
         }
-
+console.log("lower", lower);
+console.log("upper", upper);
         let lastLineText = textRest.slice(0, lower);
-
+console.log("lastLineText11", lastLineText)
         if (trimWhitespace) {
           lastLineText = this.trimRight(lastLineText);
 
@@ -221,7 +222,7 @@ console.log("targetWidth", targetWidth);
           }
         }
 // tslint:disable-next-line:no-console
-console.log('lastLineText', lastLineText);
+console.log('lastLineText22', lastLineText);
 
         resultLine = (
           <span>
