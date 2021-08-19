@@ -23,7 +23,7 @@ export const ShowMoreText = (props: IShowMoreText) => {
   const moreText = more || "Show More";
   const lessText = less || "Show Less";
   const [isShowButton, setIsShowButton] = React.useState(false);
-  const [update, setUpdate] = React.useState(false);
+  const [update, setUpdate] = React.useState<boolean>(false);
   const [height, setHeight] = React.useState<any>();
   const container = React.useRef<HTMLInputElement>(null);
 
@@ -43,8 +43,6 @@ export const ShowMoreText = (props: IShowMoreText) => {
       const currentHeight = window
         .getComputedStyle(container.current)
         .getPropertyValue('height');
-      console.log("currentHeight", currentHeight)
-
       if (Number.parseInt(currentHeight) > Number.parseInt(currentLineHeight)) {
         setIsShowButton(true);
         setHeight(currentLineHeight);
@@ -73,7 +71,7 @@ export const ShowMoreText = (props: IShowMoreText) => {
     );
   }
   return (
-    <Wrapper>
+    <div>
       <Truncate
         lines={!isExpanded && lines ? lines : 0}
         width={width}
@@ -88,25 +86,9 @@ export const ShowMoreText = (props: IShowMoreText) => {
       {!isTruncated && isExpanded && (
         <span> <Button onClick={toggleLines}>{lessText}</Button></span>
       )}
-    </Wrapper>
+    </div>
   );
-  //   return (
-  //     <Wrapper style={{ width }}>
-  // <TextTruncate
-  //             line={1}
-  //             truncateText="…"
-  //             text={
-  //                 "rH2ivGxNu5UX73rt76nLiCjtvwrtg4Tx8orH2ivGxNu5UX73rt76nLiCjtvwrtg4Tx8o"
-  //             }
-  // />
-
-  //     </Wrapper>
-  //   )
 };
-
-const Wrapper = styled.div`
-font-family: 'Gotham-Medium';
-`;
 
 const Button = styled.button`
   font-size: 11px;
