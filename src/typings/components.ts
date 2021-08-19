@@ -212,6 +212,15 @@ export interface IDropdownTypes {
   theme: IThemeMap;
 }
 
+
+export interface IBreadcrumbs {
+  routes: IBreadcrumbRoute[];
+  matchPath: any;
+  withRouter: any;
+  NavLink: any;
+  lastItem?: string;
+}
+
 export interface IBreadcrumbRoute {
   path: string;
   breadcrumb: string;
@@ -221,4 +230,14 @@ export interface IBreadcrumbRouteMatch extends IBreadcrumbRoute {
   path: string;
   breadcrumb: string;
   match: any;
+}
+
+export interface IShowMoreText {
+  children: React.ReactChild;
+  width?: number;
+  lines?: number;
+  more?: string;
+  less?: string;
+  expanded?: boolean;
+  floatLine?: boolean;
 }

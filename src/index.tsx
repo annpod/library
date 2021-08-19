@@ -7,8 +7,10 @@ import {
   SubmitButton,
   ButtonStyled
 } from './button';
+import { Breadcrumbs } from "./breadcrumbs";
 import { CollapseItem } from './collapse-item';
 import { ContentSider, ContentHeader } from './content';
+import { ShowMoreText } from './showmore-text';
 import {
   DeskDetails,
   DesksContent,
@@ -146,6 +148,7 @@ export {
   ExportBtn,
   SaveBtn,
   ButtonStyled,
+  Breadcrumbs,
   TextWrapper,
   Input,
   InputStyled,
@@ -183,6 +186,7 @@ export {
   TimePicker,
   TimeRangePicker,
   Select,
+  ShowMoreText,
   selectStyles,
   DayRangePicker,
   DaySlider,
