@@ -231,3 +231,13 @@ export interface IBreadcrumbRouteMatch extends IBreadcrumbRoute {
   breadcrumb: string;
   match: any;
 }
+
+export interface IShowMoreText {
+  children: React.ReactChild;
+  width?: number;
+  lines?: number;
+  more?: string;
+  less?: string;
+  expanded?: boolean;
+  floatLine?: boolean;
+}
