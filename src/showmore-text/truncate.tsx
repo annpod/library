@@ -97,6 +97,8 @@ export class Truncate extends Component<any> {
       canvasContext,
       props: { width }
     } = this;
+// tslint:disable-next-line:no-console
+console.log('width', width);
 
     // Calculation is no longer relevant, since node has been removed
     if (!target) {
@@ -115,6 +117,8 @@ export class Truncate extends Component<any> {
     }
 
     const style = window.getComputedStyle(target);
+// tslint:disable-next-line:no-console
+console.log('targetWidth', targetWidth);
 
     const font = [
       style['font-weight'],
@@ -194,7 +198,9 @@ export class Truncate extends Component<any> {
           const middle = Math.floor((lower + upper) / 2);
 
           const testLine = textRest.slice(0, middle + 1);
-
+console.log("this.measureWidth(testLine)", this.measureWidth(testLine));
+console.log("ellipsisWidth", ellipsisWidth);
+console.log("targetWidth", targetWidth);
           if (this.measureWidth(testLine) + ellipsisWidth <= targetWidth) {
             lower = middle + 1;
           } else {
@@ -214,6 +220,8 @@ export class Truncate extends Component<any> {
             lastLineText = this.trimRight(prevLine);
           }
         }
+// tslint:disable-next-line:no-console
+console.log('lastLineText', lastLineText);
 
         resultLine = (
           <span>
@@ -221,6 +229,9 @@ export class Truncate extends Component<any> {
             {ellipsis}
           </span>
         );
+        // tslint:disable-next-line:no-console
+        console.log('resultLine', resultLine);
+        
       } else {
         // Binary search determining when the line breaks
         let lower = 0;
@@ -230,7 +241,7 @@ export class Truncate extends Component<any> {
           const middle = Math.floor((lower + upper) / 2);
 
           const testLine = textWords.slice(0, middle + 1).join(' ');
-
+console.log("this.measureWidth(testLine), targetWidth", this.measureWidth(testLine), targetWidth)
           if (this.measureWidth(testLine) <= targetWidth) {
             lower = middle + 1;
           } else {
@@ -248,6 +259,8 @@ export class Truncate extends Component<any> {
         resultLine = textWords.slice(0, lower).join(' ');
         textLines[0].splice(0, lower);
       }
+// tslint:disable-next-line:no-console
+console.log('resultLine',resultLine);
 
       lines.push(resultLine);
     }
