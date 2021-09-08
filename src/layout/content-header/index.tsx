@@ -16,9 +16,7 @@ interface IProps {
 
 
 export const ContentHeader = ({ routes, matchPath, withRouter, NavLink, lastItem, title, isBreadcrumbs, children }: any) => {
-  // tslint:disable-next-line:no-console
-  console.log('withRouter', withRouter);
-  
+
   const Breadcrumbs = ({ lastItem }: IProps ) => BreadcrumbsLib({ routes, matchPath, withRouter, NavLink, lastItem });
 
   return (

@@ -13,6 +13,7 @@ interface IBreadcrumbsComponent {
 }
 
 export const BreadcrumbsComponent = ({ breadcrumbs, NavLink, lastItem }: IBreadcrumbsComponent) => {
+
   return (
     <div data-location='breadcrumbs'>
       {breadcrumbs.map(

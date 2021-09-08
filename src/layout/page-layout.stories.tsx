@@ -5,9 +5,6 @@ import {
   matchPath,
   withRouter,
   NavLink,
-  Router,
-  Route,
-  Switch
 } from 'react-router-dom';
 import { PageLayout } from './page-layout';
 
@@ -26,7 +23,6 @@ export default {
 } as Meta;
 
 const Template: Story<any> = (args: any) => <PageLayout {...args} />;
-// Template.addDecorator(StoryRouter())
 export const Primary = Template.bind({});
 
 const routeTable: {
@@ -71,21 +67,12 @@ Primary.args = {
       title: 'Licensing'
     }
   ],
-  breadcrumbsRoutes: [
-    { path: '/', breadcrumb: 'System Configuration' },
-  ],
   backButton: 'Back',
   onBack: () => {},
-  sidebarContent: 'sidebarContent',
-  pageContent: 'pageContent',
-  breadcrumbsLastItem: 'breadcrumbsLastItem',
-  tabs: [{ title: 'Details' }],
-  selectedTab: '11',
+  sidebarContent: '{sidebarContent}',
+  children: '{children}',
+  tabs: [{ title: 'Details' }, { title: 'Mapping' }],
+  selectedTab: 'Details',
   onSelectTab: () => {},
-  title: 'Title',
-  isBreadcrumbs: true,
-  headerContent: 'headerContent',
-  matchPath:matchPath,
-  withRouter: withRouter,
   NavLink: NavLink
 };

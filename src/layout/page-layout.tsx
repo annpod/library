@@ -4,7 +4,7 @@ import { Container } from './layout.styled';
 import { Navigation } from '../navigation';
 import { FullscreenHeader } from '../header';
 import { PageMenu } from './page-menu';
-import { ContentHeader } from './content-header';
+
 export interface IHeaderOption {
   btn: string;
   route: string;
@@ -34,9 +34,6 @@ export const PageLayout = ({
   backButton,
   onBack,
   sidebarContent,
-  pageContent,
-  breadcrumbsRoutes,
-  breadcrumbsLastItem,
   menu,
   isProfile,
   onLogoClick,
@@ -44,12 +41,8 @@ export const PageLayout = ({
   tabs,
   selectedTab,
   onSelectTab,
-  title,
-  isBreadcrumbs,
-  headerContent,
-  matchPath,
-  withRouter,
-  NavLink
+  NavLink,
+  children
 }: any) => {
   return (
     <>
@@ -76,20 +69,7 @@ export const PageLayout = ({
         >
           {sidebarContent}
         </PageMenu>
-        <ContentWrapper data-location='content'>
-          <ContentHeader
-            lastItem={breadcrumbsLastItem}
-            title={title}
-            isBreadcrumbs={isBreadcrumbs}
-            routes={breadcrumbsRoutes}
-            matchPath={matchPath}
-            withRouter={withRouter}
-            NavLink={withRouter}
-          >
-            {headerContent}
-          </ContentHeader>
-          {pageContent}
-        </ContentWrapper>
+        <ContentWrapper data-location='content'>{children}</ContentWrapper>
       </Container>
     </>
   );
