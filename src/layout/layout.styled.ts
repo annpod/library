@@ -20,3 +20,11 @@ export const Wrapper = styled.div`
   display: flex;
   box-sizing: border-box;
 `;
+
+export const Panel = styled.div`
+  width: 240px;
+  min-width: 240px;
+  background: #f7f7f7;
+  padding: 0px 20px;
+  border-right: 1px solid #dbdbdb;
+`;

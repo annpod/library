@@ -4,13 +4,14 @@ import { BtnTypes } from '../typings';
 
 interface ButtonProps {
   btnType: BtnTypes;
-  disabled?: boolean;
+  disabled: boolean;
+  slim: boolean;
 }
 
 const ButtonWrapper = styled.div<ButtonProps>`
   min-width: 81px;
   cursor: pointer;
-  height: 36px;
+  height: ${(props) => (props.slim ? '29px' : ' 36px')};
   font-size: 12px;
   border-radius: 20px;
   display: flex;
@@ -31,24 +32,27 @@ export interface IProps {
   onClick?: () => void;
   children?: React.ReactNode;
   disabled?: boolean;
+  slim?: boolean;
 }
 
 const Wrapper = (btnType: BtnTypes) => ({
   onClick,
   children,
-  disabled = false
+  disabled = false,
+  slim = false
 }: IProps) => {
   return (
     <ButtonWrapper
       btnType={btnType}
       onClick={disabled ? () => null : onClick}
       disabled={disabled}
+      slim={slim}
     >
       <Text>{children}</Text>
     </ButtonWrapper>
   );
 };
- 
+
 export const ButtonStyled = {
   Primary: Wrapper(BtnTypes.Primary),
   Dark: Wrapper(BtnTypes.Dark),

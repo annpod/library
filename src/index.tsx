@@ -7,7 +7,7 @@ import {
   SubmitButton,
   ButtonStyled
 } from './button';
-import { Breadcrumbs } from "./breadcrumbs";
+import { Breadcrumbs } from './breadcrumbs';
 import { CollapseItem } from './collapse-item';
 import { ContentSider, ContentHeader } from './content';
 import { ShowMoreText } from './showmore-text';
@@ -100,6 +100,9 @@ import {
 import { Dropdown } from './dropdown';
 import { ExtendedDropdown } from './extended-dropdown';
 import { LocationDropdown } from './location-dropdown';
+
+import { Monetary } from './monetary';
+import { TimeDropdown } from './time-dropdown';
 
 // hooks
 import { useClickOutside, useDebounce, useToggle } from './hooks';
@@ -272,5 +275,7 @@ export {
   Number,
   ExtendedDropdown,
   LocationDropdown,
+  Monetary,
+  TimeDropdown,
   ThemeTypes
 };

@@ -31,6 +31,34 @@ const RadioContainer = styled.div`
   }
 `;
 
+const RadioButtonContainer = styled.div`
+  display: inline-block;
+  
+  .ant-radio-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    background: ${props => props.theme.radioButtonBg};
+    border: 1px solid ${props => props.theme.radioButtonBorderColor} !important;
+    height: 68px;
+    min-width: 148px;
+    border-radius: 5px !important;
+    margin-right: 10px;
+    color: ${props => props.theme.radioButtonColor};
+    outline: none;
+  }
+  .ant-radio-button-wrapper-checked {
+    background: ${props => props.theme.activeColor};
+    color: ${props => props.theme.radioButtonActiveColor};
+    &:hover, &:active {
+      color: ${props => props.theme.radioButtonActiveColor};
+    }
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+    outline: none;
+`;
+
 const RadioGroupC = styled(Radio.Group)`
   width: 100%;
 `;
@@ -55,10 +83,15 @@ export const RadioGroup = (props: IRadioGroupProps) => {
     <RadioGroupC onChange={onChange} value={props.value} name={props.name}>
       {props.options.map((option: IRadioGroupOption) => (
         <React.Fragment key={option.key}>
-          <RadioContainer>
-            <Radio value={option.key}>{option.name}</Radio>
-          </RadioContainer>
-
+          {props.isButton ? (
+            <RadioButtonContainer>
+              <Radio.Button value={option.key}>{option.name}</Radio.Button>
+            </RadioButtonContainer>
+          ) : (
+            <RadioContainer>
+              <Radio value={option.key}>{option.name}</Radio>
+            </RadioContainer>
+          )}
           <Tooltip show={showTooltip(option)}>{option.tooltip}</Tooltip>
         </React.Fragment>
       ))}

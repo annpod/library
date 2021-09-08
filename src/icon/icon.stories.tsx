@@ -118,6 +118,8 @@ export const errorrRed: Story<IIconProps> = () => (
   <Icon {...args} type={'errorrRed'} />
 );
 export const Back: Story<IIconProps> = () => <Icon {...args} type={'back'} />;
-export const ArrowLeft: Story<IIconProps> = () => <Icon {...args} type={'arrowLeft'} />;
+export const ArrowLeft: Story<IIconProps> = () => (
+  <Icon {...args} type={'arrowLeft'} />
+);
 export const Close: Story<IIconProps> = () => <Icon {...args} type={'close'} />;
- 
+export const Tick: Story<IIconProps> = () => <Icon {...args} type={'tick'} />;

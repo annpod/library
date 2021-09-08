@@ -31,6 +31,7 @@ const Template: Story<IRadioGroupProps> = (args) => {
 };
 
 export const Primary = Template.bind({});
+export const Buttons = Template.bind({});
 
 Primary.args = {
   options: [
@@ -53,4 +54,23 @@ Primary.args = {
     }
   ],
   name: 'status'
+};
+
+Buttons.args = {
+  options: [
+    {
+      key: 'item1',
+      name: 'Item 1'
+    },
+    {
+      key: 'item2',
+      name: 'Item 2',
+     },
+    {
+      key: 'item3',
+      name: 'Item 4',
+    }
+  ],
+  name: 'status',
+  isButton: true,
 };

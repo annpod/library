@@ -63,6 +63,15 @@ Blue.args = {
   onClick: () => {}
 };
 
+export const PrimarySlim = Template1.bind({});
+
+PrimarySlim.args = {
+  disabled: false,
+  children: 'Close',
+  slim: true,
+  onClick: () => {}
+};
+
 const Wrapper = styled.div`
   display: flex;
 `;

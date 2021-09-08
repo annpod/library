@@ -33,7 +33,7 @@ export class Truncate extends Component<any> {
 
   componentDidUpdate(prevProps: any) {
     // Render was based on outdated refs and needs to be rerun
-    if (this.props.children !== prevProps.children) {
+    if (this.props.children !== prevProps.children || this.props.update !== prevProps.update) {
       this.forceUpdate();
     }
 
@@ -201,9 +201,7 @@ export class Truncate extends Component<any> {
             upper = middle - 1;
           }
         }
-
         let lastLineText = textRest.slice(0, lower);
-
         if (trimWhitespace) {
           lastLineText = this.trimRight(lastLineText);
 

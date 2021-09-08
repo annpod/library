@@ -31,6 +31,11 @@ const SwitchC = styled(SwitchAntd)`
         background-color: ${(props) => props.theme.switchActiveBg};
       }
     }
+    .ant-switch-loading-icon svg {
+      height: 20px;
+      width: 20px;
+      top: -10px;
+    }
   }
 `;
 

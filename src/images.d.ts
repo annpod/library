@@ -5,6 +5,7 @@ declare module '*.ico';
 
 declare module 'rollup-plugin-svg';
 declare module '@rollup/plugin-image';
+declare module 'storybook-react-router';
 declare module 'lodash';
 declare module 'react-router-dom';
 

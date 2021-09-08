@@ -180,6 +180,7 @@ export interface IRadioGroupProps {
   options: IRadioGroupOption[];
   value: string;
   name: string;
+  isButton?: boolean;
   onChange: (e: RadioChangeEvent) => void;
 }
 
@@ -239,5 +240,4 @@ export interface IShowMoreText {
   more?: string;
   less?: string;
   expanded?: boolean;
-  floatLine?: boolean;
 }

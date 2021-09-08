@@ -91,8 +91,6 @@ export const StyledTable = (styled(Table)`
     background-color: #f7f7f7;
     height: 50px;
     border-bottom: 4px solid #fff;
-    padding-top: 7px;
-    vertical-alogn: top;
   }
 
   & .ant-table-tbody > tr {

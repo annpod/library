@@ -52,6 +52,8 @@ import clearSelect from './clear-select.svg';
 import arrowLeft from './arrow-left.svg';
 import arrowBack from './arrow-back.svg';
 
+import tick from './tick.svg';
+
 type IconTypes = { [key: string]: string };
 
 export const ICONS: IconTypes = {
@@ -101,5 +103,6 @@ export const ICONS: IconTypes = {
   close,
   clearSelect,
   arrowLeft,
-  arrowBack
+  arrowBack,
+  tick
 };

@@ -5,7 +5,7 @@ import { Switch } from './switch';
 import { ISwitchProps } from '../typings';
 
 export default {
-  title: 'Switch',
+  title: 'V1/Switch',
   component: Switch,
   parameters: {
     docs: {
