@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Breadcrumbs as BreadcrumbsLib } from '../../breadcrumbs';
 
-interface IContentHeader {
-  title?: string;
-  isBreadcrumbs?: boolean;
-  lastItem?: string;
-  children?: React.ReactNode;
-  // routes, matchPath, withRouter, NavLink, lastItem 
-}
+// interface IContentHeader {
+//   title?: string;
+//   isBreadcrumbs?: boolean;
+//   lastItem?: string;
+//   children?: React.ReactNode;
+//   // routes, matchPath, withRouter, NavLink, lastItem 
+// }
 
 interface IProps {
   lastItem?: string;
