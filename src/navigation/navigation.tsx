@@ -38,6 +38,7 @@ const Container = styled.div`
 // `;
 
 export const Navigation = ({routes, pathname, selectedShard, routeTable, NavLink} : any) => {
+console.log("routes", routes);
 
   const isLinkActive = (route: string) => pathname.includes(routeTable[route]);
 
