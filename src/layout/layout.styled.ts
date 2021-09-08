@@ -28,3 +28,11 @@ export const Panel = styled.div`
   padding: 0px 20px;
   border-right: 1px solid #dbdbdb;
 `;
+
+export const ContentWrapper = styled.div`
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+`;

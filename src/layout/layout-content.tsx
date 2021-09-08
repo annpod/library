@@ -1,7 +1,7 @@
 import React from 'react';
 // import styled from 'styled-components';
 
-import { ContentHeader } from './content-header';
+import { ContentHeader } from './components/content-header';
 
 // export interface IHeaderOption {
 //   btn: string;

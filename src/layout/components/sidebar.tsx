@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Sidebar } from "../sidebar";
+import { SidebarContent } from "./sidebar-content";
 import '../../styles.css';
 
-export const PageMenu = ({
+export const Sidebar = ({
   tabs,
   backButton,
   selectedTab,
@@ -28,7 +28,7 @@ export const PageMenu = ({
   }
 
   return (
-    <Sidebar backButton={backButton} onBack={onBack}>
+    <SidebarContent backButton={backButton} onBack={onBack}>
       <TabsWrapper>
         {tabs && tabs.map((item: any, index: number) =>
           isExternalMenu
@@ -42,7 +42,7 @@ export const PageMenu = ({
         )}
       </TabsWrapper>
       {children}
-    </Sidebar>
+    </SidebarContent>
   );
 };
 

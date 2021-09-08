@@ -5,7 +5,7 @@ import { Icon } from '../../icon';
 
 import { useHistory } from "react-router-dom";
 
-export const Sidebar = ({
+export const SidebarContent = ({
   backButton,
   children,
   onBack,

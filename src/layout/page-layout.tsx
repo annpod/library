@@ -1,9 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Container } from './layout.styled';
+
+import { Container, ContentWrapper } from './layout.styled';
 import { Navigation } from '../navigation';
 import { FullscreenHeader } from '../header';
-import { PageMenu } from './page-menu';
+import { Sidebar } from './components/sidebar';
 
 export interface IHeaderOption {
   btn: string;
@@ -60,7 +60,7 @@ export const PageLayout = ({
           routeTable={routeTable}
           NavLink={NavLink}
         />
-        <PageMenu
+        <Sidebar
           backButton={backButton}
           tabs={tabs}
           onSelectTab={onSelectTab}
@@ -68,17 +68,9 @@ export const PageLayout = ({
           selectedTab={selectedTab}
         >
           {sidebarContent}
-        </PageMenu>
+        </Sidebar>
         <ContentWrapper data-location='content'>{children}</ContentWrapper>
       </Container>
     </>
   );
 };
-
-const ContentWrapper = styled.div`
-  background-color: #ffffff;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-`;
