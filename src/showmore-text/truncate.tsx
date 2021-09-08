@@ -194,7 +194,6 @@ export class Truncate extends Component<any> {
           const middle = Math.floor((lower + upper) / 2);
 
           const testLine = textRest.slice(0, middle + 1);
-
           if (this.measureWidth(testLine) + ellipsisWidth <= targetWidth) {
             lower = middle + 1;
           } else {
@@ -228,7 +227,6 @@ export class Truncate extends Component<any> {
           const middle = Math.floor((lower + upper) / 2);
 
           const testLine = textWords.slice(0, middle + 1).join(' ');
-
           if (this.measureWidth(testLine) <= targetWidth) {
             lower = middle + 1;
           } else {

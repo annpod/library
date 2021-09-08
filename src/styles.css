@@ -1,4 +1,29 @@
 /* add css module styles here (optional) */
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('./fonts/medium/gotham-medium.eot');
+  src: url('./fonts/medium/gotham-medium.eot?#iefix') format('embedded-opentype'),
+  url("./fonts/medium/gotham-medium.woff2") format('woff2'),
+  url("./fonts/medium/gotham-medium.woff") format('woff'),
+  url("./fonts/medium/gotham-medium.ttf") format('truetype'),
+  url("./fonts/medium/gotham-medium.svg") format('svg');
+}
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url('./fonts/light/gotham-light.eot');
+  src: url('./fonts/light/gotham-light.eot?#iefix') format('embedded-opentype'),
+  url("./fonts/light/gotham-light.woff") format('woff'),
+  url("./fonts/light/gotham-light.ttf") format('truetype'),
+  url("./fonts/light/gotham-light.svg") format('svg');
+}
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('./fonts/book/gotham-book.eot');
+  src: url('./fonts/book/gotham-book.eot?#iefix') format('embedded-opentype'),
+  url("./fonts/book/gotham-book.woff") format('woff'),
+  url("./fonts/book/gotham-book.ttf") format('truetype'),
+  url("./fonts/book/gotham-book.svg") format('svg');
+}
 
 .Toastify__toast-container {
   width: auto;
