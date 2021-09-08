@@ -43,7 +43,7 @@ export const Navigation = ({routes, pathname, selectedShard, routeTable, NavLink
 
   return (
     <Container>
-      {routes.map((route: IRoute) => {
+      {routes && routes.map((route: IRoute) => {
         const Icon = iconTable[route.icon];
 
         if (!Icon) {

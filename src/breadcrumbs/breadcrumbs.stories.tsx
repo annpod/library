@@ -91,6 +91,18 @@ export default {
   },
   parameters: {
     docs: {
+      description: {
+        component: `
+        Use lastItem only if you need to override the the last element. 
+        For example, url uses the ID of the element and we need to replace it with the name that comes from the backend:
+
+        systemconfiguration/userDirectory/providers/141
+        System Configuration > User Directory > Providers > My Provider
+
+        In other cases, add routes to the list of routes
+        (see Code)
+        `,
+      },
       source: {
         code: `
         
