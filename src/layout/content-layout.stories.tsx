@@ -6,7 +6,7 @@ import {
   withRouter,
   NavLink,
 } from 'react-router-dom';
-import { ContentLayout } from './layout-content';
+import { ContentLayout } from './content-layout';
 
 export default {
   title: 'Layout/ContentLayout',

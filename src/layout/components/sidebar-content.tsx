@@ -41,10 +41,10 @@ export const SidebarContent = ({
 
 const Container = styled.div`
   background: ${props => props.theme.contentHeaderBg};;
-  width: 254px;
-  max-width: 254px;
-  min-width: 254px;
-  padding: 15px 25px;
+  width: 240px;
+  max-width: 240px;
+  min-width: 240px;
+  padding: 15px 20px;
   font-family: Gotham-Light;
   color: #646367;
   border-right: 1px solid ${props => props.theme.contentHeaderBorderColor};
@@ -61,6 +61,5 @@ const BackButtonWrapper = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 `;
 

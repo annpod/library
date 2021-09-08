@@ -12,10 +12,11 @@ const ButtonWrapper = styled.div`
   align-items: center;
   justify-content: flex-end;
   margin-right: 20px;
+  
 `;
 
 export default {
-  title: 'Layout/V1/FocusViewLayout',
+  title: 'Layout/FocusViewLayout',
   component: FocusViewLayout,
   parameters: {
     docs: {
