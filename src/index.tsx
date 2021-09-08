@@ -142,10 +142,11 @@ import {
   DeleteBtn
 } from './styled-components/resources.styled';
 
-import { Layout, FocusViewLayout } from './layout';
+import { Layout, FocusViewLayout, PageLayout } from './layout';
 
 export {
   Layout,
+  PageLayout,
   FocusViewLayout,
   Button,
   ExportBtn,
