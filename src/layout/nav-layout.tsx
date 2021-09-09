@@ -43,7 +43,12 @@ export const NavLayout = ({
   visible,
   afterClose,
   siderContent,
-  onCancel
+  onCancel,
+  onClose,
+  onOk,
+  okText,
+  okButtonProps,
+  cancelButtonProps,
 }: any) => {
   return (
     <>
@@ -74,7 +79,12 @@ export const NavLayout = ({
           visible={visible}
           afterClose={afterClose}
           siderContent={siderContent}
-          onCancel={onCancel} 
+          onCancel={onCancel}
+          onClose={onClose}
+          onOk={onOk}
+          okText={okText}
+          okButtonProps={okButtonProps}
+          cancelButtonProps={cancelButtonProps}
         />
       )}
     </>

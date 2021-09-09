@@ -16,7 +16,9 @@ const SiderC = ({
   onCancel,
   onOk,
   okText,
-  cancelText
+  cancelText,
+  okButtonProps,
+  cancelButtonProps,
 }: ISider) => (
   <SiderComponent
     title={<SiderHeader headerTitle={headerTitle} />}
@@ -32,6 +34,8 @@ const SiderC = ({
     onOk={onOk}
     okText={okText}
     cancelText={cancelText || 'Cancel'}
+    okButtonProps={okButtonProps}
+    cancelButtonProps={cancelButtonProps}
   >
     {siderContent}
   </SiderComponent>
@@ -75,8 +79,8 @@ const SiderComponent = styled(ModalAntd)`
         border-radius: 18px;
       }
       &.ant-btn-primary {
-        background-color: #ee4656;
-        color: #ffffff;
+        background-color: ${(props) => props.theme.buttons.primary.background};
+        color:${(props) => props.theme.buttons.primary.color};
       }
     }
   }

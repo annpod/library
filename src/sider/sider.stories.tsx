@@ -59,15 +59,11 @@ export default {
         code: `<Sider
                   visible={false}
                   siderContent={<div>Modal Content</div>}
-                  headerTitle={'Modal Header'}
-                  confirmButton={{
-                    label: 'confirm',
-                    onClick: onConfirm
-                  }}
-                  cancelButton={{
-                    label: 'cancel',
-                    onClick: onCancel
-                  }}
+                  headerTitle={'Modal Header'} 
+                  siderContent={<div>Modal Content</div>}
+                  onOk={() => {}}
+                  okText={'okText'}
+                  cancelText={'cancelText'}                 
                 />`
       }
     },   

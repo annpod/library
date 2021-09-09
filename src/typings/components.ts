@@ -115,6 +115,8 @@ export interface ISider {
   onOk?: () => void;
   okText: string;
   cancelText: string;
+  okButtonProps: any;
+  cancelButtonProps: any;
 }
 
 export interface IPaginationProps {
