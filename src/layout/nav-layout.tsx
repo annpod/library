@@ -38,7 +38,7 @@ export const NavLayout = ({
   selectedTab,
   sidebarContent,
   children,
-  isModal,
+  isSider,
   headerTitle,
   visible,
   afterClose,
@@ -67,7 +67,7 @@ export const NavLayout = ({
           <ContentWrapper data-location='content'>{children}</ContentWrapper>
         </PageWrapper>
       </Container>
-      {isModal && (
+      {isSider && (
         <Sider
           headerTitle={headerTitle}
           visible={visible}

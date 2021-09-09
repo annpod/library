@@ -124,7 +124,7 @@ WithSider.args = {
   tabs: [{ title: 'Details' }, { title: 'Mapping' }],
   selectedTab: 'Details',
   onSelectTab: () => {}, 
-  isModal: true,
+  isSider: true,
   visible: true,
   siderContent: '{siderContent}',
   headerTitle: 'headerTitle'
