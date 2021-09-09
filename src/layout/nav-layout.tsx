@@ -42,7 +42,8 @@ export const NavLayout = ({
   headerTitle,
   visible,
   afterClose,
-  siderContent
+  siderContent,
+  onCancel
 }: any) => {
   return (
     <>
@@ -73,6 +74,7 @@ export const NavLayout = ({
           visible={visible}
           afterClose={afterClose}
           siderContent={siderContent}
+          onCancel={onCancel} 
         />
       )}
     </>

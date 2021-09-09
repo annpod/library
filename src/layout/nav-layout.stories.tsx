@@ -36,21 +36,6 @@ const routeTable: {
 };
 
 Primary.args = {
-  onLogout: () => {},
-  isProfile: true,
-  menu: {
-    activeHeader: 'Administration',
-    headerOptions: [
-      { btn: 'Desks', route: '/deskbooking/', order: 2 },
-      { btn: 'Meetings', route: '/roombooking/', order: 1 },
-      { btn: 'Display', route: '/display/settings/', order: 3 },
-      {
-        btn: 'Administration',
-        route: 'https://ssdev.platformcluster.connectib.com/administration',
-        order: 4
-      }
-    ]
-  },
   routeTable,
   selectedShard: { shardKey: '104' },
   pathname: '/systemconfiguration/shard',
@@ -82,21 +67,6 @@ Primary.args = {
 
 
 WithSider.args = {
-  onLogout: () => {},
-  isProfile: true,
-  menu: {
-    activeHeader: 'Administration',
-    headerOptions: [
-      { btn: 'Desks', route: '/deskbooking/', order: 2 },
-      { btn: 'Meetings', route: '/roombooking/', order: 1 },
-      { btn: 'Display', route: '/display/settings/', order: 3 },
-      {
-        btn: 'Administration',
-        route: 'https://ssdev.platformcluster.connectib.com/administration',
-        order: 4
-      }
-    ]
-  },
   routeTable,
   selectedShard: { shardKey: '104' },
   pathname: '/systemconfiguration/shard',
@@ -123,7 +93,8 @@ WithSider.args = {
   sidebarContent: '{sidebarContent}',
   tabs: [{ title: 'Details' }, { title: 'Mapping' }],
   selectedTab: 'Details',
-  onSelectTab: () => {}, 
+  onSelectTab: () => {},
+  onCancel: () => {},
   isSider: true,
   visible: true,
   siderContent: '{siderContent}',

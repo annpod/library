@@ -9,10 +9,11 @@ import 'antd/lib/modal/style/css';
 
 
 
-const SiderC = ({ visible, siderContent, type, afterClose, headerTitle }: ISider) => (
+const SiderC = ({ visible, siderContent, type, afterClose, headerTitle, onCancel }: ISider) => (
   <SiderComponent
     title={<SiderHeader headerTitle={headerTitle} />}
     closable={true}
+    onCancel={onCancel}
     closeIcon={<Icon type={'close'} size={25} />}
     visible={visible}
     footer={null}    

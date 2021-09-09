@@ -108,6 +108,7 @@ export interface ISider {
   visible: boolean;
   siderContent: string | React.ReactElement;
   afterClose?: () => void;
+  onCancel?: () => void;
   type?: string;
   headerTitle: string;
   theme?: any;
