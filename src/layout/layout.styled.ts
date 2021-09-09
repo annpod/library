@@ -18,7 +18,6 @@ export const Wrapper = styled.div`
   background-color: #ffffff;
   width: 100%;
   display: flex;
-  box-sizing: border-box;
 `;
 
 export const Panel = styled.div`
@@ -34,5 +33,11 @@ export const ContentWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+`;
+
+export const PageWrapper = styled.div`
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 `;

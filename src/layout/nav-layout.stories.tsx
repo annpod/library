@@ -4,23 +4,23 @@ import StoryRouter from 'storybook-react-router';
 import {
   NavLink,
 } from 'react-router-dom';
-import { PageLayout } from './page-layout';
+import { NavLayout } from './nav-layout';
 
 export default {
-  title: 'Layout/PageLayout',
-  component: PageLayout,
+  title: 'Layout/NavLayout',
+  component: NavLayout,
   decorators: [StoryRouter()],
   parameters: {
     docs: {
       source: {
         type: 'code',
-        code: `<PageLayout>Page Content</PageLayout>`
+        code: `<NavLayout>Page Content</NavLayout>`
       }
     }
   }
 } as Meta;
 
-const Template: Story<any> = (args: any) => <PageLayout {...args} />;
+const Template: Story<any> = (args: any) => <NavLayout {...args} />;
 export const Primary = Template.bind({});
 
 const routeTable: {
@@ -65,12 +65,12 @@ Primary.args = {
       title: 'Licensing'
     }
   ],
+  children: '{children}',
+  NavLink: NavLink,
   backButton: 'Back',
   onBack: () => {},
   sidebarContent: '{sidebarContent}',
-  children: '{children}',
   tabs: [{ title: 'Details' }, { title: 'Mapping' }],
   selectedTab: 'Details',
-  onSelectTab: () => {},
-  NavLink: NavLink
+  onSelectTab: () => {}, 
 };
