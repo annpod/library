@@ -45,7 +45,6 @@ const Container = styled.div`
   max-width: 240px;
   min-width: 240px;
   padding: 15px 20px;
-  font-family: Gotham-Light;
   color: #646367;
   border-right: 1px solid ${props => props.theme.contentHeaderBorderColor};
   box-sizing: border-box;

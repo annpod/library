@@ -28,7 +28,7 @@ const ModalDialog = styled(ModalAntd)`
   max-width: 990px;
   .ant-modal-header {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 20px; 
     background: rgb(67, 68, 72);
   }
   .ant-modal-body {

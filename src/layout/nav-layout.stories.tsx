@@ -23,6 +23,11 @@ export default {
 const Template: Story<any> = (args: any) => <NavLayout {...args} />;
 export const Primary = Template.bind({});
 
+
+const Template2: Story<any> = (args: any) => <NavLayout {...args} />;
+export const WithSider = Template2.bind({});
+
+
 const routeTable: {
   [key: string]: string;
 } = {
@@ -73,4 +78,54 @@ Primary.args = {
   tabs: [{ title: 'Details' }, { title: 'Mapping' }],
   selectedTab: 'Details',
   onSelectTab: () => {}, 
+};
+
+
+WithSider.args = {
+  onLogout: () => {},
+  isProfile: true,
+  menu: {
+    activeHeader: 'Administration',
+    headerOptions: [
+      { btn: 'Desks', route: '/deskbooking/', order: 2 },
+      { btn: 'Meetings', route: '/roombooking/', order: 1 },
+      { btn: 'Display', route: '/display/settings/', order: 3 },
+      {
+        btn: 'Administration',
+        route: 'https://ssdev.platformcluster.connectib.com/administration',
+        order: 4
+      }
+    ]
+  },
+  routeTable,
+  selectedShard: { shardKey: '104' },
+  pathname: '/systemconfiguration/shard',
+  routes: [
+    {
+      friendlyPageName: 'Select Shard',
+      icon: 'select_shard',
+      id: 21,
+      pathName: 'select_shard',
+      title: 'Select Shard'
+    },
+    {
+      friendlyPageName: 'Licensing Configuration',
+      icon: 'licensing',
+      id: 22,
+      pathName: 'licensing',
+      title: 'Licensing'
+    }
+  ],
+  children: '{children}',
+  NavLink: NavLink,
+  backButton: 'Back',
+  onBack: () => {},
+  sidebarContent: '{sidebarContent}',
+  tabs: [{ title: 'Details' }, { title: 'Mapping' }],
+  selectedTab: 'Details',
+  onSelectTab: () => {}, 
+  isModal: true,
+  visible: true,
+  siderContent: '{siderContent}',
+  headerTitle: 'headerTitle'
 };

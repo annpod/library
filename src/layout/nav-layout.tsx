@@ -3,6 +3,7 @@ import React from 'react';
 import { Container, ContentWrapper, PageWrapper } from './layout.styled';
 import { Navigation } from '../navigation';
 import { Sidebar } from './components/sidebar';
+import { Sider } from '../sider';
 // export interface IHeaderOption {
 //   btn: string;
 //   route: string;
@@ -37,6 +38,11 @@ export const NavLayout = ({
   selectedTab,
   sidebarContent,
   children,
+  isModal,
+  headerTitle,
+  visible,
+  afterClose,
+  siderContent
 }: any) => {
   return (
     <>
@@ -58,11 +64,17 @@ export const NavLayout = ({
           >
             {sidebarContent}
           </Sidebar>
-          <ContentWrapper data-location='content'>
-            {children}
-          </ContentWrapper>
+          <ContentWrapper data-location='content'>{children}</ContentWrapper>
         </PageWrapper>
       </Container>
+      {isModal && (
+        <Sider
+          headerTitle={headerTitle}
+          visible={visible}
+          afterClose={afterClose}
+          siderContent={siderContent}
+        />
+      )}
     </>
   );
 };

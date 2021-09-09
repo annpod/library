@@ -143,6 +143,7 @@ import {
 } from './styled-components/resources.styled';
 
 import { Layout, FocusViewLayout, PageLayout, ContentLayout, Sidebar, NavLayout } from './layout';
+import { Sider } from './sider';
 
 export {
   Layout,
@@ -151,6 +152,7 @@ export {
   NavLayout,
   FocusViewLayout,
   Sidebar,
+  Sider,
   Button,
   ExportBtn,
   SaveBtn,

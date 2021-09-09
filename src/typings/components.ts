@@ -100,6 +100,19 @@ export interface IModal extends IModalHeader {
   afterClose?: () => void;
 }
 
+export interface ISiderHeader {
+  headerTitle?: string;
+}
+
+export interface ISider {
+  visible: boolean;
+  siderContent: string | React.ReactElement;
+  afterClose?: () => void;
+  type?: string;
+  headerTitle: string;
+  theme?: any;
+}
+
 export interface IPaginationProps {
   current: number;
   setCurrentPage: (props: any) => void;
