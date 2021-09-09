@@ -3,4 +3,5 @@ export * from './with-layout';
 export * from './focus-view-layout';
 export * from './page-layout';
 export * from './layout-content';
+export * from './nav-layout';
 export * from './components';
