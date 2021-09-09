@@ -112,6 +112,9 @@ export interface ISider {
   type?: string;
   headerTitle: string;
   theme?: any;
+  onOk?: () => void;
+  okText: string;
+  cancelText: string;
 }
 
 export interface IPaginationProps {

@@ -58,7 +58,7 @@ export default {
       source: {
         code: `<Sider
                   visible={false}
-                  children={<div>Modal Content</div>}
+                  siderContent={<div>Modal Content</div>}
                   headerTitle={'Modal Header'}
                   confirmButton={{
                     label: 'confirm',
@@ -78,13 +78,9 @@ export const Primary = (args: IModal) => (
   <Sider
     {...args}
     visible={args.visible}
-    confirmButton={{
-      label: 'confirm',
-      onClick: () => {}
-    }}
-    cancelButton={{
-      label: 'cancel',
-      onClick: () => {}
-    }}
+    siderContent={<div>Modal Content</div>}
+    onOk={() => {}}
+    okText={'okText'}
+    cancelText={'cancelText'}
   />
 );
