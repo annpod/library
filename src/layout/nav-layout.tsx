@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, ContentWrapper, PageWrapper } from './layout.styled';
+import { Container, ContentWrapper, PageWrapper, Wrapper } from './layout.styled';
 import { Navigation } from '../navigation';
 import { Sidebar } from './components/sidebar';
 import { Drawer } from '../drawer';
@@ -32,7 +32,7 @@ export const NavLayout = ({
   afterVisibleChange,
 }: any) => {
   return (
-    <>
+    <Wrapper data-location='page-wrapper'>
       <Container>
         <Navigation
           routes={routes}
@@ -41,7 +41,7 @@ export const NavLayout = ({
           routeTable={routeTable}
           NavLink={NavLink}
         />
-        <PageWrapper>
+        <PageWrapper data-location='content-wrapper'>
           <Sidebar
             backButton={backButton}
             tabs={tabs}
@@ -69,6 +69,6 @@ export const NavLayout = ({
           afterVisibleChange={afterVisibleChange}
         />
       )}
-    </>
+    </Wrapper>
   );
 };
