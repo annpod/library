@@ -132,7 +132,8 @@ export interface IDrawer {
   okText: string;
   cancelText: string;
   okButtonProps: any;
-  cancelButtonProps: any;  
+  cancelButtonProps: any;
+  style: any;
 }
 
 export interface IPaginationProps {
@@ -275,4 +276,9 @@ export interface IShowMoreText {
   more?: string;
   less?: string;
   expanded?: boolean;
+}
+
+export interface IBreadcrumbsRoute {
+  path: string;
+  breadcrumb: string;
 }

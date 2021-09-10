@@ -4,6 +4,7 @@ import { Container, ContentWrapper, PageWrapper, Wrapper } from './layout.styled
 import { Navigation } from '../navigation';
 import { Sidebar } from './components/sidebar';
 import { Drawer } from '../drawer';
+import { INavLayout } from '../typings';
 
 export const NavLayout = ({
   routeTable,
@@ -30,7 +31,7 @@ export const NavLayout = ({
   okButtonProps,
   cancelButtonProps,
   afterVisibleChange,
-}: any) => {
+}: INavLayout) => {
   return (
     <Wrapper data-location='page-wrapper'>
       <Container>
@@ -52,6 +53,7 @@ export const NavLayout = ({
             {sidebarContent}
           </Sidebar>
           <ContentWrapper data-location='content'>{children}</ContentWrapper>
+         
         </PageWrapper>
       </Container>
       {isDrawer && (

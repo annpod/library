@@ -1,3 +1,5 @@
+import { IBreadcrumbsRoute } from './components';
+
 export interface IHeaderProps {
   menu?: IMenuHeader;
   isProfile?: boolean;
@@ -29,7 +31,7 @@ export interface IFocusViewLayout {
 
 export interface INavLayout {
   visible: boolean;
-  drawerContent: string | React.ReactElement;
+  drawerContent: React.ReactChildren;
   afterVisibleChange?: () => void;
   onCancel?: () => void;
   onClose?: () => void;
@@ -41,17 +43,29 @@ export interface INavLayout {
   cancelText: string;
   okButtonProps: any;
   cancelButtonProps: any;
-routeTable: any;
-selectedShard: any;
-pathname: any;
-routes: any;
-NavLink: any;
-backButton: string;
-onBack?: () => void;
-tabs: any;
-onSelectTab?: (tab: string) => void;
-selectedTab?: () => void;
-sidebarContent: string | React.ReactElement;
-children: React.ReactNode;
-isDrawer?: boolean;
+  routeTable: { [key: string]: string };
+  selectedShard: { shardKey: string };
+  pathname: string;
+  routes: any;
+  NavLink: any;
+  backButton: string;
+  onBack?: () => void;
+  tabs: any;
+  onSelectTab?: (tab: string) => void;
+  selectedTab: string;
+  sidebarContent: React.ReactChildren;
+  children: React.ReactNode;
+  isDrawer?: boolean;
+}
+
+export interface IContentLayout {
+  breadcrumbsRoutes: IBreadcrumbsRoute;
+  breadcrumbsLastItem: string;
+  title: string;
+  isBreadcrumbs: boolean;
+  headerContent: React.ReactChildren;
+  matchPath: any;
+  withRouter: any;
+  NavLink: any;
+  children: React.ReactChildren;
 }

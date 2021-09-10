@@ -1,28 +1,7 @@
 import React from 'react';
-// import styled from 'styled-components';
 
 import { ContentHeader } from './components/content-header';
-
-// export interface IHeaderOption {
-//   btn: string;
-//   route: string;
-//   order: number;
-// }
-
-// export interface IMenuHeader {
-//   headerOptions: IHeaderOption[];
-//   activeHeader: string;
-// }
-// export interface IHeaderProps {
-//   menu?: IMenuHeader;
-//   isProfile?: boolean;
-//   onLogout: () => void;
-//   onLogoClick?: () => void;
-// }
-
-// export interface ILayoutProps extends IHeaderProps {
-//   children: React.ReactNode;
-// }
+import { IContentLayout } from '../typings';
 
 export const ContentLayout = ({
   breadcrumbsRoutes,
@@ -34,7 +13,7 @@ export const ContentLayout = ({
   withRouter,
   NavLink,
   children
-}: any) => {
+}: IContentLayout) => {
   return (
     <>
       <ContentHeader
