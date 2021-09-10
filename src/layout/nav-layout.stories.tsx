@@ -1,9 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import StoryRouter from 'storybook-react-router';
-import {
-  NavLink,
-} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { NavLayout } from './nav-layout';
 
 export default {
@@ -23,10 +21,8 @@ export default {
 const Template: Story<any> = (args: any) => <NavLayout {...args} />;
 export const Primary = Template.bind({});
 
-
 const Template2: Story<any> = (args: any) => <NavLayout {...args} />;
 export const WithSider = Template2.bind({});
-
 
 const routeTable: {
   [key: string]: string;
@@ -62,9 +58,8 @@ Primary.args = {
   sidebarContent: '{sidebarContent}',
   tabs: [{ title: 'Details' }, { title: 'Mapping' }],
   selectedTab: 'Details',
-  onSelectTab: () => {}, 
+  onSelectTab: () => {}
 };
-
 
 WithSider.args = {
   routeTable,
@@ -95,8 +90,10 @@ WithSider.args = {
   selectedTab: 'Details',
   onSelectTab: () => {},
   onCancel: () => {},
+  okText: 'okText',
+  cancelText:'Cancel',
   isSider: true,
   visible: true,
-  siderContent: '{siderContent}',
+  drawerContent: '{drawerContent}',
   headerTitle: 'headerTitle'
 };

@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, ContentWrapper, PageWrapper } from './layout.styled';
 import { Navigation } from '../navigation';
 import { Sidebar } from './components/sidebar';
-import { Sider } from '../sider';
+import { Drawer } from '../drawer';
 // export interface IHeaderOption {
 //   btn: string;
 //   route: string;
@@ -42,13 +42,15 @@ export const NavLayout = ({
   headerTitle,
   visible,
   afterClose,
-  siderContent,
+  drawerContent,
   onCancel,
   onClose,
   onOk,
   okText,
+  cancelText,
   okButtonProps,
   cancelButtonProps,
+  destroyOnClose,
 }: any) => {
   return (
     <>
@@ -74,17 +76,19 @@ export const NavLayout = ({
         </PageWrapper>
       </Container>
       {isSider && (
-        <Sider
+        <Drawer
           headerTitle={headerTitle}
           visible={visible}
-          afterClose={afterClose}
-          siderContent={siderContent}
+          afterVisibleChange={afterClose}
+          drawerContent={drawerContent}
           onCancel={onCancel}
           onClose={onClose}
           onOk={onOk}
           okText={okText}
+          cancelText={cancelText}
           okButtonProps={okButtonProps}
           cancelButtonProps={cancelButtonProps}
+          destroyOnClose={destroyOnClose}
         />
       )}
     </>
