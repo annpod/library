@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 
 import { Drawer as DrawerAntd } from 'antd';
 // import { SiderHeader } from './drawer-header';
@@ -8,7 +8,7 @@ import 'antd/lib/drawer/style/css';
 import close from '../icon/icons/close.svg';
 import { ButtonStyled } from '../button';
 
-const DrawerC = ({
+export const Drawer = ({
   visible,
   drawerContent,
   headerTitle,
@@ -56,7 +56,7 @@ const DrawerC = ({
   </DrawerComponent>
 );
 
-export const Drawer: any = withTheme(DrawerC);
+// export const Drawer: any = withTheme(DrawerC);
 
 const DrawerComponent = styled(DrawerAntd)`
   && .ant-drawer-content {
