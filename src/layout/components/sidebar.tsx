@@ -15,7 +15,7 @@ export const Sidebar = ({
 }: {
   tabs?: any; // TODO add type
   backButton?: string;
-  selectedTab: string;
+  selectedTab?: string;
   isExternalMenu?: boolean;
   onSelectTab?: (title: string) => void;
   onBack?: () => void;

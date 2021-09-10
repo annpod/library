@@ -21,9 +21,6 @@ export default {
 const Template: Story<any> = (args: any) => <NavLayout {...args} />;
 export const Primary = Template.bind({});
 
-const Template2: Story<any> = (args: any) => <NavLayout {...args} />;
-export const WithDrawer = Template2.bind({});
-
 const routeTable: {
   [key: string]: string;
 } = {
@@ -61,39 +58,3 @@ Primary.args = {
   onSelectTab: () => {}
 };
 
-WithDrawer.args = {
-  routeTable,
-  selectedShard: { shardKey: '104' },
-  pathname: '/systemconfiguration/shard',
-  routes: [
-    {
-      friendlyPageName: 'Select Shard',
-      icon: 'select_shard',
-      id: 21,
-      pathName: 'select_shard',
-      title: 'Select Shard'
-    },
-    {
-      friendlyPageName: 'Licensing Configuration',
-      icon: 'licensing',
-      id: 22,
-      pathName: 'licensing',
-      title: 'Licensing'
-    }
-  ],
-  children: '{children}',
-  NavLink: NavLink,
-  backButton: 'Back',
-  onBack: () => {},
-  sidebarContent: '{sidebarContent}',
-  tabs: [{ title: 'Details' }, { title: 'Mapping' }],
-  selectedTab: 'Details',
-  onSelectTab: () => {},
-  onCancel: () => {},
-  okText: 'okText',
-  cancelText:'Cancel',
-  isDrawer: true,
-  visible: true,
-  drawerContent: '{drawerContent}',
-  headerTitle: 'headerTitle'
-};
