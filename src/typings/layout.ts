@@ -31,7 +31,7 @@ export interface IFocusViewLayout {
 
 export interface INavLayout {
   visible: boolean;
-  drawerContent: React.ReactChildren;
+  drawerContent: string | React.ReactElement;
   afterVisibleChange?: () => void;
   onCancel?: () => void;
   onClose?: () => void;

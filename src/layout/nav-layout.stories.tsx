@@ -22,7 +22,7 @@ const Template: Story<any> = (args: any) => <NavLayout {...args} />;
 export const Primary = Template.bind({});
 
 const Template2: Story<any> = (args: any) => <NavLayout {...args} />;
-export const WithSider = Template2.bind({});
+export const WithDrawer = Template2.bind({});
 
 const routeTable: {
   [key: string]: string;
@@ -61,7 +61,7 @@ Primary.args = {
   onSelectTab: () => {}
 };
 
-WithSider.args = {
+WithDrawer.args = {
   routeTable,
   selectedShard: { shardKey: '104' },
   pathname: '/systemconfiguration/shard',

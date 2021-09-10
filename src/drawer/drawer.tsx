@@ -19,7 +19,6 @@ export const Drawer = ({
   cancelText,
   okButtonProps,
   cancelButtonProps,
-  style,
   afterVisibleChange,
 }: IDrawer) => (
   <DrawerComponent
@@ -30,7 +29,6 @@ export const Drawer = ({
     width={'292px'}
     afterVisibleChange={afterVisibleChange}
     data-location='drawer'
-    style={style}
   >
     {drawerContent}
     <Footer>
