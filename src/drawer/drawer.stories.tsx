@@ -9,7 +9,7 @@ export default {
   args: {
     visible: true,
     headerTitle: 'Drawer Header',
-    drawerContent:'Drawer Content',
+    // drawerContent:'Drawer Content',
     okText:'okText',
     cancelText:'cancelText',
     okButtonProps: {
@@ -38,5 +38,5 @@ export default {
 export const Primary = (args: any) => (
   <Drawer
     {...args}   
-  />
+  >Drawer Content</Drawer>
 );

@@ -121,7 +121,7 @@ export interface ISider {
 
 export interface IDrawer {
   visible: boolean;
-  drawerContent: any;
+  children: any;
   afterVisibleChange?: () => void;
   onCancel?: () => void;
   onClose?: () => void;

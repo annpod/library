@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, ContentWrapper, PageWrapper, Wrapper } from './layout.styled';
 import { Navigation } from '../navigation';
 import { Sidebar } from './components/sidebar';
-import { Drawer } from '../drawer';
+// import { Drawer } from '../drawer';
 import { INavLayout } from '../typings';
 
 export const NavLayout = ({
@@ -56,7 +56,7 @@ export const NavLayout = ({
          
         </PageWrapper>
       </Container>
-      {isDrawer && (
+      {/* {isDrawer && (
         <Drawer
           headerTitle={headerTitle}
           visible={visible}
@@ -70,7 +70,7 @@ export const NavLayout = ({
           cancelButtonProps={cancelButtonProps}
           afterVisibleChange={afterVisibleChange}
         />
-      )}
+      )} */}
     </Wrapper>
   );
 };

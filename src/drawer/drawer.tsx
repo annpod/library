@@ -9,7 +9,7 @@ import { ButtonStyled } from '../button';
 
 const DrawerC = ({
   visible,
-  drawerContent,
+  children,
   headerTitle,
   onCancel,
   onClose,
@@ -30,7 +30,7 @@ const DrawerC = ({
     data-location='drawer'
   >
     <>
-    {drawerContent}
+    {children}
     <Footer>
       {okText && (
         <ButtonStyled.Primary
