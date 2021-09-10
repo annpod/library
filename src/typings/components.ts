@@ -121,7 +121,7 @@ export interface ISider {
 
 export interface IDrawer {
   visible: boolean;
-  drawerContent: string | React.ReactElement;
+  drawerContent: any;
   afterVisibleChange?: () => void;
   onCancel?: () => void;
   onClose?: () => void;

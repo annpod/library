@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 
 import { Drawer as DrawerAntd } from 'antd';
 import { IDrawer } from '../typings';
@@ -7,7 +7,7 @@ import 'antd/lib/drawer/style/css';
 import close from '../icon/icons/close.svg';
 import { ButtonStyled } from '../button';
 
-export const Drawer = ({
+const DrawerC = ({
   visible,
   drawerContent,
   headerTitle,
@@ -29,6 +29,7 @@ export const Drawer = ({
     afterVisibleChange={afterVisibleChange}
     data-location='drawer'
   >
+    <>
     {drawerContent}
     <Footer>
       {okText && (
@@ -50,13 +51,14 @@ export const Drawer = ({
         </ButtonStyled.Light>
       )}
     </Footer>
+    </>
   </DrawerComponent>
 );
 
-// export const Drawer: any = withTheme(DrawerC);
+export const Drawer: any = withTheme(DrawerC as any);
 
 const DrawerComponent = styled(DrawerAntd)`
-  && .ant-drawer-content {
+ .ant-drawer-content {
     max-width: 292px;
     margin: 0;
     .ant-drawer-header {
