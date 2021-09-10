@@ -92,7 +92,7 @@ WithSider.args = {
   onCancel: () => {},
   okText: 'okText',
   cancelText:'Cancel',
-  isSider: true,
+  isDrawer: true,
   visible: true,
   drawerContent: '{drawerContent}',
   headerTitle: 'headerTitle'
