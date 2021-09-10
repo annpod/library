@@ -125,12 +125,12 @@ export interface IDrawer {
   afterVisibleChange?: () => void;
   onCancel?: () => void;
   onClose?: () => void;
-  headerTitle: string;
+  headerTitle?: string;
   onOk?: () => void;
-  okText: string;
-  cancelText: string;
-  okButtonProps: any;
-  cancelButtonProps: any;
+  okText?: string;
+  cancelText?: string;
+  okButtonProps?: any;
+  cancelButtonProps?: any;
 }
 
 export interface IPaginationProps {

@@ -59,7 +59,7 @@ export interface INavLayout {
 }
 
 export interface IContentLayout {
-  breadcrumbsRoutes: IBreadcrumbsRoute;
+  breadcrumbsRoutes: IBreadcrumbsRoute[];
   breadcrumbsLastItem: string;
   title: string;
   isBreadcrumbs: boolean;

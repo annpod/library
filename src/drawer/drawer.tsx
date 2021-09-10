@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Drawer as DrawerAntd } from 'antd';
-// import { SiderHeader } from './drawer-header';
 import { IDrawer } from '../typings';
 import 'antd/lib/drawer/style/css';
 import close from '../icon/icons/close.svg';
