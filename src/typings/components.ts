@@ -119,6 +119,22 @@ export interface ISider {
   cancelButtonProps: any;
 }
 
+export interface IDrawer {
+  visible: boolean;
+  drawerContent: string | React.ReactElement;
+  afterVisibleChange?: () => void;
+  onCancel?: () => void;
+  onClose?: () => void;
+  type?: string;
+  headerTitle: string;
+  theme?: any;
+  onOk?: () => void;
+  okText: string;
+  cancelText: string;
+  okButtonProps: any;
+  cancelButtonProps: any;  
+}
+
 export interface IPaginationProps {
   current: number;
   setCurrentPage: (props: any) => void;

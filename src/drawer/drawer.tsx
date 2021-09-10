@@ -3,7 +3,7 @@ import styled, { withTheme } from 'styled-components';
 
 import { Drawer as DrawerAntd } from 'antd';
 // import { SiderHeader } from './drawer-header';
-import { ISider } from '../typings';
+import { IDrawer } from '../typings';
 import 'antd/lib/drawer/style/css';
 import close from '../icon/icons/close.svg';
 import { ButtonStyled } from '../button';
@@ -19,20 +19,22 @@ const DrawerC = ({
   cancelText,
   okButtonProps,
   cancelButtonProps,
-  destroyOnClose
-}: any) => (
+  afterVisibleChange,
+}: IDrawer) => (
   <DrawerComponent
     title={headerTitle}
     closable={true}
     onClose={onClose}
     visible={visible}
     width={'292px'}
-    destroyOnClose={destroyOnClose}
+    afterVisibleChange={afterVisibleChange}
+    data-location='drawer'
   >
     {drawerContent}
     <Footer>
       {okText && (
         <ButtonStyled.Primary
+          data-location='okButton'
           onClick={onOk}
           disabled={okButtonProps && okButtonProps.disabled}
         >
@@ -41,6 +43,7 @@ const DrawerC = ({
       )}
       {cancelText && (
         <ButtonStyled.Light
+          data-location='cancelButton'
           onClick={onCancel}
           disabled={cancelButtonProps && cancelButtonProps.disabled}
         >
@@ -53,11 +56,10 @@ const DrawerC = ({
 
 export const Drawer: any = withTheme(DrawerC);
 
-const DrawerComponent = styled(DrawerAntd)<any>`
+const DrawerComponent = styled(DrawerAntd)`
   && .ant-drawer-content {
     max-width: 292px;
     margin: 0;
-    backgroun-color: #ff0000;
     .ant-drawer-header {
       background: #f7f7f7;
       color: #434448;

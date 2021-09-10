@@ -14,36 +14,11 @@ const Container = styled.div`
   background: #dbdbdb;
 `;
 
-// const NavItem = styled(NavLink)<{ disabled: boolean }>`
-//   font-size: 10px;
-//   width: 60px;
-//   height: 60px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
-//   background: ${(props) =>
-//     props.disabled
-//       ? "repeating-linear-gradient(45deg,#909090,#909090 10px,#BEBEBE 10px,#BEBEBE 17px)"
-//       : "transparent"};
-
-//   svg {
-//     width: 30px;
-//     height: 30px;
-//   }
-
-//   &.active {
-//     background: #f7f7f7;
-//   }
-// `;
-
 export const Navigation = ({routes, pathname, selectedShard, routeTable, NavLink} : any) => {
-console.log("routes", routes);
-
   const isLinkActive = (route: string) => pathname.includes(routeTable[route]);
 
   return (
-    <Container>
+    <Container data-location='navigation'>
       {routes && routes.map((route: IRoute) => {
         const Icon = iconTable[route.icon];
 

@@ -4,26 +4,6 @@ import { Container, ContentWrapper, PageWrapper } from './layout.styled';
 import { Navigation } from '../navigation';
 import { Sidebar } from './components/sidebar';
 import { Drawer } from '../drawer';
-// export interface IHeaderOption {
-//   btn: string;
-//   route: string;
-//   order: number;
-// }
-
-// export interface IMenuHeader {
-//   headerOptions: IHeaderOption[];
-//   activeHeader: string;
-// }
-// export interface IHeaderProps {
-//   menu?: IMenuHeader;
-//   isProfile?: boolean;
-//   onLogout: () => void;
-//   onLogoClick?: () => void;
-// }
-
-// export interface ILayoutProps extends IHeaderProps {
-//   children: React.ReactNode;
-// }
 
 export const NavLayout = ({
   routeTable,
@@ -38,10 +18,9 @@ export const NavLayout = ({
   selectedTab,
   sidebarContent,
   children,
-  isSider,
+  isDrawer,
   headerTitle,
   visible,
-  afterClose,
   drawerContent,
   onCancel,
   onClose,
@@ -50,7 +29,7 @@ export const NavLayout = ({
   cancelText,
   okButtonProps,
   cancelButtonProps,
-  destroyOnClose,
+  afterVisibleChange,
 }: any) => {
   return (
     <>
@@ -75,11 +54,10 @@ export const NavLayout = ({
           <ContentWrapper data-location='content'>{children}</ContentWrapper>
         </PageWrapper>
       </Container>
-      {isSider && (
+      {isDrawer && (
         <Drawer
           headerTitle={headerTitle}
           visible={visible}
-          afterVisibleChange={afterClose}
           drawerContent={drawerContent}
           onCancel={onCancel}
           onClose={onClose}
@@ -88,7 +66,7 @@ export const NavLayout = ({
           cancelText={cancelText}
           okButtonProps={okButtonProps}
           cancelButtonProps={cancelButtonProps}
-          destroyOnClose={destroyOnClose}
+          afterVisibleChange={afterVisibleChange}
         />
       )}
     </>
