@@ -100,29 +100,9 @@ export interface IModal extends IModalHeader {
   afterClose?: () => void;
 }
 
-export interface ISiderHeader {
-  headerTitle?: string;
-}
-
-export interface ISider {
-  visible: boolean;
-  siderContent: string | React.ReactElement;
-  afterClose?: () => void;
-  onCancel?: () => void;
-  type?: string;
-  headerTitle: string;
-  theme?: any;
-  onOk?: () => void;
-  okText: string;
-  cancelText: string;
-  okButtonProps: any;
-  cancelButtonProps: any;
-}
-
 export interface IDrawer {
   visible: boolean;
-  children: any;
-  afterVisibleChange?: () => void;
+  children: React.ReactChild;
   onCancel?: () => void;
   onClose?: () => void;
   headerTitle?: string;

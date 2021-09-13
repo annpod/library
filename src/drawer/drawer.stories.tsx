@@ -7,19 +7,18 @@ export default {
   title: 'Drawer',
   component: Drawer,
   args: {
-    visible: true,
+    visible: false,
     headerTitle: 'Drawer Header',
-    // drawerContent:'Drawer Content',
-    okText:'okText',
-    cancelText:'cancelText',
+    okText: 'okText',
+    cancelText: 'cancelText',
     okButtonProps: {
       disabled: false
     }
-  },  
+  },
   parameters: {
     docs: {
       description: {
-        component: 'Based on https://ant.design/components/drawer/',
+        component: 'Based on https://ant.design/components/drawer/'
       },
       source: {
         code: `<Drawer
@@ -31,12 +30,22 @@ export default {
                   cancelText={'cancelText'}                 
                 />`
       }
-    },   
+    }
   }
 } as Meta;
 
-export const Primary = (args: any) => (
-  <Drawer
-    {...args}   
-  >Drawer Content</Drawer>
-);
+const Template = (args: any) => {
+  const [visible, setState] = React.useState<boolean>(false);
+
+  const onChange = () => {
+    setState(!visible);
+  };
+  return (
+    <>
+      <button onClick={onChange}>Click</button>
+      <Drawer {...args} visible={visible}>Drawer Content</Drawer>
+    </>
+  );
+};
+
+export const Primary = Template.bind({});

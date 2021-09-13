@@ -9,7 +9,7 @@ import { IconButton } from '../icon-button';
 import { Icon } from '../icon';
 import { CustomScrollbars } from '../scrollbars';
 
-const Overlay = styled.div`
+const Overlay = styled.div<{ visible?: boolean }>`
   background: rgba(0, 0, 0, 0.5);
   height: 100vh;
   width: 100vw;
@@ -19,9 +19,13 @@ const Overlay = styled.div`
   right: 0;
   bottom: 0;
   z-index: 20;
+  ${(props) =>
+    props.visible
+      ? `display: block;`
+      : `display: none;`}
 `;
 
-const FlyoutContainer = styled.div<{ slideInAnimation?: boolean }>`
+const FlyoutContainer = styled.div<{ visible?: boolean }>`
   @keyframes slideIn {
     0% {
       transform: translateX(100%);
@@ -40,7 +44,6 @@ const FlyoutContainer = styled.div<{ slideInAnimation?: boolean }>`
     }
   }
 
-  display: grid;
   width: 292px;
   grid-template-rows: 50px 1fr 50px;
   background: #ffffff;
@@ -48,12 +51,15 @@ const FlyoutContainer = styled.div<{ slideInAnimation?: boolean }>`
   z-index: 40;
   top: 0;
   right: 0;
-  bottom:0;
+  bottom: 0;
   height: 100vw;
   ${(props) =>
-    props.slideInAnimation
-      ? `animation: 0.5s ease-in slideIn`
-      : `animation: 0.5s ease-out slideOut`}
+    props.visible
+      ? `animation: 0.5s ease-in slideIn;
+         display: grid;`
+      : `animation: 0.5s ease-out slideOut;
+         display: none;
+  `} 
 `;
 
 const Header = styled.div`
@@ -71,21 +77,13 @@ const Form = styled.div`
   padding: 20px 20px;
 `;
 
-// interface IDrawer {
-//   backRoute: string;
-//   children?: React.ReactNode;
-//   itemCountString: string | null;
-//   goBack: () => void;
-//   isMenuOpen?: boolean;
-// }
-
 export const Drawer = (props: any) => {
   const { children, headerTitle, goBack, visible } = props;
 
   return (
     <>
-      <Overlay onClick={goBack} />
-      <FlyoutContainer slideInAnimation={visible} data-location='drawer'>
+      <Overlay onClick={goBack} visible={visible} />
+      <FlyoutContainer visible={visible} data-location='drawer'>
         <Header>
           <span>{headerTitle}</span>
           <IconButton
