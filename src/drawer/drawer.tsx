@@ -83,15 +83,13 @@ const Footer = styled.div`
   padding: 20px 20px;
 `;
 export const Drawer = (props: IDrawer) => {
-
+  const isVisible = false;
   const [go, setGo] = React.useState(false);
-  const [visible, setVisible] = React.useState(false);
 
   React.useEffect(() => {    
-    if (props.visible !== visible) {     
+    if (props.visible !== isVisible) {     
       setGo(true);
     }    
-    setVisible(props.visible);
   }, [props.visible]);
 
 
@@ -102,7 +100,8 @@ export const Drawer = (props: IDrawer) => {
     onOk,
     okButtonProps,
     onCancel,
-    cancelButtonProps
+    cancelButtonProps,
+    visible
   } = props;
   return (
     <Wrapper>
