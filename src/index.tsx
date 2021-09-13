@@ -5,7 +5,8 @@ import {
   ExportBtn,
   SaveBtn,
   SubmitButton,
-  ButtonStyled
+  ButtonStyled,
+  EditButton,
 } from './button';
 import { Breadcrumbs } from './breadcrumbs';
 import { CollapseItem } from './collapse-item';
@@ -157,6 +158,7 @@ export {
   ExportBtn,
   SaveBtn,
   ButtonStyled,
+  EditButton,
   Breadcrumbs,
   TextWrapper,
   Input,

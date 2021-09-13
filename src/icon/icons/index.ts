@@ -51,6 +51,7 @@ import successGreen from './success-green.svg';
 import clearSelect from './clear-select.svg';
 import arrowLeft from './arrow-left.svg';
 import arrowBack from './arrow-back.svg';
+import cross from './cross.svg';
 
 import tick from './tick.svg';
 
@@ -104,5 +105,6 @@ export const ICONS: IconTypes = {
   clearSelect,
   arrowLeft,
   arrowBack,
-  tick
+  tick,
+  cross
 };

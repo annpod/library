@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7.427" height="7.427" viewBox="0 0 7.427 7.427">
+  <g id="Group_7988" data-name="Group 7988" transform="translate(-120.019 -10.21)">
+    <line
+      id="Line_526"
+      data-name="Line 526"
+      x1="5.306"
+      y2="5.306"
+      transform="translate(121.079 11.271)"
+      fill="none"
+      stroke="#ee4656"
+      stroke-linecap="round"
+      stroke-miterlimit="10"
+      stroke-width="1.5"
+    />
+    <line
+      id="Line_527"
+      data-name="Line 527"
+      x2="5.306"
+      y2="5.306"
+      transform="translate(121.079 11.271)"
+      fill="none"
+      stroke="#ee4656"
+      stroke-linecap="round"
+      stroke-miterlimit="10"
+      stroke-width="1.5"
+    />
+  </g>
+</svg>

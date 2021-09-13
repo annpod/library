@@ -123,3 +123,4 @@ export const ArrowLeft: Story<IIconProps> = () => (
 );
 export const Close: Story<IIconProps> = () => <Icon {...args} type={'close'} />;
 export const Tick: Story<IIconProps> = () => <Icon {...args} type={'tick'} />;
+export const Cross: Story<IIconProps> = () => <Icon {...args} type={'cross'} />;
