@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import { Drawer as DrawerAntd } from 'antd';
-// import { IDrawer } from '../typings';
-import 'antd/lib/drawer/style/css';
+import { IDrawer } from '../typings';
 import { ButtonStyled } from '../button';
 import { IconButton } from '../icon-button';
 import { Icon } from '../icon';
@@ -19,23 +17,11 @@ const Overlay = styled.div<{ visible?: boolean }>`
   right: 0;
   bottom: 0;
   z-index: 20;
-  ${(props) =>
-    props.visible
-      ? `display: block;`
-      : `display: none;`}
+  ${(props) => (props.visible ? `display: block;` : `display: none;`)}
 `;
 
 const FlyoutContainer = styled.div<{ visible?: boolean }>`
-  @keyframes slideIn {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes slideOut {
+  @keyframes slide-in {
     0% {
       transform: translateX(0%);
     }
@@ -44,22 +30,31 @@ const FlyoutContainer = styled.div<{ visible?: boolean }>`
     }
   }
 
+  @keyframes slide-out {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
   width: 292px;
   grid-template-rows: 50px 1fr 50px;
   background: #ffffff;
-  position: fixed;
+  position: absolute;
   z-index: 40;
   top: 0;
   right: 0;
   bottom: 0;
-  height: 100vw;
+  height: 100vh;
+  display: grid;
+  transform: translateX(100%);
   ${(props) =>
     props.visible
-      ? `animation: 0.5s ease-in slideIn;
-         display: grid;`
-      : `animation: 0.5s ease-out slideOut;
-         display: none;
-  `} 
+      ? `animation: slide-out 0.5s forwards;`
+      : `animation: slide-in 0.5s forwards;
+  `}
 `;
 
 const Header = styled.div`
@@ -76,52 +71,9 @@ const Header = styled.div`
 const Form = styled.div`
   padding: 20px 20px;
 `;
-
-export const Drawer = (props: any) => {
-  const { children, headerTitle, goBack, visible } = props;
-
-  return (
-    <>
-      <Overlay onClick={goBack} visible={visible} />
-      <FlyoutContainer visible={visible} data-location='drawer'>
-        <Header>
-          <span>{headerTitle}</span>
-          <IconButton
-            className='close-button'
-            icon={<Icon size={25} type='close' />}
-            onClick={props.onCancel}
-          />
-        </Header>
-        <CustomScrollbars>
-          <Form>{children}</Form>
-          <Footer>
-            {props.okText && (
-              <ButtonStyled.Primary
-                data-location='okButton'
-                onClick={props.onOk}
-                disabled={props.okButtonProps && props.okButtonProps.disabled}
-              >
-                {props.okText}
-              </ButtonStyled.Primary>
-            )}
-            {props.cancelText && (
-              <ButtonStyled.Light
-                data-location='cancelButton'
-                onClick={props.onCancel}
-                disabled={
-                  props.cancelButtonProps && props.cancelButtonProps.disabled
-                }
-              >
-                {props.cancelText}
-              </ButtonStyled.Light>
-            )}
-          </Footer>
-        </CustomScrollbars>
-      </FlyoutContainer>
-    </>
-  );
-};
-
+const Wrapper = styled.div`
+  overflow: hidden;
+`;
 const Footer = styled.div`
   width: 100%;
   display: flex;
@@ -129,3 +81,56 @@ const Footer = styled.div`
   padding: 30px 0;
   padding: 20px 20px;
 `;
+export const Drawer = (props: IDrawer) => {
+  const {
+    children,
+    headerTitle,
+    onClose,
+    visible,
+    onOk,
+    okButtonProps,
+    onCancel,
+    cancelButtonProps
+  } = props;
+
+  return (
+    <Wrapper>
+      <Overlay onClick={onClose} visible={visible} />
+      <FlyoutContainer visible={visible} data-location='drawer'>
+        <Header>
+          <span>{headerTitle}</span>
+          {onClose && (
+            <IconButton
+              className='close-button'
+              icon={<Icon size={25} type='close' />}
+              onClick={onClose}
+            />
+          )}
+        </Header>
+        <CustomScrollbars>
+          <Form>{children}</Form>
+          <Footer>
+            {props.okText && (
+              <ButtonStyled.Primary
+                data-location='okButton'
+                onClick={onOk}
+                disabled={okButtonProps && okButtonProps.disabled}
+              >
+                {props.okText}
+              </ButtonStyled.Primary>
+            )}
+            {props.cancelText && (
+              <ButtonStyled.Light
+                data-location='cancelButton'
+                onClick={onCancel}
+                disabled={cancelButtonProps && cancelButtonProps.disabled}
+              >
+                {props.cancelText}
+              </ButtonStyled.Light>
+            )}
+          </Footer>
+        </CustomScrollbars>
+      </FlyoutContainer>
+    </Wrapper>
+  );
+};

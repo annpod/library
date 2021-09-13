@@ -43,7 +43,14 @@ const Template = (args: any) => {
   return (
     <>
       <button onClick={onChange}>Click</button>
-      <Drawer {...args} visible={visible}>Drawer Content</Drawer>
+      <Drawer
+        {...args}
+        visible={visible}
+        onClose={onChange}
+        onCancel={onChange}
+      >
+        Drawer Content
+      </Drawer>
     </>
   );
 };
