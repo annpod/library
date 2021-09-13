@@ -1,7 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { LibWithTheme } from '../theme-provider';
-import { Button, ExportBtn, SaveBtn, Submit, ButtonStyled } from '../button';
+import {
+  Button,
+  ExportBtn,
+  SaveBtn,
+  Submit,
+  ButtonStyled,
+  EditButton
+} from '../button';
 
 const ButtonsC = () => {
   return (
@@ -12,92 +19,104 @@ const ButtonsC = () => {
       <Title>Button</Title>
       <br />
       <Wrapper>
-        <div>
+        <ButtonWrapper>
           <Button>Default</Button>
-        </div>
-        <div>
+        </ButtonWrapper>
+        <ButtonWrapper>
           <Button disabled={true}>Disabled</Button>
-        </div>
+        </ButtonWrapper>
       </Wrapper>
 
       <Title>ExportBtn</Title>
 
       <Wrapper>
-        <div>
+        <ButtonWrapper>
           <ExportBtn>Default</ExportBtn>
-        </div>
-        <div>
+        </ButtonWrapper>
+        <ButtonWrapper>
           <ExportBtn disabled={true}>Disabled</ExportBtn>
-        </div>
+        </ButtonWrapper>
       </Wrapper>
 
       <Title>SaveBtn</Title>
 
       <Wrapper>
-        <div>
+        <ButtonWrapper>
           <SaveBtn>Default</SaveBtn>
-        </div>
-        <div>
+        </ButtonWrapper>
+        <ButtonWrapper>
           <SaveBtn disabled={true}>Disabled</SaveBtn>
-        </div>
+        </ButtonWrapper>
       </Wrapper>
 
       <Title>Submit</Title>
 
       <Wrapper>
-        <div>
-          <Submit onClick={() => { }} loading={false} disabled={false}>
+        <ButtonWrapper>
+          <Submit onClick={() => {}} loading={false} disabled={false}>
             Default
           </Submit>
-        </div>
-        <div>
-          <Submit onClick={() => { }} loading={false} disabled={true}>
+        </ButtonWrapper>
+        <ButtonWrapper>
+          <Submit onClick={() => {}} loading={false} disabled={true}>
             Disabled
           </Submit>
-        </div>
-        <div>
-          <Submit onClick={() => { }} loading={true} disabled={false}>
+        </ButtonWrapper>
+        <ButtonWrapper>
+          <Submit onClick={() => {}} loading={true} disabled={false}>
             Loading
           </Submit>
-        </div>
+        </ButtonWrapper>
       </Wrapper>
 
-      <div><b>V1</b></div>
+      <Title>EditButton</Title>
+
+      <Wrapper>
+        <EditButton
+          itemCountString={'Edit 2 Items'}
+          resetKeys={() => {}}
+          onClick={() => {}}
+        />
+      </Wrapper>
+
+      <div>
+        <b>V1</b>
+      </div>
       <Title>ButtonStyled.Primary</Title>
       <Wrapper>
-        <div>
+        <ButtonWrapper>
           <ButtonStyled.Primary>Default</ButtonStyled.Primary>
-        </div>
-        <div>
+        </ButtonWrapper>
+        <ButtonWrapper>
           <ButtonStyled.Primary disabled={true}>Disabled</ButtonStyled.Primary>
-        </div>
+        </ButtonWrapper>
       </Wrapper>
       <Title>ButtonStyled.Dark</Title>
       <Wrapper>
-        <div>
+        <ButtonWrapper>
           <ButtonStyled.Dark>Default</ButtonStyled.Dark>
-        </div>
-        <div>
+        </ButtonWrapper>
+        <ButtonWrapper>
           <ButtonStyled.Dark disabled={true}>Disabled</ButtonStyled.Dark>
-        </div>
+        </ButtonWrapper>
       </Wrapper>
       <Title>ButtonStyled.Light</Title>
       <Wrapper>
-        <div>
+        <ButtonWrapper>
           <ButtonStyled.Light>Default</ButtonStyled.Light>
-        </div>
-        <div>
+        </ButtonWrapper>
+        <ButtonWrapper>
           <ButtonStyled.Light disabled={true}>Disabled</ButtonStyled.Light>
-        </div>
+        </ButtonWrapper>
       </Wrapper>
       <Title>ButtonStyled.Blue</Title>
       <Wrapper>
-        <div>
+        <ButtonWrapper>
           <ButtonStyled.Blue>Default</ButtonStyled.Blue>
-        </div>
-        <div>
+        </ButtonWrapper>
+        <ButtonWrapper>
           <ButtonStyled.Blue disabled={true}>Disabled</ButtonStyled.Blue>
-        </div>
+        </ButtonWrapper>
       </Wrapper>
     </div>
   );
@@ -108,13 +127,14 @@ export const Buttons = LibWithTheme(ButtonsC);
 const Wrapper = styled.div`
   display: flex;
   margin-bottom: 30px;
-  div {
-    display: flex;
-    width: 200px;
-    align-content: center;
-    padding: 0 40px;
-  }
+ 
 `;
+const ButtonWrapper = styled.div`
+  display: flex;
+  width: 200px;
+  align-content: center;
+  padding: 0 40px;
+};`
 
 const Title = styled.h3`
   margin-bottom: 20px;

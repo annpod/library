@@ -7,7 +7,6 @@ interface IEditButtonProps {
   itemCountString: string | null;
   resetKeys: () => void;
   onClick: () => void;
-  updateKeys: string[];
 }
 
 export const EditButton = (props: IEditButtonProps) => {

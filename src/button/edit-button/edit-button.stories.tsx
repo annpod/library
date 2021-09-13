@@ -13,8 +13,7 @@ const Template: Story<any> = (args) => <EditButton {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
-  itemCountString: '2',
+  itemCountString: 'Edit 2 Items',
   resetKeys: () => {},
   onClick: () => {},
-  updateKeys: ['2']
 };
