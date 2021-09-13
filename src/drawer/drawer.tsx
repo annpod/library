@@ -42,7 +42,7 @@ const FlyoutContainer = styled.div<{ visible?: boolean }>`
   width: 292px;
   grid-template-rows: 50px 1fr 50px;
   background: #ffffff;
-  position: absolute;
+  position: fixed;
   z-index: 40;
   top: 0;
   right: 0;
@@ -50,11 +50,12 @@ const FlyoutContainer = styled.div<{ visible?: boolean }>`
   height: 100vh;
   display: grid;
   transform: translateX(100%);
-  ${(props) =>
-    props.visible
-      ? `animation: slide-out 0.5s forwards;`
-      : `animation: slide-in 0.5s forwards;
-  `}
+  &.slide-in {
+    animation: slide-in 0.5s forwards;
+  }
+  &.slide-out {
+    animation: slide-out 0.5s forwards;
+  }
 `;
 
 const Header = styled.div`
@@ -82,21 +83,34 @@ const Footer = styled.div`
   padding: 20px 20px;
 `;
 export const Drawer = (props: IDrawer) => {
+
+  const [go, setGo] = React.useState(false);
+  const [visible, setVisible] = React.useState(false);
+
+  React.useEffect(() => {    
+    if (props.visible !== visible) {     
+      setGo(true);
+    }    
+    setVisible(props.visible);
+  }, [props.visible]);
+
+
   const {
     children,
     headerTitle,
     onClose,
-    visible,
     onOk,
     okButtonProps,
     onCancel,
     cancelButtonProps
   } = props;
-
   return (
     <Wrapper>
       <Overlay onClick={onClose} visible={visible} />
-      <FlyoutContainer visible={visible} data-location='drawer'>
+      <FlyoutContainer
+        className={go ? visible ? 'slide-out' : 'slide-in' : ''}
+        data-location='drawer'
+      >
         <Header>
           <span>{headerTitle}</span>
           {onClose && (
