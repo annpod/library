@@ -34,7 +34,7 @@ const Toast = (props: IToastProps) => {
     );
   }
   return (
-    <ToastContent>
+    <ToastContent data-location='toast'>
       <Icon
         type={!props.status ? 'errorrRed' : iconMap[props.status]}
         size={'19px'}

@@ -2,7 +2,8 @@ export enum BtnTypes {
   Primary = 'primary',
   Dark = 'dark',
   Light = 'light',
-  Blue = 'blue'
+  Blue = 'blue',
+  Small = 'small',
 }
 
 export enum InputTypes {

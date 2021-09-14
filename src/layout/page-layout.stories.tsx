@@ -5,6 +5,7 @@ import {
   NavLink,
 } from 'react-router-dom';
 import { PageLayout } from './page-layout';
+import { IPageLayout } from '../typings';
 
 export default {
   title: 'Layout/PageLayout',
@@ -20,7 +21,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story<any> = (args: any) => <PageLayout {...args} />;
+const Template: Story<IPageLayout> = (args) => <PageLayout {...args} />;
 export const Primary = Template.bind({});
 
 const routeTable: {
@@ -67,7 +68,6 @@ Primary.args = {
   ],
   backButton: 'Back',
   onBack: () => {},
-  sidebarContent: '{sidebarContent}',
   children: '{children}',
   tabs: [{ title: 'Details' }, { title: 'Mapping' }],
   selectedTab: 'Details',

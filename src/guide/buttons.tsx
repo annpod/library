@@ -118,6 +118,15 @@ const ButtonsC = () => {
           <ButtonStyled.Blue disabled={true}>Disabled</ButtonStyled.Blue>
         </ButtonWrapper>
       </Wrapper>
+      <Title>ButtonStyled.Small</Title>
+      <Wrapper>
+        <ButtonWrapper>
+          <ButtonStyled.Small>Default</ButtonStyled.Small>
+        </ButtonWrapper>
+        <ButtonWrapper>
+          <ButtonStyled.Small disabled={true}>Disabled</ButtonStyled.Small>
+        </ButtonWrapper>
+      </Wrapper>
     </div>
   );
 };

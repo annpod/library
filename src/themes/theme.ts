@@ -21,7 +21,7 @@ import {
   BLUE2_COLOR,
   GOLD_COLOR,
   FOREST_GREEN,
-  LIGHT_GREY3_COLOR
+  LIGHT_GREY3_COLOR,
 } from '../constants/colors';
 import { BtnTypes, InputTypes } from '../typings';
 import { commonTheme, toast } from '../constants/common';
@@ -96,19 +96,28 @@ export const theme: Record<string, any> = {
     buttons: {
       [BtnTypes.Primary]: {
         background: LIGHT_RED3_COLOR,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
       },
       [BtnTypes.Dark]: {
         background: COAL_COLOR,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
       },
       [BtnTypes.Light]: {
         background: WHITE_COLOR,
-        color: DARK_GREY2_COLOR
+        color: DARK_GREY2_COLOR,
+        backgroundDisabled: WHITE_COLOR,
       },
       [BtnTypes.Blue]: {
         background: BLUE2_COLOR,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
+      },
+      [BtnTypes.Small]: {
+        background: 'transparent',
+        color: BLUE2_COLOR,
+        backgroundDisabled: 'transparent',
       }
     }
   },
@@ -160,19 +169,28 @@ export const theme: Record<string, any> = {
     buttons: {
       [BtnTypes.Primary]: {
         background: LIGHT_RED3_COLOR,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
       },
       [BtnTypes.Dark]: {
         background: COAL_COLOR,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
       },
       [BtnTypes.Light]: {
         background: WHITE_COLOR,
-        color: DARK_GREY2_COLOR
+        color: DARK_GREY2_COLOR,
+        backgroundDisabled: WHITE_COLOR,
       },
       [BtnTypes.Blue]: {
         background: BLUE2_COLOR,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
+      },
+      [BtnTypes.Small]: {
+        background: 'transparent',
+        color: BLUE2_COLOR,
+        backgroundDisabled: 'transparent',
       }
     }
   },
@@ -224,19 +242,28 @@ export const theme: Record<string, any> = {
     buttons: {
       [BtnTypes.Primary]: {
         background: LIGHT_RED3_COLOR,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
       },
       [BtnTypes.Dark]: {
         background: COAL_COLOR,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
       },
       [BtnTypes.Light]: {
         background: WHITE_COLOR,
-        color: DARK_GREY2_COLOR
+        color: DARK_GREY2_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
       },
       [BtnTypes.Blue]: {
         background: BLUE2_COLOR,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        backgroundDisabled: WHITE_COLOR,
+      },
+      [BtnTypes.Small]: {
+        background: 'transparent',
+        color: BLUE2_COLOR,
+        backgroundDisabled: 'transparent',
       }
     },    
   },
@@ -288,19 +315,28 @@ export const theme: Record<string, any> = {
     buttons: {
       [BtnTypes.Primary]: {
         background: LIGHT_RED3_COLOR,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
       },
       [BtnTypes.Dark]: {
         background: COAL_COLOR,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
       },
       [BtnTypes.Light]: {
         background: WHITE_COLOR,
-        color: DARK_GREY2_COLOR
+        color: DARK_GREY2_COLOR,
+        backgroundDisabled: WHITE_COLOR,
       },
       [BtnTypes.Blue]: {
         background: BLUE2_COLOR,
-        color: WHITE_COLOR
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
+      },
+      [BtnTypes.Small]: {
+        background: 'transparent',
+        color: BLUE2_COLOR,
+        backgroundDisabled: 'transparent',
       }
     }
   }

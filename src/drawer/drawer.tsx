@@ -123,10 +123,9 @@ export const Drawer = (props: IDrawer) => {
         </Header>
         <CustomScrollbars>
           <Form>{children}</Form>
-          <Footer>
+          <Footer data-location='drawer-footer'>
             {props.okText && (
               <ButtonStyled.Primary
-                data-location='okButton'
                 onClick={onOk}
                 disabled={okButtonProps && okButtonProps.disabled}
               >
@@ -135,7 +134,6 @@ export const Drawer = (props: IDrawer) => {
             )}
             {props.cancelText && (
               <ButtonStyled.Light
-                data-location='cancelButton'
                 onClick={onCancel}
                 disabled={cancelButtonProps && cancelButtonProps.disabled}
               >

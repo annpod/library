@@ -4,7 +4,6 @@ import { Icon } from '../icon';
 import { IconButton } from '../icon-button';
 import { IFocusViewLayout } from '../typings';
 
-
 export const FocusViewLayout = ({ title, children, header, onClose }: IFocusViewLayout) => {
 
   const onClick = () => {
@@ -13,7 +12,7 @@ export const FocusViewLayout = ({ title, children, header, onClose }: IFocusView
 
   return (
     <Wrapper>
-      <Header>
+      <Header data-location='header'>
         <Headline>
           <Title>{title}</Title>
           <IconButton
@@ -21,11 +20,11 @@ export const FocusViewLayout = ({ title, children, header, onClose }: IFocusView
             onClick={onClick}
           />
         </Headline>
-        <SubHeader>
+        <SubHeader data-location='sub-header'>
           {header}
         </SubHeader>
       </Header>
-      <Content>
+      <Content data-location='content'>
         {children}
       </Content>
     </Wrapper>

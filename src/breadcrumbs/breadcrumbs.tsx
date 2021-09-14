@@ -12,8 +12,11 @@ interface IBreadcrumbsComponent {
   NavLink: any;
 }
 
-export const BreadcrumbsComponent = ({ breadcrumbs, NavLink, lastItem }: IBreadcrumbsComponent) => {
-
+export const BreadcrumbsComponent = ({
+  breadcrumbs,
+  NavLink,
+  lastItem
+}: IBreadcrumbsComponent) => {
   return (
     <div data-location='breadcrumbs'>
       {breadcrumbs.map(
@@ -24,8 +27,10 @@ export const BreadcrumbsComponent = ({ breadcrumbs, NavLink, lastItem }: IBreadc
                 <LastItem>{item.breadcrumb}</LastItem>
               ) : (
                 <>
-                  <NavLink to={item.match.url} className='breadcrumb'>{item.breadcrumb}</NavLink>
-                  <Arrow>{" > "}</Arrow>
+                  <NavLink to={item.match.url} className='breadcrumb'>
+                    {item.breadcrumb}
+                  </NavLink>
+                  <Arrow>{' > '}</Arrow>
                 </>
               )}
             </span>
@@ -42,7 +47,7 @@ export const Breadcrumbs = (props: IBreadcrumbs) => {
     props.matchPath,
     props.withRouter,
     props.NavLink,
-    props.lastItem,
+    props.lastItem
   )(BreadcrumbsComponent);
   return <Breadcrumbs />;
 };

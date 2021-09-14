@@ -3,6 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import StoryRouter from 'storybook-react-router';
 import { NavLink } from 'react-router-dom';
 import { NavLayout } from './nav-layout';
+import { INavLayout } from '../typings';
 
 export default {
   title: 'Layout/NavLayout',
@@ -12,13 +13,27 @@ export default {
     docs: {
       source: {
         type: 'code',
-        code: `<NavLayout>Page Content</NavLayout>`
+        code: `<NavLayoutLib
+                      routeTable={routeTable}
+                      selectedShard={selectedShard}
+                      pathname={pathname}
+                      routes={routes}
+                      backButton={backButton}
+                      onBack={onBack}
+                      sidebarContent={sidebarContent}
+                      tabs={tabs}
+                      selectedTab={selectedTab}
+                      onSelectTab={onSelectTab}
+                      NavLink={NavLink}
+                    >
+                      Content
+                    </NavLayoutLib>`
       }
     }
   }
 } as Meta;
 
-const Template: Story<any> = (args: any) => <NavLayout {...args} />;
+const Template: Story<INavLayout> = (args) => <NavLayout {...args} />;
 export const Primary = Template.bind({});
 
 const routeTable: {
@@ -52,9 +67,7 @@ Primary.args = {
   NavLink: NavLink,
   backButton: 'Back',
   onBack: () => {},
-  sidebarContent: '{sidebarContent}',
   tabs: [{ title: 'Details' }, { title: 'Mapping' }],
   selectedTab: 'Details',
   onSelectTab: () => {}
 };
-

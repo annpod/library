@@ -13,7 +13,12 @@ export const IconButton = (props: IIconButtonProps) => {
   const { icon, title, disabled, className, onClick } = props;
 
   return (
-    <TextIconButton onClick={onClick} className={className} disabled={disabled}>
+    <TextIconButton
+      onClick={onClick}
+      className={className}
+      disabled={disabled}
+      data-location='icon-button'
+    >
       {icon}
       {title && <TextWrapper>{title} </TextWrapper>}
     </TextIconButton>

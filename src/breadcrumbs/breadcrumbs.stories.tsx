@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { IBreadcrumbRouteMatch } from '../typings';
 
@@ -21,7 +21,7 @@ const Breadcrumbs = ({ breadcrumbs, lastItem }: IBreadcrumbsComponent) => {
               ) : (
                 <>
                   <Link className='breadcrumb'>{item.breadcrumb}</Link>
-                  <Arrow>{" > "}</Arrow>
+                  <Arrow>{' > '}</Arrow>
                 </>
               )}
             </span>
@@ -87,7 +87,7 @@ export default {
   component: Breadcrumbs,
   args: {
     lastItem: 'Provider 1',
-    breadcrumbs,
+    breadcrumbs
   },
   parameters: {
     docs: {
@@ -101,7 +101,7 @@ export default {
 
         In other cases, add routes to the list of routes
         (see Code)
-        `,
+        `
       },
       source: {
         code: `
@@ -126,4 +126,3 @@ export default {
 const Template: Story<any> = (args: any) => <Breadcrumbs {...args} />;
 
 export const Primary = Template.bind({});
-

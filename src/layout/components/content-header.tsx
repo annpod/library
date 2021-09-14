@@ -1,31 +1,48 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 import { Breadcrumbs as BreadcrumbsLib } from '../../breadcrumbs';
+import { IBreadcrumbRoute } from '../../typings';
 
-// interface IContentHeader {
-//   title?: string;
-//   isBreadcrumbs?: boolean;
-//   lastItem?: string;
-//   children?: React.ReactNode;
-//   // routes, matchPath, withRouter, NavLink, lastItem 
-// }
+interface IContentHeader {
+  title?: string;
+  isBreadcrumbs?: boolean;
+  lastItem?: string;
+  children?: React.ReactNode;
+  routes?: IBreadcrumbRoute[];
+  matchPath: any;
+  withRouter: any;
+  NavLink: any;
+}
 
 interface IProps {
   lastItem?: string;
 }
 
-
-export const ContentHeader = ({ routes, matchPath, withRouter, NavLink, lastItem, title, isBreadcrumbs, children }: any) => {
-
-  const Breadcrumbs = ({ lastItem }: IProps ) => BreadcrumbsLib({ routes, matchPath, withRouter, NavLink, lastItem });
+export const ContentHeader = ({
+  routes,
+  matchPath,
+  withRouter,
+  NavLink,
+  lastItem,
+  title,
+  isBreadcrumbs,
+  children
+}: IContentHeader) => {
+  const Breadcrumbs = ({ lastItem }: IProps) => {
+    if (!routes) {
+      return null;
+    }
+    return BreadcrumbsLib({ routes, matchPath, withRouter, NavLink, lastItem });
+  };
 
   return (
     <Wpapper data-location='content-header'>
       {title && <Title>{title}</Title>}
-      {isBreadcrumbs &&
+      {isBreadcrumbs && (
         <BreadcrumbsWrapper>
           <Breadcrumbs lastItem={lastItem} />
-        </BreadcrumbsWrapper>}
+        </BreadcrumbsWrapper>
+      )}
       {children}
     </Wpapper>
   );
@@ -44,7 +61,7 @@ const Wpapper = styled.div`
   width: 100%;
   height: 70px;
   margin-bottom: 15px;
-  border-bottom: 1px solid ${props => props.theme.contentHeaderBorderColor};
+  border-bottom: 1px solid ${(props) => props.theme.contentHeaderBorderColor};
   background: ${(props) => props.theme.contentHeaderBg};
   color: ${(props) => props.theme.contentHeaderColor};
 `;

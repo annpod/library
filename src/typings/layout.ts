@@ -1,4 +1,5 @@
-import { IBreadcrumbsRoute } from './components';
+import React from 'react';
+import { IBreadcrumbsRoute, INavigation } from './components';
 
 export interface IHeaderProps {
   menu?: IMenuHeader;
@@ -29,20 +30,14 @@ export interface IFocusViewLayout {
   onClose: () => void;
 }
 
-export interface INavLayout {
-  routeTable?: { [key: string]: string };
-  selectedShard?: { shardKey: string };
-  pathname?: string;
-  routes?: any;
-  NavLink?: any;
+export interface INavLayout extends INavigation {
   backButton?: string;
   onBack?: () => void;
   tabs?: any;
   onSelectTab?: (tab: string) => void;
   selectedTab?: string;
-  sidebarContent?: React.ReactChildren;
+  sidebarContent?: React.ReactElement;
   children: React.ReactNode;
-
 }
 
 export interface IContentLayout {
@@ -50,9 +45,17 @@ export interface IContentLayout {
   breadcrumbsLastItem?: string;
   title?: string;
   isBreadcrumbs?: boolean;
-  headerContent?: React.ReactChildren;
+  headerContent?: React.ReactElement;
   matchPath?: any;
   withRouter?: any;
   NavLink?: any;
-  children: React.ReactChildren;
+  children: React.ReactNode;
+}
+
+export interface IPageLayout extends INavLayout {  
+  menu: IMenuHeader;
+  isProfile: boolean
+  onLogoClick: () => void;
+  onLogout: () => void;
+  children: React.ReactNode;
 }

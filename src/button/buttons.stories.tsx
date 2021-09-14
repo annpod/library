@@ -5,7 +5,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { ButtonStyled, IProps } from './buttons';
 
 export default {
-  title: 'Buttons/V1/ButtonStyled',
+  title: 'Buttons/ButtonStyled',
   component: ButtonStyled.Dark
 } as Meta;
 
@@ -69,6 +69,20 @@ PrimarySlim.args = {
   disabled: false,
   children: 'Close',
   slim: true,
+  onClick: () => {}
+};
+
+const Template5: Story<IProps> = (args) => (
+  <Wrapper>
+    <ButtonStyled.Small {...args}>{args.children}</ButtonStyled.Small>
+  </Wrapper>
+);
+
+export const Small = Template5.bind({});
+
+Small.args = {
+  disabled: false,
+  children: 'Clear',
   onClick: () => {}
 };
 

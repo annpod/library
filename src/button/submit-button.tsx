@@ -10,6 +10,7 @@ export const SubmitButton = (props: ISubmitButton) => {
       onClick={props.onClick}
       loading={props.isLoading}
       disabled={props.isDisabled}
+      data-location='submit-button'
     >
       {props.children || 'Search'}
     </Submit>
@@ -20,12 +21,13 @@ export const Submit = styled(Button)`
   && {
     margin-top: 20px;
     background-color: ${(props) => props.theme.bgBackground};
-    width: 216px;
+    min-width: 150px;
+    width: 100%;
     height: 36px;
-    font-size: 15px;
+    font-size: 12px;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 18px;
     cursor: pointer;
     &:disabled {
       cursor: not-allowed;

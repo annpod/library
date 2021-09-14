@@ -4,6 +4,7 @@ import { Container, ContentWrapper } from './layout.styled';
 import { Navigation } from '../navigation';
 import { FullscreenHeader } from '../header';
 import { Sidebar } from './components/sidebar';
+import { IPageLayout } from '../typings';
 
 export interface IHeaderOption {
   btn: string;
@@ -15,6 +16,7 @@ export interface IMenuHeader {
   headerOptions: IHeaderOption[];
   activeHeader: string;
 }
+
 export interface IHeaderProps {
   menu?: IMenuHeader;
   isProfile?: boolean;
@@ -43,7 +45,7 @@ export const PageLayout = ({
   onSelectTab,
   NavLink,
   children
-}: any) => {
+}: IPageLayout) => {
   return (
     <>
       <FullscreenHeader

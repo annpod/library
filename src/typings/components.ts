@@ -105,12 +105,12 @@ export interface IDrawer {
   children: React.ReactChild;
   onCancel?: () => void;
   onClose?: () => void;
-  headerTitle?: string;
+  headerTitle?: string | null;
   onOk?: () => void;
   okText?: string;
   cancelText?: string;
-  okButtonProps?: any;
-  cancelButtonProps?: any;
+  okButtonProps?: { disabled: boolean };
+  cancelButtonProps?: { disabled: boolean };
 }
 
 export interface IPaginationProps {
@@ -226,7 +226,6 @@ export interface IDropdownTypes {
   theme: IThemeMap;
 }
 
-
 export interface IBreadcrumbs {
   routes: IBreadcrumbRoute[];
   matchPath: any;
@@ -258,4 +257,31 @@ export interface IShowMoreText {
 export interface IBreadcrumbsRoute {
   path: string;
   breadcrumb: string;
+}
+
+export interface IEditButtonProps {
+  itemCountString: string | null;
+  resetKeys: () => void;
+  onClick: () => void;
+}
+
+export interface ITab {
+  to?: string;
+  title: string;
+}
+
+export interface IRoute {
+  id: number;
+  pathName: string;
+  title: string;
+  icon: string;
+  friendlyPageName: string;
+}
+
+export interface INavigation {
+  routes: IRoute[];
+  pathname: string;
+  selectedShard: { shardKey: string };
+  routeTable: { [key: string]: string };
+  NavLink: any;
 }

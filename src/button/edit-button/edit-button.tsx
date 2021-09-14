@@ -2,12 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Icon } from '../../icon';
-
-interface IEditButtonProps {
-  itemCountString: string | null;
-  resetKeys: () => void;
-  onClick: () => void;
-}
+import { IEditButtonProps } from '../../typings';
 
 export const EditButton = (props: IEditButtonProps) => {
   const { itemCountString = null, resetKeys } = props;
