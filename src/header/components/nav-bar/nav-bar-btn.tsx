@@ -15,7 +15,7 @@ export const NavBarButton = styled.div`
     ${(props) => (props.isActive ? props.theme.mainTextColor : 'transparent')};
   align-items: center;
   justify-content: center;
-  font-size: ${(props) => props.theme.normalFontSize};
+  font-size: 12px;
   color: ${(props: INavBarButtonProps) =>
     props.isActive ? props.theme.textColorMain : props.theme.textColorRegular};
   cursor: pointer;
