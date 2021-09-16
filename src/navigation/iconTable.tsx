@@ -7,7 +7,11 @@ import Admin from "./icons/Admin";
 import Upload from "./icons/Upload";
 import Resources from "./icons//Resources";
 import Estate from "./icons/Estate";
+import Covid from "./icons/Covid";
 import UserDirectory from "./icons/UserDirectory";
+import Bookings from "./icons/Bookings";
+import Reporting from "./icons/Reporting";
+import Settings from "./icons/Settings";
 
 interface IIcon {
   [key: string]: (color: { color?: string }) => JSX.Element;
@@ -24,4 +28,8 @@ export const iconTable: IIcon = {
   resources: Resources,
   estate: Estate,
   userDirectory: UserDirectory,
+  covid: Covid,
+  bookings: Bookings,
+  reporting: Reporting,
+  settings: Settings,
 };

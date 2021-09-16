@@ -281,7 +281,7 @@ export interface IRoute {
 export interface INavigation {
   routes: IRoute[];
   pathname: string;
-  selectedShard: { shardKey: string };
+  selectedShard?: { shardKey: string };
   routeTable: { [key: string]: string };
   NavLink: any;
 }

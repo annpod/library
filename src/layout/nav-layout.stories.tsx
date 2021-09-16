@@ -14,20 +14,20 @@ export default {
       source: {
         type: 'code',
         code: `<NavLayoutLib
-                      routeTable={routeTable}
-                      selectedShard={selectedShard}
-                      pathname={pathname}
-                      routes={routes}
-                      backButton={backButton}
-                      onBack={onBack}
-                      sidebarContent={sidebarContent}
-                      tabs={tabs}
-                      selectedTab={selectedTab}
-                      onSelectTab={onSelectTab}
-                      NavLink={NavLink}
-                    >
-                      Content
-                    </NavLayoutLib>`
+                routeTable={routeTable}
+                selectedShard={selectedShard}
+                pathname={pathname}
+                routes={routes}
+                backButton={backButton}
+                onBack={onBack}
+                sidebarContent={sidebarContent}
+                tabs={tabs}
+                selectedTab={selectedTab}
+                onSelectTab={onSelectTab}
+                NavLink={NavLink}
+              >
+                Content
+              </NavLayoutLib>`
       }
     }
   }

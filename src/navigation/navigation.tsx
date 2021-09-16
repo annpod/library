@@ -38,7 +38,7 @@ export const Navigation = ({
               to={{
                 pathname: routeTable[route.pathName]
               }}
-              disabled={!selectedShard.shardKey}
+              disabled={selectedShard && !selectedShard.shardKey}
               title={route.title}
               className={'navigation'}
             >

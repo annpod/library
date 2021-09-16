@@ -33,7 +33,7 @@ export interface IFocusViewLayout {
 export interface INavLayout extends INavigation {
   backButton?: string;
   onBack?: () => void;
-  tabs?: any;
+  tabs?: { title: string }[];
   onSelectTab?: (tab: string) => void;
   selectedTab?: string;
   sidebarContent?: React.ReactElement;
