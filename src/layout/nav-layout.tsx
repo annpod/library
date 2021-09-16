@@ -22,7 +22,6 @@ export const NavLayout = ({
   onSelectTab,
   selectedTab,
   sidebarContent,
-  isSelectedShard,
   children
 }: INavLayout) => {
   return (
@@ -32,7 +31,6 @@ export const NavLayout = ({
           routes={routes}
           pathname={pathname}
           selectedShard={selectedShard}
-          isSelectedShard={isSelectedShard}
           routeTable={routeTable}
           NavLink={NavLink}
         />
