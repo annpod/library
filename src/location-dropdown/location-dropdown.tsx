@@ -50,7 +50,6 @@ export const LocationDropdown = (props: ILocationDropdown) => {
               isAutoSelect={true}
               isMulti={props.config[key].isMulti}
               themeType={props.themeType}
-              key={key}
             />
           </SearchSelectBox>
         );

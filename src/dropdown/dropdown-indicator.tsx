@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { ISelectOption } from '../typings';
 
 export const DropdownIndicator = (
-  props: IndicatorProps<ISelectOption, boolean>
+  props: IndicatorProps<ISelectOption>
 ): React.ReactElement => {
   if (props.selectProps.isDisabled) {
     return (

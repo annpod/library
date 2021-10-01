@@ -2,7 +2,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { ExtendedDropdown } from './extended-dropdown';
-import { IExtendedSelectProps, ThemeTypes } from '../typings';
+import { IExtendedDropdown, ThemeTypes } from '../typings';
 
 const options = [
   {
@@ -21,7 +21,7 @@ export default {
   component: ExtendedDropdown
 } as Meta;
 
-const Template: Story<IExtendedSelectProps> = (args) => (
+const Template: Story<IExtendedDropdown> = (args) => (
   <ExtendedDropdown {...args} />
 );
 
@@ -37,5 +37,6 @@ Primary.args = {
   // onChangeMulti: (keyValue: string, value: string[]) => {},
   // onChangeOption: (keyValue: string, value: string, option: string) => {},
   isAutoSelect: true,
-  isMulti: false
+  isMulti: false,
+  key: 'key-1'
 };

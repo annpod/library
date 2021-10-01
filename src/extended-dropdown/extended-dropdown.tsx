@@ -2,13 +2,10 @@ import * as React from 'react';
 
 import { findSelectOption, findSelectOptions } from '../utils/select.utils';
 
-import { IExtendedSelectProps, ThemeTypes } from '../typings';
+import { IExtendedDropdown } from '../typings';
 import { Dropdown } from '../dropdown';
 
-interface IExtendedDropdown extends IExtendedSelectProps {
-  themeType: ThemeTypes;
-  key: string;
-}
+
 
 export const ExtendedDropdown = (props: IExtendedDropdown) => {
   const searchOption = Array.isArray(props.value)
@@ -48,7 +45,6 @@ export const ExtendedDropdown = (props: IExtendedDropdown) => {
       value={searchOption}
       onChange={handleSelectChange}
       isMulti={!!props.isMulti}
-      key={props.key}
     />
   );
 };

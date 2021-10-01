@@ -1,4 +1,5 @@
 import React from 'react';
+// import { components } from 'react-select';
 import { components, IndicatorProps } from 'react-select';
 import { ISelectOption } from '../typings';
 
@@ -45,7 +46,7 @@ const ClearIcon = ({ color }: { color: string }) => (
 );
 
 export const ClearIndicator = (
-  props: IndicatorProps<ISelectOption, boolean>
+  props: IndicatorProps<ISelectOption>
 ): React.ReactElement => {
   const [hover, setHover] = React.useState(false);
 

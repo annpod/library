@@ -4,7 +4,7 @@ import moment from 'moment';
 import { CheckboxValueType } from 'antd/lib/checkbox/Group';
 import { RadioChangeEvent } from 'antd/lib/radio';
 import { InputTypes, IThemeMap } from '../typings';
-import { WrapperType } from './enum';
+import { WrapperType, ThemeTypes } from './enum';
 
 export interface IExportButton {
   disabled: boolean;
@@ -242,7 +242,6 @@ export interface IDropdownTypes {
   width?: string;
   isMulti?: boolean;
   theme: IThemeMap;
-  key: string;
 }
 
 export interface IBreadcrumbs {
@@ -315,4 +314,8 @@ export interface IWrapper{
   ptop?: string | boolean;
   pbottom?: string | boolean;
   size: WrapperType;
+}
+
+export interface IExtendedDropdown extends IExtendedSelectProps {
+  themeType: ThemeTypes;
 }

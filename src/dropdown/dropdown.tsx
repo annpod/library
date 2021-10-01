@@ -22,7 +22,6 @@ const Wrapper = (themeType: ThemeTypes) =>
       optionRenderer,
       onChange,
       theme,
-      key
     } = props;
 
     const onDropdownChange = (option: any) => {
@@ -66,7 +65,6 @@ const Wrapper = (themeType: ThemeTypes) =>
         isSearchable={searchable}
         isMulti={!!isMulti}
         defaultValue={defaultValue}
-        key={key}
       />
     );
   });
