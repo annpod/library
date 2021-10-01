@@ -18,8 +18,7 @@ export const dropdownStyles = (
       ...provided,
       width,
       cursor: 'pointer',
-      height: '34px',
-      minHeight: '36px',
+      minHeight: '34px',
       border: `1px solid ${
         isDisabled ? theme.dropdownDisabledTextColor : theme.dropdownBorderColor
       }`,

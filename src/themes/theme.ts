@@ -22,8 +22,10 @@ import {
   GOLD_COLOR,
   FOREST_GREEN,
   LIGHT_GREY3_COLOR,
+  LIGHT_GREY4_COLOR,
+  BLACK_COLOR,
 } from '../constants/colors';
-import { BtnTypes, InputTypes } from '../typings';
+import { BtnTypes, InputTypes, DialogueTypes } from '../typings';
 import { commonTheme, toast } from '../constants/common';
 
 export const DEFAULT_THEME = 'DEFAULT';
@@ -44,6 +46,13 @@ const inputs = {
     borderColor: LIGHT_GREY2_COLOR,
     disabledBg: LIGHT_GREY2_COLOR,
   },
+};
+
+const modals = {
+  [DialogueTypes.Primary]: {
+    color: DARK_GREY2_COLOR,
+    titleColor: BLACK_COLOR,
+  },  
 };
 
 export const theme: Record<string, any> = {
@@ -92,6 +101,7 @@ export const theme: Record<string, any> = {
     radioButtonColor: DARK_GREY2_COLOR,
     radioButtonActiveColor: WHITE_COLOR,
     ...toast,
+    modals,
     inputs,
     buttons: {
       [BtnTypes.Primary]: {
@@ -101,6 +111,11 @@ export const theme: Record<string, any> = {
       },
       [BtnTypes.Dark]: {
         background: COAL_COLOR,
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
+      },
+      [BtnTypes.Grey]: {
+        background: DARK_GREY2_COLOR,
         color: WHITE_COLOR,
         backgroundDisabled: DARK_GREY_COLOR,
       },
@@ -118,7 +133,12 @@ export const theme: Record<string, any> = {
         background: 'transparent',
         color: BLUE2_COLOR,
         backgroundDisabled: 'transparent',
-      }
+      },
+      [BtnTypes.Cancel]: {
+        background: LIGHT_GREY4_COLOR,
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
+      },
     }
   },
   [SCB_THEME]: {
@@ -165,6 +185,7 @@ export const theme: Record<string, any> = {
     radioButtonColor: DARK_GREY2_COLOR,
     radioButtonActiveColor: WHITE_COLOR,
     ...toast,
+    modals,
     inputs,
     buttons: {
       [BtnTypes.Primary]: {
@@ -174,6 +195,11 @@ export const theme: Record<string, any> = {
       },
       [BtnTypes.Dark]: {
         background: COAL_COLOR,
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
+      },
+      [BtnTypes.Grey]: {
+        background: DARK_GREY2_COLOR,
         color: WHITE_COLOR,
         backgroundDisabled: DARK_GREY_COLOR,
       },
@@ -191,7 +217,12 @@ export const theme: Record<string, any> = {
         background: 'transparent',
         color: BLUE2_COLOR,
         backgroundDisabled: 'transparent',
-      }
+      },
+      [BtnTypes.Cancel]: {
+        background: LIGHT_GREY4_COLOR,
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
+      },
     }
   },
   [BT_THEME]: {
@@ -238,6 +269,7 @@ export const theme: Record<string, any> = {
     radioButtonColor: DARK_GREY2_COLOR,
     radioButtonActiveColor: WHITE_COLOR,
     ...toast,
+    modals,
     inputs,
     buttons: {
       [BtnTypes.Primary]: {
@@ -247,6 +279,11 @@ export const theme: Record<string, any> = {
       },
       [BtnTypes.Dark]: {
         background: COAL_COLOR,
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
+      },
+      [BtnTypes.Grey]: {
+        background: DARK_GREY2_COLOR,
         color: WHITE_COLOR,
         backgroundDisabled: DARK_GREY_COLOR,
       },
@@ -264,7 +301,12 @@ export const theme: Record<string, any> = {
         background: 'transparent',
         color: BLUE2_COLOR,
         backgroundDisabled: 'transparent',
-      }
+      },
+      [BtnTypes.Cancel]: {
+        background: LIGHT_GREY4_COLOR,
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
+      },
     },    
   },
   [AMEREN_THEME]: {
@@ -311,6 +353,7 @@ export const theme: Record<string, any> = {
     radioButtonColor: DARK_GREY2_COLOR,
     radioButtonActiveColor: WHITE_COLOR,
     ...toast,
+    modals,
     inputs,
     buttons: {
       [BtnTypes.Primary]: {
@@ -320,6 +363,11 @@ export const theme: Record<string, any> = {
       },
       [BtnTypes.Dark]: {
         background: COAL_COLOR,
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
+      },
+      [BtnTypes.Grey]: {
+        background: DARK_GREY2_COLOR,
         color: WHITE_COLOR,
         backgroundDisabled: DARK_GREY_COLOR,
       },
@@ -337,7 +385,12 @@ export const theme: Record<string, any> = {
         background: 'transparent',
         color: BLUE2_COLOR,
         backgroundDisabled: 'transparent',
-      }
+      },
+      [BtnTypes.Cancel]: {
+        background: LIGHT_GREY4_COLOR,
+        color: WHITE_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR,
+      },
     }
   }
 };

@@ -46,6 +46,7 @@ export interface IFormSelectProps<F> extends IFormElementProps<F, string> {
 
 export interface IFormIconSelectProps<F> extends IFormElementProps<F, string> {
   icons: IIconDescription[];
+  iconsUrl?: string;
   onChange?: (value: string) => void;
 }
 

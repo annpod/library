@@ -7,6 +7,7 @@ import { Dropdown } from '../dropdown';
 
 interface IExtendedDropdown extends IExtendedSelectProps {
   themeType: ThemeTypes;
+  key: string;
 }
 
 export const ExtendedDropdown = (props: IExtendedDropdown) => {
@@ -47,6 +48,7 @@ export const ExtendedDropdown = (props: IExtendedDropdown) => {
       value={searchOption}
       onChange={handleSelectChange}
       isMulti={!!props.isMulti}
+      key={props.key}
     />
   );
 };

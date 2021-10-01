@@ -100,6 +100,15 @@ const ButtonsC = () => {
           <ButtonStyled.Dark disabled={true}>Disabled</ButtonStyled.Dark>
         </ButtonWrapper>
       </Wrapper>
+      <Title>ButtonStyled.Grey</Title>
+      <Wrapper>
+        <ButtonWrapper>
+          <ButtonStyled.Grey>Default</ButtonStyled.Grey>
+        </ButtonWrapper>
+        <ButtonWrapper>
+          <ButtonStyled.Grey disabled={true}>Disabled</ButtonStyled.Grey>
+        </ButtonWrapper>
+      </Wrapper>
       <Title>ButtonStyled.Light</Title>
       <Wrapper>
         <ButtonWrapper>
@@ -125,6 +134,15 @@ const ButtonsC = () => {
         </ButtonWrapper>
         <ButtonWrapper>
           <ButtonStyled.Small disabled={true}>Disabled</ButtonStyled.Small>
+        </ButtonWrapper>
+      </Wrapper>
+      <Title>ButtonStyled.Cancel</Title>
+      <Wrapper>
+        <ButtonWrapper>
+          <ButtonStyled.Cancel>Default</ButtonStyled.Cancel>
+        </ButtonWrapper>
+        <ButtonWrapper>
+          <ButtonStyled.Cancel disabled={true}>Disabled</ButtonStyled.Cancel>
         </ButtonWrapper>
       </Wrapper>
     </div>

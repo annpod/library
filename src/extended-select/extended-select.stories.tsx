@@ -17,8 +17,15 @@ const options = [
 ];
 
 export default {
-  title: 'ExtendedSelect',
-  component: ExtendedSelect
+  title: 'Deprecated/ExtendedSelect',
+  component: ExtendedSelect,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Use ExtendedDropdown'
+      }
+    }
+  }
 } as Meta;
 
 const Template: Story<IExtendedSelectProps> = (args) => (

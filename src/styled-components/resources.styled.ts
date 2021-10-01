@@ -56,7 +56,7 @@ export const ListPageSearchInputBox = div`
 
 export const ListPageTableBox = div`
   flex: 1;
-  padding: 12px;
+  padding: 20px;
 `;
 
 export const SectionSelectorBody = div`
@@ -232,7 +232,7 @@ export const CheckedInputStyles = {
   CheckboxWrapper: styled.div`
     background-color: #efefef;
     padding: 0px 15px;
-    margin: 0 30px;
+    margin: 0 20px;
     width: 700px;
     border-radius: 5px;
     display: flex;

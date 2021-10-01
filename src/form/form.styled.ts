@@ -15,7 +15,7 @@ import 'antd/lib/checkbox/style/css';
 
 export const FormItemBox = styled(Form.Item)`
   max-width: 700px;
-  margin: 5px 32px 10px;
+  margin: 5px 20px 10px;
 
   & > .ant-form-item-label > label {
     font-size: 12px;
@@ -111,12 +111,12 @@ export const FormBox = styled.div`
 
 export const FormSectionStart = styled.div`
   width: 100%;
-  padding: 10px 32px;
-  margin-top: 15px;
-  margin-bottom: 25px;
+  padding: 14px 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   background-color: #f7f7f7;
-  border-top: solid 2px #ededed;
-  border-bottom: solid 2px #ededed;
+  border-top: solid 1px #DBDBDB;
+  border-bottom: solid 1px #DBDBDB;
   font-size: 14px;
   font-weight: 400;
 `;
@@ -125,8 +125,22 @@ export const FormSectionStartNoTop = styled(FormSectionStart)`
   margin-top: 0px;
 `;
 
+export const FormSectionStartTop = styled(FormSectionStart)`
+  margin-top: 0px;
+  margin-bottom: 15px;
+  border-top: none;
+`;
+
 export const FormSectionStartNoBottom = styled(FormSectionStart)`
   margin-bottom: 0px;
+`;
+
+export const FormSubSectionTop = styled(FormSectionStartTop)`
+  padding: 14px 20px;
+`;
+
+export const FormSubSection = styled(FormSectionStart)`
+  padding: 14px 20px;
 `;
 
 export const FormSubsectionStart = styled.div`
@@ -137,7 +151,7 @@ export const FormSubsectionStart = styled.div`
 `;
 
 export const FormSectionDescription = styled.p`
-  margin: 15px 32px;
+  margin: 15px 20px;
 `;
 
 export const Block = styled.div`

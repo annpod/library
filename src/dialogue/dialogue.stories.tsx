@@ -1,17 +1,12 @@
 import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Modal } from './modal';
-import { IModal } from '../typings';
+import { Dialogue } from './dialogue';
+import { IDialogue } from '../typings';
 
 export default {
-  title: 'Deprecated/Modal',
-  component: Modal,
-  args: {
-    visible: true,
-    children: `Modal Content`,
-    headerTitle: 'Modal Header'
-  },
+  title: 'Dialogue',
+  component: Dialogue.Primary,
   argTypes: {
     confirmButton: {
       type: { required: false },
@@ -53,15 +48,14 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: `Based on https://ant.design/components/modal/
-          Use ModalBox
-        `,
+        component: `Based on https://ant.design/components/modal/`
       },
       source: {
-        code: `<Modal
-                  visible={false}
-                  children={<div>Modal Content</div>}
-                  headerTitle={'Modal Header'}
+        code: `<Dialogue.Primary
+                  visible={visible}
+                  children={<div>ModalBox Content</div>}
+                  headerTitle={'ModalBox Header'}
+                  afterClose={afterClose}
                   confirmButton={{
                     label: 'confirm',
                     onClick: onConfirm
@@ -72,21 +66,38 @@ export default {
                   }}
                 />`
       }
-    },   
+    }
   }
 } as Meta;
 
-export const Primary = (args: IModal) => (
-  <Modal
-    {...args}
-    visible={args.visible}
-    confirmButton={{
-      label: 'confirm',
-      onClick: () => {}
-    }}
-    cancelButton={{
-      label: 'cancel',
-      onClick: () => {}
-    }}
-  />
-);
+const Template: Story<IDialogue> = () => {
+  const [state, setState] = React.useState<boolean>(true);
+
+  const onClick = () => {
+    setState(!state);
+  };
+
+  return (
+    <>
+      <button onClick={onClick}>Open Dialog</button>
+      <Dialogue.Primary
+        headerTitle={'Dialogue Title'}
+        visible={state}
+        confirmButton={{
+          label: 'Confirm',
+          onClick: () => {}
+        }}
+        cancelButton={{
+          label: 'Cancel',
+          onClick: onClick
+        }}
+      >
+        {'Dialogue Content'}
+      </Dialogue.Primary>
+    </>
+  );
+};
+
+export const Primary = Template.bind({});
+
+Primary.args = {};

@@ -6,16 +6,21 @@ import { NavBar } from './components/nav-bar';
 
 import { IHeaderProps } from '../typings';
 
-export const FullscreenHeader = ({ menu, isProfile, onLogoClick, onLogout }: IHeaderProps) => {
+export const FullscreenHeader = ({
+  menu,
+  isProfile,
+  onLogoClick,
+  onLogout
+}: IHeaderProps) => {
   return (
     <Wrapper data-location='header'>
-       <Logo onClick={onLogoClick}/>
-        <NavBar
-          headerOptions={menu && menu.headerOptions ? menu.headerOptions : []}
-          activeHeader={menu && menu.activeHeader ? menu.activeHeader : null}
-          isProfile={isProfile}
-          onLogout={onLogout}
-        />
+      <Logo onClick={onLogoClick} />
+      <NavBar
+        headerOptions={menu && menu.headerOptions ? menu.headerOptions : []}
+        activeHeader={menu && menu.activeHeader ? menu.activeHeader : null}
+        isProfile={isProfile}
+        onLogout={onLogout}
+      />
     </Wrapper>
   );
 };

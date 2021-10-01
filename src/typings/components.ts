@@ -4,6 +4,7 @@ import moment from 'moment';
 import { CheckboxValueType } from 'antd/lib/checkbox/Group';
 import { RadioChangeEvent } from 'antd/lib/radio';
 import { InputTypes, IThemeMap } from '../typings';
+import { WrapperType } from './enum';
 
 export interface IExportButton {
   disabled: boolean;
@@ -95,6 +96,23 @@ export interface IModalHeader {
 }
 
 export interface IModal extends IModalHeader {
+  visible: boolean;
+  children: string | React.ReactElement;
+  afterClose?: () => void;
+}
+
+
+export interface IDialogueFooter {
+  confirmButton: IModalButton | null;
+  cancelButton: IModalButton;  
+}
+
+export interface IDialogue extends IDialogueFooter {
+  className?: string;
+  closable?: boolean;
+  headerTitle?: string;
+  confirmButton: IModalButton | null;
+  cancelButton: IModalButton;
   visible: boolean;
   children: string | React.ReactElement;
   afterClose?: () => void;
@@ -224,6 +242,7 @@ export interface IDropdownTypes {
   width?: string;
   isMulti?: boolean;
   theme: IThemeMap;
+  key: string;
 }
 
 export interface IBreadcrumbs {
@@ -284,4 +303,16 @@ export interface INavigation {
   selectedShard?: { shardKey: string };
   routeTable: { [key: string]: string };
   NavLink: any;
+}
+
+export interface IWrapper{
+  mleft?: string | boolean;
+  mright?: string | boolean;
+  mtop?: string | boolean;
+  mbottom?: string | boolean;
+  pleft?: string | boolean;
+  pright?: string | boolean;
+  ptop?: string | boolean;
+  pbottom?: string | boolean;
+  size: WrapperType;
 }

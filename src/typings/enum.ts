@@ -1,9 +1,11 @@
 export enum BtnTypes {
   Primary = 'primary',
   Dark = 'dark',
+  Grey = 'grey',
   Light = 'light',
   Blue = 'blue',
   Small = 'small',
+  Cancel = 'cancel',
 }
 
 export enum InputTypes {
@@ -23,3 +25,15 @@ export enum ToastStatus {
   // info = "info",
   // warn = "warn",
 }
+
+export enum WrapperType {
+  Small = 'small',
+  Medium = 'medium',
+  Large = 'large'
+}
+
+export enum DialogueTypes {
+  Primary = 'Primary',
+}
+
+

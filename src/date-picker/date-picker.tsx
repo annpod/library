@@ -13,7 +13,7 @@ const DatePickerStyled = {
       .ant-input {
         border: 1px solid #cccccc;
         font-size: 13px;
-        width: 215px;
+        width: 199px;
         height: 36px;
         padding: 0 10px;
         font-size: 13px;

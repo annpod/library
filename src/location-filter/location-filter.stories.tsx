@@ -7,7 +7,7 @@ import { ILocationFilterProps } from '../typings/location-filter';
 import { filterData, filter, config } from './location-filter.mocks';
 
 export default {
-  title: 'LocationFilter',
+  title: 'Deprecated/LocationFilter',
   component: LocationFilter,
   args: {
     filterData,
@@ -31,6 +31,9 @@ export default {
                 filter={filter}
                 setFilterLocation={setFilterLocation}
                 />`
+      },
+      description: {
+        component: 'Use LocationDropdown'
       }
     }
   }

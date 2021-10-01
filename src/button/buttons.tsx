@@ -22,7 +22,7 @@ const ButtonWrapper = styled.div<ButtonProps>`
   background-color: ${(props) =>
     props.disabled
       ? props.theme.buttons[props.btnType].backgroundDisabled
-      : props.theme.buttons[props.btnType].background || 'transparent'};
+      : props.theme.buttons[props.btnType].background};
   color: ${(props) => props.theme.buttons[props.btnType].color};
 `;
 
@@ -56,7 +56,9 @@ const Wrapper =
 export const ButtonStyled = {
   Primary: Wrapper(BtnTypes.Primary),
   Dark: Wrapper(BtnTypes.Dark),
+  Grey: Wrapper(BtnTypes.Grey),
   Light: Wrapper(BtnTypes.Light),
   Blue: Wrapper(BtnTypes.Blue),
-  Small: Wrapper(BtnTypes.Small)
+  Small: Wrapper(BtnTypes.Small),
+  Cancel: Wrapper(BtnTypes.Cancel),
 };

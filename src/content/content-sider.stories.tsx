@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { ContentSider } from './content-sider';
 
 export default {
-  title: 'ContentSider',
+  title: 'Deprecated/ContentSider',
   component: ContentSider,
   parameters: {
     docs: {

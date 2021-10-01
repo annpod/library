@@ -22,6 +22,7 @@ export default {
                 onBack={onBack}
                 sidebarContent={sidebarContent}
                 tabs={tabs}
+                isExternalMenu={true}
                 selectedTab={selectedTab}
                 onSelectTab={onSelectTab}
                 NavLink={NavLink}
@@ -67,7 +68,8 @@ Primary.args = {
   NavLink: NavLink,
   backButton: 'Back',
   onBack: () => {},
-  tabs: [{ title: 'Details' }, { title: 'Mapping' }],
+  tabs: [{ title: 'Details', to: '/Details' }, { title: 'Mapping', to: '/Mapping' }],
+  isExternalMenu: true,
   selectedTab: 'Details',
   onSelectTab: () => {}
 };

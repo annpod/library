@@ -62,6 +62,10 @@ export const showToast = (message: IToastMessage, status?: ToastStatus) => {
   });
 };
 
+export const dismissToast = () => {
+  toast.dismiss();
+}
+
 const ToastContent = styled.div`
   display: flex;
   align-items: flex-start;

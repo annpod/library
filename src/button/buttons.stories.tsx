@@ -6,7 +6,23 @@ import { ButtonStyled, IProps } from './buttons';
 
 export default {
   title: 'Buttons/ButtonStyled',
-  component: ButtonStyled.Dark
+  component: ButtonStyled.Dark,
+  parameters: {
+    docs: {
+      source: {
+        code: `<ButtonStyled.Primary
+  disabled: false,
+  onClick: () => {}
+  >
+    Close
+  </ButtonStyled.Primary>
+  `
+      },
+      description: {
+        component: 'Use LocationDropdown'
+      }
+    }
+  }
 } as Meta;
 
 const Template1: Story<IProps> = (args) => (
@@ -83,6 +99,34 @@ export const Small = Template5.bind({});
 Small.args = {
   disabled: false,
   children: 'Clear',
+  onClick: () => {}
+};
+
+const Template6: Story<IProps> = (args) => (
+  <Wrapper>
+    <ButtonStyled.Grey {...args}>{args.children}</ButtonStyled.Grey>
+  </Wrapper>
+);
+
+export const Grey = Template6.bind({});
+
+Grey.args = {
+  disabled: false,
+  children: 'Close',
+  onClick: () => {}
+};
+
+const Template7: Story<IProps> = (args) => (
+  <Wrapper>
+    <ButtonStyled.Cancel {...args}>{args.children}</ButtonStyled.Cancel>
+  </Wrapper>
+);
+
+export const Cancel = Template7.bind({});
+
+Cancel.args = {
+  disabled: false,
+  children: 'Close',
   onClick: () => {}
 };
 

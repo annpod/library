@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { ParamsPanel, IParamsPanelProps } from '../params-panel';
 
 export default {
-  title: 'ParamsPanel',
+  title: 'Deprecated/ParamsPanel',
   component: ParamsPanel
 } as Meta;
 

@@ -5,7 +5,7 @@ import { LocationDropdown } from './location-dropdown';
 import { ILocationFilterProps } from '../typings/location-filter';
 
 import { filterData, filter, config } from './location-dropdown.mocks';
-import { ThemeTypes } from '../typings';
+import { ThemeTypes, ILocationDropdown } from '../typings';
 
 export default {
   title: 'V1/LocationDropdown',
@@ -39,7 +39,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story<ILocationFilterProps> = (args) => (
+const Template: Story<ILocationDropdown> = (args) => (
   <div style={{ display: 'inline-block' }}>
     <LocationDropdown {...args} />
   </div>

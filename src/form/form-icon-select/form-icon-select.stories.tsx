@@ -8,6 +8,7 @@ const args = {
   label: 'Label',
   id: 'facilityIcon',
   initialValue: '32',
+  iconsUrl: 'https://cdn-a.platformcluster.connectib.com/mappingprovider',
   icons: [
     {
       key: '32',
@@ -36,7 +37,9 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Based on https://ant.design/components/select/',
+        component: `Based on https://ant.design/components/select/
+        remove default iconsUrl (temporary solution - 1.0.169)
+        `,
       },
       source: {
         code: `<FormIconSelect 
@@ -46,6 +49,7 @@ export default {
                 initialValue={iconKey}
                 icons={icons}
                 validateTrigger="onBlur"
+                iconsUrl="https://cdn-a.platformcluster.connectib.com/mappingprovider"
                 rules={[
                   {
                     required: true,

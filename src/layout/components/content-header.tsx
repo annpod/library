@@ -60,7 +60,6 @@ const Wpapper = styled.div`
   align-items: center;
   width: 100%;
   height: 70px;
-  margin-bottom: 15px;
   border-bottom: 1px solid ${(props) => props.theme.contentHeaderBorderColor};
   background: ${(props) => props.theme.contentHeaderBg};
   color: ${(props) => props.theme.contentHeaderColor};

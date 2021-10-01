@@ -4,11 +4,20 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { SaveBtn } from './save';
 
 export default {
-  title: 'Buttons/SaveBtn',
-  component: SaveBtn
+  title: 'Deprecated/SaveBtn',
+  component: SaveBtn,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Use ButtonStyled.Primary'
+      }
+    }
+  }
 } as Meta;
 
-const Template: Story<any> = (args) => <SaveBtn {...args}>{args.children}</SaveBtn>;
+const Template: Story<any> = (args) => (
+  <SaveBtn {...args}>{args.children}</SaveBtn>
+);
 
 export const Primary = Template.bind({});
 

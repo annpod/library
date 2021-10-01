@@ -33,9 +33,10 @@ export interface IFocusViewLayout {
 export interface INavLayout extends INavigation {
   backButton?: string;
   onBack?: () => void;
-  tabs?: { title: string }[];
+  tabs?: { title: string, to?: string }[];
   onSelectTab?: (tab: string) => void;
   selectedTab?: string;
+  isExternalMenu?: boolean;
   sidebarContent?: React.ReactElement;
   children: React.ReactNode;
 }
@@ -53,9 +54,8 @@ export interface IContentLayout {
 }
 
 export interface IPageLayout extends INavLayout {  
-  menu: IMenuHeader;
-  isProfile: boolean
-  onLogoClick: () => void;
+  menu?: IMenuHeader;
+  isProfile?: boolean;
   onLogout: () => void;
-  children: React.ReactNode;
+  onLogoClick?: () => void;
 }

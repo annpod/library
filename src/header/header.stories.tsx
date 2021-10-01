@@ -5,7 +5,7 @@ import { Header } from './header';
 import { IHeaderProps } from '../typings';
 
 export default {
-  title: 'Header',
+  title: 'Deprecated/Header',
   component: Header,
   args: {
     isProfile: true,
@@ -26,6 +26,9 @@ export default {
   },
   parameters: {
     docs: {
+      description: {
+        component: 'Use FullscreenHeader'
+      },
       source: {
         code: `<Header 
                 menu={menu}

@@ -22,6 +22,7 @@ export const NavLayout = ({
   onSelectTab,
   selectedTab,
   sidebarContent,
+  isExternalMenu,
   children
 }: INavLayout) => {
   return (
@@ -41,6 +42,8 @@ export const NavLayout = ({
             onSelectTab={onSelectTab}
             onBack={onBack}
             selectedTab={selectedTab}
+            isExternalMenu={isExternalMenu}
+            NavLink={NavLink}
           >
             {sidebarContent}
           </Sidebar>

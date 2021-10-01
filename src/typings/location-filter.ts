@@ -1,4 +1,5 @@
 import { ISelectOption, PreferencesItems } from '.';
+import { ThemeTypes } from './enum';
 
 export interface IFilterConfig {
   [key: string]: IProps;
@@ -77,4 +78,8 @@ export interface IFilterState {
     placeholder: string;
     value: string | string[];
   };
+}
+
+export interface ILocationDropdown extends ILocationFilterProps {
+  themeType: ThemeTypes;
 }

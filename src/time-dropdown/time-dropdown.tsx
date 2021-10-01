@@ -60,6 +60,7 @@ const Wrapper = (themeType: ThemeTypes) => {
           )}
           onChange={onChangeTimeValue}
           options={timePeriodData[timeOption]}
+          key={'dropdown-from'}
         />
         <Spacer />
         <DropdownC
@@ -71,6 +72,7 @@ const Wrapper = (themeType: ThemeTypes) => {
             { value: 'Mins', label: 'Mins' },
             { value: 'Hrs', label: 'Hrs' }
           ]}
+          key={'dropdown-to'}
         />
       </Container>
     );

@@ -17,7 +17,6 @@ import {
   MainTitleName,
   MainTitleRegion,
   SaveBtn,
-  DeleteBtn,
   CheckedInputStyles
 } from './resources.styled';
 

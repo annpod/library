@@ -94,16 +94,26 @@ Dark.args = {
 Multi.args = {
   options: [
     { value: '1', label: 'Orange' },
-    { value: '2', label: 'Apple' }
+    { value: '2', label: 'Apple' },
+    { value: '3', label: 'Watermelon' },
+    { value: '4', label: 'Melon' }
   ],
   disabled: false,
   placeholder: '',
-  value: [{ value: '1', label: 'Orange' }],
+  value: [
+    { value: '1', label: 'Orange' },
+    { value: '2', label: 'Apple' },
+    { value: '3', label: 'Watermelon' }
+  ],
   clearable: false,
   searchable: false,
   width: '200px',
   isMulti: true,
-  defaultValue: { value: '1', label: 'Orange' }
+  defaultValue: [
+    { value: '1', label: 'Orange' },
+    { value: '2', label: 'Apple' },
+    { value: '3', label: 'Watermelon' }
+  ]
 };
 
 Disabled.args = {

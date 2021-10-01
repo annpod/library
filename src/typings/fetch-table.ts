@@ -32,3 +32,15 @@ export interface IFetchTableProps<T> {
   emptyText?: string;
   rowKey?: string;
 }
+
+export interface ITableProps<T> {
+  onRow?: (record: T, index: number) => TableEventListeners;
+  columns: ColumnProps<T>[];
+  data: T[];
+  pagination: IPaginatableParams;
+  sortParams: ISortableParams;
+  isLoading: boolean;
+  isHidePagination?: boolean;
+  emptyText?: string;
+  rowKey?: string;
+}

@@ -6,19 +6,12 @@ import {
   SaveBtn,
   SubmitButton,
   ButtonStyled,
-  EditButton,
+  EditButton
 } from './button';
 import { Breadcrumbs } from './breadcrumbs';
 import { CollapseItem } from './collapse-item';
 import { ContentSider, ContentHeader } from './content';
 import { ShowMoreText } from './showmore-text';
-import {
-  DeskDetails,
-  DesksContent,
-  FilterBuilder,
-  formatData,
-  locationKeyMap
-} from './desks';
 import { ExtendedSelect } from './extended-select';
 import {
   FormAmount,
@@ -44,9 +37,12 @@ import {
   FormPanelBody,
   FormBox,
   FormSectionStartNoTop,
+  FormSectionStartTop,
   FormSectionStartNoBottom,
   FormSubsectionStart,
   FormSectionDescription,
+  FormSubSectionTop,
+  FormSubSection,
   InputCustom,
   ErrorText,
   Title,
@@ -62,15 +58,16 @@ import { Select, selectStyles } from './select';
 import { TabButton, IconTextTabButton } from './tab-button';
 import { LocationFilter, createLocationFilter } from './location-filter';
 import { LocationFilterItems, ToastStatus, ThemeTypes } from './typings';
-import { FetchTable } from './fetch-table';
+import { FetchTable, Table } from './fetch-table';
 import { StyledPagination } from './pagination';
 import { Modal } from './modal';
+import { Dialogue } from './dialogue';
 import { CustomScrollbars } from './scrollbars';
-import { showToast, Toast } from './toast';
+import { showToast, Toast, dismissToast } from './toast';
 import { CustomSearchInput } from './custom-search-input';
 import { Datepicker } from './date-picker';
 import { ParamsPanel } from './params-panel';
-
+import { Wrapper } from './wrappers';
 import { Header } from './header';
 import { Input, InputStyled } from './input';
 import { Switch } from './switch';
@@ -111,7 +108,7 @@ import { useClickOutside, useDebounce, useToggle } from './hooks';
 // theme provider
 
 import { LibThemeProvider, LibWithTheme } from './theme-provider';
-
+import { theme } from './themes';
 // styles
 import {
   ResourcesInputNumbers,
@@ -143,7 +140,14 @@ import {
   DeleteBtn
 } from './styled-components/resources.styled';
 
-import { Layout, FocusViewLayout, PageLayout, ContentLayout, Sidebar, NavLayout } from './layout';
+import {
+  Layout,
+  FocusViewLayout,
+  PageLayout,
+  ContentLayout,
+  Sidebar,
+  NavLayout
+} from './layout';
 import { Drawer } from './drawer';
 
 export {
@@ -161,6 +165,7 @@ export {
   EditButton,
   Breadcrumbs,
   TextWrapper,
+  Wrapper,
   Input,
   InputStyled,
   Switch,
@@ -172,6 +177,7 @@ export {
   Datepicker,
   ExtendedSelect,
   FetchTable,
+  Table,
   FormAmount,
   FormAutoComplete,
   FormCheck,
@@ -190,7 +196,9 @@ export {
   LocationFilterItems,
   StyledPagination,
   Modal,
+  Dialogue,
   showToast,
+  dismissToast,
   Toast,
   ToastStatus,
   ParamsPanel,
@@ -207,13 +215,8 @@ export {
   CustomScrollbars,
   TabButton,
   IconTextTabButton,
-  DeskDetails,
-  DesksContent,
   IconButton,
-  FilterBuilder,
   createLocationFilter,
-  formatData,
-  locationKeyMap,
   useClickOutside,
   useDebounce,
   useToggle,
@@ -246,6 +249,7 @@ export {
   Header,
   LibThemeProvider,
   LibWithTheme,
+  theme,
   FormSectionStart,
   FormItemBox,
   FormLabel,
@@ -259,9 +263,12 @@ export {
   FormPanelBody,
   FormBox,
   FormSectionStartNoTop,
+  FormSectionStartTop,
   FormSectionStartNoBottom,
   FormSubsectionStart,
   FormSectionDescription,
+  FormSubSectionTop,
+  FormSubSection,
   InputCustom,
   ErrorText,
   Title,

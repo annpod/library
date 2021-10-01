@@ -29,7 +29,6 @@ export const Sidebar = ({
 
   return (
     <SidebarContent backButton={backButton} onBack={onBack}>
-
       {tabs &&
         <TabsWrapper data-location='tabs'>
           {tabs.map((item: ITab, index: number) =>

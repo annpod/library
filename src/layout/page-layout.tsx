@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, ContentWrapper } from './layout.styled';
+import { Container, ContentWrapper, PageWrapper } from './layout.styled';
 import { Navigation } from '../navigation';
 import { FullscreenHeader } from '../header';
 import { Sidebar } from './components/sidebar';
@@ -24,10 +24,6 @@ export interface IHeaderProps {
   onLogoClick?: () => void;
 }
 
-export interface ILayoutProps extends IHeaderProps {
-  children: React.ReactNode;
-}
-
 export const PageLayout = ({
   routeTable,
   selectedShard,
@@ -41,6 +37,7 @@ export const PageLayout = ({
   onLogoClick,
   onLogout,
   tabs,
+  isExternalMenu,
   selectedTab,
   onSelectTab,
   NavLink,
@@ -62,16 +59,20 @@ export const PageLayout = ({
           routeTable={routeTable}
           NavLink={NavLink}
         />
-        <Sidebar
-          backButton={backButton}
-          tabs={tabs}
-          onSelectTab={onSelectTab}
-          onBack={onBack}
-          selectedTab={selectedTab}
-        >
-          {sidebarContent}
-        </Sidebar>
-        <ContentWrapper data-location='content'>{children}</ContentWrapper>
+        <PageWrapper data-location='content-wrapper'>
+          <Sidebar
+            backButton={backButton}
+            tabs={tabs}
+            onSelectTab={onSelectTab}
+            onBack={onBack}
+            selectedTab={selectedTab}
+            isExternalMenu={isExternalMenu}
+            NavLink={NavLink}
+          >
+            {sidebarContent}
+          </Sidebar>
+          <ContentWrapper data-location='content'>{children}</ContentWrapper>
+        </PageWrapper>
       </Container>
     </>
   );

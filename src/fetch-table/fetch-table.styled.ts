@@ -5,7 +5,12 @@ import Table from 'antd/lib/table';
 import 'antd/lib/pagination/style/css';
 import 'antd/lib/table/style/css';
 
-export const StyledTable = (styled(Table)`
+export const StyledTable = styled(Table)`
+  & .ant-table-pagination.ant-pagination {
+    float: none;
+    display: flex;
+    justify-content: center;
+  }
   & .ant-pagination-prev:focus .ant-pagination-item-link,
   .ant-pagination-next:focus .ant-pagination-item-link,
   .ant-pagination-prev:hover .ant-pagination-item-link,
@@ -112,4 +117,4 @@ export const StyledTable = (styled(Table)`
     .ant-table-column-sorter-down.on {
     color: ${(props) => props.theme.sortButtonColor};
   }
-` as React.ComponentType) as new <T>() => Table<T>;
+` as React.ComponentType as new <T>() => Table<T>;
