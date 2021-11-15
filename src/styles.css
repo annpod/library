@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Gotham-Book';
   src: url('./assets/fonts/book/gotham-book.eot');
   src: url('./assets/fonts/book/gotham-book.eot?#iefix') format('embedded-opentype'),
@@ -13,7 +13,7 @@
     url('./assets/fonts/medium/gotham-medium.woff') format('woff'),
     url('./assets/fonts/medium/gotham-medium.ttf') format('truetype'),
     url('./assets/fonts/medium/gotham-medium.svg#gothammedium') format('svg');
-}
+} */
 
 .Toastify .Toastify__toast-container {
   width: auto;
