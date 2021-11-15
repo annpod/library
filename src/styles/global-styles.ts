@@ -5,7 +5,7 @@ import {
   GothamMediumEot,
   GothamMediumWoff,
   GothamMediumTtf
-} from '../fonts';
+} from '../assets/fonts';
 
 export const GlobalStyles = createGlobalStyle`
   @font-face {
