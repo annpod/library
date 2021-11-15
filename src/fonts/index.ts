@@ -1,7 +1,7 @@
-import GothamMediumSvg from '../fonts/book/gotham-book.svg';
-const GothamMediumEot = require('../fonts/book/gotham-book.eot');
-const GothamMediumWoff = require('../fonts/book/gotham-book.woff');
-const GothamMediumTtf = require('../fonts/book/gotham-book.ttf');
+import GothamMediumSvg from '../fonts/gotham-book.svg';
+const GothamMediumEot = require('../fonts/gotham-book.eot');
+const GothamMediumWoff = require('../fonts/gotham-book.woff');
+const GothamMediumTtf = require('../fonts/gotham-book.ttf');
 
 export { 
   GothamMediumSvg,

@@ -178,7 +178,6 @@ const options: ToastOptions = {
 
 const Template: Story<IToast> = () => (
   <>
-  <GlobalStyles />
     <Toast />
     <button onClick={() => showToast(message1)}>
       Show logId(default) Toast
