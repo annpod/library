@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-
+import styled from 'styled-components';
 import { Monetary, IMonetaryProps } from './monetary';
 
 export default {
@@ -11,7 +11,8 @@ export default {
       type: 'code',
       code: `<Monetary.Primary 
         value={value.price} 
-        onChange={onChange} 
+        onChange={onChange}
+        label='Cost (£)'
         />
       `
     }
@@ -27,11 +28,20 @@ const Template: Story<IMonetaryProps> = (args) => {
     setValue({ [name]: value });
   };
 
-  return <Monetary.Primary {...args} value={value.price} onChange={onChange} />;
+  return (
+    <Wrapper>
+      <Monetary.Primary {...args} value={value.price} onChange={onChange} />
+    </Wrapper>
+  );
 };
 
 export const Primary = Template.bind({});
 
 Primary.args = {
-  name: 'price'
+  name: 'price',
+  label: 'Cost (£)'
 };
+
+const Wrapper = styled.div`
+  width: 240px;
+`;

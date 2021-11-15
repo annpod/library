@@ -1,22 +1,8 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { ISelectOption } from '../typings';
-import { Select } from '../select';
+import { Select, IProps } from '../select';
+import styled from 'styled-components';
 
-interface ISelectProps {
-  options: ISelectOption[];
-  onChange?: (value: any) => void;
-  disabled?: boolean;
-  value?: ISelectOption | ISelectOption[] | null | undefined;
-  defaultValue?: ISelectOption | ISelectOption[] | null | undefined;
-  valueRenderer?: () => React.Component | null;
-  optionRenderer?: (value: any) => React.Component | null;
-  placeholder?: string;
-  clearable?: boolean;
-  searchable?: boolean;
-  width?: string;
-  isMulti?: boolean;
-}
 
 export default {
   title: 'Select',
@@ -29,7 +15,6 @@ export default {
       source: {
         type: 'code',
         code: `<Select
-        <Select
           disabled={isDisabled}
           clearable={clearable}
           searchable={searchable}
@@ -44,7 +29,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story<ISelectProps> = (args) => <Select {...args} />;
+const Template: Story<IProps> = (args) => <Select {...args} />;
 
 export const Primary = Template.bind({});
 
@@ -62,7 +47,8 @@ Primary.args = {
   searchable: false,
   width: '200px',
   isMulti: false,
-  defaultValue: { value: '1', label: 'Orange' }
+  defaultValue: { value: '1', label: 'Orange' },
+  menuPlacement: 'top',
 };
 
 Multi.args = {
@@ -79,4 +65,3 @@ Multi.args = {
   isMulti: true,
   defaultValue: { value: '1', label: 'Orange' }
 };
-

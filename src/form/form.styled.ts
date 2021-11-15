@@ -21,6 +21,13 @@ export const FormItemBox = styled(Form.Item)`
     font-size: 12px;
     font-weight: 400;
   }
+  .has-error .ant-input {
+    border-width: 1px;
+    border-style: solid;
+  }
+  .has-error .ant-form-explain {
+    font-size: 12px;
+  }
 `;
 
 export const FormLabel = styled.span`

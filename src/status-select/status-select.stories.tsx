@@ -8,7 +8,7 @@ const args = {
   initialValue: 'Active',
   id: '1',
   label: '',
-  isNewDesk: true,
+  slim: true,
   rules: [
     {
       required: true,
@@ -27,8 +27,20 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Based on https://ant.design/components/select/',
+        component: 'Based on https://ant.design/components/select/'
       },
+      source: {
+        type: 'code',
+        code: `<StatusSelect
+        placeholder={'Desk status'}
+        disabled={disabled}
+        onChange={onChangeStatus}
+        initialValue={initialValue}
+        form={form}
+        id={id}
+        slim={true}
+      /> `
+      }
     }
   }
 } as Meta;
@@ -49,8 +61,8 @@ const TestForm = forwardRef<any, any>(({ form, onSubmit }: any, ref) => {
       labelCol={{ span: 6 }}
       wrapperCol={{ span: 12 }}
     >
-      <div style={{width: '120px'}}>
-      <StatusSelect {...args} form={form} />
+      <div style={{ width: '120px' }}>
+        <StatusSelect {...args} form={form} />
       </div>
     </Form>
   );

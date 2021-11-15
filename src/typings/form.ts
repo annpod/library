@@ -1,6 +1,6 @@
 import { WrappedFormUtils, ValidationRule } from 'antd/lib/form/Form';
 import { ISelectOption, ICheckOption, IIconDescription } from './etc';
-
+import { MenuPlacement } from 'react-select';
 export interface ITimePeriod {
   amount: number;
   units: string;
@@ -40,8 +40,12 @@ export interface IFormElementProps<F, V> {
 
 export interface IFormSelectProps<F> extends IFormElementProps<F, string> {
   options: ISelectOption[];
+  menuPlacement?: MenuPlacement;
   onChange?: (value: string) => void;
   colorBox?: string;
+  onOpen?: () => void;
+  onClose?: () => void;
+  ref?: any;
 }
 
 export interface IFormIconSelectProps<F> extends IFormElementProps<F, string> {
@@ -86,6 +90,11 @@ export interface IFormAmountProps<F> extends IFormElementProps<F, number> {
 export interface ISelectProps extends IFormSelectProps<{}> {
   value?: string;
   options: ISelectOption[];
+  menuPlacement?: MenuPlacement;
+  onChange?: (value: string) => void;
+  colorBox?: string;
+  onOpen?: () => void;
+  onClose?: () => void;
 }
 
 export interface IFormTimePeriodData {

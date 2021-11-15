@@ -1,10 +1,12 @@
 import * as React from 'react';
-import ReactSelect from 'react-select';
+import ReactSelect, { MenuPlacement } from 'react-select';
 import { ISelectOption } from '../typings';
 
-interface IProps {
+export interface IProps {
   options: ISelectOption[];
   onChange?: (value: any) => void;
+  onOpen?: () => void;
+  onClose?: () => void;
   disabled?: boolean;
   value?: ISelectOption | ISelectOption[] | null | undefined;
   defaultValue?: ISelectOption | ISelectOption[] | null | undefined;
@@ -15,6 +17,7 @@ interface IProps {
   searchable?: boolean;
   width?: string;
   isMulti?: boolean;
+  menuPlacement?: MenuPlacement;
 }
 
 export const Select = React.memo((props: IProps) => {
@@ -28,9 +31,12 @@ export const Select = React.memo((props: IProps) => {
     width,
     isMulti,
     defaultValue,
+    menuPlacement,
     valueRenderer,
     optionRenderer,
     onChange,
+    onOpen,
+    onClose,
   } = props;
   
   const onChangeSelect = (option: any) => {
@@ -66,6 +72,9 @@ export const Select = React.memo((props: IProps) => {
       isSearchable={searchable}
       isMulti={!!isMulti}
       defaultValue={defaultValue}
+      menuPlacement={menuPlacement}
+      onMenuOpen={onOpen}
+      onMenuClose={onClose}
     />
   );
 });

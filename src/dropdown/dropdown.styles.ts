@@ -35,7 +35,6 @@ export const dropdownStyles = (
     valueContainer: (provider: CSSProperties) => ({
       ...provider,
       minHeight: '28px',
-      paddingLeft: '15px',
       transform: 'translateY(-1px)',
       caretColor: bgColorMenu
     }),

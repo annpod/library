@@ -5,7 +5,11 @@ export enum BtnTypes {
   Light = 'light',
   Blue = 'blue',
   Small = 'small',
-  Cancel = 'cancel',
+  Cancel = 'cancel'
+}
+
+export enum SelectBtnTypes {
+  Primary = 'primary'
 }
 
 export enum InputTypes {
@@ -33,7 +37,5 @@ export enum WrapperType {
 }
 
 export enum DialogueTypes {
-  Primary = 'Primary',
+  Primary = 'Primary'
 }
-
-

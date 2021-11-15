@@ -1,5 +1,5 @@
 import React from 'react';
-// import { components } from 'react-select';
+
 import { components, IndicatorProps } from 'react-select';
 import { ISelectOption } from '../typings';
 

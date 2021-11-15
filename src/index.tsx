@@ -6,6 +6,7 @@ import {
   SaveBtn,
   SubmitButton,
   ButtonStyled,
+  SelectButton,
   EditButton
 } from './button';
 import { Breadcrumbs } from './breadcrumbs';
@@ -13,6 +14,7 @@ import { CollapseItem } from './collapse-item';
 import { ContentSider, ContentHeader } from './content';
 import { ShowMoreText } from './showmore-text';
 import { ExtendedSelect } from './extended-select';
+import { StatusSelect } from './status-select';
 import {
   FormAmount,
   FormAutoComplete,
@@ -67,6 +69,8 @@ import { showToast, Toast, dismissToast } from './toast';
 import { CustomSearchInput } from './custom-search-input';
 import { Datepicker } from './date-picker';
 import { ParamsPanel } from './params-panel';
+import { Search } from './search';
+
 import { Wrapper } from './wrappers';
 import { Header } from './header';
 import { Input, InputStyled } from './input';
@@ -162,6 +166,7 @@ export {
   ExportBtn,
   SaveBtn,
   ButtonStyled,
+  SelectButton,
   EditButton,
   Breadcrumbs,
   TextWrapper,
@@ -176,6 +181,7 @@ export {
   CustomSearchInput,
   Datepicker,
   ExtendedSelect,
+  StatusSelect,
   FetchTable,
   Table,
   FormAmount,
@@ -292,5 +298,6 @@ export {
   LocationDropdown,
   Monetary,
   TimeDropdown,
-  ThemeTypes
+  ThemeTypes,
+  Search
 };

@@ -42,6 +42,16 @@ export interface IInputProps {
   onChange: (name: string, value: string) => void;
 }
 
+export interface ISearchInputProps {
+  placeholder?: string;
+  name: string;
+  className?: string;
+  type?: string;
+  value?: string;
+  disabled?: boolean;
+  onChange: (name: string, value: string) => void;
+}
+
 export interface IInputsProps extends IInputProps {
   isError?: boolean;
   large?: boolean;
@@ -49,6 +59,7 @@ export interface IInputsProps extends IInputProps {
   labelRight?: boolean;
   labelWidth?: string;
   inputType?: InputTypes;
+  step?: string;
 }
 
 export interface IDatePickerProps {
@@ -101,10 +112,9 @@ export interface IModal extends IModalHeader {
   afterClose?: () => void;
 }
 
-
 export interface IDialogueFooter {
   confirmButton: IModalButton | null;
-  cancelButton: IModalButton;  
+  cancelButton: IModalButton;
 }
 
 export interface IDialogue extends IDialogueFooter {
@@ -281,6 +291,7 @@ export interface IEditButtonProps {
   itemCountString: string | null;
   resetKeys: () => void;
   onClick: () => void;
+  enabled: boolean;
 }
 
 export interface ITab {
@@ -304,7 +315,7 @@ export interface INavigation {
   NavLink: any;
 }
 
-export interface IWrapper{
+export interface IWrapper {
   mleft?: string | boolean;
   mright?: string | boolean;
   mtop?: string | boolean;

@@ -1,10 +1,14 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { toast } from 'react-toastify';
+import { toast, ToastOptions } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { ToastStatus, IToastMessage, IToastProps } from '../typings';
+import {
+  ToastStatus,
+  IToastMessage,
+  IToastProps,
+} from '../typings';
 import { toastStrings } from './toast.strings';
 import { Icon } from '../icon';
 import '../styles.css';
@@ -14,25 +18,27 @@ const iconMap = {
   [ToastStatus.success]: 'successGreen'
 };
 
+const LogIdContent = ({ logId }: { logId: string }) => (
+  <div>
+    {toastStrings.logIdMessage}
+    <div>
+      <strong>
+        {toastStrings.logId} {logId}
+      </strong>
+    </div>
+  </div>
+);
+
 const Toast = (props: IToastProps) => {
-  const { logId, message } = props.data;
-  let toastMessage;
+  const { message, logId } = props.data;
+  let toastMessage: string | React.ReactNode = toastStrings.error;
+
   if (!logId && !message) {
     toastMessage = toastStrings.error;
   } else {
-    toastMessage = logId ? (
-      <div>
-        {toastStrings.logIdMessage}
-        <div>
-          <strong>
-            {toastStrings.logId} {logId}
-          </strong>
-        </div>
-      </div>
-    ) : (
-      message
-    );
+    toastMessage = logId ? <LogIdContent logId={logId} /> : message;
   }
+
   return (
     <ToastContent data-location='toast'>
       <Icon
@@ -44,7 +50,11 @@ const Toast = (props: IToastProps) => {
   );
 };
 
-export const showToast = (message: IToastMessage, status?: ToastStatus) => {
+export const showToast = (
+  message: IToastMessage,
+  status?: ToastStatus,
+  options?: ToastOptions
+) => {
   if (!status) {
     toast(<Toast data={message} />, {
       draggable: false,
@@ -56,15 +66,17 @@ export const showToast = (message: IToastMessage, status?: ToastStatus) => {
   }
   toast[status](<Toast data={message} status={status} />, {
     draggable: false,
-    autoClose: 2000,
+    autoClose: 2500,
     hideProgressBar: true,
-    position: toast.POSITION.TOP_CENTER
+    closeButton: false,
+    position: toast.POSITION.TOP_CENTER,
+    ...options
   });
 };
 
 export const dismissToast = () => {
   toast.dismiss();
-}
+};
 
 const ToastContent = styled.div`
   display: flex;

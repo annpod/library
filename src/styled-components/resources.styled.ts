@@ -89,9 +89,7 @@ export const MainBox = div`
   flex-direction: column;
   background-color: white;
   width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  overflow: hidden;
+  min-height: 100%;
 `;
 
 export const FormTopBody = div`

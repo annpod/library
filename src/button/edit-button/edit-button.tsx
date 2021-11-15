@@ -8,7 +8,7 @@ export const EditButton = (props: IEditButtonProps) => {
   const { itemCountString = null, resetKeys } = props;
 
   return (
-    <Transistion className={itemCountString ? 'fade-in' : 'fade-out'}>
+    <Transistion className={props.enabled ? 'fade-in' : 'fade-out'}>
       <OpenFlyout onClick={props.onClick}>{itemCountString}</OpenFlyout>
       <ClearSelected onClick={resetKeys}>
         <Circle>

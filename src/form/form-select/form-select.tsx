@@ -8,7 +8,7 @@ import { IFormSelectProps, ISelectProps } from '../../typings/form';
 
 export const FormSelect = <F extends {}>(props: IFormSelectProps<F>) => {
   return (
-    <FormItemBox label={props.label}>
+    <FormItemBox label={props.label} ref={props.ref}>
       {props.form.getFieldDecorator(props.id, {
         initialValue: props.initialValue || undefined,
         rules: props.rules,

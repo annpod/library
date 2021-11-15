@@ -23,9 +23,14 @@ import {
   FOREST_GREEN,
   LIGHT_GREY3_COLOR,
   LIGHT_GREY4_COLOR,
-  BLACK_COLOR,
+  BLACK_COLOR
 } from '../constants/colors';
-import { BtnTypes, InputTypes, DialogueTypes } from '../typings';
+import {
+  SelectBtnTypes,
+  BtnTypes,
+  InputTypes,
+  DialogueTypes
+} from '../typings';
 import { commonTheme, toast } from '../constants/common';
 
 export const DEFAULT_THEME = 'DEFAULT';
@@ -38,21 +43,21 @@ const inputs = {
     background: WHITE_COLOR,
     color: DARK_GREY2_COLOR,
     borderColor: LIGHT_GREY3_COLOR,
-    disabledBg: LIGHT_GREY2_COLOR,
+    disabledBg: LIGHT_GREY2_COLOR
   },
   [InputTypes.Dark]: {
     background: LIGHT_GREY2_COLOR,
     color: DARK_GREY2_COLOR,
     borderColor: LIGHT_GREY2_COLOR,
-    disabledBg: LIGHT_GREY2_COLOR,
-  },
+    disabledBg: LIGHT_GREY2_COLOR
+  }
 };
 
 const modals = {
   [DialogueTypes.Primary]: {
     color: DARK_GREY2_COLOR,
-    titleColor: BLACK_COLOR,
-  },  
+    titleColor: BLACK_COLOR
+  }
 };
 
 export const theme: Record<string, any> = {
@@ -103,42 +108,50 @@ export const theme: Record<string, any> = {
     ...toast,
     modals,
     inputs,
+    selectButton: {
+      [SelectBtnTypes.Primary]: {
+        background: LIGHT_RED3_COLOR,
+        color: WHITE_COLOR,
+        colorDisabled: COAL_COLOR,
+        backgroundDisabled: LIGHT_GREY2_COLOR
+      }
+    },
     buttons: {
       [BtnTypes.Primary]: {
         background: LIGHT_RED3_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Dark]: {
         background: COAL_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Grey]: {
         background: DARK_GREY2_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Light]: {
         background: WHITE_COLOR,
         color: DARK_GREY2_COLOR,
-        backgroundDisabled: WHITE_COLOR,
+        backgroundDisabled: WHITE_COLOR
       },
       [BtnTypes.Blue]: {
         background: BLUE2_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Small]: {
         background: 'transparent',
         color: BLUE2_COLOR,
-        backgroundDisabled: 'transparent',
+        backgroundDisabled: 'transparent'
       },
       [BtnTypes.Cancel]: {
         background: LIGHT_GREY4_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
-      },
+        backgroundDisabled: DARK_GREY_COLOR
+      }
     }
   },
   [SCB_THEME]: {
@@ -173,7 +186,7 @@ export const theme: Record<string, any> = {
     sortButtonColor: BLUE_COLOR,
     logoTextColor: COAL_COLOR,
     logoFontSize: '20px',
-    errorColor: RED2_COLOR,   
+    errorColor: RED2_COLOR,
     activeColor: RED2_COLOR,
     elementBg: LIGHT_GREY2_COLOR,
     switchActiveBg: LIGHT_RED2_COLOR,
@@ -187,42 +200,50 @@ export const theme: Record<string, any> = {
     ...toast,
     modals,
     inputs,
+    selectButton: {
+      [BtnTypes.Primary]: {
+        background: LIGHT_RED3_COLOR,
+        color: WHITE_COLOR,
+        colorDisabled: COAL_COLOR,
+        backgroundDisabled: LIGHT_GREY2_COLOR
+      }
+    },
     buttons: {
       [BtnTypes.Primary]: {
         background: LIGHT_RED3_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Dark]: {
         background: COAL_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Grey]: {
         background: DARK_GREY2_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Light]: {
         background: WHITE_COLOR,
         color: DARK_GREY2_COLOR,
-        backgroundDisabled: WHITE_COLOR,
+        backgroundDisabled: WHITE_COLOR
       },
       [BtnTypes.Blue]: {
         background: BLUE2_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Small]: {
         background: 'transparent',
         color: BLUE2_COLOR,
-        backgroundDisabled: 'transparent',
+        backgroundDisabled: 'transparent'
       },
       [BtnTypes.Cancel]: {
         background: LIGHT_GREY4_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
-      },
+        backgroundDisabled: DARK_GREY_COLOR
+      }
     }
   },
   [BT_THEME]: {
@@ -271,43 +292,51 @@ export const theme: Record<string, any> = {
     ...toast,
     modals,
     inputs,
+    selectButton: {
+      [BtnTypes.Primary]: {
+        background: LIGHT_RED3_COLOR,
+        color: WHITE_COLOR,
+        colorDisabled: COAL_COLOR,
+        backgroundDisabled: LIGHT_GREY2_COLOR
+      }
+    },
     buttons: {
       [BtnTypes.Primary]: {
         background: LIGHT_RED3_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Dark]: {
         background: COAL_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Grey]: {
         background: DARK_GREY2_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Light]: {
         background: WHITE_COLOR,
         color: DARK_GREY2_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Blue]: {
         background: BLUE2_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: WHITE_COLOR,
+        backgroundDisabled: WHITE_COLOR
       },
       [BtnTypes.Small]: {
         background: 'transparent',
         color: BLUE2_COLOR,
-        backgroundDisabled: 'transparent',
+        backgroundDisabled: 'transparent'
       },
       [BtnTypes.Cancel]: {
         background: LIGHT_GREY4_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
-      },
-    },    
+        backgroundDisabled: DARK_GREY_COLOR
+      }
+    }
   },
   [AMEREN_THEME]: {
     ...commonTheme,
@@ -355,42 +384,50 @@ export const theme: Record<string, any> = {
     ...toast,
     modals,
     inputs,
+    selectButton: {
+      [BtnTypes.Primary]: {
+        background: LIGHT_RED3_COLOR,
+        color: WHITE_COLOR,
+        colorDisabled: COAL_COLOR,
+        backgroundDisabled: LIGHT_GREY2_COLOR
+      }
+    },
     buttons: {
       [BtnTypes.Primary]: {
         background: LIGHT_RED3_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Dark]: {
         background: COAL_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Grey]: {
         background: DARK_GREY2_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Light]: {
         background: WHITE_COLOR,
         color: DARK_GREY2_COLOR,
-        backgroundDisabled: WHITE_COLOR,
+        backgroundDisabled: WHITE_COLOR
       },
       [BtnTypes.Blue]: {
         background: BLUE2_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
+        backgroundDisabled: DARK_GREY_COLOR
       },
       [BtnTypes.Small]: {
         background: 'transparent',
         color: BLUE2_COLOR,
-        backgroundDisabled: 'transparent',
+        backgroundDisabled: 'transparent'
       },
       [BtnTypes.Cancel]: {
         background: LIGHT_GREY4_COLOR,
         color: WHITE_COLOR,
-        backgroundDisabled: DARK_GREY_COLOR,
-      },
+        backgroundDisabled: DARK_GREY_COLOR
+      }
     }
   }
 };

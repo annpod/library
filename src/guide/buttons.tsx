@@ -27,7 +27,7 @@ const ButtonsC = () => {
         </ButtonWrapper>
       </Wrapper>
 
-      <Title>ExportBtn</Title>
+      <Title>ExportBtn [deprecated]</Title>
 
       <Wrapper>
         <ButtonWrapper>
@@ -38,7 +38,7 @@ const ButtonsC = () => {
         </ButtonWrapper>
       </Wrapper>
 
-      <Title>SaveBtn</Title>
+      <Title>SaveBtn [deprecated]</Title>
 
       <Wrapper>
         <ButtonWrapper>
@@ -154,14 +154,13 @@ export const Buttons = LibWithTheme(ButtonsC);
 const Wrapper = styled.div`
   display: flex;
   margin-bottom: 30px;
- 
 `;
 const ButtonWrapper = styled.div`
   display: flex;
   width: 200px;
   align-content: center;
   padding: 0 40px;
-};`
+};`;
 
 const Title = styled.h3`
   margin-bottom: 20px;

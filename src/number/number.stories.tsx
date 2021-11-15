@@ -9,7 +9,7 @@ export default {
 } as Meta;
 
 const Template: Story<INumberProps> = (args) => {
-  const [value, setValue] = React.useState('0');
+  const [value, setValue] = React.useState<string>();
 
   const onChange = (name: string, value: string) => {
     setValue(value);

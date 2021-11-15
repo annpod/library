@@ -38,5 +38,4 @@ Primary.args = {
   // onChangeOption: (keyValue: string, value: string, option: string) => {},
   isAutoSelect: true,
   isMulti: false,
-  key: 'key-1'
 };

@@ -6,7 +6,7 @@ export interface INumberProps {
   min?: string;
   max?: string;
   name: string;
-  value: string;
+  value: string | undefined;
   onChange: (name: string, value: string) => void;
   label?: string;
   width?: string;
@@ -30,7 +30,8 @@ const Wrapper = (themeType: ThemeTypes) => (
   };
 
   const increment = () => {
-    const targetValue = +value + 1;
+    let newValue = value || 0;
+    const targetValue = +newValue + 1;
 
     if (max && +targetValue > +max) return;
 
@@ -38,7 +39,8 @@ const Wrapper = (themeType: ThemeTypes) => (
   };
 
   const decrement = () => {
-    const targetValue = +value - 1;
+    let newValue = value || 0;
+    const targetValue = +newValue - 1;
 
     if (min && +targetValue < +min) return;
 
@@ -49,7 +51,7 @@ const Wrapper = (themeType: ThemeTypes) => (
     <InputWrapper width={width}>
       <Label>{label}</Label>
       <Flex>
-        <Input value={value} onChange={onChange} type='number' />
+        <Input value={value || ''} onChange={onChange} type='number' />
         <DecrementBtn onClick={decrement} themeType={themeType}>
           <span>-</span>
         </DecrementBtn>

@@ -47,6 +47,9 @@ Primary.args = {
   header: 
     <ButtonWrapper>
       <ButtonStyled.Primary disabled={false} onClick={() => {}}>
+        Cancel
+      </ButtonStyled.Primary>
+      <ButtonStyled.Primary disabled={false} slim={true} onClick={() => {}}>
         Save
       </ButtonStyled.Primary>
     </ButtonWrapper>

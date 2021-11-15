@@ -56,6 +56,11 @@ const Headline = styled.div`
 const SubHeader = styled.div`
   display: flex;
   min-height: 70px;
+  &:after {
+    content:'';
+    min-height:inherit;
+    font-size:0;
+  }
 `;
 
 const Title = styled.div`

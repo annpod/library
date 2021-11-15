@@ -7,8 +7,8 @@ import { IconButton } from '../icon-button';
 import { Icon } from '../icon';
 import { CustomScrollbars } from '../scrollbars';
 
-const Overlay = styled.div<{ visible?: boolean }>`
-  background: rgba(0, 0, 0, 0.5);
+const Overlay = styled.div<{ visible: boolean }>`
+  background: rgba(0, 0, 0, 0.1);
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -50,6 +50,7 @@ const FlyoutContainer = styled.div<{ visible?: boolean }>`
   height: 100vh;
   display: grid;
   transform: translateX(100%);
+  box-shadow: ${(props) => (props.visible ? '-3px 0px 4px 0px rgba(0, 0, 0, .06)' : 'none')};
   &.slide-in {
     animation: slide-in 0.5s forwards;
   }
@@ -99,7 +100,7 @@ export const Drawer = (props: IDrawer) => {
   } = props;
 
   React.useEffect(() => {    
-    if (!go && visible !== isVisible) {     
+    if (!go && visible !== isVisible) {
       setGo(true);
     }
   }, [visible]);
@@ -110,6 +111,7 @@ export const Drawer = (props: IDrawer) => {
       <FlyoutContainer
         className={go ? visible ? 'slide-out' : 'slide-in' : ''}
         data-location='drawer'
+        visible={visible}
       >
         <Header>
           <span>{headerTitle}</span>

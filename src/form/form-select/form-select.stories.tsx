@@ -1,7 +1,6 @@
 import React, { forwardRef, useImperativeHandle } from 'react';
 import Form from 'antd/lib/form/Form';
 import { Story, Meta } from '@storybook/react/types-6-0';
-
 import { FormSelect } from './form-select';
 
 const args = {
@@ -46,7 +45,7 @@ export default {
   }
 } as Meta;
 
-const TestForm = forwardRef<any, any>(({ form, onSubmit }: any, ref) => {
+const TestForm = forwardRef<any, any>(({ form, onSubmit }, ref) => {
   useImperativeHandle(ref, () => ({
     form
   }));
@@ -62,7 +61,7 @@ const TestForm = forwardRef<any, any>(({ form, onSubmit }: any, ref) => {
       labelCol={{ span: 6 }}
       wrapperCol={{ span: 12 }}
     >
-      <FormSelect {...args} form={form} />
+      <FormSelect {...args} form={form} ref={ref} />
     </Form>
   );
 });

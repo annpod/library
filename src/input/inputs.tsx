@@ -27,6 +27,7 @@ export const Wrapper = (inputType: InputTypes) => (props: IInputsProps) => {
           max={props.max}
           inputType={inputType}
           large={props.large}
+          step={props.step}
         />
       </FieldLabel>
       {props.isError && props.errorMessage && (

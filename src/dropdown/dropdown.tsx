@@ -21,7 +21,7 @@ const Wrapper = (themeType: ThemeTypes) =>
       valueRenderer,
       optionRenderer,
       onChange,
-      theme,
+      theme
     } = props;
 
     const onDropdownChange = (option: any) => {

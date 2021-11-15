@@ -80,9 +80,14 @@ export interface IDayRangePickerProps {
 
 export interface IToastMessage {
   logId?: string;
-  message?: string;
+  message?: string | React.ReactNode;
+
 }
 export interface IToastProps {
   data: IToastMessage;
   status?: ToastStatus;
+}
+
+export interface IToastOptions {
+  autoClose?: number | false;
 }

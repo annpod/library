@@ -7,9 +7,9 @@ export const Toast = styled(ToastContainer)`
       border-width: 1px;
       border-style: solid;
       border-radius: 5px;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 400;
-      font-family: 'Gotham';
+      font-family: 'Gotham-Book';
       word-break: break-word;
       min-height: 45px;
       color: ${(props) => props.theme.toastErrorColor};
@@ -32,10 +32,10 @@ export const Toast = styled(ToastContainer)`
       padding: 0;
     }
     .Toastify__close-button {
-      display: none;
-      &.Toastify__close-button--default {
-        color: #707070;
-        display: block;
+      color: #707070;
+      svg {
+        height: 14px;
+        width: 14px;
       }
     }
   }
