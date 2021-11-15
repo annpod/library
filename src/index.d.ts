@@ -1,1 +1,1 @@
-declare module 'rollup-plugin-copy-assets';
+declare module 'rollup-plugin-url';
