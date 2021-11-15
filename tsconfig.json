@@ -23,7 +23,7 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
   },
-  "include": ["src", "src/index.d.ts", "src/**/*.ts"],
+  "include": ["src", "src/index.d.ts", "src/**/*.ts", "src/**/*.woff", "src/**/*.eot"],
   "exclude": [
     "node_modules",
     "build",
