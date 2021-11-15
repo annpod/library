@@ -1,20 +1,3 @@
-/* @font-face {
-  font-family: 'Gotham-Book';
-  src: url('./assets/fonts/book/gotham-book.eot');
-  src: url('./assets/fonts/book/gotham-book.eot?#iefix') format('embedded-opentype'),
-    url('./assets/fonts/book/gotham-book.woff') format('woff'),
-    url('./assets/fonts/book/gotham-book.ttf') format('truetype'),
-    url('./assets/fonts/book/gotham-book.svg#gothambook') format('svg');
-}
-@font-face {
-  font-family: 'Gotham-Medium';
-  src: url('./assets/fonts/medium/gotham-medium.eot');
-  src: url('./assets/fonts/medium/gotham-medium.eot?#iefix') format('embedded-opentype'),
-    url('./assets/fonts/medium/gotham-medium.woff') format('woff'),
-    url('./assets/fonts/medium/gotham-medium.ttf') format('truetype'),
-    url('./assets/fonts/medium/gotham-medium.svg#gothammedium') format('svg');
-} */
-
 .Toastify .Toastify__toast-container {
   width: auto;
   max-width: 470px;

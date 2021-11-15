@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import { theme as themes } from '../themes';
-import { GlobalStyles } from './global-styles';
+import { GlobalStyles } from '../styles/global-styles';
 
 export const LibThemeProvider = (props: any) => {
   const theme = { ...themes[props.themeName], ...props.theme };

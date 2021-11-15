@@ -5,6 +5,7 @@ import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 import json from '@rollup/plugin-json';
 import image from '@rollup/plugin-image';
+import copy from "rollup-plugin-copy";
 import url from 'rollup-plugin-url';
 
 const packageJson = require('./package.json');
@@ -50,13 +51,16 @@ export default [
       }),
       commonjs(),
       json(),
+      copy({
+        targets: [{ src: 'src/assets', dest: 'dist' }]
+      }),
       url({
         // by default, rollup-plugin-url will not handle font files
-        include: ['**/*.woff', '**/*.ttf', '**/*.eot', '**/*.svg'],
+        include: ['**/*.woff', '**/*.woff2', '**/*.eot', '**/*.svg'],
         // setting infinite limit will ensure that the files 
         // are always bundled with the code, not copied to /dist
-        limit: Infinity,
-      }),
+        limit: Infinity
+      }),    
     ]
   },
   {

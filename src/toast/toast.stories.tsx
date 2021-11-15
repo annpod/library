@@ -4,6 +4,8 @@ import { ToastOptions } from 'react-toastify';
 import { ToastStatus, IToastMessage } from '../typings';
 import { Toast } from './toast.styled';
 import { showToast } from './toast';
+import { LibThemeProvider } from '../theme-provider';
+import { theme as themes } from '../themes';
 
 interface IToast {
   message?: IToastMessage;
@@ -177,6 +179,7 @@ const options: ToastOptions = {
 
 const Template: Story<IToast> = () => (
   <>
+  <LibThemeProvider theme={themes}>
     <Toast />
     <button onClick={() => showToast(message1)}>
       Show logId(default) Toast
@@ -201,6 +204,7 @@ const Template: Story<IToast> = () => (
     <button onClick={() => showToast(message5, ToastStatus.error, options)}>
       Show Toast with React Element content
     </button>
+    </LibThemeProvider>
   </>
 );
 

@@ -80,6 +80,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "rollup": "^2.39.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-font": "^1.1.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-svg": "^2.0.0",
