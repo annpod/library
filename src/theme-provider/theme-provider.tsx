@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-
+import { GlobalStyles } from '../styles';
 import { theme as themes } from '../themes';
 
 export const LibThemeProvider = (props: any) => {
@@ -8,7 +8,10 @@ export const LibThemeProvider = (props: any) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <>{props.children}</>
+      <>
+        <GlobalStyles />
+        {props.children}
+      </>
     </ThemeProvider>
   );
 };
