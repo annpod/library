@@ -4,7 +4,6 @@ import { ToastOptions } from 'react-toastify';
 import { ToastStatus, IToastMessage } from '../typings';
 import { Toast } from './toast.styled';
 import { showToast } from './toast';
-import { GlobalStyles } from '../styles';
 
 interface IToast {
   message?: IToastMessage;
