@@ -29,6 +29,13 @@ export default [
     ],
     plugins: [
       image(),
+      url({
+        // by default, rollup-plugin-url will not handle font files
+        include: ['**/*.woff', '**/*.woff2', '**/*.eot', '**/*.svg'],
+        // setting infinite limit will ensure that the files 
+        // are always bundled with the code, not copied to /dist
+        limit: Infinity
+      }),
       peerDepsExternal({
         includeDependencies: true
       }),
@@ -53,14 +60,7 @@ export default [
       json(),
       copy({
         targets: [{ src: 'src/assets', dest: 'dist' }]
-      }),
-      url({
-        // by default, rollup-plugin-url will not handle font files
-        include: ['**/*.woff', '**/*.woff2', '**/*.eot', '**/*.svg'],
-        // setting infinite limit will ensure that the files 
-        // are always bundled with the code, not copied to /dist
-        limit: Infinity
-      }),    
+      }),          
     ]
   },
   {
