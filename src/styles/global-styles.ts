@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Gotham-Book';
     src: url(${GothamMediumEot}) format('embedded-opentype');
-    src: local('Gotham Book'), local('Gotham-Book'), url(${GothamMediumSvg}) format('svg'),
+    src: local('Gotham-Book'), local('GothamBook'), url(${GothamMediumSvg}) format('svg'),
     url(${GothamMediumTtf}) format('truetype'),
     url(${GothamMediumWoff}) format('woff');
     font-weight: normal;
