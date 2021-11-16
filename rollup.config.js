@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
+import postcssFontGrabber from 'postcss-font-grabber';
 import json from '@rollup/plugin-json';
 import image from '@rollup/plugin-image';
 import copy from "rollup-plugin-copy";
@@ -18,14 +19,17 @@ export default [
         file: packageJson.main,
         format: 'cjs',
         exports: 'named',
-        sourcemap: true
+        sourcemap: true,
+        assetFileNames: "[name][extname]"
       },
       {
         file: 'dist/index.es.js',
         format: 'esm',
         exports: 'named',
-        sourcemap: true
-      }
+        sourcemap: true,
+        assetFileNames: "[name][extname]"
+      },
+      
     ],
     plugins: [
       image(),
@@ -42,6 +46,14 @@ export default [
       resolve(),
       postcss({
         extensions: ['.css'],
+        plugins: [
+          postcssFontGrabber({
+            // postcss-font-grabber needs to know the CSS output
+            // directory in order to calculate the new font URL.
+            cssDest: 'dist/',
+            fontDest: 'dist/assets/fonts/',
+          }),
+        ],
       }),
       typescript({
         emitDeclarationTrue: true,

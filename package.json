@@ -73,6 +73,7 @@
     "moment": "^2.29.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.6",
+    "postcss-font-grabber": "^3.0.2",
     "prettier": "^2.2.1",
     "react": "^16.14.0",
     "react-custom-scrollbars": "^4.2.1",
