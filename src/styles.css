@@ -1,20 +1,22 @@
 @font-face {
   font-family: 'Gotham-Book';
-  src: local('Gotham-Book'), url('/assets/fonts/gotham-book.eot');
-  src: local('Gotham-Book'),url('/assets/fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
-    url('/assets/fonts/gotham-book.woff') format('woff'),
-    url('/assets/fonts/gotham-book.ttf') format('truetype'),
-    url('/assets/fonts/gotham-book.svg#gothambook') format('svg');
+  src: local('Gotham-Book'), url('./assets/fonts/gotham-book.eot');
+  src: local('Gotham-Book'),url('./assets/fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/gotham-book.woff') format('woff'),
+    url('./assets/fonts/gotham-book.ttf') format('truetype'),
+    url('./assets/fonts/gotham-book.svg#gothambook') format('svg');
 }
 @font-face {
   font-family: 'Gotham-Medium';
-  src: local('Gotham-Medium'), url('/assets/fonts/gotham-medium.eot');
-  src: local('Gotham-Medium'), url('/assets/fonts/gotham-medium.eot?#iefix') format('embedded-opentype'),
-    url('/assets/fonts/gotham-medium.woff') format('woff'),
-    url('/assets/fonts/gotham-medium.ttf') format('truetype'),
-    url('/assets/fonts/gotham-medium.svg#gothammedium') format('svg');
+  src: local('Gotham-Medium'), url('./assets/fonts/gotham-medium.eot');
+  src: local('Gotham-Medium'), url('./assets/fonts/gotham-medium.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/gotham-medium.woff') format('woff'),
+    url('./assets/fonts/gotham-medium.ttf') format('truetype'),
+    url('./assets/fonts/gotham-medium.svg#gothammedium') format('svg');
 }
-
+body {
+  font-family: 'Gotham-Medium';
+}
 .Toastify .Toastify__toast-container {
   width: auto;
   max-width: 470px;

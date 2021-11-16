@@ -33,6 +33,12 @@ export default [
     ],
     plugins: [
       image(),
+     
+      peerDepsExternal({
+        includeDependencies: true
+      }),
+      resolve(),
+      postcss(),
       url({
         // by default, rollup-plugin-url will not handle font files
         include: ['**/*.woff', '**/*.ttf', '**/*.eot', '**/*.svg'],
@@ -40,20 +46,12 @@ export default [
         // are always bundled with the code, not copied to /dist
         limit: Infinity
       }),
-      peerDepsExternal({
-        includeDependencies: true
-      }),
-      resolve(),
-      postcss({
-        plugins: [
-          postcssFontGrabber({
-            // postcss-font-grabber needs to know the CSS output
-            // directory in order to calculate the new font URL.
-            cssDest: 'dist/',
-            fontDest: 'dist/assets/fonts/',
-          }),
-        ],
-      }),
+      copy({
+        targets: [{
+           src: ['./src/assets/fonts'],
+           dest: 'dist'
+        }],
+     }),
       typescript({
         emitDeclarationTrue: true,
         useTsconfigDeclarationDir: false,
@@ -68,10 +66,7 @@ export default [
         ]
       }),
       commonjs(),
-      json(),
-      copy({
-        targets: [{ src: 'src/assets', dest: 'dist' }]
-      }),          
+      json(),              
     ]
   },
   {
