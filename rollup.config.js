@@ -32,8 +32,7 @@ export default [
       
     ],
     plugins: [
-      image(),
-     
+      image(),     
       peerDepsExternal({
         includeDependencies: true
       }),
@@ -49,7 +48,7 @@ export default [
       copy({
         targets: [{
            src: ['./src/assets/fonts'],
-           dest: 'dist'
+           dest: 'dist/assets'
         }],
      }),
       typescript({
