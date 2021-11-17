@@ -54,6 +54,7 @@ export const Breadcrumbs = (props: IBreadcrumbs) => {
 
 const LastItem = styled.div`
   font-size: 18px;
+  font-family: 'Gotham-Book';
   color: ${(props) => props.theme.textColorRegular};
 `;
 const Arrow = styled.span`

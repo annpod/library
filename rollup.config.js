@@ -29,28 +29,28 @@ export default [
         sourcemap: true,
         assetFileNames: "[name][extname]"
       },
-      
+
     ],
     plugins: [
-      image(),     
+      image(),
       peerDepsExternal({
         includeDependencies: true
       }),
       resolve(),
-      postcss(),
+      postcss({ extensions: ['.css'] }),
       url({
         // by default, rollup-plugin-url will not handle font files
-        include: ['**/*.woff', '**/*.ttf', '**/*.eot', '**/*.svg', '**/*.css'],
+        include: ['**/*.woff', '**/*.ttf', '**/*.eot', '**/*.svg'],
         // setting infinite limit will ensure that the files 
         // are always bundled with the code, not copied to /dist
         limit: Infinity
       }),
       copy({
         targets: [{
-           src: ['./src/assets/fonts'],
-           dest: 'dist/assets'
+          src: ['./src/fonts', 'src/fonts/fonts.css',],
+          dest: 'dist'
         }],
-     }),
+      }),
       typescript({
         emitDeclarationTrue: true,
         useTsconfigDeclarationDir: false,
