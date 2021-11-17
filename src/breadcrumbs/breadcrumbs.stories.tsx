@@ -41,6 +41,7 @@ const LastItem = styled.div`
   color: ${(props) => props.theme.textColorRegular};
 `;
 const Link = styled.span`
+  font-family: 'Gotham-Book';
   font-size: 10px;
   color: ${(props) => props.theme.textColor};
   &:hover {

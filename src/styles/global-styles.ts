@@ -47,7 +47,8 @@ export const GlobalStyles = createGlobalStyle`
     bottom: 60px;
   }
   
-  .breadcrumb {
+  .breadcrumb {    
+    font-family: 'Gotham-Book';
     font-size: 10px;
     color: #707070;
     cursor: pointer;
