@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { SidebarContent } from './sidebar-content';
 import { ITab } from '../../typings';
-import '../../styles.css';
 
 export const Sidebar = ({
   tabs,

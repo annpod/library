@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import { IBreadcrumbRouteMatch, IBreadcrumbs } from '../typings';
 import { withBreadcrumbs } from './hoc';
 
-import '../styles.css';
-
 interface IBreadcrumbsComponent {
   breadcrumbs: IBreadcrumbRouteMatch[];
   lastItem: string;

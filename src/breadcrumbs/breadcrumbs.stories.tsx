@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { IBreadcrumbRouteMatch } from '../typings';
-import { GlobalStyles } from '../styles';
 
 // copy of the component because we can't use NavLink without Router
 interface IBreadcrumbsComponent {
@@ -12,8 +11,6 @@ interface IBreadcrumbsComponent {
 
 const Breadcrumbs = ({ breadcrumbs, lastItem }: IBreadcrumbsComponent) => {
   return (
-    <>
-    <GlobalStyles />
     <div>
       {breadcrumbs.map(
         (item: IBreadcrumbRouteMatch, index: number) =>
@@ -32,7 +29,6 @@ const Breadcrumbs = ({ breadcrumbs, lastItem }: IBreadcrumbsComponent) => {
       )}
       {lastItem && <LastItem>{lastItem}</LastItem>}
     </div>
-    </>
   );
 };
 

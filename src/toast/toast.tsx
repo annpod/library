@@ -11,7 +11,6 @@ import {
 } from '../typings';
 import { toastStrings } from './toast.strings';
 import { Icon } from '../icon';
-import '../styles.css';
 
 const iconMap = {
   [ToastStatus.error]: 'errorrRed',

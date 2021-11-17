@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { iconTable } from './iconTable';
 import { INavigation, IRoute } from '../typings';
-import '../styles.css';
 
 const Container = styled.div`
   width: 60px;
