@@ -21,9 +21,16 @@
     "noEmit": false,
     "noImplicitThis": true,
     "noImplicitAny": true,
-    "strictNullChecks": true,
+    "strictNullChecks": true
   },
-  "include": ["src", "src/index.d.ts", "src/**/*.ts", "src/**/*.woff", "src/**/*.eot"],
+  "include": [
+    "src",
+    "src/index.d.ts",
+    "src/**/*.ts",
+    "src/**/*.woff",
+    "src/**/*.eot",
+    "src/**/*.css"
+  ],
   "exclude": [
     "node_modules",
     "build",

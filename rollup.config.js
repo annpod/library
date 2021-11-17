@@ -40,7 +40,7 @@ export default [
       postcss(),
       url({
         // by default, rollup-plugin-url will not handle font files
-        include: ['**/*.woff', '**/*.ttf', '**/*.eot', '**/*.svg'],
+        include: ['**/*.woff', '**/*.ttf', '**/*.eot', '**/*.svg', '**/*.css'],
         // setting infinite limit will ensure that the files 
         // are always bundled with the code, not copied to /dist
         limit: Infinity
@@ -65,7 +65,7 @@ export default [
         ]
       }),
       commonjs(),
-      json(),              
+      json(),
     ]
   },
   {
