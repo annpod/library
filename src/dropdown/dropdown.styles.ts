@@ -49,7 +49,8 @@ export const dropdownStyles = (
     },
     multiValue: (provider: CSSProperties) => ({
       ...provider,
-      maxWidth: '90%'
+      maxWidth: '90%',
+      fontFamily: 'Gotham-Book',
     }),
     input: (provider: CSSProperties) => ({
       ...provider,
@@ -81,6 +82,7 @@ export const dropdownStyles = (
       ...provider,
       width,
       fontWeight: 400,
+      fontFamily: 'Gotham-Book',
       fontSize: '12px',
       marginTop: '0px',
       backgroundColor: bgColorMenu,
@@ -92,6 +94,7 @@ export const dropdownStyles = (
     }),
     option: (provider: CSSProperties) => ({
       ...provider,
+      fontFamily: 'Gotham-Book',
       borderBottom: `1px solid ${theme.dropdownBorderColor}`,
       cursor: 'pointer',
       backgroundColor: bgColorMenu,
@@ -103,6 +106,7 @@ export const dropdownStyles = (
     }),
     menuList: (provider: CSSProperties) => ({
       ...provider,
+      fontFamily: 'Gotham-Book',
       padding: '0px'
     })
   };

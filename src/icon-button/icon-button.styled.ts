@@ -7,6 +7,6 @@ export const TextIconButton = styled(Button)`
 
 export const TextWrapper = styled.div`
   margin-left: 10px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
 `;

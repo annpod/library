@@ -35,7 +35,7 @@ export const StyledTable = styled(Table)`
 
   & .ant-table-thead > tr > th,
   & .ant-table-tbody > tr > td {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 400;
     background: none;
     border: none;
@@ -56,6 +56,7 @@ export const StyledTable = styled(Table)`
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: 5px solid white;
+    font-family: 'Gotham-Book';
   }
 
   & .ant-table-thead > tr > th:hover {

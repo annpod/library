@@ -6,6 +6,10 @@ import GothamBookSvg from './gotham-book.svg';
 import GothamBookEot from './gotham-book.eot';
 import GothamBookWoff from './gotham-book.woff';
 import GothamBookTtf from './gotham-book.ttf';
+import GothamBookItalicSvg from './gotham-bookitalic.svg';
+import GothamBookItalicEot from './gotham-bookitalic.eot';
+import GothamBookItalicWoff from './gotham-bookitalic.woff';
+import GothamBookItalicTtf from './gotham-bookitalic.ttf';
 
 export { 
   GothamMediumSvg,
@@ -15,5 +19,9 @@ export {
   GothamBookSvg,
   GothamBookEot,
   GothamBookWoff,
-  GothamBookTtf
+  GothamBookTtf,
+  GothamBookItalicSvg,
+  GothamBookItalicEot,
+  GothamBookItalicWoff,
+  GothamBookItalicTtf
 }
