@@ -1,17 +1,24 @@
 import { createGlobalStyle  } from 'styled-components';
 
+import {
+  GothamMediumSvg,
+  GothamMediumEot,
+  GothamMediumWoff,
+  GothamMediumTtf
+} from '../assets/fonts';
+
 export const GlobalStyles = createGlobalStyle`
   @font-face {
-    font-family: 'Gotham-Book';
-    src: url ('../assets/fonts/gotham-medium.eot') format('embedded-opentype');
-    src: local('Gotham-Book'), local('GothamBook'), url ('../assets/fonts/gotham-medium.svg') format('svg'),
-    url ('../assets/fonts/gotham-medium.ttf) format('truetype'),
-    url ('../assets/fonts/gotham-medium.woff') format('woff');
+    font-family: 'Gotham-Medium';
+    src: url(${GothamMediumEot}) format('embedded-opentype');
+    src: url(${GothamMediumSvg}) format('svg'),
+    url(${GothamMediumTtf}) format('truetype'),
+    url(${GothamMediumWoff}) format('woff');
     font-weight: normal;
     font-style: normal;
   }
   body {
-    font-family: 'Gotham-Book';
+    font-family: 'Gotham-Medium';
     margin: 0;
     padding: 0;
   }

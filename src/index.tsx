@@ -15,6 +15,7 @@ import { ContentSider, ContentHeader } from './content';
 import { ShowMoreText } from './showmore-text';
 import { ExtendedSelect } from './extended-select';
 import { StatusSelect } from './status-select';
+import { GlobalStyles } from './styles';
 import {
   FormAmount,
   FormAutoComplete,
@@ -155,6 +156,7 @@ import {
 import { Drawer } from './drawer';
 
 export {
+  GlobalStyles,
   Layout,
   PageLayout,
   ContentLayout,
